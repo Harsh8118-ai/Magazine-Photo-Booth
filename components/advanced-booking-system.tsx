@@ -434,7 +434,7 @@ export function AdvancedBookingSystem() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="text-sm text-gray-300 mb-4">
-                      Secure your date with a ${quote.deposit.toFixed(2)} deposit. Remaining balance due 7 days before
+                      Secure your date with a ${quote.deposit.toFixed(2)} deposit. Remaining balance due 7 days before 
                       event.
                     </div>
 
