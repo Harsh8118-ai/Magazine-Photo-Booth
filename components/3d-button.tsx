@@ -98,7 +98,7 @@ export function Button3D({
       onClick={onClick}
       disabled={disabled}
     >
-      <span className="relative z-10 font-semibold  flex items-center">{children}</span>
+      <span className="relative z-10 font-semibold  flex items-center ">{children}</span>
     </Button>
   )
 }
