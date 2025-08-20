@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Star, Camera, Zap, Users, Award, CheckCircle, Calendar, Package } from "lucide-react"
+import { Star, Camera, Zap, Users, Award, CheckCircle, Calendar, Package, Home, MessageCircle } from "lucide-react"
 import { AvailabilityChecker } from "@/components/availability-checker"
 import { AiCoverPreview } from "@/components/ai-cover-preview"
 import { WhatsAppCTA } from "@/components/whatsapp-cta"
@@ -19,6 +19,8 @@ import { ParallaxSection } from "@/components/parallax-section"
 import { AdvancedBookingSystem } from "@/components/advanced-booking-system"
 import { GalleryModal } from "@/components/gallery-modal"
 import { LegalModal } from "@/components/legal-modal"
+import { FloatingNavigation } from "@/components/floating-navigation"
+import { SectionWrapper } from "@/components/section-wrapper"
 
 export default function MagazinePhotoBoothPage() {
   const [selectedPackage, setSelectedPackage] = useState("weddings")
@@ -34,6 +36,15 @@ export default function MagazinePhotoBoothPage() {
     package: "",
     city: "",
   })
+
+  const navigationSections = [
+    { id: "hero-section", label: "Home", icon: Home },
+    { id: "packages-section", label: "Packages", icon: Package },
+    { id: "gallery-section", label: "Gallery", icon: Camera },
+    { id: "testimonials-section", label: "Reviews", icon: Users },
+    { id: "booking-section", label: "Book Now", icon: Calendar },
+    { id: "contact-section", label: "Contact", icon: MessageCircle },
+  ]
 
   useEffect(() => {
     setIsVisible(true)
@@ -65,12 +76,19 @@ export default function MagazinePhotoBoothPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <main className="min-h-screen bg-black text-white overflow-x-hidden">
+      <FloatingNavigation sections={navigationSections} />
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <SectionWrapper
+        id="hero-section"
+        as="header"
+        ariaLabel="Hero section with main heading and call-to-action"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-40">
+          <video autoPlay muted loop playsInline className="w-full h-full object-cover opacity-40" aria-hidden="true">
             <source
               src="/placeholder.mp4?height=1080&width=1920&query=luxury photo booth guests posing magazine covers"
               type="video/mp4"
@@ -100,6 +118,7 @@ export default function MagazinePhotoBoothPage() {
               size="lg"
               onClick={() => scrollToSection("booking-section")}
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+              aria-label="Book your magazine photo booth now"
             >
               <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Book Now
@@ -109,35 +128,44 @@ export default function MagazinePhotoBoothPage() {
               size="lg"
               onClick={() => scrollToSection("packages-section")}
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold border-gold text-gold hover:bg-gold hover:text-black bg-transparent"
+              aria-label="View our packages and pricing"
             >
               <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               See Packages
             </Button3D>
           </div>
 
-          {/* Stats Bar - Improved mobile responsiveness */}
-          <div className="glass-enhanced rounded-2xl p-4 sm:p-6 max-w-3xl mx-auto">
+          {/* Stats Bar - Improved mobile responsiveness and SEO */}
+          <div
+            className="glass-enhanced rounded-2xl p-4 sm:p-6 max-w-3xl mx-auto"
+            role="region"
+            aria-label="Company statistics"
+          >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               <div>
                 <AnimatedCounter end={12500} suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
-                <div className="text-xs sm:text-sm text-gray-400">Covers Printed</div>
+                <div className="text-xs sm:text-sm text-gray-400">Magazine Covers Printed</div>
               </div>
               <div>
                 <AnimatedCounter end={850} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
-                <div className="text-xs sm:text-sm text-gray-400">Events Done</div>
+                <div className="text-xs sm:text-sm text-gray-400">Successful Events</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">30s</div>
-                <div className="text-xs sm:text-sm text-gray-400">Print Time</div>
+                <div className="text-xs sm:text-sm text-gray-400">Average Print Time</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </SectionWrapper>
 
       {/* Conversion Features Section */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900">
+        <SectionWrapper
+          id="features-section"
+          ariaLabel="Interactive features to try before booking"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        >
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
               Try Before You Book
@@ -145,27 +173,31 @@ export default function MagazinePhotoBoothPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
               <ScrollReveal direction="left" delay={0.3}>
-                <div>
+                <article>
                   <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3>
                   <AvailabilityChecker />
-                </div>
+                </article>
               </ScrollReveal>
 
               <ScrollReveal direction="right" delay={0.4}>
-                <div>
+                <article>
                   <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Preview Your Cover</h3>
                   <AiCoverPreview />
-                </div>
+                </article>
               </ScrollReveal>
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       {/* How It Works Section */}
       <ParallaxSection speed={0.3}>
         <ScrollReveal direction="up" delay={0.1}>
-          <section className="py-16 sm:py-20 px-4 sm:px-6">
+          <SectionWrapper
+            id="how-it-works-section"
+            ariaLabel="Step-by-step process explanation"
+            className="py-16 sm:py-20 px-4 sm:px-6"
+          >
             <div className="max-w-7xl mx-auto">
               <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
                 How It Works
@@ -199,11 +231,19 @@ export default function MagazinePhotoBoothPage() {
                   },
                 ].map((item, index) => (
                   <ScrollReveal key={index} direction="scale" delay={0.1 * index}>
-                    <Card className="glass-enhanced scale-on-hover border-0 text-center group gpu-accelerated">
+                    <Card
+                      className="glass-enhanced scale-on-hover border-0 text-center group gpu-accelerated"
+                      role="article"
+                    >
                       <CardContent className="p-6 sm:p-8">
-                        <div className="text-4xl sm:text-6xl font-bold text-gold/20 mb-4 font-display">{item.step}</div>
+                        <div
+                          className="text-4xl sm:text-6xl font-bold text-gold/20 mb-4 font-display"
+                          aria-hidden="true"
+                        >
+                          {item.step}
+                        </div>
                         <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 rounded-full glass flex items-center justify-center group-hover:neon-glow transition-all duration-300">
-                          <item.icon className="h-6 w-6 sm:h-8 sm:w-8 text-purple-400" />
+                          <item.icon className="h-6 w-6 sm:h-8 sm:w-8 text-purple-400" aria-hidden="true" />
                         </div>
                         <h3 className="text-lg sm:text-xl font-bold mb-3 font-display">{item.title}</h3>
                         <p className="text-gray-400 leading-relaxed text-sm sm:text-base">{item.desc}</p>
@@ -213,13 +253,17 @@ export default function MagazinePhotoBoothPage() {
                 ))}
               </div>
             </div>
-          </section>
+          </SectionWrapper>
         </ScrollReveal>
       </ParallaxSection>
 
       {/* Packages & Pricing Section */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section id="packages-section" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900">
+        <SectionWrapper
+          id="packages-section"
+          ariaLabel="Pricing packages and options"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        >
           <div className="max-w-6xl mx-auto">
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-8 text-gradient">
               Packages & Pricing
@@ -314,12 +358,16 @@ export default function MagazinePhotoBoothPage() {
               ))}
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       {/* Event Gallery Section */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6">
+        <SectionWrapper
+          id="gallery-section"
+          ariaLabel="Photo gallery of past events"
+          className="py-16 sm:py-20 px-4 sm:px-6"
+        >
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
               Event Gallery
@@ -352,29 +400,41 @@ export default function MagazinePhotoBoothPage() {
               </Button3D>
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <SectionWrapper
+          id="testimonials-section"
+          ariaLabel="Customer testimonials and reviews"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+        >
           <div className="max-w-7xl mx-auto">
             <TestimonialCarousel />
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6">
+        <SectionWrapper
+          id="clients-section"
+          ariaLabel="Client logos and partnerships"
+          className="py-16 sm:py-20 px-4 sm:px-6"
+        >
           <div className="max-w-7xl mx-auto">
             <ClientLogos />
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       {/* Why Choose Us Section */}
       <ParallaxSection speed={0.2}>
         <ScrollReveal direction="up" delay={0.2}>
-          <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+          <SectionWrapper
+            id="why-choose-us-section"
+            ariaLabel="Reasons to choose Magazine Photo Booth"
+            className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+          >
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <ScrollReveal direction="left" delay={0.3}>
@@ -447,13 +507,17 @@ export default function MagazinePhotoBoothPage() {
                 </ScrollReveal>
               </div>
             </div>
-          </section>
+          </SectionWrapper>
         </ScrollReveal>
       </ParallaxSection>
 
       {/* Customization Options Section */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6">
+        <SectionWrapper
+          id="customization-section"
+          ariaLabel="Customization options for your event"
+          className="py-16 sm:py-20 px-4 sm:px-6"
+        >
           <div className="max-w-7xl mx-auto">
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
               Customization Options
@@ -500,19 +564,27 @@ export default function MagazinePhotoBoothPage() {
               ))}
             </div>
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
-        <section id="booking-section" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900">
+        <SectionWrapper
+          id="booking-section"
+          ariaLabel="Booking form and contact information"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        >
           <AdvancedBookingSystem />
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       {/* About Us Section */}
       <ParallaxSection speed={0.3}>
         <ScrollReveal direction="up" delay={0.2}>
-          <section className="py-16 sm:py-20 px-4 sm:px-6">
+          <SectionWrapper
+            id="about-section"
+            ariaLabel="Information about Magazine Photo Booth"
+            className="py-16 sm:py-20 px-4 sm:px-6"
+          >
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
                 <ScrollReveal direction="left" delay={0.3}>
@@ -555,22 +627,30 @@ export default function MagazinePhotoBoothPage() {
                 </ScrollReveal>
               </div>
             </div>
-          </section>
+          </SectionWrapper>
         </ScrollReveal>
       </ParallaxSection>
 
       {/* FAQs & Logistics Section */}
       <ScrollReveal direction="up" delay={0.2}>
-        <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900">
+        <SectionWrapper
+          id="faq-section"
+          ariaLabel="Frequently asked questions and logistics information"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        >
           <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
             <FaqsSection />
             <VenueRequirements />
           </div>
-        </section>
+        </SectionWrapper>
       </ScrollReveal>
 
       {/* Footer - Enhanced with legal links */}
-      <footer className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800">
+      <footer
+        id="contact-section"
+        className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
+        role="contentinfo"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
@@ -733,6 +813,6 @@ export default function MagazinePhotoBoothPage() {
 
       <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} images={galleryImages} />
       <LegalModal isOpen={legalModal.isOpen} onClose={closeLegalModal} type={legalModal.type!} />
-    </div>
+    </main>
   )
 }

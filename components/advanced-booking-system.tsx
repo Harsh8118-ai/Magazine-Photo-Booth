@@ -446,7 +446,7 @@ export function AdvancedBookingSystem() {
                         <Badge className="ml-auto bg-green-600">Secure</Badge>
                       </Button3D>
 
-                      <Button3D className="w-full justify-start bg-orange-600 hover:bg-orange-700"
+                      <Button3D className="w-full justify-start bg-orange-600 hover:bg-orange-700"> 
                         <Smartphone className="mr-3 h-5 w-5" />
                         UPI Payment
                         <Badge className="ml-auto bg-green-600">Instant</Badge>
