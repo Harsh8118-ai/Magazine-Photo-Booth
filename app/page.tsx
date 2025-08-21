@@ -171,7 +171,7 @@ export default function MagazinePhotoBoothPage() {
               Try Before You Book
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 sm:gap-12 mb-12 sm:mb-16">
               <ScrollReveal direction="left" delay={0.3}>
                 <article>
                   <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3>
@@ -179,12 +179,14 @@ export default function MagazinePhotoBoothPage() {
                 </article>
               </ScrollReveal>
 
-              <ScrollReveal direction="right" delay={0.4}>
+              {/* AI Preview  */}
+              {/* <ScrollReveal direction="right" delay={0.4}>
                 <article>
                   <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Preview Your Cover</h3>
                   <AiCoverPreview />
                 </article>
-              </ScrollReveal>
+              </ScrollReveal> */}
+
             </div>
           </div>
         </SectionWrapper>

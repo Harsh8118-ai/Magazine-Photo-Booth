@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
@@ -27,7 +26,7 @@ export function WhatsAppCTA({
   }
 
   const generateWhatsAppURL = () => {
-    const phoneNumber = "1234567890" // Replace with actual WhatsApp business number
+    const phoneNumber = "9266037002"
     const message = generateWhatsAppMessage()
     const utmParams = "utm_source=website&utm_medium=whatsapp&utm_campaign=booking_inquiry"
     return `https://wa.me/${phoneNumber}?text=${message}&${utmParams}`
