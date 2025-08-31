@@ -11,7 +11,7 @@ interface WhatsAppCTAProps {
   className?: string
 }
 
-export function WhatsAppCTA({
+export function WhatsAppCTA({ 
   selectedDate = "{DATE}",
   selectedEventType = "{EVENT_TYPE}", 
   selectedPackage = "{PACKAGE}", 
