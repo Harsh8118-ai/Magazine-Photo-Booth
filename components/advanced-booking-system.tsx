@@ -30,10 +30,43 @@ interface BookingData {
   eventDetails: string
 }
 
-const packages = {
+// Packages vary by event type
+const defaultPackages = {
   basic: { name: "Basic", price: 899, hours: 2 },
   premium: { name: "Premium", price: 1299, hours: 4 },
   luxury: { name: "Luxury", price: 1899, hours: 6 },
+}
+
+const packagesByEventType: Record<string, typeof defaultPackages> = {
+  // Weddings
+  wedding: {
+    classic: { name: "Classic", price: 999, hours: 3 },
+    signature: { name: "Signature", price: 1399, hours: 5 },
+    royal: { name: "Royal", price: 1999, hours: 7 },
+  } as any,
+  // Corporate
+  corporate: {
+    brandStarter: { name: "Brand Starter", price: 1199, hours: 3 },
+    brandPlus: { name: "Brand Plus", price: 1599, hours: 4 },
+    brandExperience: { name: "Brand Experience", price: 2299, hours: 6 },
+  } as any,
+  // Parties / Birthdays
+  birthday: {
+    fun: { name: "Fun", price: 799, hours: 2 },
+    epic: { name: "Epic", price: 1199, hours: 4 },
+    legendary: { name: "Legendary", price: 1699, hours: 5 },
+  } as any,
+  anniversary: {
+    classic: { name: "Classic", price: 949, hours: 3 },
+    signature: { name: "Signature", price: 1349, hours: 5 },
+    royal: { name: "Royal", price: 1899, hours: 6 },
+  } as any,
+  graduation: defaultPackages,
+  other: defaultPackages,
+}
+
+const getPackagesForEvent = (eventType: string) => {
+  return packagesByEventType[eventType] || defaultPackages
 }
 
 const addOns = {
@@ -77,12 +110,18 @@ export function AdvancedBookingSystem() {
     calculateQuote()
   }, [bookingData])
 
+  // Reset selected package when event type changes
+  useEffect(() => {
+    setBookingData((prev) => ({ ...prev, package: "" }))
+  }, [bookingData.eventType])
+
   const calculateQuote = () => {
     let subtotal = 0
 
-    // Base package price
-    if (bookingData.package && packages[bookingData.package as keyof typeof packages]) {
-      subtotal += packages[bookingData.package as keyof typeof packages].price
+    // Base package price (depends on event type)
+    const currentPackages = getPackagesForEvent(bookingData.eventType)
+    if (bookingData.package && currentPackages[bookingData.package as keyof typeof currentPackages]) {
+      subtotal += currentPackages[bookingData.package as keyof typeof currentPackages].price
     }
 
     // Add-ons
@@ -107,8 +146,9 @@ export function AdvancedBookingSystem() {
   const getQuoteBreakdown = () => {
     const items = []
 
-    if (bookingData.package && packages[bookingData.package as keyof typeof packages]) {
-      const pkg = packages[bookingData.package as keyof typeof packages]
+    const currentPackages = getPackagesForEvent(bookingData.eventType)
+    if (bookingData.package && currentPackages[bookingData.package as keyof typeof currentPackages]) {
+      const pkg = currentPackages[bookingData.package as keyof typeof currentPackages]
       items.push({ name: `${pkg.name} Package (${pkg.hours}hrs)`, price: pkg.price })
     }
 
@@ -224,8 +264,11 @@ export function AdvancedBookingSystem() {
               {/* Package Selection */}
               <div>
                 <label className="block text-sm font-semibold mb-4">Package Selection *</label>
+                {!bookingData.eventType && (
+                  <div className="text-sm text-gray-400 mb-4">Select an event type to see packages</div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {Object.entries(packages).map(([key, pkg]) => (
+                  {Object.entries(getPackagesForEvent(bookingData.eventType)).map(([key, pkg]) => (
                     <div
                       key={key}
                       onClick={() => handleInputChange("package", key)}

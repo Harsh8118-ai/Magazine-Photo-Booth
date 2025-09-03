@@ -75,6 +75,105 @@ export default function MagazinePhotoBoothPage() {
     setLegalModal({ isOpen: false, type: null })
   }
 
+  // Different packages per event type
+  const packagesByType: Record<string, Array<{ name: string; price: string; features: string[]; popular?: boolean }>> = {
+    weddings: [
+      {
+        name: "Classic",
+        price: "$999",
+        features: ["3 Hours Service", "75 Prints Included", "Elegant Props", "Digital Gallery"],
+      },
+      {
+        name: "Signature",
+        price: "$1,399",
+        features: [
+          "5 Hours Service",
+          "150 Prints Included",
+          "Custom Cover Design",
+          "Guestbook Station",
+          "Social Sharing",
+          "Digital Gallery",
+        ],
+        popular: true,
+      },
+      {
+        name: "Royal",
+        price: "$1,999",
+        features: [
+          "7 Hours Service",
+          "Unlimited Prints",
+          "Luxury Props",
+          "Monogram & Branding",
+          "Social Media Station",
+          "On-site Attendant",
+          "Digital Gallery",
+        ],
+      },
+    ],
+    corporate: [
+      {
+        name: "Brand Starter",
+        price: "$1,199",
+        features: ["3 Hours Service", "Company Logo Overlay", "Standard Props", "Digital Gallery"],
+      },
+      {
+        name: "Brand Plus",
+        price: "$1,599",
+        features: [
+          "4 Hours Service",
+          "Custom Branded Covers",
+          "Lead Capture QR",
+          "Social Sharing",
+          "Digital Gallery",
+        ],
+        popular: true,
+      },
+      {
+        name: "Brand Experience",
+        price: "$2,299",
+        features: [
+          "6 Hours Service",
+          "Unlimited Prints",
+          "Full Booth Wrap",
+          "Advanced Analytics",
+          "On-site Technician",
+          "Digital Gallery",
+        ],
+      },
+    ],
+    parties: [
+      {
+        name: "Fun",
+        price: "$799",
+        features: ["2 Hours Service", "50 Prints Included", "Party Props", "Digital Gallery"],
+      },
+      {
+        name: "Epic",
+        price: "$1,199",
+        features: [
+          "4 Hours Service",
+          "100 Prints Included",
+          "Custom Covers",
+          "Social Sharing",
+          "Digital Gallery",
+        ],
+        popular: true,
+      },
+      {
+        name: "Legendary",
+        price: "$1,699",
+        features: [
+          "5 Hours Service",
+          "Unlimited Prints",
+          "Premium Props",
+          "Party Branding",
+          "On-site Attendant",
+          "Digital Gallery",
+        ],
+      },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       <FloatingNavigation sections={navigationSections} />
@@ -104,12 +203,12 @@ export default function MagazinePhotoBoothPage() {
           className={`relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 ${isVisible ? "slide-in-up" : "opacity-0"}`}
         >
           <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
-            Step Inside.
+            Luxury Booth
             <br />
             Become the Cover Star.
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Our luxury magazine photo booth brings celebrity-style covers to your event — with instant prints your
+            Luxury Booth brings celebrity-style covers to your event — with instant prints your
             guests will love.
           </p>
 
@@ -118,7 +217,7 @@ export default function MagazinePhotoBoothPage() {
               size="lg"
               onClick={() => scrollToSection("booking-section")}
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-              aria-label="Book your magazine photo booth now"
+              aria-label="Book your Luxury Booth now"
             >
               <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Book Now
@@ -132,7 +231,7 @@ export default function MagazinePhotoBoothPage() {
             >
               <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               See Packages
-            </Button3D>
+            </Button3D> 
           </div>
 
           {/* Stats Bar - Improved mobile responsiveness and SEO */}
@@ -290,41 +389,7 @@ export default function MagazinePhotoBoothPage() {
 
             {/* Pricing Cards - Improved mobile responsiveness */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {[
-                {
-                  name: "Basic",
-                  price: "$899",
-                  features: ["2 Hours Service", "50 Prints Included", "Basic Props", "Digital Gallery"],
-                  popular: false,
-                },
-                {
-                  name: "Premium",
-                  price: "$1,299",
-                  features: [
-                    "4 Hours Service",
-                    "100 Prints Included",
-                    "Premium Props",
-                    "Custom Covers",
-                    "Social Sharing",
-                    "Digital Gallery",
-                  ],
-                  popular: true,
-                },
-                {
-                  name: "Luxury",
-                  price: "$1,899",
-                  features: [
-                    "6 Hours Service",
-                    "Unlimited Prints",
-                    "Luxury Props",
-                    "Custom Branding",
-                    "Social Media Station",
-                    "Professional Attendant",
-                    "Digital Gallery",
-                  ],
-                  popular: false,
-                },
-              ].map((pkg, index) => (
+              {(packagesByType[selectedPackage] || packagesByType.weddings).map((pkg, index) => (
                 <ScrollReveal key={index} direction="scale" delay={0.1 * index}>
                   <Card
                     className={`glass-enhanced scale-on-hover border-0 relative gpu-accelerated ${pkg.popular ? "neon-glow" : ""}`}
@@ -434,7 +499,7 @@ export default function MagazinePhotoBoothPage() {
         <ScrollReveal direction="up" delay={0.2}>
           <SectionWrapper
             id="why-choose-us-section"
-            ariaLabel="Reasons to choose Magazine Photo Booth"
+            ariaLabel="Reasons to choose Luxury Booth"
             className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
           >
             <div className="max-w-6xl mx-auto">
@@ -656,9 +721,9 @@ export default function MagazinePhotoBoothPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Magazine Photo Booth</h3>
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Luxury Booth</h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                Creating celebrity-style moments at your events.
+                Luxury Booth creates celebrity-style moments at your events.
               </p>
               <div className="flex space-x-4">
                 {[
@@ -767,7 +832,7 @@ export default function MagazinePhotoBoothPage() {
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-center sm:text-left">
                 <p className="text-gray-400 text-sm sm:text-base">
-                  &copy; 2024 Magazine Photo Booth. All rights reserved.
+                  &copy; 2024 Luxury Booth. All rights reserved.
                 </p>
                 <p className="text-gray-500 text-xs sm:text-sm mt-1">
                   Licensed & Insured | CA License #12345 | Serving Los Angeles & Orange County
