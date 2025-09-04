@@ -45,13 +45,13 @@ export function WhatsAppCTA({
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 p-0 hover:scale-110"
+          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110"
         >
           <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="h-14 w-14"
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              className="w-full h-full size-full"
               fill="currentColor"
               aria-hidden="true"
               focusable="false"
