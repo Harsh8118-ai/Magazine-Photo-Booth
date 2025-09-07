@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Star, Camera, Zap, Users, Award, CheckCircle, Calendar, Package, Home, MessageCircle } from "lucide-react"
 import { AvailabilityChecker } from "@/components/availability-checker"
+import { useRouter } from "next/navigation";
 import { AiCoverPreview } from "@/components/ai-cover-preview"
 import { WhatsAppCTA } from "@/components/whatsapp-cta"
 import { FaqsSection } from "@/components/faqs-section"
@@ -74,6 +75,12 @@ export default function MagazinePhotoBoothPage() {
   const closeLegalModal = () => {
     setLegalModal({ isOpen: false, type: null })
   }
+
+  const router = useRouter();
+
+  const handleViewGallery = () => {
+    router.push("/gallery"); // Routes to the gallery page
+  };
 
   // Different packages per event type
   const packagesByType: Record<string, Array<{ name: string; price: string; features: string[]; popular?: boolean }>> = {
@@ -429,46 +436,43 @@ export default function MagazinePhotoBoothPage() {
       </ScrollReveal>
 
       {/* Event Gallery Section */}
-      <ScrollReveal direction="up" delay={0.2}>
-        <SectionWrapper
-          id="gallery-section"
-          ariaLabel="Photo gallery of past events"
-          className="py-16 sm:py-20 px-4 sm:px-6"
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
-              Event Gallery
-            </h2>
+       <ScrollReveal direction="up" delay={0.2}>
+      <SectionWrapper
+        id="gallery-section"
+        ariaLabel="Photo gallery of past events"
+        className="py-16 sm:py-20 px-4 sm:px-6"
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+            Event Gallery
+          </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-              {Array.from({ length: 8 }).map((_, index) => (
-                <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
-                  <div
-                    className="aspect-square overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated"
-                    onClick={() => setIsGalleryOpen(true)}
-                  >
-                    <img
-                      src={`/magazine-photobooth.png?height=300&width=300&query=magazine photo booth event ${index + 1}`}
-                      alt={`Event photo ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Button3D
-                variant="outline"
-                onClick={() => setIsGalleryOpen(true)}
-                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
-              >
-                View Full Gallery
-              </Button3D>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
+            {Array.from({ length: 8 }).map((_, index) => (
+              <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
+                <div className="aspect-square overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
+                  <img
+                    src={`/magazine-photobooth.png?height=300&width=300&query=magazine photo booth event ${index + 1}`}
+                    alt={`Event photo ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
-        </SectionWrapper>
-      </ScrollReveal>
+
+          <div className="text-center">
+            <Button3D
+              variant="outline"
+              onClick={handleViewGallery}
+              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+            >
+              View Full Gallery
+            </Button3D>
+          </div>
+        </div>
+      </SectionWrapper>
+    </ScrollReveal>
 
       <ScrollReveal direction="up" delay={0.2}>
         <SectionWrapper
