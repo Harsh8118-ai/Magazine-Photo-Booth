@@ -10,7 +10,7 @@ cloudinary.config({
 
 export async function GET(
   req: Request,
-  { params }: { params: { folder: string } }
+  { params }: { params: { folder: string } } 
 ) {
   try {
     const folder = params.folder;
