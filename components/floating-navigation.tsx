@@ -8,7 +8,7 @@ import { ChevronUp, Command } from "lucide-react"
 interface FloatingNavigationProps {
   sections: Array<{
     id: string
-    label: string
+    label: string   
     icon: React.ComponentType<{ className?: string }>
   }>
 }
@@ -156,14 +156,6 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
           </button>
         </div>
       </nav>
-
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-4 right-4 w-12 h-12 glass-enhanced rounded-full flex items-center justify-center hover:neon-glow transition-all duration-300 z-40"
-      >
-        <ChevronUp className="h-5 w-5 text-purple-400" />
-      </button>
 
       {/* Command Palette */}
       {showCommandPalette && (
