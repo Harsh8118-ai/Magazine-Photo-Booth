@@ -5,92 +5,43 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import { Button3D } from "@/components/3d-button"
-import { ScrollReveal } from "@/components/scroll-reveal"
-import { Calendar, Users, CreditCard, Lock, Calculator, Smartphone, DollarSign } from "lucide-react"
+import { Calendar, Users, Lock, Calculator, Camera, Printer, Gift, Send } from "lucide-react"
 
-interface BookingData {
+interface InquiryData {
   eventDate: string
   eventType: string
-  package: string
-  venueCity: string
-  expectedGuests: string
-  extraHours: number
-  customBranding: boolean
-  socialMediaStation: boolean
-  premiumProps: boolean
-  additionalPhotographer: boolean
-  customBoothWrap: boolean
+  eventLocation: string
+  photoBooth: boolean
+  cameraService: "none" | "camera" | "cameraWithPrints"
   name: string
   email: string
   phone: string
   eventDetails: string
 }
 
-// Packages vary by event type
-const defaultPackages = {
-  basic: { name: "Basic", price: 899, hours: 2 },
-  premium: { name: "Premium", price: 1299, hours: 4 },
-  luxury: { name: "Luxury", price: 1899, hours: 6 },
+const services = {
+  photoBooth: { name: "Magazine Photo Booth Setup", price: 35000, icon: Camera },
+  camera: { name: "Professional Photography", price: 5000, icon: Camera },
+  cameraWithPrints: { name: "Camera with Instant Prints", price: 15000, icon: Printer },
 }
 
-const packagesByEventType: Record<string, typeof defaultPackages> = {
-  // Weddings
-  wedding: {
-    classic: { name: "Classic", price: 999, hours: 3 },
-    signature: { name: "Signature", price: 1399, hours: 5 },
-    royal: { name: "Royal", price: 1999, hours: 7 },
-  } as any,
-  // Corporate
-  corporate: {
-    brandStarter: { name: "Brand Starter", price: 1199, hours: 3 },
-    brandPlus: { name: "Brand Plus", price: 1599, hours: 4 },
-    brandExperience: { name: "Brand Experience", price: 2299, hours: 6 },
-  } as any,
-  // Parties / Birthdays
-  birthday: {
-    fun: { name: "Fun", price: 799, hours: 2 },
-    epic: { name: "Epic", price: 1199, hours: 4 },
-    legendary: { name: "Legendary", price: 1699, hours: 5 },
-  } as any,
-  anniversary: {
-    classic: { name: "Classic", price: 949, hours: 3 },
-    signature: { name: "Signature", price: 1349, hours: 5 },
-    royal: { name: "Royal", price: 1899, hours: 6 },
-  } as any,
-  graduation: defaultPackages,
-  other: defaultPackages,
-}
-
-const getPackagesForEvent = (eventType: string) => {
-  return packagesByEventType[eventType] || defaultPackages
-}
-
-const addOns = {
-  extraHour: { name: "Extra Hour", price: 200 },
-  customBranding: { name: "Custom Branding", price: 150 },
-  socialMediaStation: { name: "Social Media Station", price: 100 },
-  premiumProps: { name: "Premium Props Package", price: 75 },
-  additionalPhotographer: { name: "Additional Photographer", price: 300 },
-  customBoothWrap: { name: "Custom Booth Wrap", price: 250 },
-}
+const freeAddOns = [
+  { name: "Unlimited Prints", description: "No limit on photo prints during event" },
+  { name: "Digital Gallery", description: "Online gallery for all event photos" },
+  { name: "Custom Branding", description: "Personalized photo frames and layouts" },
+  { name: "Social Media Collab", description: "Instant social media sharing setup" },
+]
 
 export function AdvancedBookingSystem() {
-  const [bookingData, setBookingData] = useState<BookingData>({
+  const [inquiryData, setInquiryData] = useState<InquiryData>({
     eventDate: "",
     eventType: "",
-    package: "",
-    venueCity: "",
-    expectedGuests: "",
-    extraHours: 0,
-    customBranding: false,
-    socialMediaStation: false,
-    premiumProps: false,
-    additionalPhotographer: false,
-    customBoothWrap: false,
+    eventLocation: "",
+    photoBooth: false,
+    cameraService: "none",
     name: "",
     email: "",
     phone: "",
@@ -99,96 +50,167 @@ export function AdvancedBookingSystem() {
 
   const [quote, setQuote] = useState({
     subtotal: 0,
-    tax: 0,
+    transportCost: 0,
     total: 0,
-    deposit: 0,
   })
 
-  const [showPaymentOptions, setShowPaymentOptions] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   useEffect(() => {
     calculateQuote()
-  }, [bookingData])
-
-  // Reset selected package when event type changes
-  useEffect(() => {
-    setBookingData((prev) => ({ ...prev, package: "" }))
-  }, [bookingData.eventType])
+  }, [inquiryData])
 
   const calculateQuote = () => {
     let subtotal = 0
 
-    // Base package price (depends on event type)
-    const currentPackages = getPackagesForEvent(bookingData.eventType)
-    if (bookingData.package && currentPackages[bookingData.package as keyof typeof currentPackages]) {
-      subtotal += currentPackages[bookingData.package as keyof typeof currentPackages].price
+    // Calculate service costs
+    if (inquiryData.photoBooth) {
+      subtotal += services.photoBooth.price
     }
 
-    // Add-ons
-    subtotal += bookingData.extraHours * addOns.extraHour.price
-    if (bookingData.customBranding) subtotal += addOns.customBranding.price
-    if (bookingData.socialMediaStation) subtotal += addOns.socialMediaStation.price
-    if (bookingData.premiumProps) subtotal += addOns.premiumProps.price
-    if (bookingData.additionalPhotographer) subtotal += addOns.additionalPhotographer.price
-    if (bookingData.customBoothWrap) subtotal += addOns.customBoothWrap.price
+    if (inquiryData.cameraService === "camera") {
+      subtotal += services.camera.price
+    } else if (inquiryData.cameraService === "cameraWithPrints") {
+      subtotal += services.cameraWithPrints.price
+    }
 
-    const tax = subtotal * 0.0875 // 8.75% tax
-    const total = subtotal + tax
-    const deposit = total * 0.3 // 30% deposit
+    // Transport cost calculation (simplified - would be dynamic based on location)
+    const transportCost = inquiryData.eventLocation && inquiryData.eventLocation.toLowerCase() !== "noida" ? 5000 : 0
 
-    setQuote({ subtotal, tax, total, deposit })
+    const total = subtotal + transportCost
+
+    setQuote({ subtotal, transportCost, total })
   }
 
-  const handleInputChange = (field: keyof BookingData, value: any) => {
-    setBookingData((prev) => ({ ...prev, [field]: value }))
+  const handleInputChange = (field: keyof InquiryData, value: any) => {
+    setInquiryData((prev) => ({ ...prev, [field]: value }))
+  }
+
+  const handleCameraServiceChange = (value: string) => {
+    setInquiryData((prev) => ({
+      ...prev,
+      cameraService: value as "none" | "camera" | "cameraWithPrints",
+    }))
   }
 
   const getQuoteBreakdown = () => {
     const items = []
 
-    const currentPackages = getPackagesForEvent(bookingData.eventType)
-    if (bookingData.package && currentPackages[bookingData.package as keyof typeof currentPackages]) {
-      const pkg = currentPackages[bookingData.package as keyof typeof currentPackages]
-      items.push({ name: `${pkg.name} Package (${pkg.hours}hrs)`, price: pkg.price })
-    }
-
-    if (bookingData.extraHours > 0) {
+    if (inquiryData.photoBooth) {
       items.push({
-        name: `Extra Hours (${bookingData.extraHours})`,
-        price: bookingData.extraHours * addOns.extraHour.price,
+        name: "Magazine Photo Booth Setup",
+        price: services.photoBooth.price,
       })
     }
-    if (bookingData.customBranding) items.push({ name: addOns.customBranding.name, price: addOns.customBranding.price })
-    if (bookingData.socialMediaStation)
-      items.push({ name: addOns.socialMediaStation.name, price: addOns.socialMediaStation.price })
-    if (bookingData.premiumProps) items.push({ name: addOns.premiumProps.name, price: addOns.premiumProps.price })
-    if (bookingData.additionalPhotographer)
-      items.push({ name: addOns.additionalPhotographer.name, price: addOns.additionalPhotographer.price })
-    if (bookingData.customBoothWrap)
-      items.push({ name: addOns.customBoothWrap.name, price: addOns.customBoothWrap.price })
+
+    if (inquiryData.cameraService === "camera") {
+      items.push({
+        name: "Professional Photography",
+        price: services.camera.price,
+      })
+    }
+
+    if (inquiryData.cameraService === "cameraWithPrints") {
+      items.push({
+        name: "Camera with Instant Prints",
+        price: services.cameraWithPrints.price,
+      })
+    }
+
+    if (quote.transportCost > 0) {
+      items.push({
+        name: "Transport Cost (Outside Noida)",
+        price: quote.transportCost,
+      })
+    }
 
     return items
   }
 
   const isFormValid = () => {
     return (
-      bookingData.eventDate &&
-      bookingData.eventType &&
-      bookingData.package &&
-      bookingData.venueCity &&
-      bookingData.expectedGuests &&
-      bookingData.name &&
-      bookingData.email &&
-      bookingData.phone
+      inquiryData.eventDate &&
+      inquiryData.eventType &&
+      inquiryData.eventLocation &&
+      (inquiryData.photoBooth || inquiryData.cameraService !== "none") &&
+      inquiryData.name &&
+      inquiryData.email &&
+      inquiryData.phone
+    )
+  }
+
+  const handleSubmitInquiry = async () => {
+    if (!isFormValid()) return
+
+    setIsSubmitting(true)
+
+    try {
+      // Simulate API call to backend
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+
+      console.log("[v0] Inquiry submitted:", {
+        ...inquiryData,
+        quote: quote,
+        submittedAt: new Date().toISOString(),
+      })
+
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error("[v0] Error submitting inquiry:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (isSubmitted) {
+    return (
+      <div className="max-w-4xl mx-auto text-center py-16">
+        <div className="glass-enhanced rounded-2xl p-8 border-0">
+          <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Lock className="h-8 w-8 text-white" />
+          </div>
+          <h2 className="font-display text-3xl font-bold mb-4 text-gradient">Date Locked Successfully!</h2>
+          <p className="text-gray-300 mb-6">
+            Thank you for your inquiry. We've received your event details and will contact you within 24 hours to
+            confirm availability and discuss your requirements.
+          </p>
+          <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-400/30 mb-6">
+            <p className="text-sm text-purple-300">
+              <strong>Event Date:</strong> {new Date(inquiryData.eventDate).toLocaleDateString()} <br />
+              <strong>Estimated Total:</strong> ₹{quote.total.toLocaleString()}
+            </p>
+          </div>
+          <Button3D
+            onClick={() => {
+              setIsSubmitted(false)
+              setInquiryData({
+                eventDate: "",
+                eventType: "",
+                eventLocation: "",
+                photoBooth: false,
+                cameraService: "none",
+                name: "",
+                email: "",
+                phone: "",
+                eventDetails: "",
+              })
+            }}
+            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+          >
+            Submit Another Inquiry
+          </Button3D>
+        </div>
+      </div>
     )
   }
 
   return (
     <div className="max-w-7xl mx-auto">
-      <h2 className="font-display text-5xl font-bold text-center mb-16 text-gradient">Book Your Event</h2>
+      <h2 className="font-display text-5xl font-bold text-center mb-16 text-gradient">Event Inquiry Form</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Booking Form */}
+        {/* Inquiry Form */}
         <div className="lg:col-span-2">
           <Card className="glass-enhanced border-0">
             <CardHeader>
@@ -198,13 +220,12 @@ export function AdvancedBookingSystem() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Event Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-semibold mb-2">Event Date *</label>
                   <Input
                     type="date"
-                    value={bookingData.eventDate}
+                    value={inquiryData.eventDate}
                     onChange={(e) => handleInputChange("eventDate", e.target.value)}
                     className="glass border-gray-600 focus:border-purple-400"
                     min={new Date().toISOString().split("T")[0]}
@@ -214,7 +235,7 @@ export function AdvancedBookingSystem() {
                 <div>
                   <label className="block text-sm font-semibold mb-2">Event Type *</label>
                   <Select
-                    value={bookingData.eventType}
+                    value={inquiryData.eventType}
                     onValueChange={(value) => handleInputChange("eventType", value)}
                   >
                     <SelectTrigger className="glass border-gray-600">
@@ -231,112 +252,157 @@ export function AdvancedBookingSystem() {
                   </Select>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Venue City *</label>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-semibold mb-2">Event Location *</label>
                   <Input
-                    placeholder="Los Angeles, CA"
-                    value={bookingData.venueCity}
-                    onChange={(e) => handleInputChange("venueCity", e.target.value)}
+                    placeholder="Enter complete event address"
+                    value={inquiryData.eventLocation}
+                    onChange={(e) => handleInputChange("eventLocation", e.target.value)}
                     className="glass border-gray-600 focus:border-purple-400"
                   />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Expected Guests *</label>
-                  <Select
-                    value={bookingData.expectedGuests}
-                    onValueChange={(value) => handleInputChange("expectedGuests", value)}
-                  >
-                    <SelectTrigger className="glass border-gray-600">
-                      <SelectValue placeholder="Number of guests" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1-50">1-50 guests</SelectItem>
-                      <SelectItem value="51-100">51-100 guests</SelectItem>
-                      <SelectItem value="101-200">101-200 guests</SelectItem>
-                      <SelectItem value="201-300">201-300 guests</SelectItem>
-                      <SelectItem value="300+">300+ guests</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <p className="text-xs text-gray-400 mt-1">Transport charges apply for locations outside Noida</p>
                 </div>
               </div>
 
-              {/* Package Selection */}
               <div>
-                <label className="block text-sm font-semibold mb-4">Package Selection *</label>
-                {!bookingData.eventType && (
-                  <div className="text-sm text-gray-400 mb-4">Select an event type to see packages</div>
-                )}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {Object.entries(getPackagesForEvent(bookingData.eventType)).map(([key, pkg]) => (
-                    <div
-                      key={key}
-                      onClick={() => handleInputChange("package", key)}
-                      className={`p-4 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
-                        bookingData.package === key
-                          ? "border-purple-400 bg-purple-400/10 neon-glow"
-                          : "border-gray-600 glass hover:border-purple-400/50"
-                      }`}
-                    >
-                      <div className="text-center">
-                        <h3 className="font-display text-lg font-bold mb-2">{pkg.name}</h3>
-                        <div className="text-2xl font-bold text-gold mb-1">${pkg.price}</div>
-                        <div className="text-sm text-gray-400">{pkg.hours} hours included</div>
+                <label className="block text-sm font-semibold mb-4">Service Selection *</label>
+                <div className="space-y-4">
+                  {/* Photo Booth */}
+                  <div className="p-4 rounded-lg border border-gray-600 glass">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <input
+                          type="checkbox"
+                          id="photoBooth"
+                          checked={inquiryData.photoBooth}
+                          onChange={(e) => handleInputChange("photoBooth", e.target.checked)}
+                          className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 rounded focus:ring-purple-500"
+                        />
+                        <Camera className="h-5 w-5 text-purple-400 mr-3" />
+                        <div>
+                          <h3 className="font-semibold">{services.photoBooth.name}</h3>
+                          <p className="text-sm text-gray-400">Professional magazine-style photo booth setup</p>
+                        </div>
                       </div>
+                      <div className="text-right">
+                        <div className="bg-gray-900/80 rounded px-2 py-1">
+                          <div className="text-lg font-bold text-yellow-300">
+                            ₹{services.photoBooth.price.toLocaleString()}
+                          </div>
+                          <div className="text-xs text-gray-300">per setup</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Camera Services - Mutually Exclusive */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-900 bg-gray-100 rounded px-2 py-1 inline-block">
+                      Photography Service (Select One):
+                    </h4>
+
+                    {/* No Camera Service */}
+                    <div className="p-4 rounded-lg border border-gray-600 glass">
+                      <div className="flex items-center">
+                        <input
+                          type="radio"
+                          id="noCameraService"
+                          name="cameraService"
+                          value="none"
+                          checked={inquiryData.cameraService === "none"}
+                          onChange={(e) => handleCameraServiceChange(e.target.value)}
+                          className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
+                        />
+                        <div>
+                          <h3 className="font-semibold">No Photography Service</h3>
+                          <p className="text-sm text-gray-400">Skip photography service</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Camera Individual */}
+                    <div className="p-4 rounded-lg border border-gray-600 glass">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            id="cameraOnly"
+                            name="cameraService"
+                            value="camera"
+                            checked={inquiryData.cameraService === "camera"}
+                            onChange={(e) => handleCameraServiceChange(e.target.value)}
+                            className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
+                          />
+                          <Camera className="h-5 w-5 text-purple-400 mr-3" />
+                          <div>
+                            <h3 className="font-semibold">{services.camera.name}</h3>
+                            <p className="text-sm text-gray-400">Professional photography service only</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="bg-gray-900/80 rounded px-2 py-1">
+                            <div className="text-lg font-bold text-yellow-300">
+                              ₹{services.camera.price.toLocaleString()}
+                            </div>
+                            <div className="text-xs text-gray-300">per photographer</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Camera with Prints */}
+                    <div className="p-4 rounded-lg border border-gray-600 glass">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <input
+                            type="radio"
+                            id="cameraWithPrints"
+                            name="cameraService"
+                            value="cameraWithPrints"
+                            checked={inquiryData.cameraService === "cameraWithPrints"}
+                            onChange={(e) => handleCameraServiceChange(e.target.value)}
+                            className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
+                          />
+                          <Printer className="h-5 w-5 text-purple-400 mr-3" />
+                          <div>
+                            <h3 className="font-semibold">{services.cameraWithPrints.name}</h3>
+                            <p className="text-sm text-gray-400">Photography with instant high-quality prints</p>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className="bg-gray-900/80 rounded px-2 py-1">
+                            <div className="text-lg font-bold text-yellow-300">
+                              ₹{services.cameraWithPrints.price.toLocaleString()}
+                            </div>
+                            <div className="text-xs text-gray-300">per setup</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-semibold mb-4 flex items-center">
+                  <Gift className="h-5 w-5 text-green-400 mr-2" />
+                  Complimentary Add-ons
+                </label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {freeAddOns.map((addon, index) => (
+                    <div key={index} className="p-3 rounded-lg bg-green-900/20 border border-green-400/30">
+                      <div className="flex items-center mb-1">
+                        <Gift className="h-4 w-4 text-green-400 mr-2" />
+                        <h4 className="font-semibold text-green-400">{addon.name}</h4>
+                        <Badge className="ml-auto bg-green-600 text-xs">FREE</Badge>
+                      </div>
+                      <p className="text-xs text-gray-300">{addon.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Add-ons */}
-              <div>
-                <label className="block text-sm font-semibold mb-4">Add-ons & Upgrades</label>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Extra Hours</label>
-                    <Select
-                      value={bookingData.extraHours.toString()}
-                      onValueChange={(value) => handleInputChange("extraHours", Number.parseInt(value))}
-                    >
-                      <SelectTrigger className="glass border-gray-600">
-                        <SelectValue placeholder="Additional hours" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="0">No extra hours</SelectItem>
-                        <SelectItem value="1">+1 hour (+$200)</SelectItem>
-                        <SelectItem value="2">+2 hours (+$400)</SelectItem>
-                        <SelectItem value="3">+3 hours (+$600)</SelectItem>
-                        <SelectItem value="4">+4 hours (+$800)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
-                      { key: "customBranding", label: "Custom Branding", price: 150 },
-                      { key: "socialMediaStation", label: "Social Media Station", price: 100 },
-                      { key: "premiumProps", label: "Premium Props Package", price: 75 },
-                      { key: "additionalPhotographer", label: "Additional Photographer", price: 300 },
-                      { key: "customBoothWrap", label: "Custom Booth Wrap", price: 250 },
-                    ].map((addon) => (
-                      <div key={addon.key} className="flex items-center space-x-3">
-                        <Checkbox
-                          id={addon.key}
-                          checked={bookingData[addon.key as keyof BookingData] as boolean}
-                          onCheckedChange={(checked) => handleInputChange(addon.key as keyof BookingData, checked)}
-                        />
-                        <label htmlFor={addon.key} className="text-sm flex-1 cursor-pointer">
-                          {addon.label} <span className="text-gold font-semibold">(+${addon.price})</span>
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
               <Separator className="bg-gray-700" />
-
 
               {/* Contact Information */}
               <div>
@@ -349,7 +415,7 @@ export function AdvancedBookingSystem() {
                     <label className="block text-sm font-semibold mb-2">Full Name *</label>
                     <Input
                       placeholder="Your full name"
-                      value={bookingData.name}
+                      value={inquiryData.name}
                       onChange={(e) => handleInputChange("name", e.target.value)}
                       className="glass border-gray-600 focus:border-purple-400"
                     />
@@ -359,7 +425,7 @@ export function AdvancedBookingSystem() {
                     <Input
                       type="email"
                       placeholder="your@email.com"
-                      value={bookingData.email}
+                      value={inquiryData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
                       className="glass border-gray-600 focus:border-purple-400"
                     />
@@ -368,8 +434,8 @@ export function AdvancedBookingSystem() {
                     <label className="block text-sm font-semibold mb-2">Phone Number *</label>
                     <Input
                       type="tel"
-                      placeholder="(555) 123-4567"
-                      value={bookingData.phone}
+                      placeholder="+91 98765 43210"
+                      value={inquiryData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
                       className="glass border-gray-600 focus:border-purple-400"
                     />
@@ -382,7 +448,7 @@ export function AdvancedBookingSystem() {
                 <label className="block text-sm font-semibold mb-2">Event Details & Special Requests</label>
                 <Textarea
                   placeholder="Tell us about your event, venue details, theme, special requirements, or any questions you have..."
-                  value={bookingData.eventDetails}
+                  value={inquiryData.eventDetails}
                   onChange={(e) => handleInputChange("eventDetails", e.target.value)}
                   className="glass border-gray-600 focus:border-purple-400 min-h-[120px]"
                 />
@@ -398,7 +464,7 @@ export function AdvancedBookingSystem() {
               <CardHeader>
                 <CardTitle className="font-display text-xl flex items-center">
                   <Calculator className="mr-2 h-5 w-5 text-gold" />
-                  Instant Quote
+                  Estimated Quote
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -409,7 +475,7 @@ export function AdvancedBookingSystem() {
                       {getQuoteBreakdown().map((item, index) => (
                         <div key={index} className="flex justify-between text-sm">
                           <span className="text-gray-300">{item.name}</span>
-                          <span className="font-semibold">${item.price}</span>
+                          <span className="font-semibold">₹{item.price.toLocaleString()}</span>
                         </div>
                       ))}
                     </div>
@@ -418,38 +484,32 @@ export function AdvancedBookingSystem() {
 
                     {/* Totals */}
                     <div className="space-y-2">
-                      <div className="flex justify-between">
-                        <span>Subtotal</span>
-                        <span className="font-semibold">${quote.subtotal.toFixed(2)}</span>
-                      </div>
-                      <div className="flex justify-between text-sm text-gray-400">
-                        <span>Tax (8.75%)</span>
-                        <span>${quote.tax.toFixed(2)}</span>
-                      </div>
-                      <Separator className="bg-gray-700" />
                       <div className="flex justify-between text-lg font-bold">
-                        <span>Total</span>
-                        <span className="text-gold">${quote.total.toFixed(2)}</span>
+                        <span>Estimated Total</span>
+                        <div className="bg-gray-900/80 rounded px-2 py-1">
+                          <span className="text-yellow-300">₹{quote.total.toLocaleString()}</span>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="bg-purple-900/20 rounded-lg p-3 border border-purple-400/30">
+                    <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-400/30">
                       <div className="flex items-center mb-2">
-                        <DollarSign className="h-4 w-4 text-green-400 mr-2" />
-                        <span className="text-sm font-semibold">Deposit Required</span>
+                        <Send className="h-4 w-4 text-blue-400 mr-2" />
+                        <span className="text-sm font-semibold">Inquiry Process</span>
                       </div>
-                      <div className="text-2xl font-bold text-green-400">${quote.deposit.toFixed(2)}</div>
-                      <div className="text-xs text-gray-400">30% to secure your date</div>
+                      <div className="text-xs text-gray-300">
+                        Submit your inquiry to lock your preferred date. We'll contact you within 24 hours to confirm
+                        availability and finalize details.
+                      </div>
                     </div>
 
-                    {/* Lock Date Button */}
                     <Button3D
-                      onClick={() => setShowPaymentOptions(true)}
-                      disabled={!isFormValid()}
+                      onClick={handleSubmitInquiry}
+                      disabled={!isFormValid() || isSubmitting}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg py-3"
                     >
                       <Lock className="mr-2 h-5 w-5" />
-                      Lock This Date
+                      {isSubmitting ? "Submitting..." : "Lock This Date"}
                     </Button3D>
 
                     {!isFormValid() && (
@@ -459,57 +519,11 @@ export function AdvancedBookingSystem() {
                 ) : (
                   <div className="text-center py-8">
                     <Calculator className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                    <p className="text-gray-400">Select a package to see pricing</p>
+                    <p className="text-gray-400">Select services to see pricing</p>
                   </div>
                 )}
               </CardContent>
             </Card>
-
-            {/* Payment Options */}
-            {showPaymentOptions && quote.total > 0 && (
-              <ScrollReveal direction="up">
-                <Card className="glass-enhanced border-0">
-                  <CardHeader>
-                    <CardTitle className="font-display text-xl flex items-center">
-                      <CreditCard className="mr-2 h-5 w-5 text-green-400" />
-                      Payment Options
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="text-sm text-gray-300 mb-4">
-                      Secure your date with a ${quote.deposit.toFixed(2)} deposit. Remaining balance due 7 days before 
-                      event.
-                    </div>
-
-                    {/* Payment Methods */}
-                    <div className="space-y-3">
-                      <Button3D className="w-full justify-start bg-blue-600 hover:bg-blue-700">
-                        <CreditCard className="mr-3 h-5 w-5" />
-                        Pay with Stripe
-                        <Badge className="ml-auto bg-green-600">Secure</Badge>
-                      </Button3D>
-
-                      <Button3D className="w-full justify-start bg-orange-600 hover:bg-orange-700"> 
-                        <Smartphone className="mr-3 h-5 w-5" />
-                        UPI Payment
-                        <Badge className="ml-auto bg-green-600">Instant</Badge>
-                      </Button3D>
-
-                      <Button3D className="w-full justify-start bg-purple-600 hover:bg-purple-700">
-                        <DollarSign className="mr-3 h-5 w-5" />
-                        Razorpay
-                        <Badge className="ml-auto bg-green-600">Popular</Badge>
-                      </Button3D>
-                    </div>
-
-                    <div className="flex items-center text-xs text-gray-400 mt-4">
-                      <Lock className="h-3 w-3 mr-1" />
-                      SSL encrypted • 256-bit security
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-            )}
           </div>
         </div>
       </div>

@@ -106,7 +106,7 @@ export default function RootLayout({
               description: "Luxury Booth for weddings, corporate events, and parties",
               url: "https://magazinephotobooth.com",
               telephone: "(555) 123-4567",
-              email: "hello@magazinephotobooth.com",
+              email: "luxurymagazinebooth@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Los Angeles",

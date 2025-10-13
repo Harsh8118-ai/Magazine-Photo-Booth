@@ -22,6 +22,7 @@ import { GalleryModal } from "@/components/gallery-modal"
 import { LegalModal } from "@/components/legal-modal"
 import { FloatingNavigation } from "@/components/floating-navigation"
 import { SectionWrapper } from "@/components/section-wrapper"
+import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 
 export default function MagazinePhotoBoothPage() {
   const [selectedPackage, setSelectedPackage] = useState("weddings")
@@ -31,6 +32,7 @@ export default function MagazinePhotoBoothPage() {
     isOpen: false,
     type: null,
   })
+
   const [bookingData, setBookingData] = useState({
     date: "",
     eventType: "",
@@ -38,12 +40,14 @@ export default function MagazinePhotoBoothPage() {
     city: "",
   })
 
+  const router = useRouter();
+
   const navigationSections = [
     { id: "hero-section", label: "Home", icon: Home },
     { id: "packages-section", label: "Packages", icon: Package },
     { id: "gallery-section", label: "Gallery", icon: Camera },
-    { id: "testimonials-section", label: "Reviews", icon: Users },
     { id: "booking-section", label: "Book Now", icon: Calendar },
+    { id: "testimonials-section", label: "Reviews", icon: Users },
     { id: "contact-section", label: "Contact", icon: MessageCircle },
   ]
 
@@ -76,110 +80,10 @@ export default function MagazinePhotoBoothPage() {
     setLegalModal({ isOpen: false, type: null })
   }
 
-  const router = useRouter();
-
   const handleViewGallery = () => {
-    router.push("/gallery"); // Routes to the gallery page
+    router.push("/gallery");
   };
 
-  // Different packages per event type
-  const packagesByType: Record<string, Array<{ name: string; price: string; features: string[]; popular?: boolean }>> = {
-    weddings: [
-      {
-        name: "Classic",
-        price: "$999",
-        features: ["3 Hours Service", "75 Prints Included", "Elegant Props", "Digital Gallery"],
-      },
-      {
-        name: "Signature",
-        price: "$1,399",
-        features: [
-          "5 Hours Service",
-          "150 Prints Included",
-          "Custom Cover Design",
-          "Guestbook Station",
-          "Social Sharing",
-          "Digital Gallery",
-        ],
-        popular: true,
-      },
-      {
-        name: "Royal",
-        price: "$1,999",
-        features: [
-          "7 Hours Service",
-          "Unlimited Prints",
-          "Luxury Props",
-          "Monogram & Branding",
-          "Social Media Station",
-          "On-site Attendant",
-          "Digital Gallery",
-        ],
-      },
-    ],
-    corporate: [
-      {
-        name: "Brand Starter",
-        price: "$1,199",
-        features: ["3 Hours Service", "Company Logo Overlay", "Standard Props", "Digital Gallery"],
-      },
-      {
-        name: "Brand Plus",
-        price: "$1,599",
-        features: [
-          "4 Hours Service",
-          "Custom Branded Covers",
-          "Lead Capture QR",
-          "Social Sharing",
-          "Digital Gallery",
-        ],
-        popular: true,
-      },
-      {
-        name: "Brand Experience",
-        price: "$2,299",
-        features: [
-          "6 Hours Service",
-          "Unlimited Prints",
-          "Full Booth Wrap",
-          "Advanced Analytics",
-          "On-site Technician",
-          "Digital Gallery",
-        ],
-      },
-    ],
-    parties: [
-      {
-        name: "Fun",
-        price: "$799",
-        features: ["2 Hours Service", "50 Prints Included", "Party Props", "Digital Gallery"],
-      },
-      {
-        name: "Epic",
-        price: "$1,199",
-        features: [
-          "4 Hours Service",
-          "100 Prints Included",
-          "Custom Covers",
-          "Social Sharing",
-          "Digital Gallery",
-        ],
-        popular: true,
-      },
-      {
-        name: "Legendary",
-        price: "$1,699",
-        features: [
-          "5 Hours Service",
-          "Unlimited Prints",
-          "Premium Props",
-          "Party Branding",
-          "On-site Attendant",
-          "Digital Gallery",
-        ],
-      },
-    ],
-  }
 
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -202,7 +106,6 @@ export default function MagazinePhotoBoothPage() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
         </div>
-
         <Floating3DScene />
 
         {/* Hero Content */}
@@ -238,7 +141,7 @@ export default function MagazinePhotoBoothPage() {
             >
               <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               See Packages
-            </Button3D> 
+            </Button3D>
           </div>
 
           {/* Stats Bar - Improved mobile responsiveness and SEO */}
@@ -253,7 +156,7 @@ export default function MagazinePhotoBoothPage() {
                 <div className="text-xs sm:text-sm text-gray-400">Magazine Covers Printed</div>
               </div>
               <div>
-                <AnimatedCounter end={850} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
+                <AnimatedCounter end={250} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
                 <div className="text-xs sm:text-sm text-gray-400">Successful Events</div>
               </div>
               <div>
@@ -322,7 +225,7 @@ export default function MagazinePhotoBoothPage() {
                   {
                     step: "02",
                     title: "See Live Cover",
-                    desc: "Watch yourself appear on a live magazine cover behind you",
+                    desc: "Watch yourself appear on a live magazine cover",
                     icon: Camera,
                   },
                   {
@@ -365,128 +268,133 @@ export default function MagazinePhotoBoothPage() {
         </ScrollReveal>
       </ParallaxSection>
 
-      {/* Packages & Pricing Section */}
+      {/* Charges & Services Section */}
       <ScrollReveal direction="up" delay={0.2}>
         <SectionWrapper
           id="packages-section"
-          ariaLabel="Pricing packages and options"
+          ariaLabel="Service charges and pricing information"
           className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-8 text-gradient">
-              Packages & Pricing
+              Charges & Services
             </h2>
+            <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg">
+              Professional magazine photo booth services with transparent pricing
+            </p>
 
-            {/* Package Toggle - Improved mobile layout */}
-            <div className="flex justify-center mb-8 sm:mb-12">
-              <div className="glass-enhanced rounded-full p-1 sm:p-2 flex flex-wrap justify-center">
-                {["weddings", "corporate", "parties"].map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => setSelectedPackage(type)}
-                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 capitalize text-sm sm:text-base ${
-                      selectedPackage === type ? "bg-purple-600 text-white neon-glow" : "text-gray-400 hover:text-white"
-                    }`}
-                  >
-                    {type}
-                  </button>
+            <div className="glass-enhanced rounded-2xl p-6 sm:p-8 mb-8">
+              <div className="space-y-6">
+                {[
+                  {
+                    service: "Magazine Photo Booth Setup",
+                    price: "₹35,000",
+                    description: "Complete booth setup with professional equipment and magazine covers",
+                  },
+                  {
+                    service: "Instant High Quality Prints",
+                    price: "₹20,000",
+                    description: "Premium quality instant prints for all guests",
+                  },
+                  {
+                    service: "Professional Photography",
+                    price: "₹5,000",
+                    description: "Expert photographer to capture perfect shots",
+                  },
+                  {
+                    service: "Transport Cost",
+                    price: "As per distance from Noida",
+                    description: "Travel charges calculated based on venue location",
+                  },
+                ].map((item, index) => (
+                  <ScrollReveal key={index} direction="left" delay={0.1 * index}>
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 glass rounded-xl hover:neon-glow transition-all duration-300">
+                      <div className="flex-1 mb-4 sm:mb-0">
+                        <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-2">{item.service}</h3>
+                        <p className="text-gray-400 text-sm sm:text-base">{item.description}</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xl sm:text-2xl font-bold text-gold font-display">{item.price}</div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </div>
 
-            {/* Pricing Cards - Improved mobile responsiveness */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              {(packagesByType[selectedPackage] || packagesByType.weddings).map((pkg, index) => (
-                <ScrollReveal key={index} direction="scale" delay={0.1 * index}>
-                  <Card
-                    className={`glass-enhanced scale-on-hover border-0 relative gpu-accelerated ${pkg.popular ? "neon-glow" : ""}`}
-                  >
-                    {pkg.popular && (
-                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-1">
-                        Most Popular
-                      </Badge>
-                    )}
-                    <CardHeader className="text-center pb-4">
-                      <CardTitle className="font-display text-xl sm:text-2xl mb-2">{pkg.name}</CardTitle>
-                      <div className="text-3xl sm:text-4xl font-bold text-gold mb-2">{pkg.price}</div>
-                      <div className="text-gray-400 text-sm sm:text-base">per event</div>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6">
-                      <ul className="space-y-3 mb-8">
-                        {pkg.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center">
-                            <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 mr-3 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm sm:text-base">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <Button3D
-                        onClick={() => handlePackageSelect(pkg.name)}
-                        className={`w-full text-sm sm:text-base ${pkg.popular ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" : "border border-gold text-gold hover:bg-gold hover:text-black"}`}
-                      >
-                        Choose {pkg.name}
-                      </Button3D>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-              ))}
-            </div>
+            <ScrollReveal direction="up" delay={0.4}>
+              <div className="glass-enhanced rounded-2xl p-6 sm:p-8 text-center border border-gold/30">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 mb-4">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Booking Information</h3>
+                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                  <span className="text-gold font-semibold">For Bookings:</span> You have to pay half of the amount of
+                  the services you select as advance payment.
+                </p>
+                <div className="mt-6 text-sm text-gray-400">
+                  Final pricing may vary based on event requirements and location
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </SectionWrapper>
+      </ScrollReveal>
+
+      {/* What We Need From Your Venue  */}
+      <ScrollReveal direction="up" delay={0.2}>
+        <SectionWrapper
+          id="faq-section"
+          ariaLabel="Frequently asked questions and logistics information"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        >
+          <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
+            <VenueRequirements />
           </div>
         </SectionWrapper>
       </ScrollReveal>
 
       {/* Event Gallery Section */}
-       <ScrollReveal direction="up" delay={0.2}>
-      <SectionWrapper
-        id="gallery-section"
-        ariaLabel="Photo gallery of past events"
-        className="py-16 sm:py-20 px-4 sm:px-6"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
-            Event Gallery
-          </h2>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
-                <div className="aspect-square overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
-                  <img
-                    src={`/magazine-photobooth.png?height=300&width=300&query=magazine photo booth event ${index + 1}`}
-                    alt={`Event photo ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button3D
-              variant="outline"
-              onClick={handleViewGallery}
-              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
-            >
-              View Full Gallery
-            </Button3D>
-          </div>
-        </div>
-      </SectionWrapper>
-    </ScrollReveal>
-
       <ScrollReveal direction="up" delay={0.2}>
         <SectionWrapper
-          id="testimonials-section"
-          ariaLabel="Customer testimonials and reviews"
-          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+          id="gallery-section"
+          ariaLabel="Photo gallery of past events"
+          className="py-16 sm:py-20 px-4 sm:px-6"
         >
           <div className="max-w-7xl mx-auto">
-            <TestimonialCarousel />
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+              Event Gallery
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
+              {Array.from({ length: 8 }).map((_, index) => (
+                <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
+                  <div className="aspect-square overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
+                    <img
+                      src={`/Images/${index + 1}.png`}
+                      alt={`Event photo ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Button3D
+                variant="outline"
+                onClick={handleViewGallery}
+                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+              >
+                View Full Gallery
+              </Button3D>
+            </div>
           </div>
         </SectionWrapper>
       </ScrollReveal>
 
-      <ScrollReveal direction="up" delay={0.2}>
+      {/* Trusted by Premium Parteners */}
+      {/* <ScrollReveal direction="up" delay={0.2}>
         <SectionWrapper
           id="clients-section"
           ariaLabel="Client logos and partnerships"
@@ -496,7 +404,7 @@ export default function MagazinePhotoBoothPage() {
             <ClientLogos />
           </div>
         </SectionWrapper>
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       {/* Why Choose Us Section */}
       <ParallaxSection speed={0.2}>
@@ -582,62 +490,7 @@ export default function MagazinePhotoBoothPage() {
         </ScrollReveal>
       </ParallaxSection>
 
-      {/* Customization Options Section */}
-      <ScrollReveal direction="up" delay={0.2}>
-        <SectionWrapper
-          id="customization-section"
-          ariaLabel="Customization options for your event"
-          className="py-16 sm:py-20 px-4 sm:px-6"
-        >
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
-              Customization Options
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {[
-                {
-                  title: "Custom Magazine Covers",
-                  desc: "Personalized covers with your event branding",
-                  image: "custom magazine covers design",
-                },
-                {
-                  title: "Branded Booth Exteriors",
-                  desc: "Match your event theme and colors",
-                  image: "branded photo booth exterior",
-                },
-                {
-                  title: "Props & Decor",
-                  desc: "Extensive collection of premium props",
-                  image: "luxury photo booth props",
-                },
-                {
-                  title: "Social Sharing Station",
-                  desc: "Instant social media sharing capabilities",
-                  image: "social media sharing station",
-                },
-              ].map((option, index) => (
-                <ScrollReveal key={index} direction="scale" delay={0.1 * index}>
-                  <Card className="glass-enhanced scale-on-hover border-0 group overflow-hidden gpu-accelerated">
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={`/abstract-geometric-shapes.png?height=300&width=300&query=${option.image}`}
-                        alt={option.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <CardContent className="p-4 sm:p-6">
-                      <h3 className="text-lg sm:text-xl font-bold mb-3 font-display">{option.title}</h3>
-                      <p className="text-gray-400 text-sm sm:text-base">{option.desc}</p>
-                    </CardContent>
-                  </Card>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </SectionWrapper>
-      </ScrollReveal>
-
+      {/* Event Enquiry Form  */}
       <ScrollReveal direction="up" delay={0.2}>
         <SectionWrapper
           id="booking-section"
@@ -645,6 +498,19 @@ export default function MagazinePhotoBoothPage() {
           className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
         >
           <AdvancedBookingSystem />
+        </SectionWrapper>
+      </ScrollReveal>
+
+      {/* What Our Clients Say */}
+      <ScrollReveal direction="up" delay={0.2}>
+        <SectionWrapper
+          id="testimonials-section"
+          ariaLabel="Customer testimonials and reviews"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+        >
+          <div className="max-w-7xl mx-auto">
+            <TestimonialCarousel />
+          </div>
         </SectionWrapper>
       </ScrollReveal>
 
@@ -657,37 +523,37 @@ export default function MagazinePhotoBoothPage() {
             className="py-16 sm:py-20 px-4 sm:px-6"
           >
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-0 items-center">
                 <ScrollReveal direction="left" delay={0.3}>
                   <div>
                     <img
-                      src="/photo-booth-bts.png"
+                      src="/Images/AboutUs.png"
                       alt="Our team"
-                      className="w-full h-64 sm:h-96 object-cover rounded-2xl glass-enhanced"
+                      className="w-full sm:w-80 h-full sm:h-full object-cover rounded-2xl glass-enhanced"
                     />
                   </div>
                 </ScrollReveal>
 
                 <ScrollReveal direction="right" delay={0.4}>
                   <div>
-                    <h2 className="font-display text-3xl sm:text-5xl font-bold mb-8 text-gradient">About Us</h2>
-                    <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
+                    <h2 className="font-display text-5xl font-bold text-center mb-8 text-gradient">About Us</h2>
+                    <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed text-center">
                       We're passionate about creating unforgettable moments. Our team of professional photographers and
                       event specialists brings years of experience to make your event extraordinary.
                     </p>
-                    <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed text-center">
                       From intimate weddings to large corporate events, we've helped thousands of guests become cover
                       stars with our innovative magazine photo booth experience.
                     </p>
 
-                    <div className="space-y-4">
+                    <div className="space-y-4 text-center flex items-center flex-col justify-center">
                       <div className="flex items-center space-x-4">
                         <div className="w-3 h-3 bg-gold rounded-full"></div>
-                        <span className="text-sm sm:text-base">Founded in 2019</span>
+                        <span className="text-sm sm:text-base">Founded in 2024    </span>
                       </div>
                       <div className="flex items-center space-x-4">
                         <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                        <span className="text-sm sm:text-base">500+ Events Completed</span>
+                        <span className="text-sm sm:text-base">100+ Events Completed</span>
                       </div>
                       <div className="flex items-center space-x-4">
                         <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
@@ -711,7 +577,6 @@ export default function MagazinePhotoBoothPage() {
         >
           <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
             <FaqsSection />
-            <VenueRequirements />
           </div>
         </SectionWrapper>
       </ScrollReveal>
@@ -722,7 +587,7 @@ export default function MagazinePhotoBoothPage() {
         className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
         role="contentinfo"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Luxury Booth</h3>
@@ -731,19 +596,19 @@ export default function MagazinePhotoBoothPage() {
               </p>
               <div className="flex space-x-4">
                 {[
-                  { name: "facebook", url: "https://facebook.com" },
-                  { name: "instagram", url: "https://instagram.com" },
-                  { name: "twitter", url: "https://twitter.com" },
-                  { name: "linkedin", url: "https://linkedin.com" },
+                  { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
+                  { name: "instagram", url: "https://www.instagram.com/luxurybooth.in", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
+                  { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
+                  { name: "linkedin", url: "https://www.linkedin.com/in/luxury-booth/", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
                 ].map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 glass rounded-full flex items-center justify-center hover:neon-glow transition-all duration-300 cursor-pointer"
+                    className={`w-10 h-10 glass rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer hover:neon-glow ${social.color}`}
                   >
-                    <div className="w-5 h-5 bg-purple-400 rounded"></div>
+                    {social.icon}
                   </a>
                 ))}
               </div>
@@ -825,9 +690,9 @@ export default function MagazinePhotoBoothPage() {
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <p>📞 (555) 123-4567</p>
-                <p>✉️ hello@magazinephotobooth.com</p>
-                <p>📍 Los Angeles, CA</p>
+                <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
+                <p className="flex flex-row">✉️ luxurymagazinebooth@gmail.com</p>
+                <p>📍 Sector-73, Noida</p>
               </div>
             </div>
           </div>
@@ -839,7 +704,7 @@ export default function MagazinePhotoBoothPage() {
                   &copy; 2024 Luxury Booth. All rights reserved.
                 </p>
                 <p className="text-gray-500 text-xs sm:text-sm mt-1">
-                  Licensed & Insured | CA License #12345 | Serving Los Angeles & Orange County
+                  Licensed & Insured
                 </p>
               </div>
 
@@ -863,7 +728,7 @@ export default function MagazinePhotoBoothPage() {
                   Cookie Policy
                 </button>
                 <a
-                  href="mailto:hello@magazinephotobooth.com"
+                  href="mailto:magazinephotobooth@gmail.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact

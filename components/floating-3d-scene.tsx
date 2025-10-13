@@ -4,16 +4,18 @@ import { useRef, useMemo } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import * as THREE from "three"
 
-function FloatingMagazine({
+function FloatingImage({
   position,
   rotation,
   scale,
   delay = 0,
+  imageUrl = "/magazine-cover-template.png", // Added imageUrl prop with default
 }: {
   position: [number, number, number]
   rotation: [number, number, number]
   scale: number
   delay?: number
+  imageUrl?: string // Added imageUrl prop type
 }) {
   const meshRef = useRef<THREE.Mesh>(null)
 
@@ -27,40 +29,16 @@ function FloatingMagazine({
   })
 
   const texture = useMemo(() => {
-    const canvas = document.createElement("canvas")
-    canvas.width = 256
-    canvas.height = 340
-    const ctx = canvas.getContext("2d")!
-
-    // Create gradient background
-    const gradient = ctx.createLinearGradient(0, 0, 256, 340)
-    gradient.addColorStop(0, "#8b5cf6")
-    gradient.addColorStop(0.5, "#3b82f6")
-    gradient.addColorStop(1, "#1e40af")
-
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, 256, 340)
-
-    // Add magazine text
-    ctx.fillStyle = "#ffffff"
-    ctx.font = "bold 24px Arial"
-    ctx.textAlign = "center"
-    ctx.fillText("LUXURY", 128, 50)
-    ctx.font = "16px Arial"
-    ctx.fillText("MAGAZINE", 128, 75)
-
-    // Add decorative elements
-    ctx.fillStyle = "#fbbf24"
-    ctx.fillRect(20, 100, 216, 2)
-    ctx.fillRect(20, 250, 216, 2)
-
-    return new THREE.CanvasTexture(canvas)
-  }, [])
+    const loader = new THREE.TextureLoader()
+    const imageTexture = loader.load(imageUrl)
+    imageTexture.flipY = false // Prevent image from being flipped
+    return imageTexture
+  }, [imageUrl])
 
   return (
     <mesh ref={meshRef} position={position} rotation={rotation} scale={scale}>
       <planeGeometry args={[1, 1.33]} />
-      <meshBasicMaterial map={texture} transparent opacity={0.3} />
+      <meshBasicMaterial map={texture} transparent opacity={0.4} side={THREE.DoubleSide} />
     </mesh>
   )
 }
@@ -68,11 +46,41 @@ function FloatingMagazine({
 function Scene() {
   return (
     <>
-      <FloatingMagazine position={[-3, 2, -2]} rotation={[0.1, 0.3, 0]} scale={0.8} delay={0} />
-      <FloatingMagazine position={[3, -1, -3]} rotation={[-0.1, -0.2, 0.1]} scale={0.6} delay={2} />
-      <FloatingMagazine position={[0, 3, -4]} rotation={[0.2, 0, -0.1]} scale={0.7} delay={4} />
-      <FloatingMagazine position={[-2, -2, -1]} rotation={[0, 0.5, 0.05]} scale={0.5} delay={1} />
-      <FloatingMagazine position={[2.5, 1, -2.5]} rotation={[-0.05, -0.4, 0]} scale={0.9} delay={3} />
+      <FloatingImage
+        position={[-3, 2, -2]}
+        rotation={[0.1, 0.3, 0]}
+        scale={0.8}
+        delay={0}
+        imageUrl="/Floating-Booth.png"
+      />
+      <FloatingImage
+        position={[3, -1, -3]}
+        rotation={[-0.1, -0.2, 0.1]}
+        scale={0.6}
+        delay={2}
+        imageUrl="/Floating-Booth.png"
+      />
+      <FloatingImage
+        position={[0, 3, -4]}
+        rotation={[0.2, 0, -0.1]}
+        scale={0.7}
+        delay={4}
+        imageUrl="/Floating-Booth.png"
+      />
+      <FloatingImage
+        position={[-2, -2, -1]}
+        rotation={[0, 0.5, 0.05]}
+        scale={0.5}
+        delay={1}
+        imageUrl="/Floating-Booth.png"
+      />
+      <FloatingImage
+        position={[2.5, 1, -2.5]}
+        rotation={[-0.05, -0.4, 0]}
+        scale={0.9}
+        delay={3}
+        imageUrl="/Floating-Booth.png"
+      />
     </>
   )
 }
