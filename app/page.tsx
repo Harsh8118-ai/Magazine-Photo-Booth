@@ -376,7 +376,7 @@ export default function MagazinePhotoBoothPage() {
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                </ScrollReveal>  
+                </ScrollReveal>   
               ))}
             </div>
 
