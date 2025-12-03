@@ -25,7 +25,7 @@ export function ClientLogos() {
     <div className="max-w-7xl mx-auto">
       <h2 className="font-display text-5xl font-bold text-center mb-16 text-gradient">Trusted by Premium Brands</h2>
 
-      <div className="space-y-12">
+      <div className="space-y-12"> 
         {/* Wedding Venues */}
         <div>
           <h3 className="font-display text-2xl font-bold text-center mb-8 text-gold">Luxury Wedding Venues</h3>
