@@ -81,7 +81,7 @@ export default function MagazinePhotoBoothPage() {
   }
 
   const handleViewGallery = () => {
-    router.push("/gallery");
+    router.push("/gallery");  
   };
 
 
