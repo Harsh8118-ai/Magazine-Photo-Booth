@@ -109,12 +109,13 @@ export const MultiVideoReels = ({ videoUrls, title, className = "" }: MultiVideo
 
   return (
     <div className={`w-full ${className}`}>
-      {title && <h3 className="text-2xl text-center font-bold mb-6 text-gold/30">{title}</h3>}
+      {title && <h2 className="font-display text-5xl font-bold text-center mb-8 text-gradient mt-2 sm:mt-6">{title}</h2>
+      }
 
       {/* DESKTOP VIEW */}
       <div className="hidden md:flex items-center justify-center gap-6 overflow-x-auto pb-6">
         {validUrls.map((url, index) => (
-          <VideoCard key={index} url={url} showControls={false} isActive={true} />
+          <VideoCard key={index} url={url} showControls={true} isActive={true} />
         ))}
       </div>
 

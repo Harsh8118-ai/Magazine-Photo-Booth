@@ -8,41 +8,45 @@ import { motion } from "framer-motion"
 
 const MirrorSelfieBoothClient = () => {
   const [selectedImage, setSelectedImage] = useState(0)
-  const mirrorBoothPrice = 25000
+  const mirrorBoothPrice = 14999
 
   const galleryImages = [
-    { id: 1, src: "/mirror-selfie-booth-wedding.jpg", alt: "Mirror booth at wedding" },
-    { id: 2, src: "/mirror-selfie-booth-party.jpg", alt: "Mirror booth at party" },
-    { id: 3, src: "/luxury-mirror-booth-setup.jpg", alt: "Mirror booth setup" },
-    { id: 4, src: "/red-carpet-mirror-booth.jpg", alt: "Red carpet setup" },
-    { id: 5, src: "/led-mirror-booth-event.jpg", alt: "LED setup" },
-    { id: 6, src: "/floral-mirror-booth-decoration.jpg", alt: "Floral decoration" },
-    { id: 7, src: "/mirror-booth-corporate-event.jpg", alt: "Corporate event" },
-    { id: 8, src: "/premium-mirror-booth-guests.jpg", alt: "Guest experience" },
+    { id: 1, src: "/Cloudinary/Mirror-Booth/1 (1).jpg", alt: "Mirror selfie booth at wedding" },
+    { id: 2, src: "/Cloudinary/Mirror-Booth/1 (2).jpg", alt: "Mirror booth at party" },
+    { id: 3, src: "/Cloudinary/Mirror-Booth/1 (3).jpg", alt: "Mirror booth setup" },
+    { id: 4, src: "/Cloudinary/Mirror-Booth/1 (4).jpg", alt: "Mirror selfie Booth" },
+    { id: 5, src: "/Cloudinary/Mirror-Booth/1 (5).jpg", alt: "Red carpet setup" },
+    { id: 6, src: "/Cloudinary/Mirror-Booth/1 (6).jpg", alt: "Floral decoration" },
+    { id: 7, src: "/Cloudinary/Mirror-Booth/1 (7).jpg", alt: "Corporate event" },
+    { id: 8, src: "/Cloudinary/Mirror-Booth/1 (8).jpg", alt: "Guest experience" },
+    { id: 9, src: "/Cloudinary/Mirror-Booth/1 (9).jpg", alt: "Product launch" },
+    { id: 10, src: "/Cloudinary/Mirror-Booth/1 (10).jpg", alt: "House Party" },
+    { id: 11, src: "/Cloudinary/Mirror-Booth/1 (11).png", alt: "LED setup" },
   ]
 
   const features = [
-    {
-      icon: Sparkles,
-      title: "Personalized Event Text",
-      description: "Custom vinyl writing with couple names, birthday text, or company branding",
-    },
-    {
-      icon: Heart,
-      title: "Elegant Decoration",
-      description: "Premium floral designs, LED lights, and luxurious red-carpet ambiance",
-    },
-    {
-      icon: Camera,
-      title: "Perfect for Photos",
-      description: "Guests capture selfies with their phones, instantly saving and sharing memories",
-    },
-    {
-      icon: Crown,
-      title: "Celebrity-Style Setup",
-      description: "Ultimate showstopper attraction that becomes the most photo-clicked spot",
-    },
-  ]
+  {
+    icon: Sparkles,
+    title: "Customized Mirror Text",
+    description: "Premium vinyl personalization with names, event titles, or branded messaging for a tailored experience.",
+  },
+  {
+    icon: Heart,
+    title: "Luxury Decor Styling",
+    description: "Elegant floral arrangements, warm ambient lighting, and a rich red-carpet setup that elevates every photo.",
+  },
+  {
+    icon: Camera,
+    title: "Instant Phone Selfies",
+    description: "Guests capture stunning mirror selfies directly on their phones — quick, convenient, and instantly shareable.",
+  },
+  {
+    icon: Crown,
+    title: "Red-Carpet Celebrity Experience",
+    description: "A show-stopping mirror booth setup that becomes the highlight and most-clicked attraction of the event.",
+  },
+];
+
 
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -53,7 +57,7 @@ const MirrorSelfieBoothClient = () => {
             <ChevronLeft size={20} />
             Back to Home
           </Link>
-          <h1 className="text-xl sm:text-2xl font-display font-bold text-gradient">Mirror Selfie Booth</h1>
+          <h1 className="text-xl sm:text-3xl font-display font-bold text-gradient">Mirror Selfie Booth</h1>
           <div className="w-20" /> {/* Spacer */}
         </div>
       </div>
@@ -72,12 +76,12 @@ const MirrorSelfieBoothClient = () => {
             The Luxury <span className="text-gradient">Mirror Selfie</span> Booth Experience
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
-            A glamorous red-carpet corner where guests capture and share unforgettable memories — directly on their
+            A glamorous red-carpet corner where guests capture and share unforgettable memories directly on their
             phones.
           </p>
 
           {/* Hero Image Placeholder */}
-          <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+          <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-items-center">
 
               {/* Left: Image */}
@@ -91,8 +95,8 @@ const MirrorSelfieBoothClient = () => {
                   <Image
                     src="/Cloudinary/Mirror-Booth.JPG"
                     alt="Mirror Selfie Booth Hero"
-                    width={300}
-                    height={200}
+                    width={400}
+                    height={300}
                     className="object-cover"
                   />
                 </div>
@@ -111,7 +115,7 @@ const MirrorSelfieBoothClient = () => {
                   </p>
 
                   <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-                    The mirror selfie booth isn't just a photo opportunity—it's a glamorous focal
+                    The mirror selfie booth isn't just a photo opportunity - it's a glamorous focal
                     point where guests become the stars of their own red-carpet moment.
                   </p>
 
@@ -128,7 +132,7 @@ const MirrorSelfieBoothClient = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-5 sm:py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
+      <section className="py-2 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
             Premium Features
@@ -168,9 +172,9 @@ const MirrorSelfieBoothClient = () => {
             className="glass-enhanced p-8 rounded-lg border border-gold/30 mb-8"
           >
             <div className="mb-6">
-              <p className="text-gold/80 text-sm uppercase tracking-widest mb-2">Mirror Selfie Booth Service</p>
+              <p className="text-gold/80 text-xl uppercase tracking-widest">Mirror Selfie Booth Service</p>
               <div className="flex items-baseline justify-between">
-                <span className="text-xl text-gray-300">Premium Setup & Personalization</span>
+                <span className="text-md text-gray-300">Premium Setup & Personalization</span>
                 <div>
                   <span className="text-4xl sm:text-5xl font-bold text-gold">₹{mirrorBoothPrice.toLocaleString()}</span>
                 </div>
@@ -181,12 +185,12 @@ const MirrorSelfieBoothClient = () => {
               <p className="text-gray-400 text-sm mb-4">What's Included:</p>
               <ul className="space-y-3">
                 {[
-                  "Luxury red-carpet setup with LED lighting",
-                  "Personalized vinyl text (names, event details, branding)",
-                  "Up to 3 hours of service with professional setup",
-                  "Elegant floral decorations and backdrop",
-                  "Guests capture photos directly on their phones",
-                  "Unlimited guest sessions during event",
+                  "Up to 6 hours of service with Professional setup",
+                  "Premium 6×2 ft Mirror Booth with elegant stand",
+                  "Luxury red-Carpet setup in front of the Mirror.",
+                  "Personalized vinyl text (Names, Event details, Branding)",
+                  "Elegant Floral decorations and backdrop",
+                  "Designer wooden easel for custom frames and event instructions",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
                     <Check className="size-5 text-gold mt-0.5 flex-shrink-0" />
@@ -216,7 +220,7 @@ const MirrorSelfieBoothClient = () => {
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-8 text-center text-gradient">Gallery</h2>
 
           {/* Main Gallery Image */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="relative aspect-video rounded-lg overflow-hidden glass-enhanced border border-gold/30 mb-6 max-h-96"
@@ -227,22 +231,28 @@ const MirrorSelfieBoothClient = () => {
               fill
               className="object-cover"
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Thumbnail Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+          <div className="columns-2 sm:columns-3 gap-3 space-y-3">
             {galleryImages.map((image, index) => (
-              <motion.button
+              <motion.div
                 key={image.id}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.02 }}
                 onClick={() => setSelectedImage(index)}
-                className={`relative aspect-square rounded-lg overflow-hidden cursor-pointer border-2 transition-all ${selectedImage === index ? "border-gold" : "border-transparent hover:border-gold/50"
-                  }`}
+                className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
               >
-                <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
-              </motion.button>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={800}
+                  height={800}
+                  className="w-full h-auto rounded-lg"
+                />
+              </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
