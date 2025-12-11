@@ -12,20 +12,20 @@ import { Calendar, Users, Lock, Calculator, Camera, Printer, Gift, Send } from "
 
 interface InquiryData {
   eventDate: string
-  eventType: string
+  // eventType: string
   eventLocation: string
   photoBooth: boolean
   cameraService: "none" | "camera" | "cameraWithPrints"
   name: string
-  email: string
-  phone: string
+  // email: string
+  // phone: string
   eventDetails: string
 }
 
 const services = {
   photoBooth: { name: "Magazine Photo Booth Setup", price: 35000, icon: Camera },
-  camera: { name: "Professional Photography", price: 5000, icon: Camera },
-  cameraWithPrints: { name: "Camera with Instant Prints", price: 15000, icon: Printer },
+  camera: { name: "Professional Photography only", price: 5000, icon: Camera },
+  cameraWithPrints: { name: "Photography with Instant Prints (200)", price: 25000, icon: Printer },
 }
 
 const freeAddOns = [
@@ -38,15 +38,50 @@ const freeAddOns = [
 export function AdvancedBookingSystem() {
   const [inquiryData, setInquiryData] = useState<InquiryData>({
     eventDate: "",
-    eventType: "",
+    // eventType: "",
     eventLocation: "",
     photoBooth: false,
     cameraService: "none",
     name: "",
-    email: "",
-    phone: "",
+    // email: "",
+    // phone: "",
     eventDetails: "",
   })
+
+  // WHATSAPP LOGIC 
+  const COMPANY_WHATSAPP = "919266037002";
+
+  const sendWhatsAppMessage = () => {
+  const booth = inquiryData.photoBooth ? "Yes" : "No";
+
+  const cameraMap: Record<string, string> = {
+    none: "No Photography",
+    camera: "Professional Photography Only",
+    cameraWithPrints: "Photography with Instant Prints (200)"
+  };
+
+  const cameraSelected = cameraMap[inquiryData.cameraService];
+
+  const formattedDate = inquiryData.eventDate
+    ? new Date(inquiryData.eventDate).toLocaleDateString()
+    : "Not provided";
+
+  const message =
+    `New Event Inquiry\n\n` +
+    `📅 Event Date: ${formattedDate}\n` +
+    `📍 Location: ${inquiryData.eventLocation}\n` +
+    `📸 Photo Booth: ${booth}\n` +
+    `📷 Photography Service: ${cameraSelected}\n` +
+    `👤 Client Name: ${inquiryData.name}\n\n` +
+    `💬 Event Details:\n${inquiryData.eventDetails || "None"}\n\n` +
+    `💰 Estimated Total: ₹${quote.total.toLocaleString()}\n` +
+    `(Transport Included: ${quote.transportCost > 0 ? "Yes" : "No"})`;
+
+  const url = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
 
   const [quote, setQuote] = useState({
     subtotal: 0,
@@ -131,18 +166,18 @@ export function AdvancedBookingSystem() {
   const isFormValid = () => {
     return (
       inquiryData.eventDate &&
-      inquiryData.eventType &&
+      // inquiryData.eventType &&
       inquiryData.eventLocation &&
       (inquiryData.photoBooth || inquiryData.cameraService !== "none") &&
-      inquiryData.name &&
-      inquiryData.email &&
-      inquiryData.phone
+      inquiryData.name 
+      // &&
+      // inquiryData.email &&
+      // inquiryData.phone
     )
   }
 
   const handleSubmitInquiry = async () => {
     if (!isFormValid()) return
-
     setIsSubmitting(true)
 
     try {
@@ -155,6 +190,8 @@ export function AdvancedBookingSystem() {
         submittedAt: new Date().toISOString(),
       })
 
+      sendWhatsAppMessage();
+      
       setIsSubmitted(true)
     } catch (error) {
       console.error("[v0] Error submitting inquiry:", error)
@@ -186,13 +223,13 @@ export function AdvancedBookingSystem() {
               setIsSubmitted(false)
               setInquiryData({
                 eventDate: "",
-                eventType: "",
+                // eventType: "",
                 eventLocation: "",
                 photoBooth: false,
                 cameraService: "none",
                 name: "",
-                email: "",
-                phone: "",
+                // email: "",
+                // phone: "",
                 eventDetails: "",
               })
             }}
@@ -232,7 +269,7 @@ export function AdvancedBookingSystem() {
                   />
                 </div>
 
-                <div>
+                {/* <div>
                   <label className="block text-sm font-semibold mb-2">Event Type *</label>
                   <Select
                     value={inquiryData.eventType}
@@ -250,7 +287,7 @@ export function AdvancedBookingSystem() {
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
+                </div> */}
 
                 <div className="md:col-span-2">
                   <label className="block text-sm font-semibold mb-2">Event Location *</label>
@@ -383,6 +420,58 @@ export function AdvancedBookingSystem() {
                 </div>
               </div>
 
+              {/* Contact Information */}
+              <div>
+                <h3 className="font-display text-xl font-bold mb-4 flex items-center">
+                  <Users className="mr-2 h-5 w-5 text-purple-400" />
+                  Contact Information
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-semibold mb-2">Full Name *</label>
+                    <Input
+                      placeholder="Your full name"
+                      value={inquiryData.name}
+                      onChange={(e) => handleInputChange("name", e.target.value)}
+                      className="glass border-gray-600 focus:border-purple-400"
+                    />
+                  </div>
+                  {/* <div>
+                    <label className="block text-sm font-semibold mb-2">Email Address *</label>
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      value={inquiryData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
+                      className="glass border-gray-600 focus:border-purple-400"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold mb-2">Phone Number *</label>
+                    <Input
+                      type="tel"
+                      placeholder="+91 98765 43210"
+                      value={inquiryData.phone}
+                      onChange={(e) => handleInputChange("phone", e.target.value)}
+                      className="glass border-gray-600 focus:border-purple-400"
+                    />
+                  </div> */}
+                </div>
+              </div>
+
+              {/* Event Details */}
+              <div>
+                <label className="block text-sm font-semibold mb-2">Event Details & Special Requests</label>
+                <Textarea
+                  placeholder="Tell us about your event, venue details, theme, special requirements, or any questions you have..."
+                  value={inquiryData.eventDetails}
+                  onChange={(e) => handleInputChange("eventDetails", e.target.value)}
+                  className="glass border-gray-600 focus:border-purple-400 min-h-[120px]"
+                />
+              </div>
+
+              <Separator className="bg-gray-700" />
+
               <div>
                 <label className="text-sm font-semibold mb-4 flex items-center">
                   <Gift className="h-5 w-5 text-green-400 mr-2" />
@@ -402,57 +491,8 @@ export function AdvancedBookingSystem() {
                 </div>
               </div>
 
-              <Separator className="bg-gray-700" />
 
-              {/* Contact Information */}
-              <div>
-                <h3 className="font-display text-xl font-bold mb-4 flex items-center">
-                  <Users className="mr-2 h-5 w-5 text-purple-400" />
-                  Contact Information
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-semibold mb-2">Full Name *</label>
-                    <Input
-                      placeholder="Your full name"
-                      value={inquiryData.name}
-                      onChange={(e) => handleInputChange("name", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">Email Address *</label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={inquiryData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">Phone Number *</label>
-                    <Input
-                      type="tel"
-                      placeholder="+91 98765 43210"
-                      value={inquiryData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Event Details */}
-              <div>
-                <label className="block text-sm font-semibold mb-2">Event Details & Special Requests</label>
-                <Textarea
-                  placeholder="Tell us about your event, venue details, theme, special requirements, or any questions you have..."
-                  value={inquiryData.eventDetails}
-                  onChange={(e) => handleInputChange("eventDetails", e.target.value)}
-                  className="glass border-gray-600 focus:border-purple-400 min-h-[120px]"
-                />
-              </div>
+              
             </CardContent>
           </Card>
         </div>

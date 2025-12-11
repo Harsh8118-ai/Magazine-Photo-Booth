@@ -10,9 +10,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const VintagePhotoBoothClient = () => {
   const [printCount, setPrintCount] = useState(200)
   const [selectedImage, setSelectedImage] = useState(0)
+  const [open, setOpen] = useState(false);
 
   const basePrice = 25000
-  const extraPrintCost = 70
+  const extraPrintCost = 25
 
   const calculatePrice = (prints: number) => {
     if (prints <= 200) return basePrice
@@ -33,7 +34,7 @@ const VintagePhotoBoothClient = () => {
     {
       icon: FileImage,
       title: "DSLR Quality",
-      description: "Studio-grade portraits with warm vintage tones",
+      description: "Studio-grade portraits with warm vintage tones and premium quality",
     },
     {
       icon: Sparkles,
@@ -76,13 +77,22 @@ const VintagePhotoBoothClient = () => {
   ]
 
   const galleryImages = [
-    { id: 1, src: "/placeholder.svg?key=uwbp9" },
-    { id: 2, src: "/placeholder.svg?key=3swyx" },
-    { id: 3, src: "/placeholder.svg?key=183fq" },
-    { id: 4, src: "/placeholder.svg?key=3sj0j" },
-    { id: 5, src: "/placeholder.svg?key=xf1no" },
-    { id: 6, src: "/placeholder.svg?key=cda7v" },
-  ]
+    { id: 1, src: "/Cloudinary/Vintage-Booth/1 (1).jpeg", alt: "Vintage photo booth setup with retro style and instant prints" },
+    { id: 2, src: "/Cloudinary/Vintage-Booth/1 (2).jpeg", alt: "Retro photo booth at an event with vintage booth experience" },
+    { id: 3, src: "/Cloudinary/Vintage-Booth/1 (3).jpeg", alt: "Classic vintage booth design with instant print photo booth service" },
+    { id: 4, src: "/Cloudinary/Vintage-Booth/1 (4).jpeg", alt: "Retro selfie photo booth with wooden vintage design" },
+    { id: 5, src: "/Cloudinary/Vintage-Booth/1 (5).jpeg", alt: "Vintage booth red carpet setup with instant print photo booth" },
+    { id: 6, src: "/Cloudinary/Vintage-Booth/1 (6).jpeg", alt: "Retro floral themed vintage photo booth with instant prints" },
+    { id: 7, src: "/Cloudinary/Vintage-Booth/1 (7).jpeg", alt: "Corporate event retro photo booth with vintage instant print experience" },
+    { id: 8, src: "/Cloudinary/Vintage-Booth/1 (8).jpeg", alt: "Guest enjoying vintage retro photo booth with instant prints" },
+    { id: 9, src: "/Cloudinary/Vintage-Booth/1 (9).jpeg", alt: "Product launch event featuring vintage retro photo booth" },
+    { id: 10, src: "/Cloudinary/Vintage-Booth/1 (10).jpeg", alt: "House party vintage photo booth offering instant print photos" },
+    { id: 11, src: "/Cloudinary/Vintage-Booth/1 (11).jpeg", alt: "LED illuminated retro photo booth with instant prints" },
+    { id: 12, src: "/Cloudinary/Vintage-Booth/1 (12).jpeg", alt: "Vintage style wooden photo booth with DSLR and instant print feature" },
+    { id: 13, src: "/Cloudinary/Vintage-Booth/1 (13).jpeg", alt: "Retro themed photo booth backdrop offering premium instant prints" },
+    { id: 14, src: "/Cloudinary/Vintage-Booth/1 (14).jpeg", alt: "Stylish vintage photo booth corner with classic retro booth experience" },
+  ];
+
 
   const features = [
     "Beautiful retro wooden design",
@@ -90,6 +100,20 @@ const VintagePhotoBoothClient = () => {
     "Works indoors and outdoors",
     "Ideal for aesthetic themes: rustic, vintage, outdoor, boho, pastel, romantic",
   ]
+
+  const COMPANY_WHATSAPP = "919266037002";
+
+  const sendWhatsAppBookingMessage = () => {
+    const message =
+      `Hello! I am interested in booking the *Vintage Photo Booth*.\n\n` +
+      `Selected Print Package: ${printCount} prints\n` +
+      `Total Price: ₹${currentPrice.toLocaleString()}\n\n` +
+      `Please share availability and booking details.`;
+
+    const url = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  };
 
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -100,7 +124,7 @@ const VintagePhotoBoothClient = () => {
             <ChevronLeft size={20} />
             Back
           </Link>
-          <h1 className="text-xl sm:text-2xl font-serif font-bold text-amber-100">Vintage Photo Booth</h1>
+          <h1 className="text-xl sm:text-3xl font-serif font-bold text-amber-100">Vintage Photo Booth</h1>
           <div className="w-20" />
         </div>
       </div>
@@ -120,40 +144,45 @@ const VintagePhotoBoothClient = () => {
             photography with modern instant printing.
           </p>
 
+          {/* Image Section  */}
           {/* Hero Image */}
-          <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-amber-700/50 mb-8 max-h-96">
-            <Image
-              src="/placeholder.svg?height=600&width=1200"
-              alt="Vintage Photo Booth Hero"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </motion.div>
-      </section>
+          <div className="flex gap-20">
+            <div className="relative inline-block rounded-xl overflow-hidden mb-8">
+              <Image
+                src="/Cloudinary/Products-Icon/4574a37a-0f27-4892-b2c4-79caa44a674e-md.jpeg"
+                alt="Vintage Photo Booth Hero"
+                width={350}
+                height={0}
+                className="object-contain"
+              />
+            </div>
 
-      {/* Highlights Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {highlights.map((highlight, index) => {
-              const Icon = highlight.icon
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-6 rounded-lg bg-amber-900/20 border border-amber-700/50 hover:border-amber-600/80 transition-all"
-                >
-                  <Icon className="size-8 text-amber-600 mb-4" />
-                  <h3 className="text-lg font-bold text-amber-100 mb-2">{highlight.title}</h3>
-                  <p className="text-sm text-amber-200/70">{highlight.description}</p>
-                </motion.div>
-              )
-            })}
+            {/* Highlights Section */}
+            <section className="py-8 px-4">
+              <div className="">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-center">
+                  {highlights.map((highlight, index) => {
+                    const Icon = highlight.icon
+                    return (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="p-6 rounded-lg bg-amber-900/20 border border-amber-700/50 hover:border-amber-600/80 transition-all"
+                      >
+                        <Icon className="size-8 text-amber-600 mb-4" />
+                        <h3 className="text-lg font-bold text-amber-100 mb-2">{highlight.title}</h3>
+                        <p className="text-sm text-amber-200/70">{highlight.description}</p>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+            </section>
           </div>
-        </div>
+
+        </motion.div>
       </section>
 
       {/* Features Section */}
@@ -189,7 +218,7 @@ const VintagePhotoBoothClient = () => {
       </section>
 
       {/* Pricing Calculator */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-2 text-center">Choose Your Print Package</h3>
           <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price — ₹25,000</p>
@@ -200,20 +229,38 @@ const VintagePhotoBoothClient = () => {
             className="glass-enhanced p-8 rounded-lg border border-amber-700/50"
           >
             {/* Print Count Selector */}
-            <div className="mb-8">
-              <label className="block text-sm font-semibold text-amber-200 mb-4">Number of Prints</label>
-              <select
-                value={printCount}
-                onChange={(e) => setPrintCount(Number.parseInt(e.target.value))}
-                className="w-full px-4 py-3 bg-amber-900/30 border border-amber-700 rounded-lg text-white font-semibold focus:border-amber-600 focus:outline-none"
+            <div className="mb-8 relative">
+              <label className="block text-sm font-semibold text-amber-200 mb-4">
+                Number of Prints
+              </label>
+
+              <div
+                onClick={() => setOpen(!open)}
+                className="w-full px-4 py-3 bg-amber-900/30 border border-amber-700 rounded-lg text-white font-semibold cursor-pointer flex justify-between items-center"
               >
-                {printOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option} prints
-                  </option>
-                ))}
-              </select>
+                {printCount} prints
+                <span className="text-amber-400">▼</span>
+              </div>
+
+              {open && (
+                <div className="absolute left-0 right-0 mt-2 bg-amber-900/90 border border-amber-700/50 rounded-lg shadow-lg z-20 max-h-60 overflow-y-auto">
+                  {printOptions.map((option) => (
+                    <div
+                      key={option}
+                      onClick={() => {
+                        setPrintCount(option);
+                        setOpen(false);
+                      }}
+                      className={`px-4 py-3 cursor-pointer hover:bg-amber-800/50 ${option === printCount ? "bg-amber-800/60 text-amber-300" : "text-white"
+                        }`}
+                    >
+                      {option} prints
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
+
 
             {/* Price Breakdown */}
             <div className="space-y-3 mb-6 pb-6 border-b border-amber-700/30">
@@ -223,7 +270,7 @@ const VintagePhotoBoothClient = () => {
               </div>
               {priceBreakdown > 0 && (
                 <div className="flex justify-between text-amber-300">
-                  <span>Extra {printCount - 200} prints × ₹70</span>
+                  <span>Extra {printCount - 200} prints × ₹25</span>
                   <span>₹{priceBreakdown.toLocaleString()}</span>
                 </div>
               )}
@@ -237,6 +284,7 @@ const VintagePhotoBoothClient = () => {
 
             <Link
               href="/#booking-section"
+              onClick={sendWhatsAppBookingMessage}
               className="w-full block text-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-amber-600/50 transition-all transform hover:scale-105"
             >
               Book Now
@@ -275,7 +323,7 @@ const VintagePhotoBoothClient = () => {
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Gallery</h3>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="relative aspect-video rounded-lg overflow-hidden border-2 border-amber-700/50 mb-6 max-h-96"
@@ -286,22 +334,27 @@ const VintagePhotoBoothClient = () => {
               fill
               className="object-cover"
             />
-          </motion.div>
+          </motion.div> */}
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="columns-2 sm:columns-3 gap-3 space-y-3">
             {galleryImages.map((image, index) => (
-              <motion.button
+              <motion.div
                 key={image.id}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.02 }}
                 onClick={() => setSelectedImage(index)}
-                className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all ${
-                  selectedImage === index ? "border-amber-600" : "border-transparent hover:border-amber-700/50"
-                }`}
+                className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
               >
-                <Image src={image.src || "/placeholder.svg"} alt="Gallery thumbnail" fill className="object-cover" />
-              </motion.button>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={800}
+                  height={800}
+                  className="w-full h-auto rounded-lg"
+                />
+              </motion.div>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -320,11 +373,11 @@ const VintagePhotoBoothClient = () => {
               "Timeless Memories, Instant Smiles"
             </p>
             <p className="text-lg sm:text-xl text-amber-200 leading-relaxed mb-4">
-              The vintage booth captures not just photographs—it captures the essence of your event with warmth, charm,
+              The vintage booth captures not just photographs, it captures the essence of your event with warmth, charm,
               and authentic moments that guests will treasure forever.
             </p>
             <p className="text-amber-400/80 italic font-serif">
-              A high-engagement booth with the best Return on Investment — guaranteed crowd magnet.
+              A high-engagement booth with the best Return on Investmen & guaranteed crowd magnet.
             </p>
           </div>
         </motion.div>
@@ -343,6 +396,7 @@ const VintagePhotoBoothClient = () => {
           <p className="text-amber-200 mb-8">Experience the charm of vintage photography at your celebration</p>
           <Link
             href="/#booking-section"
+            onClick={sendWhatsAppBookingMessage}
             className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-amber-600/50 transition-all transform hover:scale-105"
           >
             Book Your Vintage Booth

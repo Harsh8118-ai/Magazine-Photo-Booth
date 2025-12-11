@@ -10,6 +10,20 @@ const MirrorSelfieBoothClient = () => {
   const [selectedImage, setSelectedImage] = useState(0)
   const mirrorBoothPrice = 14999
 
+  const COMPANY_WHATSAPP = "919266037002";
+
+  const sendWhatsAppBookingMessage = () => {
+    const message =
+      `Hello! I'm interested in booking the *Mirror Selfie Booth*.\n\n` +
+      `Please share availability and details.\n\n` +
+      `Package Price: ₹${mirrorBoothPrice.toLocaleString()}`;
+
+    const url = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  };
+
+
   const galleryImages = [
     { id: 1, src: "/Cloudinary/Mirror-Booth/1 (1).jpg", alt: "Mirror selfie booth at wedding" },
     { id: 2, src: "/Cloudinary/Mirror-Booth/1 (2).jpg", alt: "Mirror booth at party" },
@@ -25,27 +39,27 @@ const MirrorSelfieBoothClient = () => {
   ]
 
   const features = [
-  {
-    icon: Sparkles,
-    title: "Customized Mirror Text",
-    description: "Premium vinyl personalization with names, event titles, or branded messaging for a tailored experience.",
-  },
-  {
-    icon: Heart,
-    title: "Luxury Decor Styling",
-    description: "Elegant floral arrangements, warm ambient lighting, and a rich red-carpet setup that elevates every photo.",
-  },
-  {
-    icon: Camera,
-    title: "Instant Phone Selfies",
-    description: "Guests capture stunning mirror selfies directly on their phones — quick, convenient, and instantly shareable.",
-  },
-  {
-    icon: Crown,
-    title: "Red-Carpet Celebrity Experience",
-    description: "A show-stopping mirror booth setup that becomes the highlight and most-clicked attraction of the event.",
-  },
-];
+    {
+      icon: Sparkles,
+      title: "Customized Mirror Text",
+      description: "Premium vinyl personalization with names, event titles, or branded messaging for a tailored experience.",
+    },
+    {
+      icon: Heart,
+      title: "Luxury Decor Styling",
+      description: "Elegant floral arrangements, warm ambient lighting, and a rich red-carpet setup that elevates every photo.",
+    },
+    {
+      icon: Camera,
+      title: "Instant Phone Selfies",
+      description: "Guests capture stunning mirror selfies directly on their phones — quick, convenient, and instantly shareable.",
+    },
+    {
+      icon: Crown,
+      title: "Red-Carpet Celebrity Experience",
+      description: "A show-stopping mirror booth setup that becomes the highlight and most-clicked attraction of the event.",
+    },
+  ];
 
 
   return (
@@ -206,10 +220,12 @@ const MirrorSelfieBoothClient = () => {
 
             <Link
               href="/#booking-section"
+              onClick={sendWhatsAppBookingMessage}
               className="w-full block text-center px-6 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
             >
               Book Now
             </Link>
+
           </motion.div>
         </div>
       </section>
@@ -267,10 +283,13 @@ const MirrorSelfieBoothClient = () => {
           <p className="text-gray-300 mb-8">Bring the mirror selfie booth to your next premium event</p>
           <Link
             href="/#booking-section"
-            className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
+            onClick={sendWhatsAppBookingMessage}
+            className="w-full block text-center px-6 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
           >
-            Check Packages & Availability
+            Book Now
           </Link>
+
+
         </motion.div>
       </section>
     </main>

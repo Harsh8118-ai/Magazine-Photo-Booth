@@ -94,7 +94,7 @@ export default function MagazinePhotoBoothPage() {
         id: "magazine",
         name: "Magazine Photo Booth",
         description: "The original luxury magazine photo booth experience with instant cover prints",
-        icon: "📰",
+        icon: "/Cloudinary/Products-Icon/Screenshot 2025-12-11 085642.png",
         link: "/#packages-section",
         color: "gold",
         features: ["Instant prints", "Magazine covers", "Premium quality"],
@@ -103,7 +103,7 @@ export default function MagazinePhotoBoothPage() {
         id: "mirror",
         name: "Mirror Selfie Booth",
         description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
-        icon: "🪞",
+        icon: "/Cloudinary/Products-Icon/IMG_3848.JPG",
         link: "/products/mirror-selfie-booth",
         color: "purple",
         features: ["Custom text", "LED lighting", "Luxury setup"],
@@ -112,7 +112,7 @@ export default function MagazinePhotoBoothPage() {
         id: "vintage",
         name: "Vintage Photo Booth",
         description: "Retro wooden booth with DSLR photography and instant prints in 30 seconds",
-        icon: "📷",
+        icon: "/Cloudinary/Products-Icon/4574a37a-0f27-4892-b2c4-79caa44a674e-md.jpeg",
         link: "/products/vintage-photo-booth",
         color: "amber",
         features: ["DSLR quality", "Instant prints", "Wooden design"],
@@ -140,9 +140,14 @@ export default function MagazinePhotoBoothPage() {
                       whileHover={{ y: -8 }}
                       className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
                     >
-                      <div className="text-5xl sm:text-6xl mb-4 opacity-60 group-hover:opacity-100 transition-opacity">
-                        {product.icon}
+                      <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <img
+                          src={product.icon}
+                          alt={product.name}
+                          className="w-16 h-16 sm:w-24 sm:h-24 object-contain mx-auto"
+                        />
                       </div>
+
                       <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
                         {product.name}
                       </h3>
@@ -451,20 +456,20 @@ export default function MagazinePhotoBoothPage() {
             </ScrollReveal>
           </div>
         </SectionWrapper>
-        </ScrollReveal>
+      </ScrollReveal>
 
 
       {/* Video Clips Carousel */}
       <ScrollReveal direction="up" delay={0.2}>
-      <MultiVideoReels
-        title="Our Instagram Reels"
-        videoUrls={[
-          "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
-          "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
-          "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4"
-        ]}
+        <MultiVideoReels
+          title="Our Instagram Reels"
+          videoUrls={[
+            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
+            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
+            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4"
+          ]}
         />
-        </ScrollReveal>
+      </ScrollReveal>
 
       {/* What We Need From Your Venue  */}
       <ScrollReveal direction="up" delay={0.2}>
@@ -494,11 +499,11 @@ export default function MagazinePhotoBoothPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
               {Array.from({ length: 8 }).map((_, index) => (
                 <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
-                  <div className="aspect-square overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
+                  <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
                     <img
                       src={`/Images/${index + 1}.png`}
                       alt={`Event photo ${index + 1}`}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                 </ScrollReveal>
