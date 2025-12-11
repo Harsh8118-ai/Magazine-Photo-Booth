@@ -120,7 +120,7 @@ export function TestimonialCarousel() {
             {/* Client Info */}
             <div className="flex items-center justify-center space-x-4">
               <div className="text-left">
-                <div className="font-display text-lg font-semibold text-white">{currentTestimonial.name}</div>
+                <div className="font-display text-lg font-semibold text-purple-500">{currentTestimonial.name}</div>
                 <div className="text-purple-400 font-medium">{currentTestimonial.event}</div>
               </div>
             </div>
