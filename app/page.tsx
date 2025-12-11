@@ -369,7 +369,7 @@ export default function MagazinePhotoBoothPage() {
                     >
                       <CardContent className="p-6 sm:p-8">
                         <div
-                          className="text-4xl sm:text-6xl font-bold text-gold/20 mb-4 font-display"
+                          className="text-4xl sm:text-6xl font-bold text-gold/60 sm:text-gold/40 mb-4 font-display"
                           aria-hidden="true"
                         >
                           {item.step}
