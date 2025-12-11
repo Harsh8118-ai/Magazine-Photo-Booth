@@ -53,7 +53,7 @@ export function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
               <section>
                 <h3 className="text-xl font-bold mb-3">Contact Us</h3>
                 <p className="text-gray-300">
-                  If you have questions about this Privacy Policy, please contact Luxury Booth at luxurymagazinebooth@gmail.com
+                  If you have questions about this Privacy Policy, please contact The Luxury Booths at theluxurybooths@gmail.com
                 </p>
               </section>
             </div>

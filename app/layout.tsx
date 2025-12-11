@@ -18,9 +18,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Luxury Booth - Step Inside. Become the Cover Star.",
+  title: "The Luxury Booths - Step Inside. Become the Cover Star.",
   description:
-    "Luxury Booth brings celebrity-style magazine covers to weddings, corporate events, and parties. Instant professional prints in 30 seconds.",
+    "The Luxury Booths brings celebrity-style magazine covers to weddings, corporate events, and parties. Instant professional prints in 30 seconds.",
   keywords: [
     "photo booth",
     "magazine photo booth",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     "Los Angeles photo booth",
     "party entertainment",
   ],
-  authors: [{ name: "Luxury Booth" }],
-  creator: "Luxury Booth",
-  publisher: "Luxury Booth",
+  authors: [{ name: "The Luxury Booths" }],
+  creator: "The Luxury Booths",
+  publisher: "The Luxury Booths",
   formatDetection: {
     email: false,
     address: false,
@@ -46,17 +46,17 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Luxury Booth - Step Inside. Become the Cover Star.",
+    title: "The Luxury Booths - Step Inside. Become the Cover Star.",
     description:
-      "Luxury Booth for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
+      "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
     url: "https://magazinephotobooth.com",
-    siteName: "Luxury Booth",
+    siteName: "Luxury Booths",
     images: [
       {
         url: "/magazine-photobooth.png",
         width: 1200,
         height: 630,
-        alt: "Luxury Booth - Celebrity Style Covers",
+        alt: "The Luxury Booths - Celebrity Style Covers",
       },
     ],
     locale: "en_US",
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Booth - Step Inside. Become the Cover Star.",
+    title: "The Luxury Booths - Step Inside. Become the Cover Star.",
     description:
-      "Luxury Booth for weddings, corporate events, and parties. Instant celebrity-style covers.",
+      "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
     images: ["/magazine-photobooth.png"],
     creator: "@luxurybooth",
   },
@@ -102,11 +102,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Luxury Booth",
-              description: "Luxury Booth for weddings, corporate events, and parties",
-              url: "https://magazinephotobooth.com",
+              name: "The Luxury Booths",
+              description: "The Luxury Booths for weddings, corporate events, and parties",
+              url: "https://theluxurybooths.com",
               telephone: "(555) 123-4567",
-              email: "luxurymagazinebooth@gmail.com",
+              email: "theluxurybooths@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Los Angeles",

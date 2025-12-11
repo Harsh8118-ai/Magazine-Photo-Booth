@@ -20,7 +20,7 @@ export function WhatsAppCTA({
   const [isHovered, setIsHovered] = useState(false)
 
   const generateWhatsAppMessage = () => {
-    const message = `Hi! I want to book Luxury Booth on ${selectedDate} for a ${selectedEventType}. Package: ${selectedPackage}. Venue: ${selectedCity}. Please share availability & quote.`
+    const message = `Hi! I want to book The Luxury Booths on ${selectedDate} for a ${selectedEventType}. Package: ${selectedPackage}. Venue: ${selectedCity}. Please share availability & quote.`
     return encodeURIComponent(message)
   }
 

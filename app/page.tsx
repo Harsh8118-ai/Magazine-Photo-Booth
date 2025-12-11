@@ -245,7 +245,7 @@ export default function MagazinePhotoBoothPage() {
               size="lg"
               onClick={() => scrollToSection("booking-section")}
               className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-              aria-label="Book your Luxury Booth now"
+              aria-label="Book your The Luxury Booth now"
             >
               <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Book Now
@@ -545,7 +545,7 @@ export default function MagazinePhotoBoothPage() {
         <ScrollReveal direction="up" delay={0.2}>
           <SectionWrapper
             id="why-choose-us-section"
-            ariaLabel="Reasons to choose Luxury Booth"
+            ariaLabel="Reasons to choose The Luxury Booths"
             className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
           >
             <div className="max-w-6xl mx-auto">
@@ -724,16 +724,16 @@ export default function MagazinePhotoBoothPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Luxury Booth</h3>
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                Luxury Booth creates celebrity-style moments at your events.
+                The Luxury Booths creates celebrity-style moments at your events.
               </p>
               <div className="flex space-x-4">
                 {[
                   { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
-                  { name: "instagram", url: "https://www.instagram.com/luxurybooth.in", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
+                  { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
                   { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
-                  { name: "linkedin", url: "https://www.linkedin.com/in/luxury-booth/", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
+                  { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
                 ].map((social) => (
                   <a
                     key={social.name}
@@ -756,31 +756,31 @@ export default function MagazinePhotoBoothPage() {
                     onClick={() => scrollToSection("packages-section")}
                     className="hover:text-white transition-colors"
                   >
-                    Wedding Booths
+                    Magazine Photo Booth
                   </button>
                 </li>
                 <li>
+                  <Link href="/products/mirror-selfie-booth">
                   <button
-                    onClick={() => scrollToSection("packages-section")}
                     className="hover:text-white transition-colors"
                   >
-                    Corporate Events
-                  </button>
+                    Mirror Selfie Booth
+                  </button></Link>
                 </li>
                 <li>
+                  <Link href="/products/mirror-selfie-booth">
                   <button
-                    onClick={() => scrollToSection("packages-section")}
                     className="hover:text-white transition-colors"
                   >
-                    Private Parties
-                  </button>
+                    Vintage Photo Booth
+                  </button></Link>
                 </li>
                 <li>
                   <button
                     onClick={() => scrollToSection("booking-section")}
                     className="hover:text-white transition-colors"
                   >
-                    Custom Branding
+                    Polaroid Photo Booth (coming soon)
                   </button>
                 </li>
               </ul>
@@ -789,17 +789,29 @@ export default function MagazinePhotoBoothPage() {
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+                
+                 <li>
+                  <button
+                    onClick={() => scrollToSection("hero-section")}
+                    className="hover:text-white transition-colors"
+                  >
+                    Home
+                  </button>
+                </li>
+                 <li>
+                  <button
+                    onClick={() => scrollToSection("products")}
+                    className="hover:text-white transition-colors"
+                  >
+                    Products
+                  </button>
+                </li>
                 <li>
                   <button
                     onClick={() => scrollToSection("about-section")}
                     className="hover:text-white transition-colors"
                   >
                     About Us
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => setIsGalleryOpen(true)} className="hover:text-white transition-colors">
-                    Gallery
                   </button>
                 </li>
                 <li>
@@ -810,14 +822,6 @@ export default function MagazinePhotoBoothPage() {
                     Reviews
                   </button>
                 </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("booking-section")}
-                    className="hover:text-white transition-colors"
-                  >
-                    Contact
-                  </button>
-                </li>
               </ul>
             </div>
 
@@ -825,7 +829,7 @@ export default function MagazinePhotoBoothPage() {
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                <p className="flex flex-row">✉️ luxurymagazinebooth@gmail.com</p>
+                <p className="flex flex-row">✉️ theluxurybooths@gmail.com</p>
                 <p>📍 Sector-73, Noida</p>
               </div>
             </div>
@@ -835,7 +839,7 @@ export default function MagazinePhotoBoothPage() {
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-center sm:text-left">
                 <p className="text-gray-400 text-sm sm:text-base">
-                  &copy; 2024 Luxury Booth. All rights reserved.
+                  &copy; 2024 The Luxury Booths. All rights reserved.
                 </p>
                 <p className="text-gray-500 text-xs sm:text-sm mt-1">
                   Licensed & Insured
