@@ -146,41 +146,48 @@ const VintagePhotoBoothClient = () => {
 
           {/* Image Section  */}
           {/* Hero Image */}
-          <div className="flex gap-20">
-            <div className="relative inline-block rounded-xl overflow-hidden mb-8">
-              <Image
-                src="/Cloudinary/Products-Icon/4574a37a-0f27-4892-b2c4-79caa44a674e-md.jpeg"
-                alt="Vintage Photo Booth Hero"
-                width={350}
-                height={0}
-                className="object-contain"
-              />
+          <div className="flex flex-col sm:flex-row sm:items-start sm:gap-12 lg:gap-20 py-8">
+
+            {/* Image */}
+            <div className="w-full sm:w-auto flex justify-center sm:justify-start mb-8 sm:mb-0">
+              <div className="relative rounded-xl overflow-hidden">
+                <Image
+                  src="/Cloudinary/Products-Icon/4574a37a-0f27-4892-b2c4-79caa44a674e-md.jpeg"
+                  alt="Vintage Photo Booth Hero"
+                  width={350}
+                  height={450}
+                  className="object-contain"
+                />
+              </div>
             </div>
 
-            {/* Highlights Section */}
-            <section className="py-8 px-4">
-              <div className="">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 justify-center items-center">
-                  {highlights.map((highlight, index) => {
-                    const Icon = highlight.icon
-                    return (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="p-6 rounded-lg bg-amber-900/20 border border-amber-700/50 hover:border-amber-600/80 transition-all"
-                      >
-                        <Icon className="size-8 text-amber-600 mb-4" />
-                        <h3 className="text-lg font-bold text-amber-100 mb-2">{highlight.title}</h3>
-                        <p className="text-sm text-amber-200/70">{highlight.description}</p>
-                      </motion.div>
-                    )
-                  })}
-                </div>
+            {/* Highlights */}
+            <section className="w-full px-2 sm:px-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                {highlights.map((highlight, index) => {
+                  const Icon = highlight.icon
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="p-6 rounded-lg bg-amber-900/20 border border-amber-700/50 hover:border-amber-600/80 transition-all"
+                    >
+                      <Icon className="size-8 text-amber-600 mb-4" />
+                      <h3 className="text-lg font-bold text-amber-100 mb-2">
+                        {highlight.title}
+                      </h3>
+                      <p className="text-sm text-amber-200/70">{highlight.description}</p>
+                    </motion.div>
+                  )
+                })}
+
               </div>
             </section>
           </div>
+
 
         </motion.div>
       </section>

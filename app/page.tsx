@@ -140,18 +140,22 @@ export default function MagazinePhotoBoothPage() {
                       whileHover={{ y: -8 }}
                       className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
                     >
-                      <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
-                        <img
-                          src={product.icon}
-                          alt={product.name}
-                          className="w-16 h-16 sm:w-24 sm:h-24 object-contain mx-auto"
-                        />
-                      </div>
 
-                      <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
-                        {product.name}
-                      </h3>
-                      <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
+                      <div className="flex justify-center items-center gap-4">
+                        <div>
+                          <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
+                            {product.name}
+                          </h3>
+                          <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
+                        </div>
+
+                        <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                          <img
+                            src={product.icon}
+                            alt={product.name}
+                            className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
+                          />
+                        </div></div>
 
                       <ul className="space-y-2 mb-6">
                         {product.features.map((feature, idx) => (
@@ -224,7 +228,7 @@ export default function MagazinePhotoBoothPage() {
         <div
           className={`relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6 ${isVisible ? "slide-in-up" : "opacity-0"}`}
         >
-          <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
             The <br />
             Luxury Booths
           </h1>
