@@ -133,7 +133,7 @@ const VintagePhotoBoothClient = () => {
       <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/20 to-transparent">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 text-amber-100 text-center text-balance">
-            Vintage Photo Booth — Capture Timeless Memories
+            Vintage Photo Booth - Capture Timeless Memories
           </h2>
           <p className="text-lg sm:text-xl text-amber-200 text-center max-w-3xl mx-auto mb-2">
             A retro-style wooden photo booth that clicks stunning photographs and prints them instantly within 30
@@ -218,7 +218,7 @@ const VintagePhotoBoothClient = () => {
             className="mt-12 p-6 bg-amber-900/30 border-l-4 border-amber-600 rounded-lg"
           >
             <p className="text-lg font-serif italic text-amber-100">
-              "A high-engagement booth with the best Return on Investment — guaranteed crowd magnet."
+              "A high-engagement booth with the best Return on Investment & guaranteed crowd magnet."
             </p>
           </motion.div>
         </div>
@@ -228,7 +228,7 @@ const VintagePhotoBoothClient = () => {
       <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-2 text-center">Choose Your Print Package</h3>
-          <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price — ₹25,000</p>
+          <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price - ₹25,000</p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

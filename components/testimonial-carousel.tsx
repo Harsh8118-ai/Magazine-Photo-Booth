@@ -6,42 +6,71 @@ import { Button } from "@/components/ui/button"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
+  // -------------------------
+  // MAGAZINE PHOTO BOOTH
+  // -------------------------
   {
-    name: "Sarah & Mike Johnson",
-    event: "Wedding, Beverly Hills",
+    name: "Pratishtha Sharma",
+    event: "Wedding, Delhi",
     rating: 5,
-    text: "The magazine photo booth was the absolute highlight of our wedding! Our guests couldn't stop talking about their celebrity covers. The quality was incredible and the team was so professional.",
-    image: "/happy-bride-testimonial.png",
+    text: "The magazine photo booth created such a rich and glamorous Vogue-style experience! It truly felt like stepping into a celebrity shoot. Everyone was obsessed with the covers and the whole setup felt premium.",
   },
   {
-    name: "Jennifer Martinez",
-    event: "Corporate Gala, Downtown LA",
+    name: "Paras Chandna",
+    event: "Corporate Event, Noida",
     rating: 5,
-    text: "We hired them for our annual company gala and it was a huge hit! The custom branding on the magazine covers with our company logo looked amazing. Highly recommend for corporate events.",
-    image: "/professional-woman-smiling.png",
+    text: "We had the magazine booth for our corporate gala and it was the showstopper! The branded covers looked extremely professional and our team loved the influencer-style experience. Highly recommended!",
+  },
+
+  // -------------------------
+  // MIRROR BOOTH
+  // -------------------------
+  {
+    name: "Mohit Dhingra",
+    event: "Engagement, Jaipur",
+    rating: 5,
+    text: "The Mirror Booth added so much charm to our engagement! The interactive animations, signatures on photos, and instant prints were a huge hit. Guests couldn’t stop taking pictures, fantastic experience!",
   },
   {
-    name: "David & Lisa Chen",
-    event: "Anniversary Party, Malibu",
+    name: "Priya",
+    event: "Birthday Celebration, New Delhi",
     rating: 5,
-    text: "What an incredible experience! The 3D booth setup was stunning and our guests loved posing for their magazine covers. The prints were ready in seconds and the quality was outstanding.",
-    image: "/happy-couple-anniversary.png",
+    text: "Absolutely loved the Mirror Booth! The Luxury Booths team created such a premium atmosphere. The lighting, the mirror effects, and the crisp photos made my birthday feel super special.",
+  },
+
+  // ------------------------------
+  // VINTAGE PHOTO BOOTH
+  // ------------------------------
+  {
+    name: "Paras Chandna",
+    event: "Family Event, Jim Corbett",
+    rating: 5,
+    text: "The Vintage Photo Booth brought such a nostalgic vibe to our event! The retro-style prints and warm tones looked stunning. It blended perfectly with the Jim Corbett atmosphere & everyone loved it!",
   },
   {
-    name: "Rachel Thompson",
-    event: "Birthday Celebration, West Hollywood",
+    name: "Pratishtha Sharma",
+    event: "Themed Party, Delhi",
     rating: 5,
-    text: "Best decision ever! The magazine photo booth made my 30th birthday unforgettable. Everyone felt like a celebrity and the custom covers were the perfect party favor. Amazing service!",
-    image: "/woman-birthday-celebration.png",
+    text: "The Vintage Booth was an absolute masterpiece! It gave our décor a classic charm and the pictures looked beautifully timeless. A perfect blend of luxury and nostalgia.",
+  },
+
+  // -------------------------
+  // BRAND – THE LUXURY BOOTHS
+  // -------------------------
+  {
+    name: "Mohit Dhingra",
+    event: "Corporate Launch, Noida",
+    rating: 5,
+    text: "The Luxury Booths team is outstanding! Their professionalism, creativity, and attention to detail made our event seamless. We’ve worked with many vendors, but their quality stands out every time.",
   },
   {
-    name: "Michael Rodriguez",
-    event: "Product Launch, Santa Monica",
+    name: "Priya",
+    event: "Bridal Shower, Jaipur",
     rating: 5,
-    text: "The team exceeded our expectations for our product launch event. The branded magazine covers featuring our new product were genius marketing. Professional, creative, and flawless execution.",
-    image: "/businessman-product-launch.png",
+    text: "The Luxury Booths truly live up to their name. The setups, the staff, the experience and everything felt high-end and beautifully executed. They made the entire event look and feel grand.",
   },
-]
+];
+
 
 export function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -90,11 +119,6 @@ export function TestimonialCarousel() {
 
             {/* Client Info */}
             <div className="flex items-center justify-center space-x-4">
-              <img
-                src={currentTestimonial.image || "/placeholder.svg"}
-                alt={currentTestimonial.name}
-                className="w-16 h-16 rounded-full object-cover border-2 border-gold"
-              />
               <div className="text-left">
                 <div className="font-display text-lg font-semibold text-white">{currentTestimonial.name}</div>
                 <div className="text-purple-400 font-medium">{currentTestimonial.event}</div>

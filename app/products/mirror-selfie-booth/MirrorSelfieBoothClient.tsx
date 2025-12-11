@@ -52,7 +52,7 @@ const MirrorSelfieBoothClient = () => {
     {
       icon: Camera,
       title: "Instant Phone Selfies",
-      description: "Guests capture stunning mirror selfies directly on their phones — quick, convenient, and instantly shareable.",
+      description: "Guests capture stunning mirror selfies directly on their phones, its quick, convenient, and instantly shareable.",
     },
     {
       icon: Crown,
