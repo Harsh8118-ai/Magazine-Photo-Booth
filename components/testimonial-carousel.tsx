@@ -11,7 +11,7 @@ const testimonials = [
   // -------------------------
   {
     name: "Pratishtha Sharma",
-    event: "Wedding, Delhi",
+    event: "Wedding, Delhi",  
     rating: 5,
     text: "The magazine photo booth created such a rich and glamorous Vogue-style experience! It truly felt like stepping into a celebrity shoot. Everyone was obsessed with the covers and the whole setup felt premium.",
   },
