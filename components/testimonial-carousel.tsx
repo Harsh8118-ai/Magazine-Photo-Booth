@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Star, ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
-  // -------------------------
-  // MAGAZINE PHOTO BOOTH
-  // -------------------------
+
   {
     name: "Pratishtha Sharma",
     event: "Wedding, Delhi",  
@@ -22,9 +20,6 @@ const testimonials = [
     text: "We had the magazine booth for our corporate gala and it was the showstopper! The branded covers looked extremely professional and our team loved the influencer-style experience. Highly recommended!",
   },
 
-  // -------------------------
-  // MIRROR BOOTH
-  // -------------------------
   {
     name: "Mohit Dhingra",
     event: "Engagement, Jaipur",
@@ -38,9 +33,6 @@ const testimonials = [
     text: "Absolutely loved the Mirror Booth! The Luxury Booths team created such a premium atmosphere. The lighting, the mirror effects, and the crisp photos made my birthday feel super special.",
   },
 
-  // ------------------------------
-  // VINTAGE PHOTO BOOTH
-  // ------------------------------
   {
     name: "Paras Chandna",
     event: "Family Event, Jim Corbett",
@@ -54,9 +46,6 @@ const testimonials = [
     text: "The Vintage Booth was an absolute masterpiece! It gave our décor a classic charm and the pictures looked beautifully timeless. A perfect blend of luxury and nostalgia.",
   },
 
-  // -------------------------
-  // BRAND – THE LUXURY BOOTHS
-  // -------------------------
   {
     name: "Mohit Dhingra",
     event: "Corporate Launch, Noida",
@@ -70,7 +59,6 @@ const testimonials = [
     text: "The Luxury Booths truly live up to their name. The setups, the staff, the experience and everything felt high-end and beautifully executed. They made the entire event look and feel grand.",
   },
 ];
-
 
 export function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
