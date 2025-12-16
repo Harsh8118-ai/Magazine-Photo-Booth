@@ -4,6 +4,8 @@ import { Space_Grotesk, Inter } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@/components/analytics"
 import { Suspense } from "react"
+import Script from "next/script"
+
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -96,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
       <head>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -145,6 +148,26 @@ export default function RootLayout({
             }),
           }}
         />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7L0PKPVM2S"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7L0PKPVM2S', {
+      page_path: window.location.pathname,
+       send_page_view: false
+    });
+  `}
+        </Script>
+
+
+
       </head>
       <body className="bg-black text-white overflow-x-hidden">
         <Suspense fallback={<div>Loading...</div>}>
