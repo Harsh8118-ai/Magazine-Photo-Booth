@@ -43,16 +43,13 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://magazinephotobooth.com"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://theluxurybooths.com"),
   openGraph: {
     title: "The Luxury Booths - Step Inside. Become the Cover Star.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
     url: "https://magazinephotobooth.com",
-    siteName: "Luxury Booths",
+    siteName: "The Luxury Booths",
     images: [
       {
         url: "/magazine-photobooth.png",
@@ -112,9 +109,9 @@ export default function RootLayout({
               email: "theluxurybooths@gmail.com",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Los Angeles",
-                addressRegion: "CA",
-                addressCountry: "US",
+                addressLocality: "Noida",
+                addressRegion: "UP",
+                addressCountry: "IN",
               },
               geo: {
                 "@type": "GeoCoordinates",
@@ -122,7 +119,7 @@ export default function RootLayout({
                 longitude: "-118.2437",
               },
               openingHours: "Mo-Su 09:00-22:00",
-              priceRange: "$899-$1899",
+              priceRange: "₹35,000–₹75,000",
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.9",

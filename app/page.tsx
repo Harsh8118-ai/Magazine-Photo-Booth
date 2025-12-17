@@ -84,9 +84,6 @@ export default function MagazinePhotoBoothPage() {
     setLegalModal({ isOpen: false, type: null })
   }
 
-  const handleViewGallery = () => {
-    router.push("/gallery");
-  };
 
   const ProductsSection = () => {
     const products = [
@@ -135,40 +132,42 @@ export default function MagazinePhotoBoothPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {products.map((product, index) => (
                 <ScrollReveal key={product.id} direction={index % 2 === 0 ? "left" : "right"} delay={0.2 + index * 0.1}>
-                  <Link href={product.link}>
-                    <motion.div
-                      whileHover={{ y: -8 }}
-                      className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
-                    >
+                  <Link href={product.link} passHref legacyBehavior>
+                    <a className="block h-full">
+                      <motion.div
+                        whileHover={{ y: -8 }}
+                        className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
+                      >
 
-                      <div className="flex justify-center items-center gap-4">
-                        <div>
-                          <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
-                            {product.name}
-                          </h3>
-                          <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
+                        <div className="flex justify-center items-center gap-4">
+                          <div>
+                            <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
+                              {product.name}
+                            </h3>
+                            <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
+                          </div>
+
+                          <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img
+                              src={product.icon}
+                              alt={product.name}
+                              className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
+                            />
+                          </div></div>
+
+                        <ul className="space-y-2 mb-6">
+                          {product.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <span className="text-gold">✓</span> {feature}
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="flex items-center text-gold group-hover:text-yellow-300 transition-colors font-semibold text-sm sm:text-base">
+                          Explore {product.name.split(" ")[0]} Booth →
                         </div>
-
-                        <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
-                          <img
-                            src={product.icon}
-                            alt={product.name}
-                            className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
-                          />
-                        </div></div>
-
-                      <ul className="space-y-2 mb-6">
-                        {product.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                            <span className="text-gold">✓</span> {feature}
-                          </li>
-                        ))}
-                      </ul>
-
-                      <div className="flex items-center text-gold group-hover:text-yellow-300 transition-colors font-semibold text-sm sm:text-base">
-                        Explore {product.name.split(" ")[0]} Booth →
-                      </div>
-                    </motion.div>
+                      </motion.div>
+                    </a>
                   </Link>
                 </ScrollReveal>
               ))}
@@ -515,14 +514,16 @@ export default function MagazinePhotoBoothPage() {
             </div>
 
             <div className="text-center">
-              <Button3D
-                variant="outline"
-                onClick={handleViewGallery}
-                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
-              >
-                View Full Gallery
-              </Button3D>
+              <a href="/gallery">
+                <Button3D
+                  variant="outline"
+                  className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                >
+                  View Full Gallery
+                </Button3D>
+              </a>
             </div>
+
           </div>
         </SectionWrapper>
       </ScrollReveal>
@@ -760,28 +761,19 @@ export default function MagazinePhotoBoothPage() {
                   </button>
                 </li>
                 <li>
-                  <Link href="/products/mirror-selfie-booth">
-                  <button
-                    className="hover:text-white transition-colors"
-                  >
-                    Mirror Selfie Booth
-                  </button></Link>
+                  <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
+                      Mirror Selfie Booth
+                    </Link>
                 </li>
                 <li>
-                  <Link href="/products/mirror-selfie-booth">
-                  <button
-                    className="hover:text-white transition-colors"
-                  >
-                    Vintage Photo Booth
-                  </button></Link>
+                  <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
+                      Vintage Photo Booth
+                    </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => scrollToSection("booking-section")}
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/" className="hover:text-white transition-colors">
                     Polaroid Photo Booth (coming soon)
-                  </button>
+                    </Link>
                 </li>
               </ul>
             </div>
@@ -789,8 +781,8 @@ export default function MagazinePhotoBoothPage() {
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                
-                 <li>
+
+                <li>
                   <button
                     onClick={() => scrollToSection("hero-section")}
                     className="hover:text-white transition-colors"
@@ -798,7 +790,7 @@ export default function MagazinePhotoBoothPage() {
                     Home
                   </button>
                 </li>
-                 <li>
+                <li>
                   <button
                     onClick={() => scrollToSection("products")}
                     className="hover:text-white transition-colors"
@@ -884,6 +876,12 @@ export default function MagazinePhotoBoothPage() {
         selectedPackage={bookingData.package}
         selectedCity={bookingData.city}
       />
+
+      <div className="sr-only">
+        <a href="/products/mirror-selfie-booth">Mirror Selfie Booth</a>
+        <a href="/products/vintage-photo-booth">Vintage Photo Booth</a>
+      </div>
+
 
       <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} images={galleryImages} />
       <LegalModal isOpen={legalModal.isOpen} onClose={closeLegalModal} type={legalModal.type!} />
