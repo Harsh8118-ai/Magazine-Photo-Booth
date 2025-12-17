@@ -48,25 +48,30 @@ export const metadata: Metadata = {
     title: "The Luxury Booths - Step Inside. Become the Cover Star.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
-    url: "https://magazinephotobooth.com",
+    url: "https://theluxurybooths.com",
     siteName: "The Luxury Booths",
     images: [
       {
-        url: "/magazine-photobooth.png",
+        url: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths - Celebrity Style Covers",
       },
     ],
+
     locale: "en_US",
     type: "website",
+  },
+  icons: {
+    icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
+    apple: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
   },
   twitter: {
     card: "summary_large_image",
     title: "The Luxury Booths - Step Inside. Become the Cover Star.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
-    images: ["/magazine-photobooth.png"],
+    images: ["https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp"],
     creator: "@luxurybooth",
   },
   robots: {
