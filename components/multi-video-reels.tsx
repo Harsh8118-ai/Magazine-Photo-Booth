@@ -59,6 +59,8 @@ const VideoCard = ({ url, showControls = false, isActive = true }: VideoCardProp
         muted={true}
         loop
         playsInline
+        preload="none"
+        poster="https://res.cloudinary.com/dpnykjono/image/upload/v1765974059/Video_Carousel_1_htbwlo.webp"
         className="w-full h-full object-cover"
       />
 

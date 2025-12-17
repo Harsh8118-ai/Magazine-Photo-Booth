@@ -51,35 +51,35 @@ function Scene() {
         rotation={[0.1, 0.3, 0]}
         scale={0.8}
         delay={0}
-        imageUrl="/Floating-Booth.png"
+        imageUrl="https://res.cloudinary.com/dpnykjono/image/upload/v1765974415/Floating-Booth_pap8vz.webp"
       />
       <FloatingImage
         position={[3, -1, -3]}
         rotation={[-0.1, -0.2, 0.1]}
         scale={0.6}
         delay={2}
-        imageUrl="/Floating-Booth.png"
+        imageUrl="https://res.cloudinary.com/dpnykjono/image/upload/v1765974415/Floating-Booth_pap8vz.webp"
       />
       <FloatingImage
         position={[0, 3, -4]}
         rotation={[0.2, 0, -0.1]}
         scale={0.7}
         delay={4}
-        imageUrl="/Floating-Booth.png"
+        imageUrl="https://res.cloudinary.com/dpnykjono/image/upload/v1765974415/Floating-Booth_pap8vz.webp"
       />
       <FloatingImage
         position={[-2, -2, -1]}
         rotation={[0, 0.5, 0.05]}
         scale={0.5}
         delay={1}
-        imageUrl="/Floating-Booth.png"
+        imageUrl="https://res.cloudinary.com/dpnykjono/image/upload/v1765974415/Floating-Booth_pap8vz.webp"
       />
       <FloatingImage
         position={[2.5, 1, -2.5]}
         rotation={[-0.05, -0.4, 0]}
         scale={0.9}
         delay={3}
-        imageUrl="/Floating-Booth.png"
+        imageUrl="https://res.cloudinary.com/dpnykjono/image/upload/v1765974415/Floating-Booth_pap8vz.webp"
       />
     </>
   )

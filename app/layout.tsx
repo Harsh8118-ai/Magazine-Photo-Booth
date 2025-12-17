@@ -109,7 +109,7 @@ export default function RootLayout({
               name: "The Luxury Booths",
               description: "The Luxury Booths for weddings, corporate events, and parties",
               url: "https://theluxurybooths.com",
-              telephone: "(555) 123-4567",
+              telephone: "+91-9266037002",
               email: "theluxurybooths@gmail.com",
               address: {
                 "@type": "PostalAddress",
@@ -177,7 +177,8 @@ export default function RootLayout({
           }}
         />
 
-        <script
+        <Script
+          strategy="beforeInteractive"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -211,8 +212,8 @@ export default function RootLayout({
 
       </head>
       <body className="bg-black text-white overflow-x-hidden">
+        {children}
         <Suspense fallback={<div>Loading...</div>}>
-          {children}
           <Analytics />
         </Suspense>
       </body>
