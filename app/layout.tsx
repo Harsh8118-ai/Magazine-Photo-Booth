@@ -20,7 +20,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "The Luxury Booths - Step Inside. Become the Cover Star.",
+  title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
   description:
     "The Luxury Booths brings celebrity-style magazine covers to weddings, corporate events, and parties. Instant professional prints in 30 seconds.",
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://theluxurybooths.com"),
   openGraph: {
-    title: "The Luxury Booths - Step Inside. Become the Cover Star.",
+    title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
     url: "https://theluxurybooths.com",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Luxury Booths - Step Inside. Become the Cover Star.",
+    title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
     images: ["https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp"],
@@ -173,6 +173,19 @@ export default function RootLayout({
                   }
                 }
               ]
+            }),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "The Luxury Booths",
+              "alternateName": "Luxury Photo Booth Rentals",
+              "url": "https://theluxurybooths.com"
             }),
           }}
         />
