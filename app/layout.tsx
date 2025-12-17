@@ -86,8 +86,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
+    google: "BBikFu5Pfi8aCoGkZQqMLLnbMfGGkKIUksA625GxFPA",
   },
   generator: "v0.app",
 }
@@ -133,20 +132,47 @@ export default function RootLayout({
               service: [
                 {
                   "@type": "Service",
-                  name: "Wedding Photo Booth",
-                  description: "Luxury magazine photo booth for weddings",
+                  "name": "Wedding Photo Booth Rental",
+                  "description": "Luxury magazine-style photo booth rentals for weddings with instant professional prints, red carpet setup, and custom branding.",
+                  "url": "https://theluxurybooths.com/products/mirror-selfie-booth",
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "India"
+                  },
+                  "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "The Luxury Booths"
+                  }
                 },
                 {
                   "@type": "Service",
-                  name: "Corporate Event Photo Booth",
-                  description: "Professional photo booth for corporate events",
+                  "name": "Corporate Event Photo Booth Rental",
+                  "description": "Premium photo booth solutions for corporate events, brand activations, and product launches with customized templates and on-site support.",
+                  "url": "https://theluxurybooths.com/products/vintage-photo-booth",
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "India"
+                  },
+                  "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "The Luxury Booths"
+                  }
                 },
                 {
                   "@type": "Service",
-                  name: "Party Photo Booth",
-                  description: "Fun magazine photo booth for private parties",
-                },
-              ],
+                  "name": "Party & Birthday Photo Booth Rental",
+                  "description": "Fun and interactive photo booth rentals for private parties, birthdays, and celebrations with instant prints and digital sharing.",
+                  "url": "https://theluxurybooths.com/gallery",
+                  "areaServed": {
+                    "@type": "Place",
+                    "name": "India"
+                  },
+                  "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "The Luxury Booths"
+                  }
+                }
+              ]
             }),
           }}
         />
