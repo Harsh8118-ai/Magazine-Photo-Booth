@@ -120,10 +120,10 @@ export default function RootLayout({
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: "34.0522",
-                longitude: "-118.2437",
+                "latitude": "28.5355",
+                "longitude": "77.3910"
               },
-              openingHours: "Mo-Su 09:00-22:00",
+              openingHours: "Mo-Su 00:00-23:59",
               priceRange: "₹35,000–₹75,000",
               aggregateRating: {
                 "@type": "AggregateRating",
