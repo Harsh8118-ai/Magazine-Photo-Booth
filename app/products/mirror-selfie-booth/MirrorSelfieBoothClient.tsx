@@ -235,20 +235,6 @@ const MirrorSelfieBoothClient = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-8 text-center text-gradient">Gallery</h2>
 
-          {/* Main Gallery Image */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="relative aspect-video rounded-lg overflow-hidden glass-enhanced border border-gold/30 mb-6 max-h-96"
-          >
-            <Image
-              src={galleryImages[selectedImage].src || "/placeholder.svg"}
-              alt={galleryImages[selectedImage].alt}
-              fill
-              className="object-cover"
-            />
-          </motion.div> */}
-
           {/* Thumbnail Grid */}
           <div className="columns-2 sm:columns-3 gap-3 space-y-3">
             {galleryImages.map((image, index) => (

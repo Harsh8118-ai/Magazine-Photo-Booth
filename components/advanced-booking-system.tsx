@@ -248,23 +248,25 @@ export function AdvancedBookingSystem() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Inquiry Form */}
-        <div className="lg:col-span-2">
-          <Card className="glass-enhanced border-0">
+        <div className="lg:col-span-2 ">
+          <Card className="glass-enhanced border border-gold/20">
             <CardHeader>
               <CardTitle className="font-display text-2xl flex items-center">
                 <Calendar className="mr-3 h-6 w-6 text-purple-400" />
-                Event Details
+                <span className="text-gold">
+                   Event Details
+                  </span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold mb-2">Event Date *</label>
+                  <label className="block text-sm font-semibold mb-2 text-gold">Event Date *</label>
                   <Input
                     type="date"
                     value={inquiryData.eventDate}
                     onChange={(e) => handleInputChange("eventDate", e.target.value)}
-                    className="glass border-gray-600 focus:border-purple-400"
+                    className="bg-black/40 border-gold/30 text-white text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3 rounded-lg"
                     min={new Date().toISOString().split("T")[0]}
                   />
                 </div>
@@ -290,19 +292,19 @@ export function AdvancedBookingSystem() {
                 </div> */}
 
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-semibold mb-2">Event Location *</label>
+                  <label className="block text-sm font-semibold mb-2 text-gold">Event Location *</label>
                   <Input
                     placeholder="Enter complete event address"
                     value={inquiryData.eventLocation}
                     onChange={(e) => handleInputChange("eventLocation", e.target.value)}
-                    className="glass border-gray-600 focus:border-purple-400"
+                    className="bg-black/40 border-gold/30 text-white text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3 rounded-lg placeholder-gray-500"
                   />
                   <p className="text-xs text-gray-400 mt-1">Transport charges apply for locations outside Noida</p>
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold mb-4">Service Selection *</label>
+                <label className="block text-sm font-semibold mb-4 text-gold">Service Selection *</label>
                 <div className="space-y-4">
                   {/* Photo Booth */}
                   <div className="p-4 rounded-lg border border-gray-600 glass">
@@ -315,18 +317,18 @@ export function AdvancedBookingSystem() {
                           onChange={(e) => handleInputChange("photoBooth", e.target.checked)}
                           className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 rounded focus:ring-purple-500"
                         />
-                        <Camera className="h-5 w-5 text-purple-400 mr-3" />
+                        <Camera className="h-5 w-5 text-gold mr-3" />
                         <div>
-                          <h3 className="font-semibold">{services.photoBooth.name}</h3>
+                          <h3 className="font-semibold text-white">{services.photoBooth.name}</h3>
                           <p className="text-sm text-gray-400">Professional magazine-style photo booth setup</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="bg-gray-900/80 rounded px-2 py-1">
+                        <div className=" rounded px-2 py-1">
                           <div className="text-lg font-bold text-yellow-300">
                             ₹{services.photoBooth.price.toLocaleString()}
                           </div>
-                          <div className="text-xs text-gray-300">per setup</div>
+                          
                         </div>
                       </div>
                     </div>
@@ -334,7 +336,7 @@ export function AdvancedBookingSystem() {
 
                   {/* Camera Services - Mutually Exclusive */}
                   <div className="space-y-3">
-                    <h4 className="text-sm font-semibold text-gray-900 bg-gray-100 rounded px-2 py-1 inline-block">
+                    <h4 className="text-sm font-semibold text-gold rounded px-2 py-1 inline-block">
                       Photography Service (Select One):
                     </h4>
 
@@ -348,10 +350,10 @@ export function AdvancedBookingSystem() {
                           value="none"
                           checked={inquiryData.cameraService === "none"}
                           onChange={(e) => handleCameraServiceChange(e.target.value)}
-                          className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
+                          className="mr-3 h-4 w-4 bg-transparent border-gray-600 "
                         />
                         <div>
-                          <h3 className="font-semibold">No Photography Service</h3>
+                          <h3 className="font-semibold text-white">No Photography Service</h3>
                           <p className="text-sm text-gray-400">Skip photography service</p>
                         </div>
                       </div>
@@ -370,18 +372,17 @@ export function AdvancedBookingSystem() {
                             onChange={(e) => handleCameraServiceChange(e.target.value)}
                             className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
                           />
-                          <Camera className="h-5 w-5 text-purple-400 mr-3" />
+                          <Camera className="h-5 w-5 text-gold mr-3" />
                           <div>
-                            <h3 className="font-semibold">{services.camera.name}</h3>
+                            <h3 className="font-semibold text-white">{services.camera.name}</h3>
                             <p className="text-sm text-gray-400">Professional photography service only</p>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="bg-gray-900/80 rounded px-2 py-1">
+                          <div className="rounded px-2 py-1">
                             <div className="text-lg font-bold text-yellow-300">
                               ₹{services.camera.price.toLocaleString()}
                             </div>
-                            <div className="text-xs text-gray-300">per photographer</div>
                           </div>
                         </div>
                       </div>
@@ -400,18 +401,17 @@ export function AdvancedBookingSystem() {
                             onChange={(e) => handleCameraServiceChange(e.target.value)}
                             className="mr-3 h-4 w-4 text-purple-600 bg-transparent border-gray-600 focus:ring-purple-500"
                           />
-                          <Printer className="h-5 w-5 text-purple-400 mr-3" />
+                          <Printer className="h-5 w-5 text-gold mr-3" />
                           <div>
-                            <h3 className="font-semibold">{services.cameraWithPrints.name}</h3>
+                            <h3 className="font-semibold text-white">{services.cameraWithPrints.name}</h3>
                             <p className="text-sm text-gray-400">Photography with instant high-quality prints</p>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="bg-gray-900/80 rounded px-2 py-1">
+                          <div className=" rounded px-2 py-1">
                             <div className="text-lg font-bold text-yellow-300">
                               ₹{services.cameraWithPrints.price.toLocaleString()}
                             </div>
-                            <div className="text-xs text-gray-300">per setup</div>
                           </div>
                         </div>
                       </div>
@@ -423,17 +423,19 @@ export function AdvancedBookingSystem() {
               {/* Contact Information */}
               <div>
                 <h3 className="font-display text-xl font-bold mb-4 flex items-center">
-                  <Users className="mr-2 h-5 w-5 text-purple-400" />
-                  Contact Information
+                  <Users className="mr-2 h-5 w-5 text-gold" />
+                  <span className="text-white">
+                    Contact Information
+                    </span>
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="md:col-span-2">
-                    <label className="block text-sm font-semibold mb-2">Full Name *</label>
+                    <label className="block text-sm font-semibold mb-2 text-gold">Full Name *</label>
                     <Input
                       placeholder="Your full name"
                       value={inquiryData.name}
                       onChange={(e) => handleInputChange("name", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
+                      className="glass border-gold/30  text-white"
                     />
                   </div>
                   {/* <div>
@@ -443,7 +445,7 @@ export function AdvancedBookingSystem() {
                       placeholder="your@email.com"
                       value={inquiryData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
+                      className="glass border-gray-600 "
                     />
                   </div>
                   <div>
@@ -453,7 +455,7 @@ export function AdvancedBookingSystem() {
                       placeholder="+91 98765 43210"
                       value={inquiryData.phone}
                       onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="glass border-gray-600 focus:border-purple-400"
+                      className="glass border-gray-600 "
                     />
                   </div> */}
                 </div>
@@ -461,12 +463,12 @@ export function AdvancedBookingSystem() {
 
               {/* Event Details */}
               <div>
-                <label className="block text-sm font-semibold mb-2">Event Details & Special Requests</label>
+                <label className="block text-sm font-semibold mb-2 text-gold">Event Details & Special Requests</label>
                 <Textarea
                   placeholder="Tell us about your event, venue details, theme, special requirements, or any questions you have..."
                   value={inquiryData.eventDetails}
                   onChange={(e) => handleInputChange("eventDetails", e.target.value)}
-                  className="glass border-gray-600 focus:border-purple-400 min-h-[120px]"
+                  className="glass border-gold/30 text-white  min-h-[120px]"
                 />
               </div>
 
@@ -474,16 +476,18 @@ export function AdvancedBookingSystem() {
 
               <div>
                 <label className="text-sm font-semibold mb-4 flex items-center">
-                  <Gift className="h-5 w-5 text-green-400 mr-2" />
+                  <Gift className="h-5 w-5 text-white mr-2" />
+                  <span className="text-white text-lg">
                   Complimentary Add-ons
+                  </span>
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {freeAddOns.map((addon, index) => (
-                    <div key={index} className="p-3 rounded-lg bg-green-900/20 border border-green-400/30">
+                    <div key={index} className="p-3 rounded-lg glass border border-white/30">
                       <div className="flex items-center mb-1">
-                        <Gift className="h-4 w-4 text-green-400 mr-2" />
-                        <h4 className="font-semibold text-green-400">{addon.name}</h4>
-                        <Badge className="ml-auto bg-green-600 text-xs">FREE</Badge>
+                        <Gift className="h-4 w-4 text-white mr-2" />
+                        <h4 className="font-semibold text-white">{addon.name}</h4>
+                        <Badge className="ml-auto bg-gray-400 text-xs">FREE</Badge>
                       </div>
                       <p className="text-xs text-gray-300">{addon.description}</p>
                     </div>

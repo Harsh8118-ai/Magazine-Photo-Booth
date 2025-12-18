@@ -1,15 +1,17 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
-import { ChevronUp, Command } from "lucide-react"
+import { ChevronUp, Command, Sparkles, Wind } from "lucide-react"
+import Link from "next/link"
 
 interface FloatingNavigationProps {
   sections: Array<{
     id: string
-    label: string   
+    label: string
     icon: React.ComponentType<{ className?: string }>
+    isExternal?: boolean
+    href?: string
   }>
 }
 
@@ -27,8 +29,9 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
       setScrollProgress(progress)
       setIsVisible(scrollTop > 300)
 
-      // Find active section
-      const sectionElements = sections.map((section) => ({
+      // Find active section - only for internal sections
+      const internalSections = sections.filter((section) => !section.isExternal)
+      const sectionElements = internalSections.map((section) => ({
         id: section.id,
         element: document.getElementById(section.id),
       }))
@@ -72,6 +75,15 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
     setShowCommandPalette(false)
   }
 
+  const handleSectionClick = (section: (typeof sections)[0]) => {
+    if (section.isExternal && section.href) {
+      // External links will be handled by Link component
+      setShowCommandPalette(false)
+    } else {
+      scrollToSection(section.id)
+    }
+  }
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -93,7 +105,25 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
         <div className="glass-enhanced rounded-2xl p-2 space-y-2 backdrop-blur-xl border border-white/10">
           {sections.map((section) => {
             const Icon = section.icon
-            const isActive = activeSection === section.id
+            const isActive = activeSection === section.id && !section.isExternal
+
+            if (section.isExternal && section.href) {
+              return (
+                <Link key={section.id} href={section.href}>
+                  <button
+                    className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group relative hover:bg-white/10"
+                    title={section.label}
+                  >
+                    <Icon className="h-5 w-5 text-gray-400 group-hover:text-purple-400" />
+
+                    {/* Tooltip */}
+                    <div className="absolute right-full mr-3 px-3 py-1 bg-black/90 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      {section.label}
+                    </div>
+                  </button>
+                </Link>
+              )
+            }
 
             return (
               <button
@@ -133,7 +163,17 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
         <div className="glass-enhanced rounded-2xl p-2 flex space-x-2 backdrop-blur-xl border border-white/10">
           {sections.slice(0, 5).map((section) => {
             const Icon = section.icon
-            const isActive = activeSection === section.id
+            const isActive = activeSection === section.id && !section.isExternal
+
+            if (section.isExternal && section.href) {
+              return (
+                <Link key={section.id} href={section.href}>
+                  <button className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-white/10">
+                    <Icon className="h-4 w-4 text-gray-400 hover:text-purple-400" />
+                  </button>
+                </Link>
+              )
+            }
 
             return (
               <button
@@ -157,6 +197,14 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
         </div>
       </nav>
 
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-4 right-4 w-12 h-12 glass-enhanced rounded-full flex items-center justify-center hover:neon-glow transition-all duration-300 z-40"
+      >
+        <ChevronUp className="h-5 w-5 text-purple-400" />
+      </button>
+
       {/* Command Palette */}
       {showCommandPalette && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
@@ -169,12 +217,29 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
             </div>
 
             <div className="space-y-2">
+              {/* Pages Section Header */}
+              <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Pages</div>
               {sections.map((section) => {
                 const Icon = section.icon
+
+                if (section.isExternal && section.href) {
+                  return (
+                    <Link key={section.id} href={section.href}>
+                      <button
+                        onClick={() => setShowCommandPalette(false)}
+                        className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
+                      >
+                        <Icon className="h-5 w-5 text-purple-400" />
+                        <span>{section.label}</span>
+                      </button>
+                    </Link>
+                  )
+                }
+
                 return (
                   <button
                     key={section.id}
-                    onClick={() => scrollToSection(section.id)}
+                    onClick={() => handleSectionClick(section)}
                     className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
                   >
                     <Icon className="h-5 w-5 text-purple-400" />
@@ -182,6 +247,38 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
                   </button>
                 )
               })}
+
+              {/* Products Section Header */}
+              <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mt-4">
+                Products
+              </div>
+              <Link href="/products/magazine-photo-booth">
+                <button
+                  onClick={() => setShowCommandPalette(false)}
+                  className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
+                >
+                  <Sparkles className="h-5 w-5 text-gold" />
+                  <span>Magazine Photo Booth</span>
+                </button>
+              </Link>
+              <Link href="/products/mirror-selfie-booth">
+                <button
+                  onClick={() => setShowCommandPalette(false)}
+                  className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
+                >
+                  <Sparkles className="h-5 w-5 text-purple-400" />
+                  <span>Mirror Selfie Booth</span>
+                </button>
+              </Link>
+              <Link href="/products/vintage-photo-booth">
+                <button
+                  onClick={() => setShowCommandPalette(false)}
+                  className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
+                >
+                  <Wind className="h-5 w-5 text-amber-600" />
+                  <span>Vintage Photo Booth</span>
+                </button>
+              </Link>
             </div>
 
             <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
