@@ -812,7 +812,6 @@ export default function Hero() {
                 <a href="/products/vintage-photo-booth">Vintage Photo Booth Rental</a>
             </nav>
 
-
             <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} images={galleryImages} />
             <LegalModal isOpen={legalModal.isOpen} onClose={closeLegalModal} type={legalModal.type!} />
         </main>
