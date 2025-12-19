@@ -10,6 +10,8 @@ import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SectionWrapper } from "@/components/section-wrapper"
+import { PhotoCategorizer } from "./photo-categorizer"
+import { PhotoSharingTools } from "./photo-sharing-tools"
 
 const AvailabilityChecker = dynamic(
     () =>
@@ -55,13 +57,10 @@ const AnimatedCounter = dynamic(
 )
 
 const Floating3DScene = dynamic(
-    () =>
-        import("@/components/floating-3d-scene").then(
-            (mod) => mod.Floating3DScene
-        ),
+    () => import("@/components/floating-3d-scene").then(m => m.Floating3DScene),
     {
         ssr: false,
-        loading: () => <div className="h-96" />,
+        loading: () => null
     }
 )
 
@@ -75,16 +74,6 @@ const Button3D = dynamic(
     }
 )
 
-const ScrollReveal = dynamic(
-    () =>
-        import("@/components/scroll-reveal").then(
-            (mod) => mod.ScrollReveal
-        ),
-    {
-        ssr: false,
-    }
-)
-
 const ParallaxSection = dynamic(
     () =>
         import("@/components/parallax-section").then(
@@ -92,17 +81,6 @@ const ParallaxSection = dynamic(
         ),
     {
         ssr: false,
-    }
-)
-
-const AdvancedBookingSystem = dynamic(
-    () =>
-        import("@/components/advanced-booking-system").then(
-            (mod) => mod.AdvancedBookingSystem
-        ),
-    {
-        ssr: false,
-        loading: () => <div className="h-64" />,
     }
 )
 
@@ -158,8 +136,7 @@ const MultiVideoReels = dynamic(
     }
 )
 
-export default function MagazinePhotoBoothPage() {
-    const [selectedPackage, setSelectedPackage] = useState("weddings")
+export default function Hero() {
     const [isVisible, setIsVisible] = useState(false)
     const [isGalleryOpen, setIsGalleryOpen] = useState(false)
     const [legalModal, setLegalModal] = useState<{ isOpen: boolean; type: "privacy" | "terms" | "cookies" | null }>({
@@ -174,7 +151,15 @@ export default function MagazinePhotoBoothPage() {
         city: "",
     })
 
-    const router = useRouter();
+    const [load3D, setLoad3D] = useState(false)
+
+    useEffect(() => {
+        if ("requestIdleCallback" in window) {
+            requestIdleCallback(() => setLoad3D(true))
+        } else {
+            setTimeout(() => setLoad3D(true), 2000)
+        }
+    }, [])
 
     const navigationSections = [
         { id: "hero-section", label: "Home", icon: Home },
@@ -199,11 +184,6 @@ export default function MagazinePhotoBoothPage() {
         { length: 12 },
         (_, index) => `/magazine-photobooth.png?height=400&width=400&query=magazine photo booth event ${index + 1}`,
     )
-
-    const handlePackageSelect = (packageName: string) => {
-        setBookingData((prev) => ({ ...prev, package: packageName }))
-        scrollToSection("booking-section")
-    }
 
     const openLegalModal = (type: "privacy" | "terms" | "cookies") => {
         setLegalModal({ isOpen: true, type })
@@ -246,94 +226,96 @@ export default function MagazinePhotoBoothPage() {
         ]
 
         return (
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="products"
-                    ariaLabel="Photo booth products showcase"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
-                >
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-4 text-gradient">Our Products</h2>
-                        <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg max-w-2xl mx-auto">
-                            Choose the perfect photo booth experience for your event
-                        </p>
+            <SectionWrapper
+                id="products"
+                ariaLabel="Photo booth products showcase"
+                className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+            >
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-4 text-gradient">Our Products</h2>
+                    <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg max-w-2xl mx-auto">
+                        Choose the perfect photo booth experience for your event
+                    </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                            {products.map((product, index) => (
-                                <ScrollReveal key={product.id} direction={index % 2 === 0 ? "left" : "right"} delay={0.2 + index * 0.1}>
-                                    <Link href={product.link} passHref legacyBehavior>
-                                        <a className="block h-full">
-                                            <motion.div
-                                                whileHover={{ y: -8 }}
-                                                className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
-                                            >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                        {products.map((product, index) => (
+                            <div
+                                key={product.id}
+                                className={`reveal visible ${index % 2 === 0 ? "reveal-left" : "reveal-right"
+                                    } reveal-delay-${Math.min(index + 2, 5)}`}
+                            >
+                                <Link href={product.link} passHref legacyBehavior>
+                                    <a className="block h-full">
+                                        <motion.div
+                                            whileHover={{ y: -8 }}
+                                            className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group"
+                                        >
 
-                                                <div className="flex justify-center items-center gap-4">
-                                                    <div>
-                                                        <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
-                                                            {product.name}
-                                                        </h3>
-                                                        <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
-                                                    </div>
-
-                                                    <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
-                                                        <Image
-                                                            src={product.icon}
-                                                            alt={product.name}
-                                                            width={800}
-                                                            height={600}
-                                                            loading="lazy"
-                                                            className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
-                                                        />
-                                                    </div></div>
-
-                                                <ul className="space-y-2 mb-6">
-                                                    {product.features.map((feature, idx) => (
-                                                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                                                            <span className="text-gold">✓</span> {feature}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-
-                                                <div className="flex items-center text-gold group-hover:text-yellow-300 transition-colors font-semibold text-sm sm:text-base">
-                                                    Explore {product.name.split(" ")[0]} Booth →
+                                            <div className="flex justify-center items-center gap-4">
+                                                <div>
+                                                    <h3 className="font-display text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-gold transition-colors">
+                                                        {product.name}
+                                                    </h3>
+                                                    <p className="text-gray-400 mb-6 text-sm sm:text-base">{product.description}</p>
                                                 </div>
-                                            </motion.div>
-                                        </a>
-                                    </Link>
-                                </ScrollReveal>
+
+                                                <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                                                    <Image
+                                                        src={product.icon}
+                                                        alt={product.name}
+                                                        width={800}
+                                                        height={600}
+                                                        loading="lazy"
+                                                        className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
+                                                    />
+                                                </div></div>
+
+                                            <ul className="space-y-2 mb-6">
+                                                {product.features.map((feature, idx) => (
+                                                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                                                        <span className="text-gold">✓</span> {feature}
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                            <div className="flex items-center text-gold group-hover:text-yellow-300 transition-colors font-semibold text-sm sm:text-base">
+                                                Explore {product.name.split(" ")[0]} Booth →
+                                            </div>
+                                        </motion.div>
+                                    </a>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Why Choose Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="mt-12 sm:mt-16 glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20"
+                    >
+                        <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gradient">Why Choose Our Booths?</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                            {[
+                                { title: "Premium Quality", desc: "Professional equipment & instant prints" },
+                                { title: "Customizable", desc: "Event branding & personal touches" },
+                                { title: "Experienced Team", desc: "Trained professionals on-site" },
+                                { title: "Guaranteed Fun", desc: "Every guest leaves with memories" },
+                            ].map((item, idx) => (
+                                <div key={idx} className="text-center">
+                                    <h4 className="font-bold text-gold mb-2 text-sm sm:text-base">{item.title}</h4>
+                                    <p className="text-gray-400 text-xs sm:text-sm">{item.desc}</p>
+                                </div>
                             ))}
                         </div>
-
-                        {/* Why Choose Section */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            className="mt-12 sm:mt-16 glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20"
-                        >
-                            <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gradient">Why Choose Our Booths?</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                                {[
-                                    { title: "Premium Quality", desc: "Professional equipment & instant prints" },
-                                    { title: "Customizable", desc: "Event branding & personal touches" },
-                                    { title: "Experienced Team", desc: "Trained professionals on-site" },
-                                    { title: "Guaranteed Fun", desc: "Every guest leaves with memories" },
-                                ].map((item, idx) => (
-                                    <div key={idx} className="text-center">
-                                        <h4 className="font-bold text-gold mb-2 text-sm sm:text-base">{item.title}</h4>
-                                        <p className="text-gray-400 text-xs sm:text-sm">{item.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </SectionWrapper>
-            </ScrollReveal>
+                    </motion.div>
+                </div>
+            </SectionWrapper>
         )
     }
 
     return (
-        <main className="min-h-screen bg-black text-white overflow-x-hidden">
+        <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
             <FloatingNavigation sections={navigationSections} />
 
             {/* Hero Section */}
@@ -344,7 +326,8 @@ export default function MagazinePhotoBoothPage() {
                 className="relative min-h-screen flex items-center justify-center overflow-hidden"
             >
                 {/* Floating Background */}
-                <Floating3DScene />
+                {/* <Floating3DScene /> */}
+                {load3D && <Floating3DScene />}
 
                 {/* Hero Content */}
                 <div
@@ -365,7 +348,7 @@ export default function MagazinePhotoBoothPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                         <Button3D
                             size="lg"
-                            onClick={() => scrollToSection("booking-section")}
+                            onClick={() => scrollToSection("products")}
                             className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
                             aria-label="Book your The Luxury Booth now"
                         >
@@ -375,7 +358,7 @@ export default function MagazinePhotoBoothPage() {
                         <Button3D
                             variant="outline"
                             size="lg"
-                            onClick={() => scrollToSection("packages-section")}
+                            onClick={() => scrollToSection("products")}
                             className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold border-gold text-gold hover:bg-gold hover:text-black bg-transparent"
                             aria-label="View our packages and pricing"
                         >
@@ -392,11 +375,15 @@ export default function MagazinePhotoBoothPage() {
                     >
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
                             <div>
-                                <AnimatedCounter end={12500} suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
+                                {isVisible && (
+                                    <AnimatedCounter end={12500} suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
+                                )}
                                 <div className="text-xs sm:text-sm text-gray-400">Magazine Covers Printed</div>
                             </div>
                             <div>
-                                <AnimatedCounter end={250} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
+                                {isVisible && (
+                                    <AnimatedCounter end={250} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
+                                )}
                                 <div className="text-xs sm:text-sm text-gray-400">Successful Events</div>
                             </div>
                             <div>
@@ -409,43 +396,41 @@ export default function MagazinePhotoBoothPage() {
             </SectionWrapper>
 
             {/* Conversion Features Section */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="features-section"
-                    ariaLabel="Interactive features to try before booking"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
-                >
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
-                            Try Before You Book
-                        </h2>
+            <SectionWrapper
+                id="features-section"
+                ariaLabel="Interactive features to try before booking"
+                className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+            >
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+                        Try Before You Book
+                    </h2>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 sm:gap-12 mb-12 sm:mb-16">
-                            <ScrollReveal direction="left" delay={0.3}>
-                                <article>
-                                    <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3>
-                                    <AvailabilityChecker />
-                                </article>
-                            </ScrollReveal>
+                    <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 sm:gap-12 mb-12 sm:mb-16">
+                        <div className="reveal visible reveal-left reveal-delay-3">
+                            <article>
+                                <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3>
+                                <AvailabilityChecker />
+                            </article>
+                        </div>
 
-                            {/* AI Preview  */}
-                            {/* <ScrollReveal direction="right" delay={0.4}>
+                        {/* AI Preview  */}
+                        {/* <ScrollReveal direction="right" delay={0.4}>
                 <article>
                   <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Preview Your Cover</h3>
                   <AiCoverPreview />
                 </article>
               </ScrollReveal> */}
 
-                        </div>
                     </div>
-                </SectionWrapper>
-            </ScrollReveal>
+                </div>
+            </SectionWrapper>
 
             {/* Products Section  */}
             <ProductsSection />
 
             {/* Video Clips Carousel */}
-            <ScrollReveal direction="up" delay={0.2}>
+            <div className="reveal visible reveal-up reveal-delay-2">
                 <MultiVideoReels
                     title="Our Instagram Reels"
                     videoUrls={[
@@ -454,221 +439,214 @@ export default function MagazinePhotoBoothPage() {
                         "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4"
                     ]}
                 />
-            </ScrollReveal>
+            </div>
 
             {/* Event Gallery Section */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="gallery-section"
-                    ariaLabel="Photo gallery of past events"
-                    className="py-16 sm:py-20 px-4 sm:px-6"
-                >
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
-                            Event Gallery
-                        </h2>
+            <SectionWrapper
+                id="gallery-section"
+                ariaLabel="Photo gallery of past events"
+                className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6"
+            >
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+                        Event Gallery
+                    </h2>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
-                                    <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
-                                        <Image
-                                            src={`/Images/${index + 1}.png`}
-                                            alt={`Event photo ${index + 1}`}
-                                            loading="lazy"
-                                            width={800}
-                                            height={600}
-                                            className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-                                </ScrollReveal>
-                            ))}
-                        </div>
-
-                        <div className="text-center">
-                            <a href="/gallery">
-                                <Button3D
-                                    variant="outline"
-                                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
-                                >
-                                    View Full Gallery
-                                </Button3D>
-                            </a>
-                        </div>
-
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
+                        {Array.from({ length: 8 }).map((_, index) => (
+                            <div key={index} className="reveal visible reveal-scale reveal-delay-1">
+                                <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
+                                    <Image
+                                        src={`/Images/${index + 1}.png`}
+                                        alt={`Event photo ${index + 1}`}
+                                        loading="lazy"
+                                        width={800}
+                                        height={600}
+                                        className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                </SectionWrapper>
-            </ScrollReveal>
+
+                    <div className="text-center">
+                        <a href="/gallery">
+                            <Button3D
+                                variant="outline"
+                                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                            >
+                                View Full Gallery
+                            </Button3D>
+                        </a>
+                    </div>
+
+                </div>
+            </SectionWrapper>
 
             {/* Why Choose Us Section */}
             <ParallaxSection speed={0.2}>
-                <ScrollReveal direction="up" delay={0.2}>
-                    <SectionWrapper
-                        id="why-choose-us-section"
-                        ariaLabel="Reasons to choose The Luxury Booths"
-                        className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
-                    >
-                        <div className="max-w-6xl mx-auto">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-                                <ScrollReveal direction="left" delay={0.3}>
-                                    <div>
-                                        <h2 className="font-display text-3xl sm:text-5xl font-bold mb-8 text-gradient">Why Choose Us</h2>
+                <SectionWrapper
+                    id="why-choose-us-section"
+                    ariaLabel="Reasons to choose The Luxury Booths"
+                    className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+                >
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                            <div className="reveal visible reveal-left reveal-delay-3">
+                                <div>
+                                    <h2 className="font-display text-3xl sm:text-5xl font-bold mb-8 text-gradient">Why Choose Us</h2>
 
-                                        <div className="space-y-6">
-                                            {[
-                                                {
-                                                    icon: Award,
-                                                    title: "Premium Quality",
-                                                    desc: "Professional-grade equipment and instant high-quality prints",
-                                                },
-                                                { icon: Users, title: "Expert Team", desc: "Experienced photographers and event specialists" },
-                                                {
-                                                    icon: Zap,
-                                                    title: "Instant Results",
-                                                    desc: "Get your magazine covers printed in just 30 seconds",
-                                                },
-                                                { icon: Star, title: "5-Star Reviews", desc: "Trusted by 500+ events with perfect ratings" },
-                                            ].map((item, index) => (
-                                                <ScrollReveal key={index} direction="left" delay={0.1 * index}>
-                                                    <div className="flex items-start space-x-4">
-                                                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center flex-shrink-0">
-                                                            <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
-                                                        </div>
-                                                        <div>
-                                                            <h3 className="text-lg sm:text-xl font-bold mb-2 font-display">{item.title}</h3>
-                                                            <p className="text-gray-400 text-sm sm:text-base">{item.desc}</p>
-                                                        </div>
+                                    <div className="space-y-6">
+                                        {[
+                                            {
+                                                icon: Award,
+                                                title: "Premium Quality",
+                                                desc: "Professional-grade equipment and instant high-quality prints",
+                                            },
+                                            { icon: Users, title: "Expert Team", desc: "Experienced photographers and event specialists" },
+                                            {
+                                                icon: Zap,
+                                                title: "Instant Results",
+                                                desc: "Get your magazine covers printed in just 30 seconds",
+                                            },
+                                            { icon: Star, title: "5-Star Reviews", desc: "Trusted by 500+ events with perfect ratings" },
+                                        ].map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className={`reveal visible reveal-left reveal-delay-${Math.min(index + 1, 5)}`}
+                                            >
+                                                <div className="flex items-start space-x-4">
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center flex-shrink-0">
+                                                        <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
                                                     </div>
-                                                </ScrollReveal>
+                                                    <div>
+                                                        <h3 className="text-lg sm:text-xl font-bold mb-2 font-display">{item.title}</h3>
+                                                        <p className="text-gray-400 text-sm sm:text-base">{item.desc}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="mt-8 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                                        <div className="flex">
+                                            {Array.from({ length: 5 }).map((_, i) => (
+                                                <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 text-gold fill-current" />
                                             ))}
                                         </div>
+                                        <span className="text-base sm:text-lg font-semibold">4.9/5 from 200+ reviews</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <div className="mt-8 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                                            <div className="flex">
+                            <div className="reveal visible reveal-right reveal-delay-4">
+                                <div className="relative">
+                                    <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
+                                        <Image
+                                            src="/photo-booth-team.png"
+                                            alt="Our team in action"
+                                            loading="lazy"
+                                            width={800}
+                                            height={600}
+                                            className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
+                                        />
+                                        <div className="text-center">
+                                            <div className="flex justify-center mb-4">
                                                 {Array.from({ length: 5 }).map((_, i) => (
-                                                    <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 text-gold fill-current" />
+                                                    <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-gold fill-current" />
                                                 ))}
                                             </div>
-                                            <span className="text-base sm:text-lg font-semibold">4.9/5 from 200+ reviews</span>
+                                            <p className="text-base sm:text-lg italic text-gray-300 mb-4">
+                                                "Professional service from start to finish. Our guests are still talking about the amazing
+                                                magazine covers!"
+                                            </p>
+                                            <div className="font-semibold text-sm sm:text-base">Emma & James Wilson</div>
+                                            <div className="text-xs sm:text-sm text-gray-400">Wedding, Napa Valley</div>
                                         </div>
                                     </div>
-                                </ScrollReveal>
-
-                                <ScrollReveal direction="right" delay={0.4}>
-                                    <div className="relative">
-                                        <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
-                                            <Image
-                                                src="/photo-booth-team.png"
-                                                alt="Our team in action"
-                                                loading="lazy"
-                                                width={800}
-                                                height={600}
-                                                className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
-                                            />
-                                            <div className="text-center">
-                                                <div className="flex justify-center mb-4">
-                                                    {Array.from({ length: 5 }).map((_, i) => (
-                                                        <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-gold fill-current" />
-                                                    ))}
-                                                </div>
-                                                <p className="text-base sm:text-lg italic text-gray-300 mb-4">
-                                                    "Professional service from start to finish. Our guests are still talking about the amazing
-                                                    magazine covers!"
-                                                </p>
-                                                <div className="font-semibold text-sm sm:text-base">Emma & James Wilson</div>
-                                                <div className="text-xs sm:text-sm text-gray-400">Wedding, Napa Valley</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ScrollReveal>
+                                </div>
                             </div>
                         </div>
-                    </SectionWrapper>
-                </ScrollReveal>
+                    </div>
+                </SectionWrapper>
             </ParallaxSection>
 
             {/* What Our Clients Say */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="testimonials-section"
-                    ariaLabel="Customer testimonials and reviews"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
-                >
-                    <div className="max-w-7xl mx-auto">
-                        <TestimonialCarousel />
-                    </div>
-                </SectionWrapper>
-            </ScrollReveal>
+            <SectionWrapper
+                id="testimonials-section"
+                ariaLabel="Customer testimonials and reviews"
+                className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+            >
+                <div className="max-w-7xl mx-auto">
+                    <TestimonialCarousel />
+                </div>
+            </SectionWrapper>
 
             {/* About Us Section */}
             <ParallaxSection speed={0.3}>
-                <ScrollReveal direction="up" delay={0.2}>
-                    <SectionWrapper
-                        id="about-section"
-                        ariaLabel="Information about Magazine Photo Booth"
-                        className="py-16 sm:py-20 px-4 sm:px-6"
-                    >
-                        <div className="max-w-6xl mx-auto">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-0 items-center">
-                                <ScrollReveal direction="left" delay={0.3}>
-                                    <div>
-                                        <Image
-                                            src="/Images/AboutUs.png"
-                                            alt="Our team"
-                                            width={800}
-                                            height={600}
-                                            loading="lazy"
-                                            className="w-full sm:w-80 h-full sm:h-full object-cover rounded-2xl glass-enhanced"
-                                        />
-                                    </div>
-                                </ScrollReveal>
+                <SectionWrapper
+                    id="about-section"
+                    ariaLabel="Information about Magazine Photo Booth"
+                    className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6"
+                >
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-0 items-center">
+                            <div className="reveal visible reveal-left reveal-delay-3">
+                                <div>
+                                    <Image
+                                        src="/Images/AboutUs.png"
+                                        alt="Our team"
+                                        width={800}
+                                        height={600}
+                                        loading="lazy"
+                                        className="w-full sm:w-80 h-full sm:h-full object-cover rounded-2xl glass-enhanced"
+                                    />
+                                </div>
+                            </div>
 
-                                <ScrollReveal direction="right" delay={0.4}>
-                                    <div>
-                                        <h2 className="font-display text-5xl font-bold text-center mb-8 text-gradient">About Us</h2>
-                                        <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed text-center">
-                                            We're passionate about creating unforgettable moments. Our team of professional photographers and
-                                            event specialists brings years of experience to make your event extraordinary.
-                                        </p>
-                                        <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed text-center">
-                                            From intimate weddings to large corporate events, we've helped thousands of guests become cover
-                                            stars with our innovative magazine photo booth experience.
-                                        </p>
+                            <div className="reveal visible reveal-right reveal-delay-4">
+                                <div>
+                                    <h2 className="font-display text-5xl font-bold text-center mb-8 text-gradient">About Us</h2>
+                                    <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed text-center">
+                                        We're passionate about creating unforgettable moments. Our team of professional photographers and
+                                        event specialists brings years of experience to make your event extraordinary.
+                                    </p>
+                                    <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed text-center">
+                                        From intimate weddings to large corporate events, we've helped thousands of guests become cover
+                                        stars with our innovative magazine photo booth experience.
+                                    </p>
 
-                                        <div className="space-y-4 text-center flex items-center flex-col justify-center">
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-3 h-3 bg-gold rounded-full"></div>
-                                                <span className="text-sm sm:text-base">Founded in 2024    </span>
-                                            </div>
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                                <span className="text-sm sm:text-base">100+ Events Completed</span>
-                                            </div>
-                                            <div className="flex items-center space-x-4">
-                                                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                                                <span className="text-sm sm:text-base">Award-Winning Service</span>
-                                            </div>
+                                    <div className="space-y-4 text-center flex items-center flex-col justify-center">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-3 h-3 bg-gold rounded-full"></div>
+                                            <span className="text-sm sm:text-base">Founded in 2024    </span>
+                                        </div>
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                                            <span className="text-sm sm:text-base">100+ Events Completed</span>
+                                        </div>
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                                            <span className="text-sm sm:text-base">Award-Winning Service</span>
                                         </div>
                                     </div>
-                                </ScrollReveal>
+                                </div>
                             </div>
                         </div>
-                    </SectionWrapper>
-                </ScrollReveal>
+                    </div>
+                </SectionWrapper>
             </ParallaxSection>
 
             {/* FAQs & Logistics Section */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="faq-section"
-                    ariaLabel="Frequently asked questions and logistics information"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
-                >
-                    <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
-                        <FaqsSection />
-                    </div>
-                </SectionWrapper>
-            </ScrollReveal>
+            <SectionWrapper
+                id="faq-section"
+                ariaLabel="Frequently asked questions and logistics information"
+                className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+            >
+                <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
+                    <FaqsSection />
+                </div>
+            </SectionWrapper>
 
             {/* Footer - Enhanced with legal links */}
             <footer
@@ -707,12 +685,9 @@ export default function MagazinePhotoBoothPage() {
                             <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
                             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                                 <li>
-                                    <button
-                                        onClick={() => scrollToSection("packages-section")}
-                                        className="hover:text-white transition-colors"
-                                    >
+                                    <Link href="/products/magazine-photo-booth" className="hover:text-white transition-colors">
                                         Magazine Photo Booth
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
@@ -720,7 +695,7 @@ export default function MagazinePhotoBoothPage() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
+                                    <Link href="/products/vintage-photo-booth" className="hover:text-white transition-colors">
                                         Vintage Photo Booth
                                     </Link>
                                 </li>
@@ -775,7 +750,7 @@ export default function MagazinePhotoBoothPage() {
                             <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
                             <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                                <p className="flex flex-row">✉️ theluxurybooths@gmail.com</p>
+                                <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
                                 <p>📍 Sector-73, Noida</p>
                             </div>
                         </div>
@@ -831,10 +806,11 @@ export default function MagazinePhotoBoothPage() {
                 selectedCity={bookingData.city}
             />
 
-            <div className="sr-only">
-                <a href="/products/mirror-selfie-booth">Mirror Selfie Booth</a>
-                <a href="/products/vintage-photo-booth">Vintage Photo Booth</a>
-            </div>
+            <nav aria-hidden="true" className="sr-only">
+                <a href="/products/magazine-photo-booth">Magazine Photo Booth in Delhi</a>
+                <a href="/products/mirror-selfie-booth">Mirror Selfie Booth for Weddings</a>
+                <a href="/products/vintage-photo-booth">Vintage Photo Booth Rental</a>
+            </nav>
 
 
             <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} images={galleryImages} />

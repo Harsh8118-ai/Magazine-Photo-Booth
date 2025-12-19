@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardTwo } from "@/components/ui/card"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
 
@@ -149,7 +149,7 @@ export function FaqsSection() {
 
       <div className="space-y-4">
         {faqData.map((faq, index) => (
-          <Card key={index} className="glass border-0 overflow-hidden">
+          <CardTwo key={index} className=" border-0 overflow-hidden">
             <CardContent className="p-0">
               <button
                 onClick={() => toggleFaq(index)}
@@ -171,7 +171,7 @@ export function FaqsSection() {
                 </div>
               )}
             </CardContent>
-          </Card>
+          </CardTwo>
         ))}
       </div>
 

@@ -3,13 +3,20 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardTwo } from "@/components/ui/card"
 import { Calendar, CheckCircle, Clock, X } from "lucide-react"
 
 export function AvailabilityChecker() {
   const [selectedDate, setSelectedDate] = useState("")
   const [availability, setAvailability] = useState<"available" | "waitlist" | "booked" | null>(null)
   const [isChecking, setIsChecking] = useState(false)
+
+  const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" })
+    }
+        }
 
   const checkAvailability = async () => {
     if (!selectedDate) return
@@ -71,7 +78,7 @@ export function AvailabilityChecker() {
   const statusConfig = getStatusConfig()
 
   return (
-    <Card className="glass border-0 max-w-md mx-auto">
+    <CardTwo className="glass border-0 max-w-md mx-auto">
       <CardContent className="p-6">
         <div className="flex items-center mb-4">
           <Calendar className="h-5 w-5 text-purple-400 mr-2" />
@@ -106,6 +113,7 @@ export function AvailabilityChecker() {
               </div>
 
               <Button
+              onClick={() => scrollToSection("products")}
                 className={`w-full ${
                   availability === "available"
                     ? "bg-green-600 hover:bg-green-700"
@@ -120,6 +128,6 @@ export function AvailabilityChecker() {
           )}
         </div>
       </CardContent>
-    </Card>
+    </CardTwo>
   )
 }

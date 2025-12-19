@@ -5,6 +5,7 @@ import "./globals.css"
 import { Analytics } from "@/components/analytics"
 import { Suspense } from "react"
 import Script from "next/script"
+import RevealProvider from "@/components/reveal-provider"
 
 
 const spaceGrotesk = Space_Grotesk({
@@ -212,6 +213,7 @@ export default function RootLayout({
 
       </head>
       <body className="bg-black text-white overflow-x-hidden">
+        <RevealProvider />
         {children}
         <Suspense fallback={<div>Loading...</div>}>
           <Analytics />
