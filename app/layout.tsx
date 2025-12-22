@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Space_Grotesk, Inter } from "next/font/google"
+import { Space_Grotesk, Inter, Comic_Neue } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@/components/analytics"
 import { Suspense } from "react"
@@ -12,6 +12,13 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-space-grotesk",
+})
+
+const comicNeue = Comic_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-comic-neue",
 })
 
 const inter = Inter({
@@ -101,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${comicNeue.variable} ${inter.variable} antialiased`}>
       <head>
 
         <script
