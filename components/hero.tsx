@@ -4,14 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { useRouter } from "next/navigation";
-import { Star, Camera, Zap, Users, Award, CheckCircle, Calendar, Package, Home, MessageCircle, PackageOpen } from "lucide-react"
+import { Star, Camera, Zap, Users, Award, Calendar, Package, Home, MessageCircle, PackageOpen } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SectionWrapper } from "@/components/section-wrapper"
-import { PhotoCategorizer } from "./photo-categorizer"
-import { PhotoSharingTools } from "./photo-sharing-tools"
 
 const AvailabilityChecker = dynamic(
     () =>

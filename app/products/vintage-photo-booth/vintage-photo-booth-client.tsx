@@ -144,7 +144,6 @@ const VintagePhotoBoothClient = () => {
             photography with modern instant printing.
           </p>
 
-          {/* Image Section  */}
           {/* Hero Image */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:gap-12 lg:gap-20 py-8">
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import MagazinePhotoBoothClient from "./magazine-photo-booth-client"
+import MagazinePhotoBooth from "./magazine-photo-booth"
 
 export const metadata: Metadata = {
   title: "Magazine Photo Booth - Luxury Celebrity Cover Experience | Magazine Photo Booth",
@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 }
 
 export default function MagazinePhotoBoothPage() {
-  return <MagazinePhotoBoothClient />
+  return <MagazinePhotoBooth />
 }
