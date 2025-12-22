@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   keywords: [
     "photo booth",
     "magazine photo booth",
+    "mirro selfie booth",
+    "vintage photo booth",
+    "retro photo booth",
     "wedding photo booth",
     "corporate events",
     "luxury photo booth",
@@ -73,7 +76,7 @@ export const metadata: Metadata = {
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
     images: ["https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp"],
-    creator: "@luxurybooth",
+    creator: "@theluxurybooths",
   },
   robots: {
     index: true,
