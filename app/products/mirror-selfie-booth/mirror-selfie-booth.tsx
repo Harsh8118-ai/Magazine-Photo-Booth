@@ -1,42 +1,11 @@
-"use client"
-
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ChevronLeft, Sparkles, Camera, Heart, Crown, Check } from "lucide-react"
-import { motion } from "framer-motion"
+import GalleryAndCTA from "./gallery"
+import WhatsAppButton from "./whatsapp-button"
 
-const MirrorSelfieBoothClient = () => {
-  const [selectedImage, setSelectedImage] = useState(0)
+const MirrorSelfieBooth = () => {
   const mirrorBoothPrice = 14999
-
-  const COMPANY_WHATSAPP = "919266037002";
-
-  const sendWhatsAppBookingMessage = () => {
-    const message =
-      `Hello! I'm interested in booking the *Mirror Selfie Booth*.\n\n` +
-      `Please share availability and details.\n\n` +
-      `Package Price: ₹${mirrorBoothPrice.toLocaleString()}`;
-
-    const url = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`;
-
-    window.open(url, "_blank");
-  };
-
-
-  const galleryImages = [
-    { id: 1, src: "/Cloudinary/Mirror-Booth/1 (1).jpg", alt: "Mirror selfie booth at wedding" },
-    { id: 2, src: "/Cloudinary/Mirror-Booth/1 (2).jpg", alt: "Mirror booth at party" },
-    { id: 3, src: "/Cloudinary/Mirror-Booth/1 (3).jpg", alt: "Mirror booth setup" },
-    { id: 4, src: "/Cloudinary/Mirror-Booth/1 (4).jpg", alt: "Mirror selfie Booth" },
-    { id: 5, src: "/Cloudinary/Mirror-Booth/1 (5).jpg", alt: "Red carpet setup" },
-    { id: 6, src: "/Cloudinary/Mirror-Booth/1 (6).jpg", alt: "Floral decoration" },
-    { id: 7, src: "/Cloudinary/Mirror-Booth/1 (7).jpg", alt: "Corporate event" },
-    { id: 8, src: "/Cloudinary/Mirror-Booth/1 (8).jpg", alt: "Guest experience" },
-    { id: 9, src: "/Cloudinary/Mirror-Booth/1 (9).jpg", alt: "Product launch" },
-    { id: 10, src: "/Cloudinary/Mirror-Booth/1 (10).jpg", alt: "House Party" },
-    { id: 11, src: "/Cloudinary/Mirror-Booth/1 (11).png", alt: "LED setup" },
-  ]
 
   const features = [
     {
@@ -61,7 +30,6 @@ const MirrorSelfieBoothClient = () => {
     },
   ];
 
-
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with back button */}
@@ -80,12 +48,7 @@ const MirrorSelfieBoothClient = () => {
       <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-transparent opacity-50" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto relative z-10"
-        >
+        <div className="max-w-6xl mx-auto relative z-10 animate-fade-up">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
             The Luxury <span className="text-gradient">Mirror Selfie</span> Booth Experience
           </h1>
@@ -99,12 +62,7 @@ const MirrorSelfieBoothClient = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-items-center">
 
               {/* Left: Image */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="w-full flex justify-center"
-              >
+              <div className="w-full flex justify-center animate-fade-left">
                 <div className="inline-block rounded-xl overflow-hidden border border-gold/30">
                   <Image
                     src="/Cloudinary/Mirror-Booth.JPG"
@@ -114,15 +72,10 @@ const MirrorSelfieBoothClient = () => {
                     className="object-cover"
                   />
                 </div>
-              </motion.div>
+              </div>
 
               {/* Right: Text */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="w-full flex justify-center"
-              >
+              <div className="w-full flex justify-center animate-fade-right">
                 <div className="bg-gradient-to-r from-gold/10 via-purple-900/20 to-gold/10 p-8 sm:p-10 rounded-2xl shadow-lg max-w-xl text-center">
                   <p className="text-3xl sm:text-4xl font-display font-bold text-gold mb-6">
                     "Where Every Moment Becomes Iconic"
@@ -137,12 +90,12 @@ const MirrorSelfieBoothClient = () => {
                     Perfect for weddings, product launches, and luxury celebrations.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
             </div>
           </section>
 
-        </motion.div>
+        </div>
       </section>
 
       {/* Features Section */}
@@ -156,17 +109,14 @@ const MirrorSelfieBoothClient = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="glass-enhanced p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all group"
+                  className={`glass-enhanced p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all group animate-fade-up reveal-delay-${index + 1}`}
                 >
                   <Icon className="size-8 sm:size-10 text-gold mb-4 group-hover:text-yellow-300 transition-colors" />
                   <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
                   <p className="text-sm text-gray-400">{feature.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -180,11 +130,7 @@ const MirrorSelfieBoothClient = () => {
             Premium Pricing
           </h3>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="glass-enhanced p-8 rounded-lg border border-gold/30 mb-8"
-          >
+        <div className="glass-enhanced p-8 rounded-lg border border-gold/30 mb-8 animate-fade-up">
             <div className="mb-6">
               <p className="text-gold/80 text-xl uppercase tracking-widest">Mirror Selfie Booth Service</p>
               <div className="flex items-baseline justify-between">
@@ -217,69 +163,15 @@ const MirrorSelfieBoothClient = () => {
             <p className="text-gold/80 italic text-sm mb-6 p-4 bg-gold/10 rounded-lg">
               * 50% advance payment required to lock your event date
             </p>
-
-            <Link
-              href="/#booking-section"
-              onClick={sendWhatsAppBookingMessage}
-              className="w-full block text-center px-6 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
-            >
-              Book Now
-            </Link>
-
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-8 text-center text-gradient">Gallery</h2>
-
-          {/* Thumbnail Grid */}
-          <div className="columns-2 sm:columns-3 gap-3 space-y-3">
-            {galleryImages.map((image, index) => (
-              <motion.div
-                key={image.id}
-                whileHover={{ scale: 1.02 }}
-                onClick={() => setSelectedImage(index)}
-                className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={800}
-                  height={800}
-                  className="w-full h-auto rounded-lg"
-                />
-              </motion.div>
-            ))}
+            <WhatsAppButton />
           </div>
-
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-gold/10 to-transparent">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="max-w-2xl mx-auto text-center"
-        >
-          <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4">Ready for Luxury?</h2>
-          <p className="text-gray-300 mb-8">Bring the mirror selfie booth to your next premium event</p>
-          <Link
-            href="/#booking-section"
-            onClick={sendWhatsAppBookingMessage}
-            className="w-full block text-center px-6 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
-          >
-            Book Now
-          </Link>
-
-
-        </motion.div>
-      </section>
+      {/* Gallery & CTA Section */}
+      <GalleryAndCTA />
     </main>
   )
 }
 
-export default MirrorSelfieBoothClient
+export default MirrorSelfieBooth

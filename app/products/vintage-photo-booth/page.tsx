@@ -1,4 +1,4 @@
-import VintagePhotoBoothClient from "./vintage-photo-booth-client"
+import VintagePhotoBooth from "./vintage-photo-booth"
 
 export const metadata = {
   title: "Vintage Photo Booth for Weddings & Events | The Luxury Booths",
@@ -11,5 +11,5 @@ export const metadata = {
 }
 
 export default function VintagePhotoBoothPage() {
-  return <VintagePhotoBoothClient />
+  return <VintagePhotoBooth />
 }
