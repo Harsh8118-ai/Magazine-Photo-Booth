@@ -4,15 +4,32 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { ChevronUp, Command, Sparkles, Wind } from "lucide-react"
 import Link from "next/link"
+import {
+  Home,
+  Camera,
+  Users,
+  MessageCircle,
+  PackageOpen,
+} from "lucide-react"
+
+const ICON_MAP = {
+  home: Home,
+  camera: Camera,
+  users: Users,
+  message: MessageCircle,
+  package: PackageOpen,
+}
+
+type NavigationSection = {
+  id: string
+  label: string
+  icon: keyof typeof ICON_MAP
+  isExternal?: boolean
+  href?: string
+}
 
 interface FloatingNavigationProps {
-  sections: Array<{
-    id: string
-    label: string
-    icon: React.ComponentType<{ className?: string }>
-    isExternal?: boolean
-    href?: string
-  }>
+  sections: readonly NavigationSection[]
 }
 
 export function FloatingNavigation({ sections }: FloatingNavigationProps) {
@@ -104,7 +121,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
       <nav className="fixed right-4 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
         <div className="glass-enhanced rounded-2xl p-2 space-y-2 backdrop-blur-xl border border-white/10">
           {sections.map((section) => {
-            const Icon = section.icon
+            const Icon = ICON_MAP[section.icon]
             const isActive = activeSection === section.id && !section.isExternal
 
             if (section.isExternal && section.href) {
@@ -162,7 +179,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
       <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 lg:hidden">
         <div className="glass-enhanced rounded-2xl p-2 flex space-x-2 backdrop-blur-xl border border-white/10">
           {sections.slice(0, 5).map((section) => {
-            const Icon = section.icon
+            const Icon = ICON_MAP[section.icon]
             const isActive = activeSection === section.id && !section.isExternal
 
             if (section.isExternal && section.href) {
@@ -200,14 +217,14 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-4 right-4 w-12 h-12 glass-enhanced rounded-full flex items-center justify-center hover:neon-glow transition-all duration-300 z-40"
+        className="hidden sm:fixed bottom-4 right-4 w-12 h-12 glass-enhanced rounded-full sm:flex items-center justify-center hover:neon-glow transition-all duration-300 z-40"
       >
         <ChevronUp className="h-5 w-5 text-purple-400" />
       </button>
 
       {/* Command Palette */}
       {showCommandPalette && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center">
           <div className="glass-enhanced rounded-2xl p-6 w-full max-w-md mx-4 border border-white/20">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-display text-lg font-bold">Quick Navigation</h3>
@@ -220,7 +237,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
               {/* Pages Section Header */}
               <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Pages</div>
               {sections.map((section) => {
-                const Icon = section.icon
+                const Icon = ICON_MAP[section.icon]
 
                 if (section.isExternal && section.href) {
                   return (
@@ -281,7 +298,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
               </Link>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
+            <div className="hidden sm:block mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
               Press <kbd className="px-2 py-1 bg-white/10 rounded">⌘K</kbd> to open •{" "}
               <kbd className="px-2 py-1 bg-white/10 rounded">Esc</kbd> to close
             </div>

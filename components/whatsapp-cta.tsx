@@ -2,25 +2,12 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 
-interface WhatsAppCTAProps {
-  selectedDate?: string
-  selectedEventType?: string
-  selectedPackage?: string
-  selectedCity?: string
-  className?: string
-}
 
-export function WhatsAppCTA({
-  selectedDate = "{DATE}",
-  selectedEventType = "{EVENT_TYPE}",
-  selectedPackage = "{PACKAGE}", 
-  selectedCity = "{CITY}",
-  className = "",
-}: WhatsAppCTAProps) {
+export function WhatsAppCTA () {
   const [isHovered, setIsHovered] = useState(false)
 
   const generateWhatsAppMessage = () => {
-    const message = `Hi! I want to book The Luxury Booths on ${selectedDate} for a ${selectedEventType}. Package: ${selectedPackage}. Venue: ${selectedCity}. Please share availability & quote.`
+    const message = "Hi! I’m interested in booking The Luxury Booths for an upcoming event. Please share availability, packages, and pricing details."
     return encodeURIComponent(message)
   }
 
@@ -32,7 +19,7 @@ export function WhatsAppCTA({
   }
 
   return (
-    <div className={`fixed bottom-24 right-4 sm:bottom-10 sm:right-6 lg:bottom-12 lg:left-6 lg:right-auto z-50 ${className}`}>
+    <div className={`fixed bottom-36 right-4 sm:bottom-10 sm:right-6 lg:bottom-12 lg:left-6 lg:right-auto z-50`}>
       <div className="relative">
         {isHovered && (
           <div className="absolute bottom-16 right-0 bg-black/90 text-white p-3 rounded-lg text-sm max-w-xs whitespace-nowrap mb-2 glass">
@@ -45,7 +32,7 @@ export function WhatsAppCTA({
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110"
+          className="sm:w-14 sm:h-14 animate-fade-up rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110"
         >
           <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
             <svg

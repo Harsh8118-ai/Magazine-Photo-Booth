@@ -12,11 +12,11 @@ export function AvailabilityChecker() {
   const [isChecking, setIsChecking] = useState(false)
 
   const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" })
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
     }
-        }
+  }
 
   const checkAvailability = async () => {
     if (!selectedDate) return
@@ -87,8 +87,9 @@ export function AvailabilityChecker() {
 
         <div className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold mb-2">Event Date</label>
+            <label htmlFor="eventdate" className="block text-sm font-semibold mb-2">Event Date</label>
             <Input
+              id="eventdate"
               type="date"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
@@ -113,14 +114,13 @@ export function AvailabilityChecker() {
               </div>
 
               <Button
-              onClick={() => scrollToSection("products")}
-                className={`w-full ${
-                  availability === "available"
+                onClick={() => scrollToSection("products")}
+                className={`w-full ${availability === "available"
                     ? "bg-green-600 hover:bg-green-700"
                     : availability === "waitlist"
                       ? "bg-yellow-600 hover:bg-yellow-700"
                       : "glass border border-red-400 text-red-400 hover:bg-red-400 hover:text-black"
-                }`}
+                  }`}
               >
                 {statusConfig.cta}
               </Button>

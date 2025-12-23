@@ -69,6 +69,7 @@ const VideoCard = ({ url, showControls = false, isActive = true }: VideoCardProp
           {/* Play / Pause */}
           <button
             onClick={togglePlay}
+            aria-label={isPlaying ? "Pause video" : "Play video"}
             className="absolute top-3 left-3 bg-black/60 p-2 rounded-full backdrop-blur-sm hover:bg-black/75 transition"
           >
             {isPlaying ? <Pause className="w-5 h-5 text-gold" /> : <Play className="w-5 h-5 text-gold" />}
@@ -77,6 +78,7 @@ const VideoCard = ({ url, showControls = false, isActive = true }: VideoCardProp
           {/* Mute / Unmute */}
           <button
             onClick={toggleMute}
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
             className="absolute top-3 right-3 bg-black/60 p-2 rounded-full backdrop-blur-sm hover:bg-black/75 transition"
           >
             {isMuted ? <VolumeX className="w-5 h-5 text-gold" /> : <Volume2 className="w-5 h-5 text-gold" />}
@@ -126,6 +128,7 @@ export const MultiVideoReels = ({ videoUrls, title, className = "" }: MultiVideo
         {/* LEFT BUTTON */}
         <button
           onClick={goPrev}
+          aria-label="Previous video"
           className="absolute left-2 z-20 bg-black/50 p-2 rounded-full"
         >
           <ChevronLeft className="text-gold" size={24} />
@@ -146,6 +149,7 @@ export const MultiVideoReels = ({ videoUrls, title, className = "" }: MultiVideo
         {/* RIGHT BUTTON */}
         <button
           onClick={goNext}
+          aria-label="Next video"
           className="absolute right-2 z-20 bg-black/50 p-2 rounded-full"
         >
           <ChevronRight className="text-gold" size={24} />

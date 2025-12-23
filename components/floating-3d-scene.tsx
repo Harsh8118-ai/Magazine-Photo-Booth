@@ -9,13 +9,13 @@ function FloatingImage({
   rotation,
   scale,
   delay = 0,
-  imageUrl = "/magazine-cover-template.png", // Added imageUrl prop with default
+  imageUrl = "/magazine-cover-template.png",
 }: {
   position: [number, number, number]
   rotation: [number, number, number]
   scale: number
   delay?: number
-  imageUrl?: string // Added imageUrl prop type
+  imageUrl?: string 
 }) {
   const meshRef = useRef<THREE.Mesh>(null)
 
@@ -91,7 +91,7 @@ export function Floating3DScene() {
       <Canvas
         camera={{ position: [0, 0, 5], fov: 50 }}
         style={{ background: "transparent" }}
-        dpr={[1, 1.5]} // Limit pixel ratio for performance
+        dpr={[1, 1.5]} 
       >
         <Scene />
       </Canvas>

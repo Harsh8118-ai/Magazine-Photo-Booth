@@ -1,13 +1,10 @@
-"use client"
-
-import type { ReactNode } from "react"
-import type { JSX } from "react/jsx-runtime"
+import { ReactNode, ElementType, createElement } from "react"
 
 interface SectionWrapperProps {
   id: string
   children: ReactNode
   className?: string
-  as?: keyof JSX.IntrinsicElements
+  as?: ElementType
   ariaLabel?: string
 }
 
@@ -15,17 +12,17 @@ export function SectionWrapper({
   id,
   children,
   className = "",
-  as: Component = "section",
+  as = "section",
   ariaLabel,
 }: SectionWrapperProps) {
-  return (
-    <Component
-      id={id}
-      className={className}
-      aria-label={ariaLabel}
-      role={Component === "section" ? "region" : undefined}
-    >
-      {children}
-    </Component>
+  return createElement(
+    as,
+    {
+      id,
+      className,
+      "aria-label": ariaLabel,
+      role: as === "section" ? "region" : undefined,
+    },
+    children
   )
 }
