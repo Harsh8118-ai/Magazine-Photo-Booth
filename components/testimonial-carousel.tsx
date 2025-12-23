@@ -9,7 +9,7 @@ const testimonials = [
 
   {
     name: "Pratishtha Sharma",
-    event: "Wedding, Delhi",  
+    event: "Wedding, Delhi",
     rating: 5,
     text: "The magazine photo booth created such a rich and glamorous Vogue-style experience! It truly felt like stepping into a celebrity shoot. Everyone was obsessed with the covers and the whole setup felt premium.",
   },
@@ -87,7 +87,8 @@ export function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto" role="region"
+      aria-label="Customer testimonials carousel">
       <h2 className="font-display text-5xl font-bold text-center mb-16 text-gradient">What Our Clients Say</h2>
 
       <Card className="glass border-0 relative overflow-hidden">
@@ -96,7 +97,7 @@ export function TestimonialCarousel() {
             {/* Star Rating */}
             <div className="flex justify-center mb-6">
               {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-gold fill-current" />
+                <Star key={i} aria-hidden="true" className="h-6 w-6 text-gold fill-current" />
               ))}
             </div>
 
@@ -120,6 +121,7 @@ export function TestimonialCarousel() {
               variant="ghost"
               size="sm"
               onClick={prevTestimonial}
+              aria-label="Previous testimonial"
               className="w-10 h-10 rounded-full glass hover:neon-glow transition-all duration-300"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -131,6 +133,7 @@ export function TestimonialCarousel() {
               variant="ghost"
               size="sm"
               onClick={nextTestimonial}
+              aria-label="Next testimonial"
               className="w-10 h-10 rounded-full glass hover:neon-glow transition-all duration-300"
             >
               <ChevronRight className="h-5 w-5" />
@@ -147,9 +150,10 @@ export function TestimonialCarousel() {
                 setCurrentIndex(index)
                 setIsAutoPlaying(false)
               }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-purple-400 scale-125" : "bg-gray-600 hover:bg-gray-500"
-              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+              aria-current={index === currentIndex ? "true" : undefined}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-purple-400 scale-125" : "bg-gray-600 hover:bg-gray-500"
+                }`}
             />
           ))}
         </div>
