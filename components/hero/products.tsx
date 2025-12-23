@@ -9,7 +9,7 @@ export default function ProductsSection() {
             id: "magazine",
             name: "Magazine Photo Booth",
             description: "The original luxury magazine photo booth experience with instant cover prints",
-            icon: "/Cloudinary/Products-Icon/Screenshot 2025-12-11 085642.png",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
             link: "/products/magazine-photo-booth",
             color: "gold",
             features: ["Instant prints", "Magazine covers", "Premium quality"],
@@ -18,7 +18,7 @@ export default function ProductsSection() {
             id: "mirror",
             name: "Mirror Selfie Booth",
             description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
-            icon: "/Cloudinary/Products-Icon/IMG_3848.JPG",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
             link: "/products/mirror-selfie-booth",
             color: "purple",
             features: ["Custom text", "LED lighting", "Luxury setup"],
@@ -27,7 +27,7 @@ export default function ProductsSection() {
             id: "vintage",
             name: "Vintage Photo Booth",
             description: "Retro wooden booth with DSLR photography and instant prints in 30 seconds",
-            icon: "/Cloudinary/Products-Icon/4574a37a-0f27-4892-b2c4-79caa44a674e-md.jpeg",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp",
             link: "/products/vintage-photo-booth",
             color: "amber",
             features: ["DSLR quality", "Instant prints", "Wooden design"],
@@ -67,15 +67,16 @@ export default function ProductsSection() {
                                         </div>
 
                                         <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+                                            <div className="mx-auto rounded-sm overflow-hidden">
                                             <Image
                                                 src={product.icon}
                                                 alt={product.name}
-                                                width={800}
-                                                height={600}
+                                                width={208}
+                                                height={208}
                                                 loading="lazy"
-                                                className="w-52 h-52 sm:w-52 sm:h-52 object-contain mx-auto"
+                                                className="object-contain"
                                             />
-                                        </div></div>
+                                            </div></div></div>
 
                                     <ul className="space-y-2 mb-6">
                                         {product.features.map((feature, idx) => (

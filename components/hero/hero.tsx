@@ -259,12 +259,12 @@ export default function Hero() {
                             <div className="">
                                 <div>
                                     <Image
-                                        src="/Images/AboutUs.png"
-                                        alt="Our team"
+                                        src="https://res.cloudinary.com/dpnykjono/image/upload/AboutUs.webp"
+                                        alt="About Us"
                                         width={800}
                                         height={600}
                                         loading="lazy"
-                                        className="w-full sm:w-80 h-full sm:h-full object-cover rounded-2xl glass-enhanced"
+                                        className="w-full sm:w-80 h-full object-cover rounded-2xl glass-enhanced"
                                     />
                                 </div>
                             </div>
