@@ -2,13 +2,13 @@ import type { Metadata } from "next"
 import MagazinePhotoBooth from "./magazine-photo-booth"
 
 export const metadata: Metadata = {
-  title: "Magazine Photo Booth - Luxury Celebrity Cover Experience | Magazine Photo Booth",
+  title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",
   description:
-    "Transform your event with our luxury magazine photo booth. Professional instant prints featuring guests as magazine cover stars. Perfect for weddings, corporate events & parties.",
+  "Premium magazine photo booth rental in India with instant celebrity-style prints. Ideal for luxury weddings, corporate events, exhibitions & private parties.",
   keywords:
     "magazine photo booth, luxury photo booth, celebrity photo booth, instant magazine prints, event photo booth, wedding photo booth, corporate photo booth",
   openGraph: {
-    title: "Magazine Photo Booth - Become the Cover Star",
+    title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",
     description: "Luxury magazine photo booth with instant celebrity-style cover prints for your event",
     type: "website",
     images: ["/magazine-cover-template.png"],
