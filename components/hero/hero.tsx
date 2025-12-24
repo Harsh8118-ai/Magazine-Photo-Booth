@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Star, Zap, Users, Award} from "lucide-react"
+import { Star, Zap, Users, Award } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { SectionWrapper } from "@/components/section-wrapper"
 import FooterClientTwo from "./footer.client-2"
