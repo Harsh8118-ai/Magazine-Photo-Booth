@@ -261,8 +261,8 @@ export default function Hero() {
                                     <Image
                                         src="https://res.cloudinary.com/dpnykjono/image/upload/AboutUs.webp"
                                         alt="About Us"
-                                        width={800}
-                                        height={600}
+                                        width={208}
+                                        height={208}
                                         loading="lazy"
                                         className="w-full sm:w-80 h-full object-cover rounded-2xl glass-enhanced"
                                     />

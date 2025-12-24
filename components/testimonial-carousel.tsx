@@ -34,26 +34,26 @@ const testimonials = [
   },
 
   {
-    name: "Paras Chandna",
+    name: "Anushree Srivastava",
     event: "Family Event, Jim Corbett",
     rating: 5,
     text: "The Vintage Photo Booth brought such a nostalgic vibe to our event! The retro-style prints and warm tones looked stunning. It blended perfectly with the Jim Corbett atmosphere & everyone loved it!",
   },
   {
-    name: "Pratishtha Sharma",
+    name: "Shreya Jha",
     event: "Themed Party, Delhi",
     rating: 5,
     text: "The Vintage Booth was an absolute masterpiece! It gave our décor a classic charm and the pictures looked beautifully timeless. A perfect blend of luxury and nostalgia.",
   },
 
   {
-    name: "Mohit Dhingra",
+    name: "Tariq Anwar",
     event: "Corporate Launch, Noida",
     rating: 5,
     text: "The Luxury Booths team is outstanding! Their professionalism, creativity, and attention to detail made our event seamless. We’ve worked with many vendors, but their quality stands out every time.",
   },
   {
-    name: "Priya",
+    name: "Sumit Singh",
     event: "Bridal Shower, Jaipur",
     rating: 5,
     text: "The Luxury Booths truly live up to their name. The setups, the staff, the experience and everything felt high-end and beautifully executed. They made the entire event look and feel grand.",
@@ -108,7 +108,7 @@ export function TestimonialCarousel() {
 
             {/* Client Info */}
             <div className="flex items-center justify-center space-x-4">
-              <div className="text-left">
+              <div className="text-center">
                 <div className="font-display text-lg font-semibold text-purple-500">{currentTestimonial.name}</div>
                 <div className="text-purple-400 font-medium">{currentTestimonial.event}</div>
               </div>

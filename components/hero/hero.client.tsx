@@ -1,7 +1,7 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import dynamic from "next/dynamic"
-import {Calendar, Package } from "lucide-react"
+import { Calendar, Package } from "lucide-react"
 
 const AnimatedCounter = dynamic(
     () =>
@@ -25,8 +25,6 @@ const Button3D = dynamic(
 )
 
 export default function HeroClient() {
-    const [isVisible, setIsVisible] = useState(false)
-
     const [load3D, setLoad3D] = useState(false)
 
     useEffect(() => {
@@ -37,9 +35,25 @@ export default function HeroClient() {
         }
     }, [])
 
-        useEffect(() => {
-            setIsVisible(true)
-        }, [])
+    const [startCount, setStartCount] = useState(false)
+    const statsRef = useRef<HTMLDivElement | null>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setStartCount(true)
+                    observer.disconnect()
+                }
+            },
+            { threshold: 0.4 }
+        )
+
+        if (statsRef.current) observer.observe(statsRef.current)
+
+        return () => observer.disconnect()
+    }, [])
+
 
 
     const scrollToSection = (sectionId: string) => {
@@ -75,20 +89,25 @@ export default function HeroClient() {
 
             {/* Stats Bar - Improved mobile responsiveness and SEO */}
             <div
+                ref={statsRef}
                 className="glass-enhanced rounded-2xl p-4 sm:p-6 max-w-3xl mx-auto"
                 role="region"
                 aria-label="Company statistics"
             >
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
                     <div>
-                        {isVisible && (
-                            <AnimatedCounter end={12500} suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
+                        {startCount && (
+                            <AnimatedCounter end={12500}
+                                duration={1800}
+                                suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
                         )}
                         <div className="text-xs sm:text-sm text-gray-400">Magazine Covers Printed</div>
                     </div>
                     <div>
-                        {isVisible && (
-                            <AnimatedCounter end={250} suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
+                        {startCount && (
+                            <AnimatedCounter end={250}
+                                duration={1800}
+                                suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
                         )}
                         <div className="text-xs sm:text-sm text-gray-400">Successful Events</div>
                     </div>
