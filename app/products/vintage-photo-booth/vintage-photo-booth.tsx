@@ -7,7 +7,6 @@ import Pricing from "./pricing"
 import WhatsAppButton from "./whatsapp-button"
 import Hero from "./hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
-import FooterClientOne from "@/components/hero/footer.client-1"
 
 const VintagePhotoBooth = () => {
 
@@ -271,7 +270,41 @@ const VintagePhotoBooth = () => {
               </ul>
             </div>
 
-            <FooterClientOne />
+            <div>
+                            <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
+                            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+
+                                <li>
+                                    <Link href="/#hero-section"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        Home
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/#products"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        Products
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/#about-section"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        About Us
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/#testimonials-section"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        Reviews
+                                    </Link>
+
+                                </li>
+                            </ul>
+                        </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
