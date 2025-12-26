@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 type Event = {
   id: string
@@ -35,15 +36,19 @@ export default function GalleryClient({ events }: { events: Event[] }) {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="sticky top-0 z-40 bg-black/80 backdrop-blur border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      <header className="sticky top-0 z-40 bg-black/80 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4">
           <h1 className="text-5xl font-bold mb-2 text-gradient">
-            Event Gallery
+            The Luxury Booths' Gallery
           </h1>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400  border-b border-gray-800">
             Browse photos from our magazine photo booth events
           </p>
+          </div>
+          </header> 
 
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           {/* Search */}
           <input
             type="text"
@@ -55,39 +60,40 @@ export default function GalleryClient({ events }: { events: Event[] }) {
 
           {/* Filters */}
           <div className="flex flex-wrap gap-3 mt-6">
-            {["all", "wedding", "corporate", "birthday", "party"].map((type) => (
+            {["all", "wedding", "corporate", "birthday", "anniversary", "party" ].map((type) => (
               <button
                 key={type}
                 onClick={() => setFilter(type)}
-                className={`px-6 py-2 rounded-full font-medium capitalize transition ${
-                  filter === type
+                className={`px-6 py-2 rounded-full font-medium capitalize transition ${filter === type
                     ? "bg-purple-600 text-white shadow-lg shadow-purple-600/50"
                     : "bg-gray-900 text-gray-400 border border-gray-700 hover:border-purple-500 hover:text-white"
-                }`}
+                  }`}
               >
                 {type}
               </button>
             ))}
           </div>
         </div>
-      </header>
 
       {/* Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {filtered.length === 0 ? (
           <p className="text-center text-gray-400">
             No events found matching your search
           </p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 items-center">
             {filtered.map((event) => (
               <Link key={event.id} href={`/gallery/${event.id}`}>
                 <div className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-xl aspect-video bg-gray-900 mb-4">
-                    <img
+                  <div className="overflow-hidden rounded-xl bg-gray-900 mb-4">
+                    <Image
                       src={event.thumb}
                       alt={event.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      width={208}
+                      height={208}
+                      loading="lazy"
+                      className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
 

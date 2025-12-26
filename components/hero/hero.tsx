@@ -4,7 +4,6 @@ import { Star, Zap, Users, Award } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { SectionWrapper } from "@/components/section-wrapper"
 import FooterClientTwo from "./footer.client-2"
-import FooterClientOne from "./footer.client-1"
 import HeroClient from "./hero.client"
 import ProductsSection from "./products"
 import { FaqsSection } from "@/components/faqs-section"
