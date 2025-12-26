@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronLeft, Sparkles, Camera, Heart, Crown, Check } from "lucide-react"
+import { Sparkles, Camera, Heart, Crown, Check, ArrowLeft } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import GalleryAndCTA from "./gallery"
 import WhatsAppButton from "./whatsapp-button"
@@ -37,12 +37,12 @@ const MirrorSelfieBooth = () => {
       {/* Header with back button */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-gold hover:text-yellow-300 transition-colors">
-            <ChevronLeft size={20} />
-            Back to Home
-          </Link>
+          <a href="/" className="flex items-center gap-2 text-gold hover:text-yellow-300 transition-colors">
+            <ArrowLeft size={20} />
+            <span className="hidden sm:block">Back</span>
+          </a>
           <h1 className="text-xl sm:text-3xl font-display font-bold text-gradient">Mirror Selfie Booth</h1>
-          <div className="w-20" /> {/* Spacer */}
+          <div className="w-20" />
         </div>
       </div>
 
@@ -67,7 +67,7 @@ const MirrorSelfieBooth = () => {
               <div className="w-full flex justify-center animate-fade-left">
                 <div className="inline-block rounded-xl overflow-hidden border border-gold/30">
                   <Image
-                    src="/Cloudinary/Mirror-Booth.JPG"
+                    src="https://res.cloudinary.com/dpnykjono/image/upload/v1766755393/Mirror-Booth_rheieh.webp"
                     alt="Mirror Selfie Booth Hero"
                     width={400}
                     height={300}

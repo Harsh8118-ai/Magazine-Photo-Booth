@@ -6,17 +6,17 @@ import WhatsAppButton from "./whatsapp-button"
 const GalleryAndCTA = () => {
 
   const galleryImages = [
-    { id: 1, src: "/Cloudinary/Mirror-Booth/1 (1).jpg", alt: "Mirror selfie booth at wedding" },
-    { id: 2, src: "/Cloudinary/Mirror-Booth/1 (2).jpg", alt: "Mirror booth at party" },
-    { id: 3, src: "/Cloudinary/Mirror-Booth/1 (3).jpg", alt: "Mirror booth setup" },
-    { id: 4, src: "/Cloudinary/Mirror-Booth/1 (4).jpg", alt: "Mirror selfie Booth" },
-    { id: 5, src: "/Cloudinary/Mirror-Booth/1 (5).jpg", alt: "Red carpet setup" },
-    { id: 6, src: "/Cloudinary/Mirror-Booth/1 (6).jpg", alt: "Floral decoration" },
-    { id: 7, src: "/Cloudinary/Mirror-Booth/1 (7).jpg", alt: "Corporate event" },
-    { id: 8, src: "/Cloudinary/Mirror-Booth/1 (8).jpg", alt: "Guest experience" },
-    { id: 9, src: "/Cloudinary/Mirror-Booth/1 (9).jpg", alt: "Product launch" },
-    { id: 10, src: "/Cloudinary/Mirror-Booth/1 (10).jpg", alt: "House Party" },
-    { id: 11, src: "/Cloudinary/Mirror-Booth/1 (11).png", alt: "LED setup" },
+    { id: 1, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-12.webp", alt: "Mirror selfie booth at wedding" },
+    { id: 2, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-13.webp", alt: "Mirror booth at party" },
+    { id: 3, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-14.webp", alt: "Mirror booth setup" },
+    { id: 4, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-15.webp", alt: "Mirror selfie Booth" },
+    { id: 5, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-16.webp", alt: "Red carpet setup" },
+    { id: 6, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-17.webp", alt: "Floral decoration" },
+    { id: 7, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-18.webp", alt: "Corporate event" },
+    { id: 8, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-19.webp", alt: "Guest experience" },
+    { id: 9, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-20.webp", alt: "Product launch" },
+    { id: 10, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-21.webp", alt: "House Party" },
+    { id: 11, src: "https://res.cloudinary.com/dpnykjono/image/upload/v1766755168/1-22.webp", alt: "LED setup" },
   ]
 
   return (

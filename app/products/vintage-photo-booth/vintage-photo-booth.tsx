@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronLeft } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Pricing from "./pricing"
@@ -68,8 +68,8 @@ const VintagePhotoBooth = () => {
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-amber-600 hover:text-amber-500 transition-colors">
-            <ChevronLeft size={20} />
-            Back
+            <ArrowLeft size={20} />
+            <span className="hidden sm:block">Back</span>
           </Link>
           <h1 className="text-xl sm:text-3xl font-serif font-bold text-amber-100">Vintage Photo Booth</h1>
           <div className="w-20" />
