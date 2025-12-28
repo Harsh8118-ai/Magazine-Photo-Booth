@@ -438,26 +438,6 @@ export function AdvancedBookingSystem() {
                       className="glass border-gold/30  text-white"
                     />
                   </div>
-                  {/* <div>
-                    <label className="block text-sm font-semibold mb-2">Email Address *</label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={inquiryData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      className="glass border-gray-600 "
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">Phone Number *</label>
-                    <Input
-                      type="tel"
-                      placeholder="+91 98765 43210"
-                      value={inquiryData.phone}
-                      onChange={(e) => handleInputChange("phone", e.target.value)}
-                      className="glass border-gray-600 "
-                    />
-                  </div> */}
                 </div>
               </div>
 
@@ -506,7 +486,7 @@ export function AdvancedBookingSystem() {
           <div className="sticky top-6">
             <Card className="glass-enhanced border-0 mb-6">
               <CardHeader>
-                <CardTitle className="font-display text-xl flex items-center">
+                <CardTitle className="font-display text-xl flex items-center text-gold">
                   <Calculator className="mr-2 h-5 w-5 text-gold" />
                   Estimated Quote
                 </CardTitle>
@@ -519,7 +499,7 @@ export function AdvancedBookingSystem() {
                       {getQuoteBreakdown().map((item, index) => (
                         <div key={index} className="flex justify-between text-sm">
                           <span className="text-gray-300">{item.name}</span>
-                          <span className="font-semibold">₹{item.price.toLocaleString()}</span>
+                          <span className="font-semibold text-gold">₹{item.price.toLocaleString()}</span>
                         </div>
                       ))}
                     </div>
@@ -528,10 +508,10 @@ export function AdvancedBookingSystem() {
 
                     {/* Totals */}
                     <div className="space-y-2">
-                      <div className="flex justify-between text-lg font-bold">
+                      <div className="flex justify-between text-lg font-bold text-gold">
                         <span>Estimated Total</span>
                         <div className="bg-gray-900/80 rounded px-2 py-1">
-                          <span className="text-yellow-300">₹{quote.total.toLocaleString()}</span>
+                          <span className="text-gold">₹{quote.total.toLocaleString()}</span>
                         </div>
                       </div>
                     </div>
@@ -539,7 +519,7 @@ export function AdvancedBookingSystem() {
                     <div className="bg-blue-900/20 rounded-lg p-3 border border-blue-400/30">
                       <div className="flex items-center mb-2">
                         <Send className="h-4 w-4 text-blue-400 mr-2" />
-                        <span className="text-sm font-semibold">Inquiry Process</span>
+                        <span className="text-sm font-semibold text-gold">Inquiry Process</span>
                       </div>
                       <div className="text-xs text-gray-300">
                         Submit your inquiry to lock your preferred date. We'll contact you within 24 hours to confirm
@@ -550,9 +530,9 @@ export function AdvancedBookingSystem() {
                     <Button3D
                       onClick={handleSubmitInquiry}
                       disabled={!isFormValid() || isSubmitting}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg py-3"
+                      className="w-full bg-gradient text-lg py-3"
                     >
-                      <Lock className="mr-2 h-5 w-5" />
+                      <Lock className="mr-2 h-5 w-5 text-gold" />
                       {isSubmitting ? "Submitting..." : "Lock This Date"}
                     </Button3D>
 
