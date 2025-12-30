@@ -167,7 +167,7 @@ export function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
           <h2 className="text-2xl font-bold text-gradient">{title}</h2>
           <Button variant="ghost" size="icon" onClick={onClose} className="text-white hover:bg-white/20">
             <X className="h-6 w-6" />
-          </Button>
+          </Button> 
         </div>
 
         <div className="p-6 overflow-y-auto max-h-[60vh]">{content}</div>
