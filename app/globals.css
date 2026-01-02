@@ -447,3 +447,28 @@
   .animate-fade-right {
     animation: fadeRight 0.8s ease-out both;
   }
+
+  @layer components {
+    /* .glassmorphism {
+      @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+    } */
+
+    .neon-glow {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fbbf24, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    
+  }
+
+  @layer utilities {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }
