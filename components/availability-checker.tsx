@@ -3,130 +3,126 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardTwo } from "@/components/ui/card"
-import { Calendar, CheckCircle, Clock, X } from "lucide-react"
+import { CardContent, CardTwo } from "@/components/ui/card"
+import { Calendar, MapPin, Phone, CheckCircle } from "lucide-react"
 
 export function AvailabilityChecker() {
-  const [selectedDate, setSelectedDate] = useState("")
-  const [availability, setAvailability] = useState<"available" | "waitlist" | "booked" | null>(null)
-  const [isChecking, setIsChecking] = useState(false)
+  const [date, setDate] = useState("")
+  const [city, setCity] = useState("")
+  const [phone, setPhone] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+
+    const formData = new FormData()
+    formData.append("form-name", "availability-check")
+    formData.append("event_date", date)
+    formData.append("city", city)
+    formData.append("phone", phone)
+
+    await fetch("/", {
+      method: "POST",
+      body: formData,
+    })
+
+    setLoading(false)
+    setSubmitted(true)
+    setDate("")
+    setCity("")
+    setPhone("")
   }
-
-  const checkAvailability = async () => {
-    if (!selectedDate) return
-
-    setIsChecking(true)
-
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    // Mock availability logic based on date
-    const date = new Date(selectedDate)
-    const dayOfWeek = date.getDay()
-    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6
-
-    // Weekend dates are more likely to be booked/waitlist
-    if (isWeekend) {
-      setAvailability(Math.random() > 0.6 ? "available" : Math.random() > 0.5 ? "waitlist" : "booked")
-    } else {
-      setAvailability(Math.random() > 0.8 ? "waitlist" : "available")
-    }
-
-    setIsChecking(false)
-  }
-
-  const getStatusConfig = () => {
-    switch (availability) {
-      case "available":
-        return {
-          icon: CheckCircle,
-          text: "Available",
-          color: "text-green-400",
-          bgColor: "bg-green-400/10",
-          borderColor: "border-green-400/30",
-          cta: "Book This Date",
-        }
-      case "waitlist":
-        return {
-          icon: Clock,
-          text: "Waitlist",
-          color: "text-yellow-400",
-          bgColor: "bg-yellow-400/10",
-          borderColor: "border-yellow-400/30",
-          cta: "Join Waitlist",
-        }
-      case "booked":
-        return {
-          icon: X,
-          text: "Booked",
-          color: "text-red-400",
-          bgColor: "bg-red-400/10",
-          borderColor: "border-red-400/30",
-          cta: "Contact for Alternatives",
-        }
-      default:
-        return null
-    }
-  }
-
-  const statusConfig = getStatusConfig()
 
   return (
     <CardTwo className="glass border-0 max-w-md mx-auto">
       <CardContent className="p-6">
-        <div className="flex items-center mb-4">
-          <Calendar className="h-5 w-5 text-purple-400 mr-2" />
-          <h3 className="font-display text-xl font-bold">Check Availability</h3>
-        </div>
+        <h3 className="font-display text-xl font-bold mb-4">
+          Check Availability
+        </h3>
 
-        <div className="space-y-4">
-          <div>
-            <label htmlFor="eventdate" className="block text-sm font-semibold mb-2">Event Date</label>
-            <Input
-              id="eventdate"
-              type="date"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              className="glass border-gray-600 focus:border-purple-400"
-              min={new Date().toISOString().split("T")[0]}
-            />
+        {submitted ? (
+          <div className="flex items-center gap-2 text-green-400">
+            <CheckCircle className="h-5 w-5" />
+            <p className="font-semibold">
+              Thank you! We’ll contact you shortly.
+            </p>
           </div>
-
-          <Button
-            onClick={checkAvailability}
-            disabled={!selectedDate || isChecking}
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+        ) : (
+          <form
+            name="availability-check"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="space-y-4"
           >
-            {isChecking ? "Checking..." : "Check Availability"}
-          </Button>
+            {/* REQUIRED HIDDEN INPUT */}
+            <input type="hidden" name="form-name" value="availability-check" />
+            <input type="hidden" name="bot-field" />
 
-          {statusConfig && (
-            <div className={`p-4 rounded-lg border ${statusConfig.bgColor} ${statusConfig.borderColor}`}>
-              <div className="flex items-center mb-3">
-                <statusConfig.icon className={`h-5 w-5 ${statusConfig.color} mr-2`} />
-                <span className={`font-semibold ${statusConfig.color}`}>{statusConfig.text}</span>
-              </div>
-
-              <Button
-                onClick={() => scrollToSection("products")}
-                className={`w-full ${availability === "available"
-                    ? "bg-green-600 hover:bg-green-700"
-                    : availability === "waitlist"
-                      ? "bg-yellow-600 hover:bg-yellow-700"
-                      : "glass border border-red-400 text-red-400 hover:bg-red-400 hover:text-black"
-                  }`}
-              >
-                {statusConfig.cta}
-              </Button>
+            {/* Event Date */}
+            <div>
+              <label className="text-sm font-semibold mb-2 flex items-center gap-2">
+                <Calendar className="h-4 w-4 text-purple-400" />
+                Event Date
+              </label>
+              <Input
+                type="date"
+                name="event_date"
+                required
+                min={new Date().toISOString().split("T")[0]}
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="glass"
+              />
             </div>
-          )}
-        </div>
+
+            {/* City */}
+            <div>
+              <label className="text-sm font-semibold mb-2 flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-purple-400" />
+                City
+              </label>
+              <Input
+                type="text"
+                name="city"
+                placeholder="Enter your city"
+                required
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                className="glass"
+              />
+            </div>
+
+            {/* Phone Number */}
+            <div>
+              <label className="text-sm font-semibold mb-2 flex items-center gap-2">
+                <Phone className="h-4 w-4 text-purple-400" />
+                Phone Number
+              </label>
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="10-digit mobile number"
+                required
+                pattern="[0-9]{10}"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="glass"
+              />
+            </div>
+
+            <Button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+            >
+              {loading ? "Submitting..." : "Check Availability"}
+            </Button>
+          </form>
+        )}
       </CardContent>
     </CardTwo>
   )
