@@ -16,7 +16,7 @@ export function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
       case "privacy":
         return {
           title: "Privacy Policy",
-          content: (
+          content: ( 
             <div className="space-y-6">
               <section>
                 <h3 className="text-xl font-bold mb-3">Information We Collect</h3>
