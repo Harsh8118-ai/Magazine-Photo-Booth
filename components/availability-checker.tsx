@@ -54,16 +54,9 @@ export function AvailabilityChecker() {
           </div>
         ) : (
           <form
-            name="availability-check"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="space-y-4"
           >
-            {/* REQUIRED HIDDEN INPUT */}
-            <input type="hidden" name="form-name" value="availability-check" />
-            <input type="hidden" name="bot-field" />
 
             {/* Event Date */}
             <div>
