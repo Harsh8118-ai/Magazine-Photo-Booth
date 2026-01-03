@@ -6,9 +6,6 @@ import { Analytics } from "@/components/analytics"
 import { Suspense } from "react"
 import Script from "next/script"
 import RevealProvider from "@/components/reveal-provider"
-import NetlifyHiddenForm from "./netlify-form"
-
-
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -226,7 +223,6 @@ export default function RootLayout({
       </head>
       <body className="bg-black text-white overflow-x-hidden">
         <RevealProvider />
-        <NetlifyHiddenForm />
         {children}
         <Suspense fallback={<div>Loading...</div>}>
           <Analytics />
