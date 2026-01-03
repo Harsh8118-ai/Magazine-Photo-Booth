@@ -13,26 +13,11 @@ export function AvailabilityChecker() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = () => {
+    // DO NOT prevent default
+    // DO NOT use fetch
     setLoading(true)
-
-    const formData = new FormData()
-    formData.append("form-name", "availability-check")
-    formData.append("event_date", date)
-    formData.append("city", city)
-    formData.append("phone", phone)
-
-    await fetch("/", {
-      method: "POST",
-      body: formData,
-    })
-
-    setLoading(false)
     setSubmitted(true)
-    setDate("")
-    setCity("")
-    setPhone("")
   }
 
   return (
@@ -53,16 +38,15 @@ export function AvailabilityChecker() {
           <form
             name="availability-check"
             method="POST"
+            action="/"
             data-netlify="true"
             netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="space-y-4"
           >
-            {/* REQUIRED HIDDEN INPUT */}
             <input type="hidden" name="form-name" value="availability-check" />
             <input type="hidden" name="bot-field" />
 
-            {/* Event Date */}
             <div>
               <label className="text-sm font-semibold mb-2 flex items-center gap-2">
                 <Calendar className="h-4 w-4 text-purple-400" />
@@ -79,7 +63,6 @@ export function AvailabilityChecker() {
               />
             </div>
 
-            {/* City */}
             <div>
               <label className="text-sm font-semibold mb-2 flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-purple-400" />
@@ -96,7 +79,6 @@ export function AvailabilityChecker() {
               />
             </div>
 
-            {/* Phone Number */}
             <div>
               <label className="text-sm font-semibold mb-2 flex items-center gap-2">
                 <Phone className="h-4 w-4 text-purple-400" />
@@ -117,7 +99,7 @@ export function AvailabilityChecker() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+              className="w-full bg-gradient-to-r from-purple-600 to-blue-600"
             >
               {loading ? "Submitting..." : "Check Availability"}
             </Button>
