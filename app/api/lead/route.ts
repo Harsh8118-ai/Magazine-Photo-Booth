@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const body = await req.json()
 
     const response = await fetch(
-      process.env.GOOGLE_SHEETS_WEBHOOK_URL as string,
+      process.env.NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL as string,
       {
         method: "POST",
         headers: {
