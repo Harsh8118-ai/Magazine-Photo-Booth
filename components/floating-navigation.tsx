@@ -1,6 +1,5 @@
 "use client"
 
-import type React from "react"
 import { useState, useEffect } from "react"
 import { ChevronUp, Command, Sparkles, Wind } from "lucide-react"
 import Link from "next/link"
@@ -10,6 +9,7 @@ import {
   Users,
   MessageCircle,
   PackageOpen,
+  BookOpen
 } from "lucide-react"
 
 const ICON_MAP = {
@@ -18,6 +18,7 @@ const ICON_MAP = {
   users: Users,
   message: MessageCircle,
   package: PackageOpen,
+  blog: BookOpen,
 }
 
 type NavigationSection = {

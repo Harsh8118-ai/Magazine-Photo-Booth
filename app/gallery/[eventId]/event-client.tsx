@@ -2,7 +2,7 @@ import Link from "next/link"
 
 // Mock data
 const eventData = {
-  "wedding-001": {
+  "silver-ijya-gurugram": {
     name: "Sharma Wedding",
     date: "2024-03-15",
     type: "Wedding",

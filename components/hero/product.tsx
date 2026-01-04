@@ -10,7 +10,7 @@ export default function ProductsSection() {
             name: "Magazine Photo Booth",
             description: "The original luxury magazine photo booth experience with instant cover prints",
             icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
-            link: "/products/magazine-photo-booth",
+            link: "/product/magazine-photo-booth",
             color: "gold",
             features: ["Instant prints", "Magazine covers", "Premium quality"],
         },
@@ -19,7 +19,7 @@ export default function ProductsSection() {
             name: "Mirror Selfie Booth",
             description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
             icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
-            link: "/products/mirror-selfie-booth",
+            link: "/product/mirror-selfie-booth",
             color: "purple",
             features: ["Custom text", "LED lighting", "Luxury setup"],
         },
@@ -28,7 +28,7 @@ export default function ProductsSection() {
             name: "Vintage Photo Booth",
             description: "Retro wooden booth with DSLR photography and instant prints in 30 seconds",
             icon: "https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp",
-            link: "/products/vintage-photo-booth",
+            link: "/product/vintage-photo-booth",
             color: "amber",
             features: ["DSLR quality", "Instant prints", "Wooden design"],
         },
@@ -36,7 +36,7 @@ export default function ProductsSection() {
 
     return (
         <SectionWrapper
-            id="products"
+            id="product"
             ariaLabel="Photo booth products showcase"
             className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
         >

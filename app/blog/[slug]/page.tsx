@@ -3,6 +3,7 @@ import BlogLuxuryBooths from "@/components/blogs/MainBlog"
 import BlogMagazineWeddingTrend from "@/components/blogs/BlogOne"
 import BlogLuxuryPhotoBoothIdeas from "@/components/blogs/BlogTwo"
 import BlogInstagramWorthyWedding from "@/components/blogs/BlogThree"
+import BlogBrandedEventActivations from "@/components/blogs/BlogFour"
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -16,6 +17,8 @@ const blogComponentMap = {
   "magazine-photo-booth-wedding-trend-india-2026": <BlogMagazineWeddingTrend />,
   "best-photo-booth-ideas-luxury-weddings": <BlogLuxuryPhotoBoothIdeas />,
   "instagram-worthy-wedding-ideas": <BlogInstagramWorthyWedding />,
+  "branded-event-activations-delhi-ncr": <BlogBrandedEventActivations />,
+
 } as const
 
 type BlogSlug = keyof typeof blogComponentMap
