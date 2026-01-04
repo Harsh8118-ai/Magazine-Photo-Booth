@@ -6,7 +6,7 @@ import Image from "next/image"
 import blogPosts from "@/hooks/blogPosts" 
 
 export const metadata = {
-  title: "Luxury Booths Blog — Wedding & Event Photo Booth Insights",
+  title: "Luxury Booths Blog - Wedding & Event Photo Booth Insights",
   description:
     "Explore expert insights, trends, and guides on luxury photo booths for weddings, corporate events, and premium celebrations across India.",
 }

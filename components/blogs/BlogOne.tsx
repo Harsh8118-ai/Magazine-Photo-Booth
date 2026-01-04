@@ -90,7 +90,7 @@ const BlogMagazineWeddingTrend = () => {
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
               From our on-ground experience at weddings across India, one trend
-              consistently stands out — the magazine photo booth. It’s no longer
+              consistently stands out - the magazine photo booth. It’s no longer
               just an add-on; it has become a defining element of modern luxury
               weddings.
             </p>
@@ -110,7 +110,7 @@ const BlogMagazineWeddingTrend = () => {
                 </h3>
                 <p className="text-gray-300 text-sm">
                   Magazine booths create portraits that look professionally
-                  published, not casual snapshots — a perfect match for luxury
+                  published, not casual snapshots - a perfect match for luxury
                   weddings.
                 </p>
               </div>
@@ -148,7 +148,7 @@ const BlogMagazineWeddingTrend = () => {
             <div className="bg-neutral-900/40 rounded-xl p-6 border border-neutral-800">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
                 At recent weddings, couples are positioning magazine booths near
-                cocktail areas or reception entrances — turning them into a visual
+                cocktail areas or reception entrances - turning them into a visual
                 centerpiece rather than a side attraction.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">

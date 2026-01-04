@@ -77,7 +77,7 @@ const BlogLuxuryBooths = () => {
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Over the years, we’ve worked across weddings, corporate launches, and
               private celebrations where one thing became clear: guests don’t just
-              want photos anymore — they want an experience.
+              want photos anymore - they want an experience.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
               The Luxury Booths was built around this insight. Our focus has always
@@ -99,8 +99,8 @@ const BlogLuxuryBooths = () => {
                   Professional Photography
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  We use professional cameras, studio lighting, and controlled framing —
-                  not tablet-based systems — to ensure every photo looks polished.
+                  We use professional cameras, studio lighting, and controlled framing -
+                  not tablet-based systems - to ensure every photo looks polished.
                 </p>
               </div>
 
@@ -137,7 +137,7 @@ const BlogLuxuryBooths = () => {
             <div className="bg-neutral-900/40 rounded-xl p-6 border border-neutral-800">
               <p className="text-gray-300 text-lg leading-relaxed mb-4">
                 At weddings, our booths often become a natural gathering point for
-                guests — not because they’re directed to, but because the setup itself
+                guests - not because they’re directed to, but because the setup itself
                 stands out visually.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
@@ -194,7 +194,7 @@ const BlogLuxuryBooths = () => {
             About the Author
           </h3>
           <p className="text-gray-400">
-            This article is written by the Luxury Booths Team — event professionals
+            This article is written by the Luxury Booths Team - event professionals
             with hands-on experience delivering premium photo booth experiences across
             weddings, corporate events, and private celebrations in India.
           </p>

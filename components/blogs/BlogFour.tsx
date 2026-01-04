@@ -98,7 +98,7 @@ const BlogBrandedEventActivations = () => {
             </p>
             <p>
               Branded event activations bridge the gap between live events and
-              marketing campaigns — and luxury photo booths have become one of
+              marketing campaigns - and luxury photo booths have become one of
               the most effective activation tools available.
             </p>
           </section>
@@ -113,7 +113,7 @@ const BlogBrandedEventActivations = () => {
               <p className="text-gray-300 text-lg leading-relaxed">
                 Branded event activations are immersive, on-ground brand
                 experiences designed to engage attendees, encourage interaction,
-                and deliver measurable marketing outcomes — not just visibility.
+                and deliver measurable marketing outcomes - not just visibility.
               </p>
             </div>
           </section>
@@ -132,7 +132,7 @@ const BlogBrandedEventActivations = () => {
                 </h3>
                 <p className="text-gray-300 text-sm">
                   Every photo includes brand visuals, messaging, and campaign
-                  identity — turning guests into brand ambassadors.
+                  identity - turning guests into brand ambassadors.
                 </p>
               </div>
 

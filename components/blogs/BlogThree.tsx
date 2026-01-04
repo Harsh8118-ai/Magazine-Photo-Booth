@@ -86,7 +86,7 @@ const BlogInstagramWorthyWedding = () => {
           {/* Intro */}
           <section className="bg-neutral-900/60 rounded-2xl p-8 border border-neutral-800 mb-10">
             <p>
-              Modern weddings are no longer planned just for the guest list —
+              Modern weddings are no longer planned just for the guest list -
               they’re planned for the camera as well. Couples today want moments
               that look as beautiful on Instagram as they feel in real life.
             </p>

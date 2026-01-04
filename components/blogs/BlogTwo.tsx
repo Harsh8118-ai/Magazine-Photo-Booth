@@ -87,7 +87,7 @@ const BlogLuxuryPhotoBoothIdeas = () => {
           <section className="bg-neutral-900/60 rounded-2xl p-8 border border-neutral-800 mb-10">
             <p>
               Luxury weddings are no longer defined only by décor and venues.
-              Today, couples focus heavily on guest experience — and photo booths
+              Today, couples focus heavily on guest experience - and photo booths
               have evolved into one of the most expressive elements of the celebration.
             </p>
             <p>
