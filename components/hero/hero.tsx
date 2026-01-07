@@ -52,12 +52,12 @@ export default function Hero() {
                         The <br />
                         Luxury Booths
                     </h1>
-                    <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
                         Become the Cover Star
-                    </h1>
+                    </h2>
                     <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
                         The Luxury Booths brings celebrity-style covers to your event with instant prints your
-                        guests will love.
+                        guests will love.  
                     </p>
 
                     <HeroClient />
