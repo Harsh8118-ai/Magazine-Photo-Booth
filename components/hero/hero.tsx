@@ -23,7 +23,7 @@ export default function Hero() {
         { id: "hero-section", label: "Home", icon: "home" },
         { id: "product", label: "Product", icon: "package" },
         { id: "gallery-section", label: "Gallery", icon: "camera" },
-        {id: "blog", label: "Blog", icon: "blog", isExternal: true, href: "/blog" },
+        { id: "blog", label: "Blog", icon: "blog", isExternal: true, href: "/blog" },
         { id: "testimonials-section", label: "Reviews", icon: "users" },
         { id: "faq-section", label: "FAQs", icon: "message" },
     ] as const
@@ -57,7 +57,7 @@ export default function Hero() {
                     </h2>
                     <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
                         The Luxury Booths brings celebrity-style covers to your event with instant prints your
-                        guests will love.  
+                        guests will love.
                     </p>
 
                     <HeroClient />
@@ -199,7 +199,7 @@ export default function Hero() {
                                                 />
                                             ))}
                                         </div>
-                                        <span className="text-base sm:text-lg font-semibold">4.9/5 from 200+ reviews</span>
+                                        <span className="text-base sm:text-lg font-semibold">5/5 from 200+ reviews</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,7 +208,7 @@ export default function Hero() {
                                 <div className="relative">
                                     <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
                                         <Image
-                                            src="/photo-booth-team.png"
+                                            src="/photo-booth-team.jpg"
                                             alt="Our team in action"
                                             loading="lazy"
                                             width={800}
@@ -222,11 +222,11 @@ export default function Hero() {
                                                 ))}
                                             </div>
                                             <p className="text-base sm:text-lg italic text-gray-300 mb-4">
-                                                "Professional service from start to finish. Our guests are still talking about the amazing
-                                                magazine covers!"
+                                                “From the first interaction to the final print, everything was flawless.
+                                                Our guests couldn’t stop talking about the magazine-style photos - truly unforgettable.”
                                             </p>
-                                            <div className="font-semibold text-sm sm:text-base">Emma & James Wilson</div>
-                                            <div className="text-xs sm:text-sm text-gray-400">Wedding, Napa Valley</div>
+                                            <div className="font-semibold text-sm sm:text-base">Ankit Verma</div>
+                                            <div className="text-xs sm:text-sm text-gray-400">Birthday, New Delhi</div>
                                         </div>
                                     </div>
                                 </div>
@@ -288,7 +288,7 @@ export default function Hero() {
                                         </div>
                                         <div className="flex items-center space-x-4">
                                             <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                                            <span className="text-sm sm:text-base">100+ Events Completed</span>
+                                            <span className="text-sm sm:text-base">200+ Events Completed</span>
                                         </div>
                                         <div className="flex items-center space-x-4">
                                             <div className="w-3 h-3 bg-blue-400 rounded-full"></div>

@@ -44,7 +44,7 @@ const events = [
     type: "Corporate",
     location: "Noida",
     photoCount: 74,
-    thumb: "/photo-booth-team.png",
+    thumb: "/photo-booth-team.jpg",
   },
   {
     id: "tariq-sumaiya-ghaziabad",

@@ -13,7 +13,7 @@ const eventData = {
       { id: 1, url: "/happy-bride-testimonial.png", title: "Bride's First Look" },
       { id: 2, url: "/magazine-cover-template.png", title: "Couple Dance" },
       { id: 3, url: "/magazine-photobooth.png", title: "Reception Moments" },
-      { id: 4, url: "/photo-booth-team.png", title: "Family Photos" },
+      { id: 4, url: "/photo-booth-team.jpg", title: "Family Photos" },
       { id: 5, url: "/celebrity-magazine-cover.png", title: "Candid Shots" },
       { id: 6, url: "/photo-booth-bts.png", title: "Evening Celebration" },
     ],
@@ -32,7 +32,7 @@ const eventData = {
     driveLink: "https://drive.google.com/drive/folders/corporate-001",
     topMoments: [
       { id: 1, url: "/magazine-photobooth.png", title: "Keynote Session" },
-      { id: 2, url: "/photo-booth-team.png", title: "Networking" },
+      { id: 2, url: "/photo-booth-team.jpg", title: "Networking" },
       { id: 3, url: "/magazine-cover-template.png", title: "Panel Discussion" },
       { id: 4, url: "/celebrity-magazine-cover.png", title: "Prize Distribution" },
     ],
