@@ -137,7 +137,7 @@ export default function Hero() {
                                 className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
                                 aria-label="View Full Gallery"
                             >
-                                View Full Gallery
+                                View Gallery
                             </Button3D>
                         </a>
                     </div>
