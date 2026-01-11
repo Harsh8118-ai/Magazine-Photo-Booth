@@ -138,7 +138,7 @@ export default function Hero() {
                                 aria-label="View Full Gallery"
                             >
                                 View Gallery
-                            </Button3D>
+                            </Button3D> 
                         </a>
                     </div>
 
