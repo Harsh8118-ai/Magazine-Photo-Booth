@@ -33,8 +33,8 @@ const MiddleOneSection = () => {
                                         description: "Complete booth setup with professional equipment and magazine covers",
                                     },
                                     {
-                                        service: "Instant High Quality Prints",
-                                        price: "₹20,000",
+                                        service: "Instant High Quality Prints with Photography",
+                                        price: "₹25,000",
                                         description: "Premium quality instant prints for all guests",
                                     },
                                     {

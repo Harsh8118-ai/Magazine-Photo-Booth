@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     "celebrity covers",
     "instant prints",
     "event photography",
-    "Los Angeles photo booth",
     "party entertainment",
   ],
   authors: [{ name: "The Luxury Booths" }],
