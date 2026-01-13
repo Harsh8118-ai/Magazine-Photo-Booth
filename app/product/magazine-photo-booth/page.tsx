@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
+  alternates: {
+  canonical: "https://theluxurybooths.com/product/magazine-photo-booth",
+},
 
 }
 

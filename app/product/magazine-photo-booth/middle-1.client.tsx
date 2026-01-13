@@ -159,6 +159,11 @@ const MiddleOneSection = () => {
                         "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4"
                     ]}
                 />
+                <p className="text-center text-gray-400 mt-3 max-w-3xl mx-auto">
+                    Watch real highlights from our luxury magazine photo booth setups across weddings, exhibitions,
+                    and corporate events in India.
+                </p>
+
             </ScrollReveal>
         </>
     )
