@@ -351,17 +351,17 @@ export default function Hero() {
                             <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
                             <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                                 <li>
-                                    <Link href="/product/magazine-photo-booth" className="hover:text-white transition-colors">
+                                    <Link href="/products/magazine-photo-booth" className="hover:text-white transition-colors">
                                         Magazine Photo Booth
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/product/mirror-selfie-booth" className="hover:text-white transition-colors">
+                                    <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
                                         Mirror Selfie Booth
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/product/vintage-photo-booth" className="hover:text-white transition-colors">
+                                    <Link href="/products/vintage-photo-booth" className="hover:text-white transition-colors">
                                         Vintage Photo Booth
                                     </Link>
                                 </li>
@@ -385,7 +385,7 @@ export default function Hero() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/#product"
+                                    <Link href="/products"
                                         className="hover:text-white transition-colors"
                                     >
                                         Product
@@ -428,9 +428,9 @@ export default function Hero() {
             {/* Enhanced WhatsApp CTA with dynamic data */}
             <WhatsAppCTA />
             <nav aria-hidden="true" className="sr-only">
-                <a href="/product/magazine-photo-booth">Magazine Photo Booth in Delhi</a>
-                <a href="/product/mirror-selfie-booth">Mirror Selfie Booth for Weddings</a>
-                <a href="/product/vintage-photo-booth">Vintage Photo Booth Rental</a>
+                <a href="/products/magazine-photo-booth">Magazine Photo Booth in Delhi</a>
+                <a href="/products/mirror-selfie-booth">Mirror Selfie Booth for Weddings</a>
+                <a href="/products/vintage-photo-booth">Vintage Photo Booth Rental</a>
             </nav>
         </main>
     )

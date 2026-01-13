@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://theluxurybooths.com/product/magazine-photo-booth",
+    canonical: "https://theluxurybooths.com/products/magazine-photo-booth",
   },
 
 }
