@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Premium magazine photo booth rental in India with instant celebrity-style prints. Ideal for luxury weddings, corporate events, exhibitions & private parties.",
   keywords:
-    "magazine photo booth, luxury photo booth, celebrity photo booth, instant magazine prints, event photo booth, wedding photo booth, corporate photo booth",
+    "vogue magazine photo booth, magazine photo booth, luxury photo booth, celebrity photo booth, instant magazine prints, event photo booth, wedding photo booth, corporate photo booth",
   openGraph: {
     title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",
     description: "Luxury magazine photo booth with instant celebrity-style cover prints for your event",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-  canonical: "https://theluxurybooths.com/product/magazine-photo-booth",
-},
+    canonical: "https://theluxurybooths.com/product/magazine-photo-booth",
+  },
 
 }
 

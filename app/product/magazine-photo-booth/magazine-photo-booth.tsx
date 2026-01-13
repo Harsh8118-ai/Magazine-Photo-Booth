@@ -12,8 +12,8 @@ export default function MagazinePhotoBooth() {
   const features = [
     {
       icon: Star,
-      title: "Celebrity-Style Covers",
-      description: "Professional magazine layouts featuring your guests as the main attraction",
+      title: "Vogue-Style Editorial Look",
+      description: "A luxury Vogue magazine photo booth style setup with premium lighting and cover-worthy frames",
     },
     {
       icon: Zap,
@@ -58,7 +58,7 @@ export default function MagazinePhotoBooth() {
             The Luxury <span className="text-gradient">Magazine Photo Booth</span> Rental In India
           </h1  >
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
-            Transform your guests into magazine cover stars with instant, high-quality prints they'll treasure forever.
+            Transform your guests into Vogue style Magazine cover stars with instant, high-quality prints they'll treasure forever.
           </p>
 
           {/* Use Cases Section - Magazine Theme */}
@@ -86,8 +86,9 @@ export default function MagazinePhotoBooth() {
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
                   Our magazine photo booth is designed for events where presentation, branding, and guest experience truly matter.
-                  With its editorial-style visuals and luxury execution, it seamlessly elevates events across India.
+                  With editorial-style visuals and luxury execution, it delivers a Vogue magazine photo booth experience for premium events across India.
                 </p>
+
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
                   Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Agra, and nearby cities.
