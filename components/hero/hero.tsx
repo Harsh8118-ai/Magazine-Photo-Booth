@@ -21,7 +21,7 @@ export default function Hero() {
 
     const navigationSections = [
         { id: "hero-section", label: "Home", icon: "home" },
-        { id: "product", label: "Product", icon: "package", isExternal: true, href: "/product" },
+        { id: "product", label: "Product", icon: "package", isExternal: true, href: "/products" },
         { id: "gallery-section", label: "Gallery", icon: "camera" },
         { id: "blog", label: "Blog", icon: "blog", isExternal: true, href: "/blog" },
         { id: "testimonials-section", label: "Reviews", icon: "users" },

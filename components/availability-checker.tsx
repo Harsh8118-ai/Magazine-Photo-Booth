@@ -26,7 +26,7 @@ export function AvailabilityChecker() {
         event_date: date,
         city,
         phone,
-        source: "luxurybooths.com",
+        source: "theluxurybooths.com",
       }),
     })
 

@@ -1,6 +1,5 @@
-import EventClient from "@/components/gallery/[eventId]/event-client"
 import type { Metadata } from "next"
-
+import EventClient from "./event-client"
 
 export const metadata: Metadata = {
   title: "Luxury Magazine Photo Booth Event | The Luxury Booths",

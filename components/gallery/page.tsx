@@ -1,6 +1,5 @@
-import GalleryPage from "@/components/gallery/gallery"
 import type { Metadata } from "next"
-
+import GalleryPage from "./gallery"
 
 export const metadata: Metadata = {
   title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",

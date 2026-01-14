@@ -8,18 +8,18 @@ export const metadata: Metadata = {
   description:
     "Explore premium photo booth products in India — Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Perfect for luxury weddings, corporate events, exhibitions & private parties.",
   alternates: {
-    canonical: "https://theluxurybooths.in/products",
+    canonical: "https://theluxurybooths.com/products",
   },
   openGraph: {
     title: "Luxury Photo Booth Products in India | The Luxury Booths",
     description:
       "Explore our premium photo booth products for weddings, corporate events, exhibitions & private parties across India.",
-    url: "https://theluxurybooths.in/products",
+    url: "https://theluxurybooths.com/products",
     siteName: "The Luxury Booths",
     type: "website",
     images: [
       {
-        url: "https://theluxurybooths.in/magazine-cover-template.png",
+        url: "https://theluxurybooths.com/magazine-cover-template.png",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths - Photo Booth Products",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Luxury Photo Booth Products in India | The Luxury Booths",
     description:
       "Choose from Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth for your next premium event in India.",
-    images: ["https://theluxurybooths.in/magazine-cover-template.png"],
+    images: ["https://theluxurybooths.com/magazine-cover-template.png"],
   },
   robots: {
     index: true,
