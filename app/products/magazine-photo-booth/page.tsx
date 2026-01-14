@@ -1,5 +1,6 @@
+import MagazinePhotoBooth from "@/components/products/magazine-photo-booth/magazine-photo-booth"
 import type { Metadata } from "next"
-import MagazinePhotoBooth from "./magazine-photo-booth"
+
 
 export const metadata: Metadata = {
   title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",

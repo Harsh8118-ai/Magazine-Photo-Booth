@@ -1,4 +1,5 @@
-import MirrorSelfieBooth from "./mirror-selfie-booth"
+import MirrorSelfieBooth from "@/components/products/mirror-selfie-booth/mirror-selfie-booth"
+
 
 export const metadata = {
   title: "Mirror Selfie Booth for Luxury Events | The Luxury Booths",

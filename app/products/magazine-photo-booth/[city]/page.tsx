@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import MagazinePhotoBooth from "./magazine-photo-booth";
+import MagazinePhotoBooth from "@/components/products/magazine-photo-booth/[city]/magazine-photo-booth";
+
 
 const cities: Record<string, { name: string; state: string }> = {
   delhi: { name: "Delhi", state: "Delhi" },

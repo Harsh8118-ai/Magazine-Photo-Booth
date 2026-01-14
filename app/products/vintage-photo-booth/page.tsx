@@ -1,4 +1,5 @@
-import VintagePhotoBooth from "./vintage-photo-booth"
+import VintagePhotoBooth from "@/components/products/vintage-photo-booth/vintage-photo-booth"
+
 
 export const metadata = {
   title: "Vintage Photo Booth for Weddings & Events | The Luxury Booths",
