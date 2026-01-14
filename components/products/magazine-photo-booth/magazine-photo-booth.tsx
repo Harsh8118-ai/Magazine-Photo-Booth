@@ -171,7 +171,7 @@ export default function MagazinePhotoBooth() {
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/products/magazine-photo-booth/cities/${city.slug}`}
+                href={`/products/magazine-photo-booth/${city.slug}`}
                 className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
               >
                 {city.name} <span className="text-gray-400">({city.state})</span>

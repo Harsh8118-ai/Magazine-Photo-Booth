@@ -1,15 +1,16 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import MagazinePhotoBooth from "@/components/products/magazine-photo-booth/[city]/magazine-photo-booth";
+import Script from "next/script"
+import MagazinePhotoBoothCity from "@/components/products/magazine-photo-booth/[city]/magazine-photo-booth";
 
 
 const cities: Record<string, { name: string; state: string }> = {
-  delhi: { name: "Delhi", state: "Delhi" },
-  ghaziabad: { name: "Ghaziabad", state: "Uttar Pradesh" },
-  noida: { name: "Noida", state: "Uttar Pradesh" },
-  gurugram: { name: "Gurugram", state: "Haryana" },
-  gurgaon: { name: "Gurgaon", state: "Haryana" },
-  faridabad: { name: "Faridabad", state: "Haryana" },
+  delhi: { name: "Delhi", state: "Delhi NCR" },
+  ghaziabad: { name: "Ghaziabad", state: "Delhi NCR" },
+  noida: { name: "Noida", state: "Delhi NCR" },
+  gurugram: { name: "Gurugram", state: "Delhi NCR" },
+  gurgaon: { name: "Gurgaon", state: "Delhi NCR" },
+  faridabad: { name: "Faridabad", state: "Delhi NCR" },
   jaipur: { name: "Jaipur", state: "Rajasthan" },
   udaipur: { name: "Udaipur", state: "Rajasthan" },
   mumbai: { name: "Mumbai", state: "Maharashtra" },
@@ -80,10 +81,48 @@ export default async function CityMagazineBoothPage({
   const data = cities[city]
   if (!data) return notFound()
 
+  const pageUrl = `https://theluxurybooths.com/products/magazine-photo-booth/${city}`
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Luxury Magazine Photo Booth Rental in ${data.name}`,
+    description: `Book a luxury Vogue-style magazine photo booth in ${data.name} for weddings, corporate events, exhibitions & private parties.`,
+    serviceType: "Photo Booth Rental",
+    url: pageUrl,
+    areaServed: {
+      "@type": "City",
+      name: data.name,
+    },
+    provider: {
+      "@type": "LocalBusiness",
+      name: "The Luxury Booths",
+      url: "https://theluxurybooths.com",
+      telephone: "+91-9266037002",
+      email: "theluxurybooths@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Sector-73",
+        addressLocality: "Noida",
+        addressRegion: "Uttar Pradesh",
+        addressCountry: "IN",
+      },
+    },
+  }
+
+
   return (
-    <MagazinePhotoBooth
-      cityName={data.name}
-      stateName={data.state}
-    />
+    <>
+      <Script
+        id={`schema-magazine-city-${city}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
+      <MagazinePhotoBoothCity
+        cityName={data.name}
+        stateName={data.state}
+      />
+    </>
   )
 }

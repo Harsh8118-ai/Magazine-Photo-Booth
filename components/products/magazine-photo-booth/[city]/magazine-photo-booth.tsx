@@ -12,7 +12,7 @@ type MagazinePhotoBoothProps = {
   stateName?: string
 }
 
-export default function MagazinePhotoBooth({
+export default function MagazinePhotoBoothCity({
   cityName,
   stateName,
 }: MagazinePhotoBoothProps) {
@@ -44,6 +44,19 @@ export default function MagazinePhotoBooth({
     },
   ]
 
+  const cities = [
+    { slug: "delhi", name: "Delhi", state: "Delhi" },
+    { slug: "ghaziabad", name: "Ghaziabad", state: "Uttar Pradesh" },
+    { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
+    { slug: "gurugram", name: "Gurugram", state: "Haryana" },
+    { slug: "gurgaon", name: "Gurgaon", state: "Haryana" },
+    { slug: "faridabad", name: "Faridabad", state: "Haryana" },
+    { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
+    { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
+    { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
+    { slug: "pune", name: "Pune", state: "Maharashtra" },
+  ]
+
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Header with back button */}
@@ -56,10 +69,10 @@ export default function MagazinePhotoBooth({
             <ArrowLeft size={20} />
             <span className="hidden sm:block">Back</span>
           </Link>
-          <p className="text-xl sm:text-3xl font-display text-center font-bold text-gradient">
-            Magazine Photo Booth
+          <p className="text-lg sm:text-3xl font-display text-center font-bold text-gradient">
+            Magazine Photo Booth in {cityName}
           </p>
-          <div className="w-20" />
+          <div className="" />
         </div>
       </div>
 
@@ -71,13 +84,13 @@ export default function MagazinePhotoBooth({
           {/* ✅ Dynamic H1 with City */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
             Luxury <span className="text-gradient">Magazine Photo Booth</span>{" "}
-            Rental in {locationText}
+            Rental in {cityName} ({stateName})
           </h1>
 
           {/* ✅ Dynamic paragraph with City */}
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
-            forever — now available in {locationText}.
+            forever. Now available in {cityName} ({stateName}).
           </p>
 
           {/* Use Cases Section */}
@@ -101,13 +114,13 @@ export default function MagazinePhotoBooth({
               {/* Right Highlights */}
               <div className="w-full sm:w-auto flex-1">
                 <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 text-gradient text-center sm:text-left">
-                  Perfect for Every Premium Event in {locationText}
+                  Perfect for Every Premium Event in {cityName}
                 </h2>
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
                   Our magazine photo booth is designed for events where presentation, branding, and guest experience truly
                   matter. With editorial-style visuals and luxury execution, it delivers a Vogue magazine photo booth
-                  experience for premium events in {locationText}.
+                  experience for premium events in {cityName}.
                 </p>
 
                 {/* ✅ City-based + fallback for India */}
@@ -122,6 +135,10 @@ export default function MagazinePhotoBooth({
                     pan-India for premium weddings, corporate events, and exhibitions.
                   </p>
                 )}
+
+                <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
+                  Trusted for premium weddings and corporate events across {cityName} venues, banquet halls, and luxury farmhouses.
+                </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {[
@@ -168,6 +185,32 @@ export default function MagazinePhotoBooth({
               </div>
             </div>
           </section>
+        </div>
+      </section>
+
+      {/* Avaiable Cities  */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
+            Available in These Cities
+          </h2>
+
+          <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 text-base sm:text-lg">
+            We provide luxury magazine photo booth services with premium setup and instant Vogue-style prints across major cities in India.
+            Select your city to see location-specific details.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {cities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/products/magazine-photo-booth/${city.slug}`}
+                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
+              >
+                {city.name} <span className="text-gray-400">({city.state})</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

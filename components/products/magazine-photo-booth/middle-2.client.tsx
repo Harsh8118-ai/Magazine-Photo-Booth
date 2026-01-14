@@ -6,7 +6,6 @@ import { SectionWrapper } from "@/components/section-wrapper"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { VenueRequirements } from "@/components/venue-requirements"
 import { Button3D } from "@/components/3d-button"
-import { AdvancedBookingSystem } from "@/components/advanced-booking-system"
 
 const MiddleTwoSection = () => {
     const faqs = [
@@ -33,17 +32,6 @@ const MiddleTwoSection = () => {
     ];
     return (
         <>
-            {/* Event Enquiry Form  */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="booking-section"
-                    ariaLabel="Booking form and contact information"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
-                >
-                    <AdvancedBookingSystem />
-                </SectionWrapper>
-            </ScrollReveal>
-
             {/* What We Need From Your Venue  */}
             <ScrollReveal direction="up" delay={0.2}>
                 <SectionWrapper

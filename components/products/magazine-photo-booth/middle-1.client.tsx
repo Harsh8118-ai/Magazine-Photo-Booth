@@ -5,82 +5,151 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { ParallaxSection } from "@/components/parallax-section"
 import { MultiVideoReels } from "@/components/multi-video-reels"
 import { CardContent, CardTwo } from "@/components/ui/card"
+import WhatsAppButton from "./whatsapp-button"
 
 const MiddleOneSection = () => {
     return (
         <>
             {/* Charges & Services Section */}
-            <ScrollReveal direction="up" delay={0.2}>
-                <SectionWrapper
-                    id="packages-section"
-                    ariaLabel="Service charges and pricing information"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
-                >
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-8 text-gradient">
-                            Charges & Services
-                        </h2>
-                        <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg">
-                            Professional magazine photo booth services with transparent pricing
+            {/* <div className="grid grid-cols-1 gap-6">
+                <ScrollReveal direction="up" delay={0.1}>
+                    <div className="glass-enhanced rounded-2xl p-6 sm:p-8 border border-white/10 hover:neon-glow transition-all duration-300">
+                        <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-2">
+                            1) Magazine Booth Setup
+                        </h3>
+
+                        <p className="text-gray-400 text-sm sm:text-base mb-4">
+                            Best for premium branding & luxury photo corner setups.
                         </p>
 
-                        <div className="glass-enhanced rounded-2xl p-6 sm:p-8 mb-8">
-                            <div className="space-y-6">
-                                {[
-                                    {
-                                        service: "Magazine Photo Booth Setup",
-                                        price: "₹35,000",
-                                        description: "Complete booth setup with professional equipment and magazine covers",
-                                    },
-                                    {
-                                        service: "Instant High Quality Prints with Photography",
-                                        price: "₹25,000",
-                                        description: "Premium quality instant prints for all guests",
-                                    },
-                                    {
-                                        service: "Professional Photography",
-                                        price: "₹5,000",
-                                        description: "Expert photographer to capture perfect shots",
-                                    },
-                                    {
-                                        service: "Transport Cost",
-                                        price: "As per distance from Noida",
-                                        description: "Travel charges calculated based on venue location",
-                                    },
-                                ].map((item, index) => (
-                                    <ScrollReveal key={index} direction="left" delay={0.1 * index}>
-                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 glass rounded-xl hover:neon-glow transition-all duration-300">
-                                            <div className="flex-1 mb-4 sm:mb-0">
-                                                <h3 className="font-display text-lg sm:text-xl font-bold text-white mb-2">{item.service}</h3>
-                                                <p className="text-gray-400 text-sm sm:text-base">{item.description}</p>
-                                            </div>
-                                            <div className="text-right">
-                                                <div className="text-xl sm:text-2xl font-bold text-gold font-display">{item.price}</div>
-                                            </div>
-                                        </div>
-                                    </ScrollReveal>
-                                ))}
-                            </div>
+                        <div className="text-3xl sm:text-4xl font-bold text-gold font-display mb-5">
+                            ₹35,000
                         </div>
 
-                        <ScrollReveal direction="up" delay={0.4}>
-                            <div className="glass-enhanced rounded-2xl p-6 sm:p-8 text-center border border-gold/30">
-                                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 mb-4">
-                                    <CheckCircle className="h-6 w-6 text-white" />
-                                </div>
-                                <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">Booking Information</h3>
-                                <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                                    <span className="text-gold font-semibold">For Bookings:</span> You have to pay half of the amount of
-                                    the services you select as advance payment.
-                                </p>
-                                <div className="mt-6 text-sm text-gray-400">
-                                    Final pricing may vary based on event requirements and location
-                                </div>
-                            </div>
-                        </ScrollReveal>
+                        <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Luxury Magazine Booth Setup
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Vogue-style magazine cover display
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Complete lighting & professional setup
+                            </li>
+                        </ul>
+
+                        <p className="mt-4 text-xs sm:text-sm text-gray-500">
+                            🚚 Transport extra (as per distance from Noida)
+                        </p>
+
+                        <button className="mt-6 w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition">
+                            Book This Package
+                        </button>
                     </div>
-                </SectionWrapper>
-            </ScrollReveal>
+                </ScrollReveal>
+
+                
+                <ScrollReveal direction="up" delay={0.2}>
+                    <div className="glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/40 hover:neon-glow transition-all duration-300 relative overflow-hidden">
+                
+                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gold/20 text-gold border border-gold/30">
+                            Most Popular
+                        </div>
+
+                        <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-2">
+                            2) Setup + Photography
+                        </h3>
+
+                        <p className="text-gray-400 text-sm sm:text-base mb-4">
+                            Best for weddings & corporate events with perfect posing & guidance.
+                        </p>
+
+                        <div className="text-3xl sm:text-4xl font-bold text-gold font-display mb-5">
+                            ₹40,000
+                        </div>
+
+                        <ul className="space-y-2 text-gray-300 text-sm sm:text-base">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Everything from Magazine Booth Setup
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Professional Photographer Included
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Best angle + pose guidance for guests
+                            </li>
+                        </ul>
+
+                        
+                        <p className="mt-4 text-xs sm:text-sm text-gray-500">
+                            🚚 Transport extra (as per distance from Noida)
+                        </p>
+
+                        <button className="mt-6 w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition">
+                            Book This Package
+                        </button>
+                    </div>
+                </ScrollReveal>
+
+                
+                <ScrollReveal direction="up" delay={0.3}>
+                    <div className="glass-enhanced rounded-2xl p-6 sm:p-8 border border-purple-500/50 hover:neon-glow transition-all duration-300 relative overflow-hidden shadow-[0_0_35px_rgba(168,85,247,0.25)]">
+
+                        
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 pointer-events-none" />
+
+                        
+                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-200 border border-purple-400/30">
+                            Premium
+                        </div>
+
+                        <h3 className="relative font-display text-xl sm:text-2xl font-bold text-white mb-2">
+                            3) Setup + Photography + Prints
+                        </h3>
+
+                        <p className="relative text-gray-400 text-sm sm:text-base mb-4">
+                            Best for premium guest experience with instant keepsake prints.
+                        </p>
+
+                        <div className="relative text-3xl sm:text-4xl font-bold text-gold font-display mb-5">
+                            ₹65,000
+                        </div>
+
+                        <ul className="relative space-y-2 text-gray-300 text-sm sm:text-base">
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Everything from Setup + Photography
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Instant High Quality Prints for Guests
+                            </li>
+                            <li className="flex items-start gap-2">
+                                <CheckCircle className="h-5 w-5 text-green-400 mt-0.5" />
+                                Premium print output (magazine-style)
+                            </li>
+                        </ul>
+
+                        
+                        <p className="relative mt-4 text-xs sm:text-sm text-gray-500">
+                            🚚 Transport extra (as per distance from Noida)
+                        </p>
+
+                        <button className="relative mt-6 w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:opacity-90 transition">
+                            Book Premium Package
+                        </button>
+                    </div>
+                </ScrollReveal>
+            </div> */}
+
+             <WhatsAppButton />
+
 
             {/* How It Works Section */}
             <ParallaxSection speed={0.3}>
