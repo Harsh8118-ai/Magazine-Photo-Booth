@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     "The Luxury Booths brings celebrity-style magazine covers to weddings, corporate events, and parties. Instant professional prints in 30 seconds.",
   keywords: [
     "photo booth",
+    "photo booth near me",
+    "vogue magazine booth",
+    "vogue photo booth",
     "magazine photo booth",
     "mirro selfie booth",
     "vintage photo booth",
@@ -61,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "The Luxury Booths",
     images: [
       {
-        url: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
+        url: "/the-luxury-booths.png",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths - Celebrity Style Covers",
@@ -72,15 +75,15 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
-    apple: "https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp",
+    icon: "/the-luxury-booths.png",
+    apple: "/the-luxury-booths.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
     description:
       "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
-    images: ["https://res.cloudinary.com/dpnykjono/image/upload/v1765967591/The_Luxury_Booths_Profile_qhlimj.webp"],
+    images: ["/the-luxury-booths.png"],
     creator: "@theluxurybooths",
   },
   robots: {
