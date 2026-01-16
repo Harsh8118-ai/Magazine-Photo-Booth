@@ -102,7 +102,7 @@ const MirrorSelfieBooth = () => {
 
       {/* Features Section */}
       <section className="py-2 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto"> 
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
             Premium Features
           </h2>
