@@ -95,7 +95,7 @@ const MirrorSelfieBooth = () => {
               </div>
 
             </div>
-          </section>  
+          </section>
 
         </div>
       </section>
