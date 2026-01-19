@@ -48,17 +48,27 @@ export default function Hero() {
 
                 {/* Hero Content */}
                 <div className={`relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6`}>
-                    <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
+                    <p className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-6 text-gradient leading-tight">
                         The <br />
                         Luxury Booths
-                    </h1>
-                    <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
-                        Become the Cover Star
-                    </h2>
-                    <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        The Luxury Booths brings celebrity-style covers to your event with instant prints your
-                        guests will love.
                     </p>
+                    <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
+                        Luxury Photo Booth Rental for Weddings, Corporate & VIP Events
+                    </h1>
+                    <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Looking for a <span className="text-white font-semibold">luxury photo booth rental near you</span>?
+                        We deliver premium magazine cover prints, mirror selfie experiences, and vintage photo booth setups that
+                        instantly elevate any event.
+                    </p>
+
+                    <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Trusted for high-end weddings, celebrity-style parties, corporate activations, brand launches, and VIP celebrations —
+                        with instant photo prints your guests take home as luxury souvenirs.
+                    </p>
+
+                    <h2 className="font-display text-xl sm:text-2xl font-semibold text-center mb-6 text-gray-200">
+                        Premium Magazine, Mirror & Vintage Photo Booth Experiences
+                    </h2>
 
                     <HeroClient />
 
@@ -138,7 +148,7 @@ export default function Hero() {
                                 aria-label="View Full Gallery"
                             >
                                 View Gallery
-                            </Button3D> 
+                            </Button3D>
                         </a>
                     </div>
 
@@ -427,11 +437,6 @@ export default function Hero() {
 
             {/* Enhanced WhatsApp CTA with dynamic data */}
             <WhatsAppCTA />
-            <nav aria-hidden="true" className="sr-only">
-                <a href="/products/magazine-photo-booth">Magazine Photo Booth in Delhi</a>
-                <a href="/products/mirror-selfie-booth">Mirror Selfie Booth for Weddings</a>
-                <a href="/products/vintage-photo-booth">Vintage Photo Booth Rental</a>
-            </nav>
         </main>
     )
 }
