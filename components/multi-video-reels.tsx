@@ -31,7 +31,7 @@ const VideoCard = ({ url, showControls = false, isActive = true }: VideoCardProp
 
     if (isPlaying) {
       video.pause();
-      setIsPlaying(false);
+      setIsPlaying(false); 
     } else {
       video.play().then(() => setIsPlaying(true));
     }
