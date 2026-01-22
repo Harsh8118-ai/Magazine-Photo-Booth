@@ -65,27 +65,7 @@ export default function HeroClient() {
 
     return (
         <>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button3D
-                    size="lg"
-                    onClick={() => scrollToSection("products")}
-                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                    aria-label="Book your The Luxury Booth now"
-                >
-                    <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    Book Now
-                </Button3D>
-                <Button3D
-                    variant="outline"
-                    size="lg"
-                    onClick={() => scrollToSection("products")}
-                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold border-gold text-gold hover:bg-gold hover:text-black bg-transparent"
-                    aria-label="View our packages and pricing"
-                >
-                    <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    See Packages
-                </Button3D>
-            </div>
+           
 
             {/* Stats Bar - Improved mobile responsiveness and SEO */}
             <div
@@ -116,6 +96,28 @@ export default function HeroClient() {
                         <div className="text-xs sm:text-sm text-gray-400">Premium Booth Options</div>
                     </div>
                 </div>
+            </div>
+
+             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                <Button3D
+                    size="lg"
+                    onClick={() => scrollToSection("products")}
+                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                    aria-label="Book your The Luxury Booth now"
+                >
+                    <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    Book Now
+                </Button3D>
+                <Button3D
+                    variant="outline"
+                    size="lg"
+                    onClick={() => scrollToSection("products")}
+                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold border-gold text-gold hover:bg-gold hover:text-black bg-transparent"
+                    aria-label="View our packages and pricing"
+                >
+                    <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    See Packages
+                </Button3D>
             </div>
         </>
     )

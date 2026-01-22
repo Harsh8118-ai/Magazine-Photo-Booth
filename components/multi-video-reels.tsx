@@ -7,7 +7,7 @@ import { useRef, useState, useEffect, useCallback } from "react";
 interface VideoCardProps {
   url: string;
   showControls?: boolean;
-  isActive?: boolean; // For mobile single video
+  isActive?: boolean;
 }
 
 const VideoCard = ({ url, showControls = false, isActive = true }: VideoCardProps) => {

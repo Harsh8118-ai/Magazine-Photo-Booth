@@ -55,14 +55,14 @@ export default function Hero() {
                     <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
                         Luxury Photo Booth Rental for Weddings, Corporate & VIP Events
                     </h1>
-                    <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        Looking for a <span className="text-white font-semibold">luxury photo booth rental near you</span>?
-                        We deliver premium magazine cover prints, mirror selfie experiences, and vintage photo booth setups that
+                    <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
+                        Looking for a <span className="text-white font-semibold">Luxury Photo Booth rental near you</span>?
+                        We deliver Premium Vogue Magazine cover prints, mirror selfie experiences and vintage photo booth setups that
                         instantly elevate any event.
                     </p>
 
-                    <p className="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                        Trusted for high-end weddings, celebrity-style parties, corporate activations, brand launches, and VIP celebrations —
+                    <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
+                        Trusted for high-end weddings, celebrity-style parties, corporate activations, brand launches, and VIP celebrations
                         with instant photo prints your guests take home as luxury souvenirs.
                     </p>
 
