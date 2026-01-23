@@ -18,12 +18,12 @@ import Floating3DScene from "@/components/floating-3d-scene.client"
 
 const cities: { slug: string; name: string; state: string }[] = [
     { slug: "delhi-ncr", name: "Delhi NCR", state: "Delhi NCR" },
-    { slug: "delhi", name: "Delhi", state: "Delhi NCR" },
-    { slug: "noida", name: "Noida", state: "Delhi NCR" },
-    { slug: "ghaziabad", name: "Ghaziabad", state: "Delhi NCR" },
-    { slug: "gurugram", name: "Gurugram", state: "Delhi NCR" },
-    { slug: "gurgaon", name: "Gurgaon", state: "Delhi NCR" },
-    { slug: "faridabad", name: "Faridabad", state: "Delhi NCR" },
+    { slug: "delhi", name: "Delhi", state: "Delhi" },
+    { slug: "ghaziabad", name: "Ghaziabad", state: "Uttar Pradesh" },
+    { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
+    { slug: "gurugram", name: "Gurugram", state: "Haryana" },
+    { slug: "gurgaon", name: "Gurgaon", state: "Haryana" },
+    { slug: "faridabad", name: "Faridabad", state: "Haryana" },
     { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
     { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },

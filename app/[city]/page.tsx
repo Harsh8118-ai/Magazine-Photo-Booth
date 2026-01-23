@@ -61,7 +61,7 @@ const cities: Record<
     name: "Gurugram",
     state: "Delhi NCR",
     nearby: ["Delhi", "Noida", "Faridabad", "Ghaziabad"],
-    areas: ["Golf Course Road", "Cyber City", "Sector 29", "Sohna Road"],
+    areas: ["Golf Course Road", "DLF Cyber City", "Sector 24", "Sohna Road"],
   },
 
   gurgaon: {
