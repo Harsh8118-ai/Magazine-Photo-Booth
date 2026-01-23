@@ -101,7 +101,7 @@ export default function HeroClient() {
              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
                 <Button3D
                     size="lg"
-                    onClick={() => scrollToSection("products")}
+                    onClick={() => scrollToSection("features-section")}
                     className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
                     aria-label="Book your The Luxury Booth now"
                 >
