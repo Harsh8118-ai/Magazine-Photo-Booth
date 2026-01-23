@@ -105,6 +105,12 @@ const cities: Record<
     nearby: ["Hinjewadi", "Wakad", "Kharadi"],
     areas: ["Baner", "Viman Nagar", "Koregaon Park", "Kothrud"],
   },
+  bangalore: {
+    name: "Bangalore",
+    state: "Karnataka",
+    nearby: ["Whitefield", "Electronic City", "Sarjapur", "Marathahalli"],
+    areas: ["Indiranagar", "Koramangala", "HSR Layout", "MG Road"],
+  },
 }
 
 function getCityData(citySlug: string) {
@@ -476,6 +482,7 @@ export default async function CityHomePage({
           </div>
         </SectionWrapper>
       </ParallaxSection>
+
 
       {/* FAQs & Logistics Section */}
       <SectionWrapper

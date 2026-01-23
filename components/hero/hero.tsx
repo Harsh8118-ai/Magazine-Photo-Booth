@@ -16,6 +16,22 @@ import { FloatingNavigation } from "@/components/floating-navigation"
 import MultiVideoReels from "@/components/multi-video-reels.client"
 import Floating3DScene from "@/components/floating-3d-scene.client"
 
+const cities: { slug: string; name: string; state: string }[] = [
+    { slug: "delhi-ncr", name: "Delhi NCR", state: "Delhi NCR" },
+    { slug: "delhi", name: "Delhi", state: "Delhi NCR" },
+    { slug: "noida", name: "Noida", state: "Delhi NCR" },
+    { slug: "ghaziabad", name: "Ghaziabad", state: "Delhi NCR" },
+    { slug: "gurugram", name: "Gurugram", state: "Delhi NCR" },
+    { slug: "gurgaon", name: "Gurgaon", state: "Delhi NCR" },
+    { slug: "faridabad", name: "Faridabad", state: "Delhi NCR" },
+    { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
+    { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
+    { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
+    { slug: "pune", name: "Pune", state: "Maharashtra" },
+    { slug: "bangalore", name: "Bangalore", state: "Karnataka" }
+]
+
+
 
 export default function Hero() {
 
@@ -311,6 +327,38 @@ export default function Hero() {
                     </div>
                 </SectionWrapper>
             </ParallaxSection>
+
+            {/* ✅ Available Cities (City Landing Page) */}
+            <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+                <div className="max-w-6xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
+                        Luxury Photo Booth Rental by City
+                    </h2>
+
+                    <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 text-base sm:text-lg">
+                        Choose your city to explore luxury photo booth rental options including Magazine Photo Booth, Mirror Selfie Booth,
+                        and Vintage Photo Booth — with instant premium prints and complete event-ready setup.
+                    </p>
+
+                    <div className="flex flex-wrap justify-center gap-3">
+                        {cities.map((city) => (
+                            <Link
+                                key={city.slug}
+                                href={`/photo-booth-rental-in-${city.slug}`}
+                                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
+                            >
+                                {city.name} <span className="text-gray-400">({city.state})</span>
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* ✅ Optional: Small SEO line */}
+                    <p className="text-center text-gray-400 text-sm sm:text-base mt-8">
+                        Serving premium events in weddings, corporate activations, exhibitions, celebrity parties, and VIP celebrations.
+                    </p>
+                </div>
+            </section>
+
 
             {/* FAQs & Logistics Section */}
             <SectionWrapper

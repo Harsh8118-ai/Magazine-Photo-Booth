@@ -59,7 +59,7 @@ const products = [
     ],
     pricing: "Starting ₹35,000",
     href: "/products/magazine-photo-booth",
-    image: "/Cloudinary/Magazine-Booth/Hero.png",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
   },
   {
     id: "mirror-selfie-booth",
@@ -75,7 +75,7 @@ const products = [
     ],
     pricing: "Starting ₹25,000",
     href: "/products/mirror-selfie-booth",
-    image: "/placeholder-gi9dj.png",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
   },
   {
     id: "vintage-photo-booth",
@@ -91,7 +91,7 @@ const products = [
     ],
     pricing: "Starting ₹25,000 + prints",
     href: "/products/vintage-photo-booth",
-    image: "/photo-booth-team.png",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp",
   },
 ]
 
@@ -129,9 +129,9 @@ export default function ProductsPage() {
               Our Luxury Photo Booth Products
             </h1>
             <p className="text-gray-300 text-base sm:text-lg">
-              Choose the perfect photo booth experience for your event —{" "}
+              Choose the perfect photo booth experience for your event with{" "}
               <span className="text-gold font-semibold">
-                Vogue-style magazine cover prints
+                Vogue-Style Magazine cover prints
               </span>
               , interactive mirror selfies, or vintage photo memories. Designed for premium events across India.
             </p>
@@ -146,14 +146,15 @@ export default function ProductsPage() {
                 key={product.id}
                 className="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/30 hover:scale-[1.02] transition-all duration-300"
               >
+                <Link href={product.href} className="block h-full">
                 {/* Product Image */}
-                <div className="relative h-52 sm:h-56 overflow-hidden bg-gray-800">
+                <div className="relative aspect-[3/4] w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
                   <Image
                     src={product.image}
                     alt={`${product.name} by The Luxury Booths`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
+                    // className="object-cover"
                   />
                 </div>
 
@@ -182,19 +183,12 @@ export default function ProductsPage() {
 
                   {/* Pricing */}
                   <div className="border-t border-white/10 pt-4 mb-4">
-                    <p className="text-gold text-lg font-semibold">
+                    <p className="text-gold text-xl font-semibold">
                       {product.pricing}
                     </p>
                   </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    href={product.href}
-                    className="mt-auto inline-block w-full text-center px-4 py-2 bg-gradient-to-r from-gold to-amber-400 text-gray-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-gold/40 transition-shadow"
-                  >
-                    View Details
-                  </Link>
                 </div>
+                </Link>
               </article>
             ))}
           </div>
