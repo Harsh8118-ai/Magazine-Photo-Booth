@@ -38,7 +38,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-black/80 backdrop-blur">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4">
-          <h1 className="text-5xl font-bold mb-2 text-gradient">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-2 text-gradient">
             The Luxury Booths' Gallery
           </h1>
           <p className="text-gray-400  border-b border-gray-800">
@@ -97,7 +97,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
                     />
                   </div>
 
-                  <h3 className="text-xl font-bold group-hover:text-purple-400 transition">
+                  <h3 className=" sm:text-xl font-bold group-hover:text-purple-400 transition">
                     {event.name}
                   </h3>
 

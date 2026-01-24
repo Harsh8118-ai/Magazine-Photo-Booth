@@ -160,7 +160,7 @@ export default function Hero() {
                         <a href="/gallery">
                             <Button3D
                                 variant="outline"
-                                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                                className="border-purple-400 px-10 py-5 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
                                 aria-label="View Full Gallery"
                             >
                                 View Gallery
