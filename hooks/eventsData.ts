@@ -46,7 +46,10 @@ export const eventData = {
     photoCount: 556,
     driveLink: "https://drive.google.com/drive/folders/birthday-001",
     topMoments: [
-      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769182097/Paras-and-Anushree-optimized_xnwgms.webp", title: "" },
+      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769340102/paras-and-anushree.webp", title: "" },
+      { id: 2, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769340102/paras-and-anushree-2.webp", title: "" },
+      { id: 3, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769340102/paras-and-anushree-3.webp", title: "" },
+
     ],
     videos: [
       "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",

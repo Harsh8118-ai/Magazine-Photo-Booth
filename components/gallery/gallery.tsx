@@ -8,7 +8,7 @@ const events = [
     type: "Corporate",
     location: "Gurugram",
     photoCount: 587,
-    thumb: "https://res.cloudinary.com/dpnykjono/image/upload/v1766764258/Hero-2.webp",
+    thumb: "https://res.cloudinary.com/dpnykjono/image/upload/v1769160644/1-2.webp",
   },
   {
     id: "jai-shreya-jim-corbett",
