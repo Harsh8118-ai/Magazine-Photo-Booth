@@ -27,25 +27,31 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
+  metadataBase: new URL("https://theluxurybooths.com"),
+
+  title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
   description:
-    "The Luxury Booths brings celebrity-style magazine covers to weddings, corporate events, and parties. Instant professional prints in 30 seconds.",
+    "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
+  alternates: {
+    canonical: "https://theluxurybooths.com",
+  },
+
   keywords: [
     "photo booth",
     "photo booth near me",
     "vogue magazine booth",
     "vogue photo booth",
     "magazine photo booth",
-    "mirro selfie booth",
+    "mirror selfie booth",
     "vintage photo booth",
     "retro photo booth",
     "wedding photo booth",
     "corporate events",
     "luxury photo booth",
-    "celebrity covers",
-    "instant prints",
-    "event photography",
-    "party entertainment",
+    "Delhi NCR photo booth",
+    "Noida photo booth",
+    "Gurugram photo booth",
+    "instant prints"
   ],
   authors: [{ name: "The Luxury Booths" }],
   creator: "The Luxury Booths",
@@ -55,11 +61,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://theluxurybooths.com"),
+
   openGraph: {
-    title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
+    title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
     description:
-      "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers with professional prints.",
+      "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
     url: "https://theluxurybooths.com",
     siteName: "The Luxury Booths",
     images: [
@@ -67,25 +73,22 @@ export const metadata: Metadata = {
         url: "/the-luxury-booths.png",
         width: 1200,
         height: 630,
-        alt: "The Luxury Booths - Celebrity Style Covers",
+        alt: "The Luxury Booths - Magazine Photo Booth",
       },
     ],
 
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
-  icons: {
-    icon: "/the-luxury-booths.png",
-    apple: "/the-luxury-booths.png",
-  },
+
   twitter: {
     card: "summary_large_image",
-    title: "The Luxury Booths – Celebrity-Style Photo Booth Rentals.",
+    title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
     description:
-      "The Luxury Booths for weddings, corporate events, and parties. Instant celebrity-style covers.",
+      "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
     images: ["/the-luxury-booths.png"],
-    creator: "@theluxurybooths",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -97,6 +100,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+
+  icons: {
+    icon: "/the-luxury-booths.png",
+    apple: "/the-luxury-booths.png",
+  },
+
   verification: {
     google: "BBikFu5Pfi8aCoGkZQqMLLnbMfGGkKIUksA625GxFPA",
   },
@@ -112,14 +121,16 @@ export default function RootLayout({
     <html lang="en" className={`${spaceGrotesk.variable} ${comicNeue.variable} ${inter.variable} antialiased`}>
       <head>
 
-        <script
+        <Script
+          id="localbusiness-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "The Luxury Booths",
-              description: "The Luxury Booths for weddings, corporate events, and parties",
+              description: "The Luxury Photo Booths for weddings, corporate events, and parties",
               url: "https://theluxurybooths.com",
               telephone: "+91-9266037002",
               email: "theluxurybooths@gmail.com",
@@ -136,6 +147,7 @@ export default function RootLayout({
               },
               openingHours: "Mo-Su 00:00-23:59",
               priceRange: "₹35,000–₹75,000",
+              areaServed: ["Delhi NCR", "Noida", "Gurugram", "India"],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.9",
@@ -144,61 +156,41 @@ export default function RootLayout({
               service: [
                 {
                   "@type": "Service",
-                  "name": "Wedding Photo Booth Rental",
-                  "description": "Luxury magazine-style photo booth rentals for weddings with instant professional prints, red carpet setup, and custom branding.",
-                  "url": "https://theluxurybooths.com/products/mirror-selfie-booth",
-                  "areaServed": {
-                    "@type": "Place",
-                    "name": "India"
-                  },
-                  "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "The Luxury Booths"
-                  }
+                  name: "Magazine Photo Booth Rental",
+                  description:
+                    "Luxury magazine cover photo booth experience with instant premium prints and celebrity-style setup.",
+                  url: "https://theluxurybooths.com/products/magazine-photo-booth",
                 },
                 {
                   "@type": "Service",
-                  "name": "Corporate Event Photo Booth Rental",
-                  "description": "Premium photo booth solutions for corporate events, brand activations, and product launches with customized templates and on-site support.",
-                  "url": "https://theluxurybooths.com/products/vintage-photo-booth",
-                  "areaServed": {
-                    "@type": "Place",
-                    "name": "India"
-                  },
-                  "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "The Luxury Booths"
-                  }
+                  name: "Mirror Selfie Booth Rental",
+                  description:
+                    "Interactive mirror selfie booth for weddings, parties, and corporate activations with instant prints.",
+                  url: "https://theluxurybooths.com/products/mirror-selfie-booth",
                 },
                 {
                   "@type": "Service",
-                  "name": "Party & Birthday Photo Booth Rental",
-                  "description": "Fun and interactive photo booth rentals for private parties, birthdays, and celebrations with instant prints and digital sharing.",
-                  "url": "https://theluxurybooths.com/gallery",
-                  "areaServed": {
-                    "@type": "Place",
-                    "name": "India"
-                  },
-                  "provider": {
-                    "@type": "LocalBusiness",
-                    "name": "The Luxury Booths"
-                  }
-                }
+                  name: "Vintage Photo Booth Rental",
+                  description:
+                    "Classic vintage photo booth setup for retro-style celebrations and premium event experiences.",
+                  url: "https://theluxurybooths.com/products/vintage-photo-booth",
+                },
               ]
             }),
           }}
         />
 
         <Script
-          strategy="beforeInteractive"
+          id="website-schema"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "The Luxury Booths",
-              "alternateName": "Luxury Photo Booth Rentals",
-              "url": "https://theluxurybooths.com"
+              name: "The Luxury Booths",
+              alternateName: "Luxury Photo Booth Rentals",
+              url: "https://theluxurybooths.com",
             }),
           }}
         />
@@ -219,14 +211,12 @@ export default function RootLayout({
     });
   `}
         </Script>
-
-
-
       </head>
+
       <body className="bg-black text-white overflow-x-hidden">
         <RevealProvider />
         {children}
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={null}>
           <Analytics />
         </Suspense>
       </body>

@@ -4,6 +4,7 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import { Star, Zap, Users, Award } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react"
+import Script from "next/script"
 
 import { SectionWrapper } from "@/components/section-wrapper"
 import FooterClientTwo from "@/components/hero/footer.client-2"
@@ -128,26 +129,48 @@ export async function generateMetadata({
 
   if (!cityData) return {}
 
+  const canonicalSlug = city === "gurgaon" ? "gurugram" : city
+
   const title = `Luxury Photo Booth Rental in ${cityData.name} | The Luxury Booths`
-  const description = `Book Premium Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth in ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup.`
+  const description = `Book premium Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth in ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events & VIP parties.`
+
+  const canonicalUrl = `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`
+
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://theluxurybooths.com/photo-booth-rental-in-${city}`,
+      canonical: canonicalUrl,
     },
+
     openGraph: {
       title,
       description,
-      url: `https://theluxurybooths.com/photo-booth-rental-in-${city}`,
+      url: canonicalUrl,
       siteName: "The Luxury Booths",
       type: "website",
+      images: [
+        {
+          url: "/the-luxury-booths.png",
+          width: 1200,
+          height: 630,
+          alt: `Luxury Photo Booth Rental in ${cityData.name}`,
+        },
+      ],
+      locale: "en_IN",
     },
+
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/the-luxury-booths.png"],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   }
 }
@@ -160,7 +183,35 @@ export default async function CityHomePage({
   const { city } = await params
   const cityData = getCityData(city)
 
-  const seoCityUrl = `/photo-booth-rental-in-${city}`
+  if (!cityData) return notFound()
+
+  const canonicalSlug = city === "gurgaon" ? "gurugram" : city
+
+
+  const schemaCity = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Luxury Photo Booth Rental in ${cityData.name}`,
+    description: `Premium photo booth rental in ${cityData.name} including Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth.`,
+    serviceType: "Photo Booth Rental",
+    url: `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`,
+    areaServed: { "@type": "City", name: cityData.name },
+    provider: {
+      "@type": "LocalBusiness",
+      name: "The Luxury Booths",
+      url: "https://theluxurybooths.com",
+      telephone: "+91-9266037002",
+      email: "theluxurybooths@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Noida",
+        addressRegion: "Uttar Pradesh",
+        addressCountry: "IN",
+      },
+    },
+  }
+
+  const seoCityUrl = `/photo-booth-rental-in-${canonicalSlug}`
 
   if (!cityData) return notFound()
 
@@ -178,6 +229,14 @@ export default async function CityHomePage({
 
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
+
+      <Script
+        id={`schema-city-${city}`}
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCity) }}
+      />
+
       <FloatingNavigation sections={navigationSections} />
 
       {/* Hero Section */}

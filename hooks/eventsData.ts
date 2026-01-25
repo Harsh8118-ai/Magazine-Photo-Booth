@@ -65,7 +65,10 @@ export const eventData = {
     photoCount: 712,
     driveLink: "https://drive.google.com/drive/folders/birthday-001",
     topMoments: [
-      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769181557/vikas-and-sweta_fq4xmt.webp", title: "" },
+      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta.webp", title: "" },
+      { id: 2, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-2.webp", title: "" },
+      { id: 3, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-3.webp", title: "" },
+      { id: 4, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-4.webp", title: "" },
     ],
     videos: [
       "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",

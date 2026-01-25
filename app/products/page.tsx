@@ -4,35 +4,57 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Luxury Photo Booth Products in India | The Luxury Booths",
+  title: "Photo Booth Rental Products | Magazine, Mirror & Vintage",
   description:
-    "Explore premium photo booth products in India — Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Perfect for luxury weddings, corporate events, exhibitions & private parties.",
+    "Explore premium photo booth rental products by The Luxury Booths — Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Ideal for luxury weddings, corporate events, exhibitions & private parties across India.",
+
   alternates: {
     canonical: "https://theluxurybooths.com/products",
   },
+
+  keywords: [
+    "photo booth rental",
+    "photo booth rental products",
+    "magazine photo booth rental",
+    "magazine photo booth price",
+    "mirror selfie booth rental",
+    "vintage photo booth rental",
+    "luxury photo booth",
+    "wedding photo booth rental",
+    "corporate photo booth rental",
+    "photo booth for exhibitions",
+    "instant photo prints",
+    "celebrity magazine photo booth",
+    "Delhi NCR photo booth rental",
+    "Noida photo booth rental",
+    "Gurugram photo booth rental",
+  ],
+
   openGraph: {
-    title: "Luxury Photo Booth Products in India | The Luxury Booths",
+    title: "Photo Booth Rental Products | The Luxury Booths",
     description:
-      "Explore our premium photo booth products for weddings, corporate events, exhibitions & private parties across India.",
+      "Choose from Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth rentals for luxury weddings, corporate events & premium parties across India.",
     url: "https://theluxurybooths.com/products",
     siteName: "The Luxury Booths",
     type: "website",
     images: [
       {
-        url: "https://theluxurybooths.com/magazine-cover-template.png",
+        url: "/magazine-cover-template.png",
         width: 1200,
         height: 630,
-        alt: "The Luxury Booths - Photo Booth Products",
+        alt: "The Luxury Booths - Premium Photo Booth Products",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Photo Booth Products in India | The Luxury Booths",
+    title: "Photo Booth Rental Products | The Luxury Booths",
     description:
-      "Choose from Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth for your next premium event in India.",
-    images: ["https://theluxurybooths.com/magazine-cover-template.png"],
+      "Explore our premium photo booth rental products — Magazine, Mirror Selfie, and Vintage setups for luxury events across India.",
+    images: ["/magazine-cover-template.png"],
   },
+
   robots: {
     index: true,
     follow: true,
@@ -120,13 +142,12 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* ✅ Page Content Wrapper (padding-top because header is fixed) */}
       <div className="pt-24">
         {/* SEO Header */}
         <header className="px-4 pb-10 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
-              Our Luxury Photo Booth Products
+              Our Luxury Photo Booth Rental Products
             </h1>
             <p className="text-gray-300 text-base sm:text-lg">
               Choose the perfect photo booth experience for your event with{" "}

@@ -35,7 +35,7 @@ export default function ProductsSection() {
 
     return (
         <SectionWrapper
-            id="product"
+            id="products"
             ariaLabel="Photo booth products showcase"
             className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
         >
