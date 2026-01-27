@@ -83,8 +83,8 @@ export default function MagazinePhotoBoothCity({
         <div className="max-w-6xl mx-auto relative z-10">
           {/* ✅ Dynamic H1 with City */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
-            Luxury <span className="text-gradient">Magazine Photo Booth</span>{" "}
-            Rental in {cityName} ({stateName})
+            The <span className="text-gradient">Vogue Magazine Photo Booth</span>{" "}
+            Rental in {cityName}
           </h1>
 
           {/* ✅ Dynamic paragraph with City */}

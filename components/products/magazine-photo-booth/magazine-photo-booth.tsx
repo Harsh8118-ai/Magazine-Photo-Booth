@@ -70,7 +70,7 @@ export default function MagazinePhotoBooth() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
-            The Luxury <span className="text-gradient">Magazine Photo Booth</span> Rental In India
+            The <span className="text-gradient">Vogue Magazine Photo Booth</span> Rental In India
           </h1  >
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue style Magazine cover stars with instant, high-quality prints they'll treasure forever.
@@ -100,13 +100,13 @@ export default function MagazinePhotoBooth() {
                   Perfect for Every Premium Event in India
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                  Our magazine photo booth is designed for events where presentation, branding, and guest experience truly matter.
-                  With editorial-style visuals and luxury execution, it delivers a Vogue magazine photo booth experience for premium events across India.
+                  Our Magazine Photo Booth is designed for events where presentation, branding, and guest experience truly matter.
+                  With editorial-style visuals and luxury execution, it delivers a Vogue Magazine Photo Booth experience for Premium Events across India.
                 </p>
 
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                  Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Agra, and nearby cities.
+                  Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Banglore, Pune and nearby cities.
                   Our team travels pan-India for premium weddings, corporate events, and exhibitions.
                 </p>
 
@@ -146,11 +146,11 @@ export default function MagazinePhotoBooth() {
                   ))}
                 </div>
 
-                <p className="text-center sm:text-left text-gold/80 italic mt-12 max-w-3xl">
-                  With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts effortlessly to different event styles and themes across India.
-                </p>
               </div>
             </div>
+                <p className="text-center mx-auto text-gold/80 italic mt-12 max-w-3xl">
+                  With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts effortlessly to different event styles and themes across India.
+                </p>
           </section>
 
 

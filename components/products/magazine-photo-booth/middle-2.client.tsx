@@ -30,6 +30,8 @@ const MiddleTwoSection = () => {
             answer: "Absolutely! Our booth enhances corporate events, product launches, and activations by creating engaging, shareable magazine-style photos."
         },
     ];
+
+    
     return (
         <>
             {/* What We Need From Your Venue  */}
