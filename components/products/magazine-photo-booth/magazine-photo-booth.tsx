@@ -83,7 +83,7 @@ export default function MagazinePhotoBooth() {
               <div className="w-full sm:w-auto flex justify-center sm:justify-start mb-8 sm:mb-0">
                 <div className="relative rounded-xl overflow-hidden glass-enhanced border border-gold/30">
                   <Image
-                    src="/Cloudinary/Magazine-Booth/Hero.png"
+                    src="/luxury magazine photo booth rental setup.webp"
                     alt="luxury magazine photo booth rental setup in India"
                     width={400}
                     height={500}

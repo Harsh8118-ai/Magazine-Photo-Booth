@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Luxury Magazine Photo Booth Event | The Luxury Booths",
     description: "Luxury magazine photo booth event highlights with high-resolution photos",
     type: "website",
-    images: ["/magazine-cover-template.webp"],
+    images: ["/luxury magazine photo booth rental setup.webp"],
   },
 }
 

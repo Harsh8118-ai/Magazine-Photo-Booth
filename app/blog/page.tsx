@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/magazine-cover-template.webp",
+        url: "/luxury magazine photo booth rental setup.webp",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths Blog",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Luxury Photo Booth Blog | The Luxury Booths",
     description:
       "Read trends, guides, and insights on luxury photo booths for weddings, corporate events & premium parties.",
-    images: ["/magazine-cover-template.webp"],
+    images: ["/luxury magazine photo booth rental setup.webp"],
   },
 
   robots: {

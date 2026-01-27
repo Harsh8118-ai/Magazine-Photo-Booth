@@ -56,7 +56,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/magazine-cover-template.webp",
+          url: "/luxury magazine photo booth rental setup.webp",
           width: 1200,
           height: 630,
           alt: `Magazine Photo Booth in ${data.name}`,
@@ -68,7 +68,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/magazine-cover-template.webp"],
+      images: ["/luxury magazine photo booth rental setup.webp"],
     },
 
     robots: {

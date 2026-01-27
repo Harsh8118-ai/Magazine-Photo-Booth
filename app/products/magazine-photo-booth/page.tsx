@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",
     description: "Luxury magazine photo booth with instant celebrity-style cover prints for your event",
     type: "website",
-    images: ["/magazine-cover-template.webp"],
+    images: ["/luxury magazine photo booth rental setup.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Luxury Magazine Photo Booth Rental in India | The Luxury Booths",
     description:
       "Premium magazine photo booth rental with instant celebrity-style prints for luxury weddings & events.",
-    images: ["/magazine-cover-template.webp"],
+    images: ["/luxury magazine photo booth rental setup.webp"],
   },
   robots: {
     index: true,

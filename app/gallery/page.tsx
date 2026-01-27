@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description:
       "Browse real events, premium magazine cover prints, and luxury photo booth moments from weddings, corporate activations, and private parties across India.",
     type: "website",
-    images: ["/magazine-cover-template.webp"],
+    images: ["/luxury magazine photo booth rental setup.webp"],
   },
 }
 
