@@ -234,7 +234,7 @@ export default function Hero() {
                                 <div className="relative">
                                     <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
                                         <Image
-                                            src="/photo-booth-team.jpg"
+                                            src="/photo-booth-team.webp"
                                             alt="Our team in action"
                                             loading="lazy"
                                             width={800}

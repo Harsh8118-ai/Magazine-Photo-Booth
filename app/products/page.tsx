@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/magazine-cover-template.png",
+        url: "/magazine-cover-template.webp",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths - Premium Photo Booth Products",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Photo Booth Rental Products | The Luxury Booths",
     description:
       "Explore our premium photo booth rental products — Magazine, Mirror Selfie, and Vintage setups for luxury events across India.",
-    images: ["/magazine-cover-template.png"],
+    images: ["/magazine-cover-template.webp"],
   },
 
   robots: {

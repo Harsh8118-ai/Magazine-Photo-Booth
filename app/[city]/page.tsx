@@ -152,7 +152,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/the-luxury-booths.png",
+          url: "/the-luxury-booths.webp",
           width: 1200,
           height: 630,
           alt: `Luxury Photo Booth Rental in ${cityData.name}`,
@@ -165,7 +165,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/the-luxury-booths.png"],
+      images: ["/the-luxury-booths.webp"],
     },
 
     robots: {
@@ -440,7 +440,7 @@ export default async function CityHomePage({
                 <div className="relative">
                   <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
                     <Image
-                      src="/photo-booth-team.jpg"
+                      src="/photo-booth-team.webp"
                       alt={`Our team in action in ${cityData.name}`}
                       loading="lazy"
                       width={800}

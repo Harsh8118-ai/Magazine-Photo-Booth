@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     siteName: "The Luxury Booths",
     images: [
       {
-        url: "/the-luxury-booths.png",
+        url: "/the-luxury-booths.webp",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths - Magazine Photo Booth",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
     description:
       "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
-    images: ["/the-luxury-booths.png"],
+    images: ["/the-luxury-booths.webp"],
   },
 
   robots: {
@@ -102,8 +102,8 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/the-luxury-booths.png",
-    apple: "/the-luxury-booths.png",
+    icon: "/the-luxury-booths.webp",
+    apple: "/the-luxury-booths.webp",
   },
 
   verification: {
