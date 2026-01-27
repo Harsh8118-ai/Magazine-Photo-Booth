@@ -101,7 +101,7 @@ export default function MagazinePhotoBoothCity({
                 <div className="relative rounded-xl overflow-hidden glass-enhanced border border-gold/30">
                   <Image
                     src="/Cloudinary/Magazine-Booth/Hero.png"
-                    alt={`Luxury magazine photo booth rental setup in ${locationText}`}
+                    alt={`luxury magazine photo booth rental setup in ${locationText}`}
                     width={400}
                     height={500}
                     className="object-cover"

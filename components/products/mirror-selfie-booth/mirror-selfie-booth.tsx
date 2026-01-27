@@ -67,11 +67,13 @@ const MirrorSelfieBooth = () => {
               <div className="w-full flex justify-center animate-fade-left">
                 <div className="inline-block rounded-xl overflow-hidden border border-gold/30">
                   <Image
-                    src="https://res.cloudinary.com/dpnykjono/image/upload/v1766755393/Mirror-Booth_rheieh.webp"
-                    alt="Mirror Selfie Booth Hero"
-                    width={400}
-                    height={300}
+                    src="https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_500,c_fill/Mirror-Booth_rheieh.webp"
+                    alt="Mirror Selfie Booth Rental in India"
+                    width={600}
+                    height={900}
+                    sizes="(max-width: 768px) 90vw, 600px"
                     className="object-cover"
+                    priority
                   />
                 </div>
               </div>
@@ -102,7 +104,7 @@ const MirrorSelfieBooth = () => {
 
       {/* Features Section */}
       <section className="py-2 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
-        <div className="max-w-6xl mx-auto"> 
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
             Premium Features
           </h2>
