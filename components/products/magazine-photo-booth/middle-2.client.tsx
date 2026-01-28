@@ -31,7 +31,17 @@ const MiddleTwoSection = () => {
         },
     ];
 
-    
+    const images = [
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-4.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769340103/paras-and-anushree-3.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-4.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-3.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa-2.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769604826/jai-ans-shreya_rnea5o.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-3.webp",
+    ]
+
     return (
         <>
             {/* What We Need From Your Venue  */}
@@ -60,28 +70,30 @@ const MiddleTwoSection = () => {
                         </h2>
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-                            {Array.from({ length: 8 }).map((_, index) => (
-                                <ScrollReveal key={index} direction="scale" delay={0.05 * index}>
-                                    <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
-                                        <Image
-                                            src={`/Images/${index + 1}.png`}
-                                            alt={`Event photo ${index + 1}`}
-                                            loading="lazy"
-                                            width={800}
-                                            height={600}
-                                            className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                        />
-                                    </div>
-                                </ScrollReveal>
-                            ))}
-                        </div>
+                            {/* <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4 mb-12"> */}
+                                {images.map((src, index) => (
+                                    <ScrollReveal key={index} direction="scale" delay={index * 0.05}>
+                                        <div className="break-inside-avoid overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer">
+                                            <Image
+                                                src={src}
+                                                alt={`Event gallery image ${index + 1}`}
+                                                width={800}
+                                                height={1000}
+                                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                                                loading="lazy"
+                                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                            />
+                                        </div>
+                                    </ScrollReveal>
+                                ))}
+                            </div>
+                        {/* </div> */}
 
                         <div className="text-center">
                             <a href="/gallery">
                                 <Button3D
                                     variant="outline"
-                                    className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                                    className="border-purple-400 px-10 py-5 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
                                 >
                                     View Full Gallery
                                 </Button3D>
