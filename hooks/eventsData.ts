@@ -29,7 +29,7 @@ export const eventData = {
     photoCount: 627,
     driveLink: "https://drive.google.com/drive/folders/corporate-001",
     topMoments: [
-      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769183723/jai-and-shreya_ebyels.webp", title: "" },
+      { id: 1, url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769604826/jai-ans-shreya_rnea5o.webp", title: "" },
     ],
     videos: [
       "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",

@@ -39,20 +39,16 @@ const VintagePhotoBooth = () => {
   ]
 
   const galleryImages = [
-    { id: 1, src: "/Cloudinary/Vintage-Booth/1 (1).jpeg", alt: "Vintage photo booth setup with retro style and instant prints" },
-    { id: 2, src: "/Cloudinary/Vintage-Booth/1 (2).jpeg", alt: "Retro photo booth at an event with vintage booth experience" },
-    { id: 3, src: "/Cloudinary/Vintage-Booth/1 (3).jpeg", alt: "Classic vintage booth design with instant print photo booth service" },
-    { id: 4, src: "/Cloudinary/Vintage-Booth/1 (4).jpeg", alt: "Retro selfie photo booth with wooden vintage design" },
-    { id: 5, src: "/Cloudinary/Vintage-Booth/1 (5).jpeg", alt: "Vintage booth red carpet setup with instant print photo booth" },
-    { id: 6, src: "/Cloudinary/Vintage-Booth/1 (6).jpeg", alt: "Retro floral themed vintage photo booth with instant prints" },
-    { id: 7, src: "/Cloudinary/Vintage-Booth/1 (7).jpeg", alt: "Corporate event retro photo booth with vintage instant print experience" },
-    { id: 8, src: "/Cloudinary/Vintage-Booth/1 (8).jpeg", alt: "Guest enjoying vintage retro photo booth with instant prints" },
-    { id: 9, src: "/Cloudinary/Vintage-Booth/1 (9).jpeg", alt: "Product launch event featuring vintage retro photo booth" },
-    { id: 10, src: "/Cloudinary/Vintage-Booth/1 (10).jpeg", alt: "House party vintage photo booth offering instant print photos" },
-    { id: 11, src: "/Cloudinary/Vintage-Booth/1 (11).jpeg", alt: "LED illuminated retro photo booth with instant prints" },
-    { id: 12, src: "/Cloudinary/Vintage-Booth/1 (12).jpeg", alt: "Vintage style wooden photo booth with DSLR and instant print feature" },
-    { id: 13, src: "/Cloudinary/Vintage-Booth/1 (13).jpeg", alt: "Retro themed photo booth backdrop offering premium instant prints" },
-    { id: 14, src: "/Cloudinary/Vintage-Booth/1 (14).jpeg", alt: "Stylish vintage photo booth corner with classic retro booth experience" },
+    { id: 1, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth.webp", alt: "Vintage photo booth setup with retro style and instant prints" },
+    { id: 2, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-2.webp", alt: "Retro photo booth at an event with vintage booth experience" },
+    { id: 3, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-3.webp", alt: "Classic vintage booth design with instant print photo booth service" },
+    { id: 4, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-4.webp", alt: "Retro selfie photo booth with wooden vintage design" },
+    { id: 5, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-5.webp", alt: "Vintage booth red carpet setup with instant print photo booth" },
+    { id: 6, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-6.webp", alt: "Retro floral themed vintage photo booth with instant prints" },
+    { id: 7, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-7.webp", alt: "Corporate event retro photo booth with vintage instant print experience" },
+    { id: 8, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
+    { id: 9, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-9.webp", alt: "Product launch event featuring vintage retro photo booth" },
+    
   ];
 
   const features = [
@@ -163,8 +159,9 @@ const VintagePhotoBooth = () => {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={800}
-                  height={800}
+                  width={300}
+                  height={450}
+                  sizes="(max-width: 768px) 45vw, 300px"
                   className="w-full h-auto rounded-lg"
                   loading="lazy"
                 />

@@ -44,6 +44,17 @@ export default function Hero() {
         { id: "faq-section", label: "FAQs", icon: "message" },
     ] as const
 
+    const galleryImages = [
+        { id: 1, src: "/Images/1.webp", alt: "Vogue-Magazine Photo Booth" },
+        { id: 3, src: "/Images/3.webp", alt: "Photo Booth in Delhi NCR" },
+        { id: 6, src: "/Images/6.webp", alt: "Magazine Photo Booth Rental In Delhi NCR" },
+        { id: 7, src: "/Images/7.webp", alt: "Magazine Photo Booth in Wedding, Corporate and VVIP Events" },
+        { id: 2, src: "/Images/2.webp", alt: "Mirror photo booth at an event with vintage booth experience" },
+        { id: 4, src: "/Images/4.webp", alt: "Mirror selfie photo booth with wooden vintage design" },
+        { id: 5, src: "/Images/5.webp", alt: "Vintage booth red carpet setup with instant print photo booth" },
+        { id: 8, src: "/Images/8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
+    ];
+
 
     return (
         <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
@@ -139,19 +150,21 @@ export default function Hero() {
                         Event Gallery
                     </h2>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-                        {Array.from({ length: 8 }).map((_, index) => (
-                            <div key={index}>
-                                <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
-                                    <Image
-                                        src={`/Images/${index + 1}.png`}
-                                        alt={`Event photo ${index + 1}`}
-                                        loading="lazy"
-                                        width={800}
-                                        height={600}
-                                        className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
-                                    />
-                                </div>
+                    <div className="columns-2 sm:columns-3 gap-3 space-y-3">
+                        {galleryImages.map((image) => (
+                            <div
+                                key={image.id}
+                                className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
+                            >
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={300}
+                                    height={450}
+                                    sizes="(max-width: 768px) 45vw, 300px"
+                                    className="w-full h-auto rounded-lg"
+                                    loading="lazy"
+                                />
                             </div>
                         ))}
                     </div>
@@ -160,7 +173,7 @@ export default function Hero() {
                         <a href="/gallery">
                             <Button3D
                                 variant="outline"
-                                className="border-purple-400 px-10 py-5 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                                className="border-purple-400 px-10 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
                                 aria-label="View Full Gallery"
                             >
                                 View Gallery
