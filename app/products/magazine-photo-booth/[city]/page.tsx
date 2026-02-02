@@ -42,6 +42,8 @@ export async function generateMetadata({
     alternates: { canonical: canonicalUrl },
     keywords: [
       `magazine photo booth rental ${data.name.toLowerCase()}`,
+      `vogue magazine photo booth rental ${data.name.toLowerCase()}`,
+      `vogue magazine photo booth ${data.name.toLowerCase()}`,
       `magazine photo booth ${data.name.toLowerCase()}`,
       `luxury photo booth ${data.name.toLowerCase()}`,
       `wedding photo booth ${data.name.toLowerCase()}`,

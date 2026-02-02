@@ -29,7 +29,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://theluxurybooths.com"),
 
-  title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
+  title: "Best Photo Booth Rental in India | The Luxury Booths.",
   description:
     "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
   alternates: {
@@ -38,7 +38,11 @@ export const metadata: Metadata = {
 
   keywords: [
     "photo booth",
+    "photobooth",
     "photo booth near me",
+    "photobooth near me",
+    "photobooth noida",
+    "photobooth delhi",
     "vogue magazine booth",
     "vogue photo booth",
     "magazine photo booth",
@@ -47,7 +51,6 @@ export const metadata: Metadata = {
     "retro photo booth",
     "wedding photo booth",
     "corporate events",
-    "luxury photo booth",
     "Delhi NCR photo booth",
     "Noida photo booth",
     "Gurugram photo booth",
@@ -63,7 +66,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
+    title: "Best Photo Booth Rental in India | The Luxury Booths.",
     description:
       "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
     url: "https://theluxurybooths.com",
@@ -83,7 +86,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Photo Booth Rental in India | The Luxury Booths.",
+    title: "Best Photo Booth Rental in India | The Luxury Booths.",
     description:
       "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
     images: ["/the-luxury-booths.webp"],
@@ -130,7 +133,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "The Luxury Booths",
-              description: "The Luxury Photo Booths for weddings, corporate events, and parties",
+              description: "The Photo Booths for weddings, corporate events, and parties",
               url: "https://theluxurybooths.com",
               telephone: "+91-9266037002",
               email: "theluxurybooths@gmail.com",
@@ -189,7 +192,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "The Luxury Booths",
-              alternateName: "Luxury Photo Booth Rentals",
+              alternateName: "Photo Booth Rentals",
               url: "https://theluxurybooths.com",
             }),
           }}

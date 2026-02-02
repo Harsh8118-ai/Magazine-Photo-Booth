@@ -131,7 +131,7 @@ export async function generateMetadata({
 
   const canonicalSlug = city === "gurgaon" ? "gurugram" : city
 
-  const title = `Luxury Photo Booth Rental in ${cityData.name} | The Luxury Booths`
+  const title = `Photo Booth Rental in ${cityData.name} | The Luxury Booths`
   const description = `Book premium Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth in ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events & VIP parties.`
 
   const canonicalUrl = `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`
@@ -155,7 +155,7 @@ export async function generateMetadata({
           url: "/the-luxury-booths.webp",
           width: 1200,
           height: 630,
-          alt: `Luxury Photo Booth Rental in ${cityData.name}`,
+          alt: `Photo Booth Rental in ${cityData.name}`,
         },
       ],
       locale: "en_IN",
@@ -191,7 +191,7 @@ export default async function CityHomePage({
   const schemaCity = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `Luxury Photo Booth Rental in ${cityData.name}`,
+    name: `Photo Booth Rental in ${cityData.name}`,
     description: `Premium photo booth rental in ${cityData.name} including Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth.`,
     serviceType: "Photo Booth Rental",
     url: `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`,
@@ -227,6 +227,17 @@ export default async function CityHomePage({
   const nearbyText = cityData.nearby?.length ? cityData.nearby.join(", ") : ""
   const areasText = cityData.areas?.length ? cityData.areas.join(", ") : ""
 
+  const galleryImages = [
+    { id: 1, src: "/Images/1.webp", alt: "Vogue-Magazine Photo Booth" },
+    { id: 3, src: "/Images/3.webp", alt: "Photo Booth in Delhi NCR" },
+    { id: 6, src: "/Images/6.webp", alt: "Magazine Photo Booth Rental In Delhi NCR" },
+    { id: 7, src: "/Images/7.webp", alt: "Magazine Photo Booth in Wedding, Corporate and VVIP Events" },
+    { id: 2, src: "/Images/2.webp", alt: "Mirror photo booth at an event with vintage booth experience" },
+    { id: 4, src: "/Images/4.webp", alt: "Mirror selfie photo booth with wooden vintage design" },
+    { id: 5, src: "/Images/5.webp", alt: "Vintage booth red carpet setup with instant print photo booth" },
+    { id: 8, src: "/Images/8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
+  ];
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
 
@@ -260,12 +271,12 @@ export default async function CityHomePage({
 
           {/* ✅ City Based H1 */}
           <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
-            Luxury Photo Booth Rental in {cityData.name} for Weddings, Corporate & VIP Events
+            Photo Booth Rental in {cityData.name} for Weddings, Corporate & VIP Events
           </h1>
 
           {/* ✅ City Based Hero Paragraph */}
           <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Looking for a <span className="text-white font-semibold">Luxury Photo Booth rental in {cityData.name}</span>?
+            Looking for a <span className="text-white font-semibold">Photo Booth rental in {cityData.name}</span>?
             We deliver Premium Vogue Magazine cover prints, mirror selfie experiences and vintage photo booth setups that
             instantly elevate any event.
           </p>
@@ -340,19 +351,21 @@ export default async function CityHomePage({
             Event Gallery ({cityData.name})
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div key={index}>
-                <div className=" overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer gpu-accelerated">
-                  <Image
-                    src={`/Images/${index + 1}.png`}
-                    alt={`Event photo ${index + 1} in ${cityData.name}`}
-                    loading="lazy"
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-contain hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+          <div className="columns-2 sm:columns-3 gap-3 space-y-3">
+            {galleryImages.map((image) => (
+              <div
+                key={image.id}
+                className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={300}
+                  height={450}
+                  sizes="(max-width: 768px) 45vw, 300px"
+                  className="w-full h-auto rounded-lg"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
@@ -517,7 +530,7 @@ export default async function CityHomePage({
 
                   {/* ✅ City serving statement */}
                   <p className="text-sm sm:text-base text-gray-400 leading-relaxed text-center">
-                    We provide luxury photo booth rentals in {cityData.name}
+                    We provide Luxury Photo Booth rentals in {cityData.name}
                     {nearbyText ? ` and nearby locations like ${nearbyText}.` : "."}
                   </p>
 

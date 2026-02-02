@@ -7,16 +7,16 @@ import blogPosts from "@/hooks/blogPosts"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Luxury Photo Booth Blog | Wedding & Event Insights | The Luxury Booths",
+  title: "Photo Booth Blog | Wedding & Event Insights | The Luxury Booths",
   description:
-    "Explore luxury photo booth insights, trends, and guides for weddings, corporate events, exhibitions, and premium celebrations across India. Learn about magazine photo booths, mirror selfie booths, and event branding.",
+    "Explore photo booth insights, trends, and guides for weddings, corporate events, exhibitions, and premium celebrations across India. Learn about magazine photo booths, mirror selfie booths, and event branding.",
 
   alternates: {
     canonical: "https://theluxurybooths.com/blog",
   },
 
   openGraph: {
-    title: "Luxury Photo Booth Blog | The Luxury Booths",
+    title: "Photo Booth Blog | The Luxury Booths",
     description:
       "Wedding and corporate event photo booth insights, luxury trends, and practical guides to help you book the perfect photo booth experience.",
     url: "https://theluxurybooths.com/blog",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Photo Booth Blog | The Luxury Booths",
+    title: "Photo Booth Blog | The Luxury Booths",
     description:
-      "Read trends, guides, and insights on luxury photo booths for weddings, corporate events & premium parties.",
+      "Read trends, guides, and insights on photo booths for weddings, corporate events & premium parties.",
     images: ["/luxury magazine photo booth rental setup.webp"],
   },
 
@@ -92,7 +92,7 @@ export default function BlogPage() {
               <div>
                 <Image
                   src="https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp"
-                  alt="Luxury photo booth setup at a wedding event"
+                  alt="photo booth setup at a wedding event"
                   width={500}
                   height={360}
                   className="rounded-xl object-cover"

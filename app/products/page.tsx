@@ -4,7 +4,7 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Photo Booth Rental Products | Magazine, Mirror & Vintage",
+  title: "Photo Booth Rental in India | Magazine, Mirror & Vintage",
   description:
     "Explore premium photo booth rental products by The Luxury Booths — Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Ideal for luxury weddings, corporate events, exhibitions & private parties across India.",
 

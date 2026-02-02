@@ -80,7 +80,7 @@ export default function Hero() {
                         Luxury Booths
                     </p>
                     <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
-                        Luxury Photo Booth Rental for Weddings, Corporate & VIP Events
+                        Photo Booth Rental for Weddings, Corporate & VIP Events
                     </h1>
                     <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
                         Looking for a <span className="text-white font-semibold">Luxury Photo Booth rental near you</span>?
@@ -109,14 +109,14 @@ export default function Hero() {
                 className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
             >
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+                    <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-6 sm:mb-16 text-gradient">
                         Try Before You Book
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 sm:gap-12 mb-12 sm:mb-16">
                         <div>
                             <article>
-                                <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3>
+                                {/* <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">Check Your Date</h3> */}
                                 <AvailabilityChecker />
                             </article>
                         </div>
