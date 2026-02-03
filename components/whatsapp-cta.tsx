@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 
 
-export function WhatsAppCTA () {
+export function WhatsAppCTA() {
   const [isHovered, setIsHovered] = useState(false)
 
   const generateWhatsAppMessage = () => {
@@ -19,7 +19,18 @@ export function WhatsAppCTA () {
   }
 
   return (
-    <div className={`fixed bottom-36 right-4 sm:bottom-10 sm:right-6 lg:bottom-12 lg:left-6 lg:right-auto z-50`}>
+    <div
+      className="
+    fixed
+    right-4
+    sm:right-6
+    lg:left-6 lg:right-auto
+    z-50
+    bottom-[calc(1rem+env(safe-area-inset-bottom))]
+    sm:bottom-[calc(2.5rem+env(safe-area-inset-bottom))]
+    lg:bottom-[calc(3rem+env(safe-area-inset-bottom))]
+  "
+    >
       <div className="relative">
         {isHovered && (
           <div className="absolute bottom-16 right-0 bg-black/90 text-white p-3 rounded-lg text-sm max-w-xs whitespace-nowrap mb-2 glass">
@@ -32,12 +43,11 @@ export function WhatsAppCTA () {
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="sm:w-14 sm:h-14 animate-fade-up rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110"
-        >
+          className="w-14 h-14 sm:w-14 sm:h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110" >
           <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
             <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
               className="w-full h-full size-full"
               fill="currentColor"
               aria-hidden="true"
