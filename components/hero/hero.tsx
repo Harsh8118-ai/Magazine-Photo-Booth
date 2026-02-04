@@ -485,7 +485,7 @@ export default function Hero() {
                             <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
                                 <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
-                                <p>📍 Sector-73, Noida</p>
+                                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
                             </div>
                         </div>
                     </div>

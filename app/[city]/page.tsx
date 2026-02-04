@@ -706,7 +706,7 @@ export default async function CityHomePage({
                 <p className="flex flex-row">
                   <a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a>
                 </p>
-                <p>📍 Sector-73, Noida</p>
+                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
 
                 {/* ✅ City Serving note */}
                 <p className="text-xs sm:text-sm text-gray-500">

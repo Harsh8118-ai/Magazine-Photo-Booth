@@ -378,7 +378,7 @@ export default function MagazinePhotoBoothCity({
                 <p className="flex flex-row">
                   <a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a>
                 </p>
-                <p>📍 Sector-73, Noida</p>
+                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
               </div>
             </div>
           </div>
