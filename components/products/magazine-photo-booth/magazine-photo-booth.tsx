@@ -72,8 +72,14 @@ export default function MagazinePhotoBooth() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance text-gradient">
             Magazine Photo Booth Rental In India
           </h1  >
+          
+          {/* ✅ Dynamic paragraph with City */}
+          <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
+            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in India.</strong>
+            </p>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
-            Transform your guests into Vogue style Magazine cover stars with instant, high-quality prints they'll treasure forever.
+            Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
+            forever.
           </p>
 
           {/* Use Cases Section - Magazine Theme */}

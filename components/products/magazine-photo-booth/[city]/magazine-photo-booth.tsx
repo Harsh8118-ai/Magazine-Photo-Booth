@@ -18,7 +18,7 @@ export default function MagazinePhotoBoothCity({
 }: MagazinePhotoBoothProps) {
   const locationText = cityName
     ? `${cityName}${stateName ? `, ${stateName}` : ""}`
-    : "India"
+    : "Delhi NCR"
 
   const features = [
     {
@@ -56,7 +56,6 @@ export default function MagazinePhotoBoothCity({
     { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
     { slug: "pune", name: "Pune", state: "Maharashtra" },
     { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
-
   ]
 
   return (
@@ -89,9 +88,12 @@ export default function MagazinePhotoBoothCity({
           </h1>
 
           {/* ✅ Dynamic paragraph with City */}
+          <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
+            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in {cityName}.</strong>
+            </p>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
-            forever. Now available in {cityName} ({stateName}).
+            forever.
           </p>
 
           {/* Use Cases Section */}
@@ -115,7 +117,7 @@ export default function MagazinePhotoBoothCity({
               {/* Right Highlights */}
               <div className="w-full sm:w-auto flex-1">
                 <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 text-gradient text-center sm:text-left">
-                  Perfect for Every Premium Event in {cityName}
+                  Trusted Magazine Photo Booth Rental in {cityName}
                 </h2>
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
