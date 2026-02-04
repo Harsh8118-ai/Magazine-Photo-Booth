@@ -1,6 +1,6 @@
 const blogPosts = [
   {
-    title: "Why the Magazine Photo Booth Is the #1 Trend in India for 2026 High-Fashion Weddings.",
+    title: "Why the Magazine Photo Booth is the #1 Trend in India for 2026 High-Fashion Weddings.",
     slug: "magazine-photo-booth-wedding-trend-india-2026",
     excerpt:
       "Discover why magazine photo booths have become the most sought-after wedding trend in India for 2026, offering luxury aesthetics, premium keepsake prints, and unforgettable guest experiences.",

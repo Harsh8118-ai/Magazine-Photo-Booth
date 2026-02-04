@@ -47,7 +47,7 @@ const BlogMagazineWeddingTrend = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Why the Magazine Photo Booth Is
+            Why the Magazine Photo Booth is{" "}
             <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
               the #1 Wedding Trend in India for 2026
             </span>
