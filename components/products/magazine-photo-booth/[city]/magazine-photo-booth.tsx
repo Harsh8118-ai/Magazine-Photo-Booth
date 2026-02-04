@@ -55,6 +55,8 @@ export default function MagazinePhotoBoothCity({
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
     { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
     { slug: "pune", name: "Pune", state: "Maharashtra" },
+    { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
+
   ]
 
   return (

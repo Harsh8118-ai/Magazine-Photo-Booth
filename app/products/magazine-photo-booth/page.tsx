@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords:
     "vogue magazine photo booth, magazine photo booth, luxury photo booth, celebrity photo booth, instant magazine prints, event photo booth, wedding photo booth, corporate photo booth",
   openGraph: {
-    title: "Vogue Magazine Photo Booth Rental in India | The Luxury Booths",
+    title: "Magazine Photo Booth Rental in India | The Luxury Booths",
     description: "Luxury magazine photo booth with instant celebrity-style cover prints for your event",
     type: "website",
     images: ["/luxury magazine photo booth rental setup.webp"],

@@ -15,6 +15,8 @@ const cities: Record<string, { name: string; state: string; canonicalSlug?: stri
   udaipur: { name: "Udaipur", state: "Rajasthan" },
   mumbai: { name: "Mumbai", state: "Maharashtra" },
   pune: { name: "Pune", state: "Maharashtra" },
+  bangalore: { name: "Bangalore", state: "Karnataka" },
+
 }
 
 export async function generateStaticParams() {
