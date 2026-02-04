@@ -147,7 +147,7 @@ export default function ProductsPage() {
         <header className="px-4 pb-10 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
-              Our Luxury Photo Booth Rental Products
+              Photo Booth Rental Products
             </h1>
             <p className="text-gray-300 text-base sm:text-lg">
               Choose the perfect photo booth experience for your event with{" "}

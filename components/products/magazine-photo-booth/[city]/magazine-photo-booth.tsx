@@ -82,9 +82,8 @@ export default function MagazinePhotoBoothCity({
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* ✅ Dynamic H1 with City */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
-            The <span className="text-gradient">Vogue Magazine Photo Booth</span>{" "}
-            Rental in {cityName}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance text-gradient">
+            Magazine Photo Booth Rental in {cityName}
           </h1>
 
           {/* ✅ Dynamic paragraph with City */}
@@ -118,7 +117,7 @@ export default function MagazinePhotoBoothCity({
                 </h2>
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                  Our magazine photo booth is designed for events where presentation, branding, and guest experience truly
+                  Our Vogue Magazine Photo Booth is designed for events where presentation, branding, and guest experience truly
                   matter. With editorial-style visuals and luxury execution, it delivers a Vogue magazine photo booth
                   experience for premium events in {cityName}.
                 </p>

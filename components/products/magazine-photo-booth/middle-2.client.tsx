@@ -32,18 +32,63 @@ const MiddleTwoSection = () => {
     ];
 
     const images = [
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-4.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769340103/paras-and-anushree-3.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-4.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-3.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa-2.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769604826/jai-ans-shreya_rnea5o.webp",
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-3.webp",
-    ]
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-4.webp",
+            alt: "magazine photo booth at premium birthday party in Delhi NCR"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa.webp",
+            alt: "Vogue-style magazine photo booth branding at corporate event in Noida"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769340103/paras-and-anushree-3.webp",
+            alt: "Magazine photo booth at cocktail in Delhi NCR"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-4.webp",
+            alt: "magazine photo booth setup for wedding couple in Gurgaon"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-3.webp",
+            alt: "magazine photo booth experience at kids birthday celebration"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa-2.webp",
+            alt: "Corporate magazine photo booth for brand activation event in Delhi NCR"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769604826/jai-ans-shreya_rnea5o.webp",
+            alt: "Luxury wedding magazine photo booth with Vogue cover style in Delhi"
+        },
+        {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-3.webp",
+            alt: "Elegant magazine photo booth for destination-style wedding shoot"
+        }
+    ];
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map((faq) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+            },
+        })),
+    }
+
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(faqSchema),
+                }}
+            />
+
             {/* What We Need From Your Venue  */}
             <ScrollReveal direction="up" delay={0.2}>
                 <SectionWrapper
@@ -71,22 +116,22 @@ const MiddleTwoSection = () => {
 
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12">
                             {/* <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4 mb-12"> */}
-                                {images.map((src, index) => (
-                                    <ScrollReveal key={index} direction="scale" delay={index * 0.05}>
-                                        <div className="break-inside-avoid overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer">
-                                            <Image
-                                                src={src}
-                                                alt={`Event gallery image ${index + 1}`}
-                                                width={800}
-                                                height={1000}
-                                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-                                                loading="lazy"
-                                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                            />
-                                        </div>
-                                    </ScrollReveal>
-                                ))}
-                            </div>
+                            {images.map((image, index) => (
+                                <ScrollReveal key={index} direction="scale" delay={index * 0.05}>
+                                    <div className="break-inside-avoid overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer">
+                                        <Image
+                                            src={image.url}
+                                            alt={image.alt}
+                                            width={800}
+                                            height={1000}
+                                            className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                                            loading="lazy"
+                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                        />
+                                    </div>
+                                </ScrollReveal>
+                            ))}
+                        </div>
                         {/* </div> */}
 
                         <div className="text-center">

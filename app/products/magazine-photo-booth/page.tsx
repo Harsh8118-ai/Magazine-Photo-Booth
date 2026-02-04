@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 
 
 export const metadata: Metadata = {
-  title: "Vogue Magazine Photo Booth Rental in India | The Luxury Booths",
+  title: "Magazine Photo Booth Rental in India | The Luxury Booths",
   description:
     "Premium magazine photo booth rental in India with instant celebrity-style prints. Ideal for luxury weddings, corporate events, exhibitions & private parties.",
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vogue Magazine Photo Booth Rental in India | The Luxury Booths",
+    title: "Magazine Photo Booth Rental in India | The Luxury Booths",
     description:
       "Premium magazine photo booth rental with instant celebrity-style prints for luxury weddings & events.",
     images: ["/luxury magazine photo booth rental setup.webp"],
