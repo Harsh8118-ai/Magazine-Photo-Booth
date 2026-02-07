@@ -52,7 +52,7 @@ const MirrorSelfieBooth = () => {
 
         <div className="max-w-6xl mx-auto relative z-10 animate-fade-up">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
-            The Luxury <span className="text-gradient">Mirror Selfie</span> Booth Experience
+            The <span className="text-gradient">Mirror Selfie Booth</span> Experience
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             A glamorous red-carpet corner where guests capture and share unforgettable memories directly on their

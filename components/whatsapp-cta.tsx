@@ -19,7 +19,7 @@ export function WhatsAppCTA() {
   }
 
   return (
-    <div className="fixed right-4 sm:right-6 lg:left-6 lg:right-auto z-50 bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:bottom-[calc(2.5rem+env(safe-area-inset-bottom))] lg:bottom-[calc(3rem+env(safe-area-inset-bottom))]" >
+    <div className="fixed right-2 sm:right-6 lg:left-6 lg:right-auto z-50 bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:bottom-[calc(2.5rem+env(safe-area-inset-bottom))] lg:bottom-[calc(3rem+env(safe-area-inset-bottom))]" >
       <div className="relative">
         {isHovered && (
           <div className="absolute bottom-16 right-0 bg-black/90 text-white p-3 rounded-lg text-sm max-w-xs whitespace-nowrap mb-2 glass">
@@ -32,7 +32,7 @@ export function WhatsAppCTA() {
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="w-14 h-14 sm:w-14 sm:h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110" >
+          className="w-12 h-12 sm:w-14 sm:h-14 mb-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110" >
           <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
             <svg
               xmlns="http://www.w3.org/2000/svg"
