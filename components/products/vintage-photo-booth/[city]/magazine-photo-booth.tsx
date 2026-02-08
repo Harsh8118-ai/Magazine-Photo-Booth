@@ -2,18 +2,28 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { Camera, Zap, Users, Star } from "lucide-react"
-import { Facebook, Instagram, X, Linkedin } from "lucide-react";
-import MiddleOneSection from "./middle-1.client"
-import MiddleTwoSection from "./middle-2.client"
+import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 
-export default function MagazinePhotoBooth() {
+type MagazinePhotoBoothProps = {
+  cityName?: string
+  stateName?: string
+}
+
+export default function VintagePhotoBoothCity({
+  cityName,
+  stateName,
+}: MagazinePhotoBoothProps) {
+  const locationText = cityName
+    ? `${cityName}${stateName ? `, ${stateName}` : ""}`
+    : "Delhi NCR"
 
   const features = [
     {
       icon: Star,
       title: "Vogue-Style Editorial Look",
-      description: "A luxury Vogue magazine photo booth style setup with premium lighting and cover-worthy frames",
+      description:
+        "A luxury Vogue magazine photo booth style setup with premium lighting and cover-worthy frames",
     },
     {
       icon: Zap,
@@ -43,24 +53,25 @@ export default function MagazinePhotoBooth() {
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
     { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
     { slug: "pune", name: "Pune", state: "Maharashtra" },
-    { slug: "bangalore", name: "Bangalore", state: "Karnataka" }
-
+    { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
   ]
 
   return (
     <main className="min-h-screen bg-black text-white">
-
       {/* Header with back button */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-3">
-          <Link href="/products" className="flex items-center  text-gold hover:text-yellow-300 transition-colors">
+          <Link
+            href="/"
+            className="flex items-center text-gold hover:text-yellow-300 transition-colors"
+          >
             <ArrowLeft size={20} />
             <span className="hidden sm:block">Back</span>
           </Link>
-          <p className="text-xl sm:text-3xl font-display text-center font-bold text-gradient">
-            Magazine Photo Booth
+          <p className="text-lg sm:text-3xl font-display text-center font-bold text-gradient">
+            Magazine Photo Booth in {cityName}
           </p>
-          <div className="w-20" />
+          <div className="" />
         </div>
       </div>
 
@@ -69,20 +80,21 @@ export default function MagazinePhotoBooth() {
         <div className="absolute inset-0 bg-gradient-to-b from-gold/20 to-transparent opacity-50" />
 
         <div className="max-w-6xl mx-auto relative z-10">
+          {/* ✅ Dynamic H1 with City */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance text-gradient">
-            Magazine Photo Booth Rental In India
-          </h1  >
-          
+            Magazine Photo Booth Rental in {cityName}
+          </h1>
+
           {/* ✅ Dynamic paragraph with City */}
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
-            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in India.</strong>
+            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in {cityName}.</strong>
             </p>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
             forever.
           </p>
 
-          {/* Use Cases Section - Magazine Theme */}
+          {/* Use Cases Section */}
           <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-start sm:gap-12 lg:gap-20">
               {/* Left Image */}
@@ -90,7 +102,7 @@ export default function MagazinePhotoBooth() {
                 <div className="relative rounded-xl overflow-hidden glass-enhanced border border-gold/30">
                   <Image
                     src="/luxury magazine photo booth rental setup.webp"
-                    alt="luxury magazine photo booth rental setup in India"
+                    alt={`luxury magazine photo booth rental setup in ${locationText}`}
                     width={400}
                     height={500}
                     className="object-cover"
@@ -103,17 +115,30 @@ export default function MagazinePhotoBooth() {
               {/* Right Highlights */}
               <div className="w-full sm:w-auto flex-1">
                 <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 text-gradient text-center sm:text-left">
-                  Perfect for Every Premium Event in India
+                  Trusted Magazine Photo Booth Rental in {cityName}
                 </h2>
+
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                  Our Vogue Magazine Photo Booth is designed for events where presentation, branding, and guest experience truly matter.
-                  With editorial-style visuals and luxury execution, it delivers a Vogue Magazine Photo Booth experience for Premium Events across India.
+                  Our Vogue Magazine Photo Booth is designed for events where presentation, branding, and guest experience truly
+                  matter. With editorial-style visuals and luxury execution, it delivers a Vogue magazine photo booth
+                  experience for premium events in {cityName}.
                 </p>
 
+                {/* ✅ City-based + fallback for India */}
+                {cityName ? (
+                  <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
+                    Serving {cityName} and nearby areas with premium on-site setup, professional execution, and instant
+                    magazine-cover prints for weddings, corporate events, exhibitions, and private parties.
+                  </p>
+                ) : (
+                  <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
+                    Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Agra, and nearby cities. Our team travels
+                    pan-India for premium weddings, corporate events, and exhibitions.
+                  </p>
+                )}
 
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                  Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Banglore, Pune and nearby cities.
-                  Our team travels pan-India for premium weddings, corporate events, and exhibitions.
+                  Trusted for premium weddings and corporate events across {cityName} venues, banquet halls, and luxury farmhouses.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -145,21 +170,22 @@ export default function MagazinePhotoBooth() {
                     },
                   ].map((item, index) => (
                     <div
-                      key={index} className="glass-enhanced p-6 rounded-xl border border-gold/20 hover:border-gold/50 transition-all">
+                      key={index}
+                      className="glass-enhanced p-6 rounded-xl border border-gold/20 hover:border-gold/50 transition-all"
+                    >
                       <h3 className="text-xl font-semibold mb-3 text-gold">{item.title}</h3>
                       <p className="text-gray-400 leading-relaxed">{item.description}</p>
                     </div>
                   ))}
                 </div>
 
+                <p className="text-center sm:text-left text-gold/80 italic mt-12 max-w-3xl">
+                  With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts
+                  effortlessly to different event styles and themes across {locationText}.
+                </p>
               </div>
             </div>
-                <p className="text-center mx-auto text-gold/80 italic mt-12 max-w-3xl">
-                  With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts effortlessly to different event styles and themes across India.
-                </p>
           </section>
-
-
         </div>
       </section>
 
@@ -189,7 +215,6 @@ export default function MagazinePhotoBooth() {
         </div>
       </section>
 
-
       {/* Quote Section */}
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gold/10 via-transparent to-gold/10">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
@@ -197,12 +222,10 @@ export default function MagazinePhotoBooth() {
             "Step Inside. Become the Cover Star."
           </p>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-            Our magazine photo booth doesn't just capture moments-it creates iconic,
-            celebrity-style magazine covers that guests will cherish and share for years to come.
+            Our magazine photo booth doesn't just capture moments — it creates iconic, celebrity-style magazine covers that
+            guests will cherish and share for years to come.
           </p>
-          <p className="text-gold/80 italic">
-            The perfect blend of luxury, fun, and unforgettable memories.
-          </p>
+          <p className="text-gold/80 italic">The perfect blend of luxury, fun, and unforgettable memories.</p>
         </div>
       </section>
 
@@ -231,13 +254,7 @@ export default function MagazinePhotoBooth() {
         </div>
       </section>
 
-      {/* <MiddleOne /> */}
-      <MiddleOneSection />
-
-      {/* <MiddleTwo /> */}
-      <MiddleTwoSection />
-
-      {/* Footer - Enhanced with legal links */}
+      {/* Footer */}
       <footer
         id="contact-section"
         className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
@@ -246,16 +263,39 @@ export default function MagazinePhotoBooth() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
             <div className="sm:col-span-2 lg:col-span-1">
-              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">
+                The Luxury Booths
+              </h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
                 The Luxury Booths creates celebrity-style moments at your events.
               </p>
+
               <div className="flex space-x-4">
                 {[
-                  { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
-                  { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
-                  { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
-                  { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
+                  {
+                    name: "facebook",
+                    url: "https://www.facebook.com/profile.php?id=61570489859940",
+                    icon: <Facebook className="w-5 h-5" />,
+                    color: "hover:text-blue-500",
+                  },
+                  {
+                    name: "instagram",
+                    url: "https://www.instagram.com/theluxurybooths",
+                    icon: <Instagram className="w-5 h-5" />,
+                    color: "hover:text-pink-500",
+                  },
+                  {
+                    name: "twitter",
+                    url: "https://twitter.com",
+                    icon: <X className="w-5 h-5" />,
+                    color: "hover:text-sky-400",
+                  },
+                  {
+                    name: "linkedin",
+                    url: "https://www.linkedin.com/in/theluxurybooths",
+                    icon: <Linkedin className="w-5 h-5" />,
+                    color: "hover:text-blue-600",
+                  },
                 ].map((social) => (
                   <a
                     key={social.name}
@@ -300,35 +340,25 @@ export default function MagazinePhotoBooth() {
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-
                 <li>
-                  <Link href="/#hero-section"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/#hero-section" className="hover:text-white transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#products"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/#products" className="hover:text-white transition-colors">
                     Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#about-section"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/#about-section" className="hover:text-white transition-colors">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#testimonials-section"
-                    className="hover:text-white transition-colors"
-                  >
+                  <Link href="/#testimonials-section" className="hover:text-white transition-colors">
                     Reviews
                   </Link>
-
                 </li>
               </ul>
             </div>
@@ -336,19 +366,24 @@ export default function MagazinePhotoBooth() {
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
+                <p>
+                  <a href="tel:+919266037002">📞 +91-9266037002</a>
+                </p>
+                <p className="flex flex-row">
+                  <a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a>
+                </p>
                 <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
               </div>
             </div>
           </div>
 
           <FooterClientTwo />
-
         </div>
-        <div className="py-9 sm:hidden"><span></span></div>
-      </footer>
 
+        <div className="py-9 sm:hidden">
+          <span />
+        </div>
+      </footer>
     </main>
   )
 }

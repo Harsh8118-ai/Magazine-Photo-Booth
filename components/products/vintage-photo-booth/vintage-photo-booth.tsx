@@ -7,10 +7,16 @@ import Pricing from "./pricing"
 import WhatsAppButton from "./whatsapp-button"
 import Hero from "./hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
+import { FloatingNavigation } from "@/components/floating-navigation";
 
 const VintagePhotoBooth = () => {
 
   const faqs = [
+    {
+      question: "Why is the Vintage Photo Booth a perfect wedding return gift?",
+      answer:
+        "Guests receive a printed photograph customized with the couple’s names and wedding date. It’s a personal keepsake they can frame and cherish long after the wedding — unlike traditional gifts that are often forgotten.",
+    },
     {
       question: "How many hours is the service for?",
       answer:
@@ -48,7 +54,7 @@ const VintagePhotoBooth = () => {
     { id: 7, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-7.webp", alt: "Corporate event retro photo booth with vintage instant print experience" },
     { id: 8, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
     { id: 9, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-9.webp", alt: "Product launch event featuring vintage retro photo booth" },
-    
+
   ];
 
   const features = [
@@ -58,12 +64,23 @@ const VintagePhotoBooth = () => {
     "Ideal for aesthetic themes: rustic, vintage, outdoor, boho, pastel, romantic",
   ]
 
+  const navigationSections = [
+    { id: "hero-section", label: "Home", icon: "home" },
+    { id: "product", label: "Product", icon: "package", isExternal: true, href: "/products" },
+    { id: "gallery-section", label: "Gallery", icon: "camera", isExternal: true, href: "/gallery" },
+    { id: "blog", label: "Blog", icon: "blog", isExternal: true, href: "/blog" },
+    { id: "testimonials-section", label: "Reviews", icon: "users" },
+    { id: "faq-section", label: "FAQs", icon: "message" },
+  ] as const
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
+      <FloatingNavigation sections={navigationSections} />
+
       {/* Header */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-amber-600 hover:text-amber-500 transition-colors">
+          <Link href="/products" className="flex items-center gap-2 text-amber-600 hover:text-amber-500 transition-colors">
             <ArrowLeft size={20} />
             <span className="hidden sm:block">Back</span>
           </Link>
@@ -76,15 +93,15 @@ const VintagePhotoBooth = () => {
       <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/20 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 text-amber-100 text-center text-balance">
-            Vintage Photo Booth - Capture Timeless Memories
+            Vintage Photo Booth with Instant Prints <br /><span className="text-2xl sm:text-2xl lg:text-3xl"> - A Luxury Return Gift for Wedding Guests</span> 
           </h2>
+
           <p className="text-lg sm:text-xl text-amber-200 text-center max-w-3xl mx-auto mb-2">
-            A retro-style wooden photo booth that clicks stunning photographs and prints them instantly within 30
-            seconds.
+            Guests come dressed for your wedding. We make sure they leave with a printed memory of it.
           </p>
+
           <p className="text-base sm:text-lg text-amber-300/80 text-center max-w-3xl mx-auto mb-8">
-            Bring an antique charm to your celebration with a DSLR-powered vintage booth that combines nostalgic
-            photography with modern instant printing.
+            A handcrafted vintage camera-style photo booth that clicks beautiful photographs across your event and prints them instantly — customized with your names, date, and wedding theme.
           </p>
 
           {/* Hero Image */}
@@ -114,11 +131,23 @@ const VintagePhotoBooth = () => {
             className="mt-12 p-6 bg-amber-900/30 border-l-4 border-amber-600 rounded-lg"
           >
             <p className="text-lg font-serif italic text-amber-100">
-              "A high-engagement booth with the best Return on Investment & guaranteed crowd magnet."
+              "A calm, elegant photo booth that blends into your décor and gives every guest a memory to take home."
             </p>
           </div>
         </div>
       </section>
+
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-2xl sm:text-3xl font-serif font-bold text-amber-100 mb-4">
+            More than a photo booth. A keepsake.
+          </p>
+          <p className="text-amber-200 leading-relaxed">
+            Instead of traditional return gifts that are often forgotten, the Vintage Photo Booth gives guests a printed photograph from your wedding — personal, emotional, and timeless.
+          </p>
+        </div>
+      </section>
+
 
       {/* Pricing Calculator */}
       <Pricing />
@@ -149,6 +178,10 @@ const VintagePhotoBooth = () => {
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Gallery</h3>
+
+          <p className="text-center text-amber-300 mb-6">
+            Real guests. Real moments. Printed memories.
+          </p>
 
           <div className="columns-2 sm:columns-3 gap-3 space-y-3">
             {galleryImages.map((image) => (
@@ -188,7 +221,7 @@ const VintagePhotoBooth = () => {
               and authentic moments that guests will treasure forever.
             </p>
             <p className="text-amber-400/80 italic font-serif">
-              A high-engagement booth with the best Return on Investmen & guaranteed crowd magnet.
+              A timeless photo experience that turns guest moments into lifelong memories.
             </p>
           </div>
         </div>
@@ -268,40 +301,40 @@ const VintagePhotoBooth = () => {
             </div>
 
             <div>
-                            <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
-                            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
+              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
 
-                                <li>
-                                    <Link href="/#hero-section"
-                                        className="hover:text-white transition-colors"
-                                    >
-                                        Home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/#products"
-                                        className="hover:text-white transition-colors"
-                                    >
-                                        Products
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/#about-section"
-                                        className="hover:text-white transition-colors"
-                                    >
-                                        About Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/#testimonials-section"
-                                        className="hover:text-white transition-colors"
-                                    >
-                                        Reviews
-                                    </Link>
+                <li>
+                  <Link href="/#hero-section"
+                    className="hover:text-white transition-colors"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#products"
+                    className="hover:text-white transition-colors"
+                  >
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#about-section"
+                    className="hover:text-white transition-colors"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#testimonials-section"
+                    className="hover:text-white transition-colors"
+                  >
+                    Reviews
+                  </Link>
 
-                                </li>
-                            </ul>
-                        </div>
+                </li>
+              </ul>
+            </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
