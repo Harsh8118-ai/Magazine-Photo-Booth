@@ -76,7 +76,7 @@ export async function generateMetadata({
     },
 
     robots: {
-      index: true, 
+      index: true,
       follow: true,
       googleBot: {
         index: true,
