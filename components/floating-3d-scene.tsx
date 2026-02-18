@@ -9,7 +9,7 @@ function FloatingImage({
   rotation,
   scale,
   delay = 0,
-  imageUrl = "/luxury magazine photo booth rental setup.webp",
+  imageUrl = "/magazine-photo-booth.webp",
 }: {
   position: [number, number, number]
   rotation: [number, number, number]

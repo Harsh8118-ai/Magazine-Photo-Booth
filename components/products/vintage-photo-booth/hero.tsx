@@ -36,7 +36,7 @@ const Hero = () => {
       <div className="w-full sm:w-auto flex justify-center sm:justify-start mb-8 sm:mb-0">
         <div className="relative rounded-xl overflow-hidden">
           <Image
-            src="https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp"
+            src="https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp"
             alt="Vintage Photo Booth Hero"
             width={350}
             height={450}

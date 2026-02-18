@@ -113,7 +113,7 @@ const products = [
     ],
     pricing: "Starting ₹25,000 + prints",
     href: "/products/vintage-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
   },
 ]
 

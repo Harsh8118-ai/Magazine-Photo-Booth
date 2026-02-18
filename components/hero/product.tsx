@@ -26,7 +26,7 @@ export default function ProductsSection() {
             id: "vintage",
             name: "Vintage Photo Booth",
             description: "Retro wooden booth with DSLR photography and instant prints in 30 seconds",
-            icon: "https://res.cloudinary.com/dpnykjono/image/upload/Products/Vintage.webp",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
             link: "/products/vintage-photo-booth",
             color: "amber",
             features: ["DSLR quality", "Instant prints", "Wooden design"],
