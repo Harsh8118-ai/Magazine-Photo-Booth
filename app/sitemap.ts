@@ -87,6 +87,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const vintageCityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/vintage-photo-booth/${city}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
   const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: now,
@@ -98,6 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...cityLandingRoutes,
     ...magazineCityRoutes,
+    ...vintageCityRoutes,
     ...blogRoutes,
   ]
 }
