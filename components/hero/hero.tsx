@@ -37,7 +37,7 @@ export default function Hero() {
 
     const navigationSections = [
         { id: "hero-section", label: "Home", icon: "home" },
-        { id: "product", label: "Product", icon: "package", isExternal: true, href: "/products" },
+        { id: "product", label: "Booths", icon: "package", isExternal: true, href: "/products" },
         { id: "gallery-section", label: "Gallery", icon: "camera", isExternal: true, href: "/gallery" },
         { id: "blog", label: "Blog", icon: "blog", isExternal: true, href: "/blog" },
         { id: "testimonials-section", label: "Reviews", icon: "users" },
@@ -80,17 +80,16 @@ export default function Hero() {
                         Luxury Booths
                     </p>
                     <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gradient leading-tight">
-                        Photo Booth Rental for Weddings, Corporate & VIP Events
+                        Luxury Photo Booth Experiences for Premium Events
                     </h1>
-                    <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
-                        Looking for a <span className="text-white font-semibold">Luxury Photo Booth rental near you</span>?
-                        We deliver Premium Vogue Magazine cover prints, mirror selfie experiences and vintage photo booth setups that
-                        instantly elevate any event.
-                    </p>
-
-                    <p className="text-lg sm:text-xl lg:text-xl mb-8 text-gray-300 max-w-5xl mx-auto leading-relaxed">
-                        Trusted for high-end weddings, celebrity-style parties, corporate activations, brand launches, and VIP celebrations
-                        with instant photo prints your guests take home as luxury souvenirs.
+                    <h2 className="font-display text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-gray-200">
+                        Photo Booth Rentals for Weddings, Corporate & VIP Events
+                    </h2>
+                    <p className="text-lg sm:text-xl lg:text-xl mb-10 text-gray-300 max-w-5xl mx-auto leading-relaxed">
+                        <strong className="text-white">The Luxury Booths</strong> is a premium photo booth experience brand designed for
+                        luxury weddings, high-end corporate events, celebrity parties, and VIP celebrations.
+                        We specialize in Vogue-style magazine photo booths, mirror selfie experiences, and
+                        bespoke vintage setups that deliver studio-quality photography and instant luxury prints.
                     </p>
 
                     <h2 className="font-display text-xl sm:text-2xl font-semibold text-center mb-6 text-gray-200">
@@ -312,8 +311,10 @@ export default function Hero() {
                                 <div>
                                     <h2 className="font-display text-5xl font-bold text-center mb-8 text-gradient">About Us</h2>
                                     <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed text-center">
-                                        We're passionate about creating unforgettable moments. Our team of professional photographers and
-                                        event specialists brings years of experience to make your event extraordinary.
+                                        <strong>The Luxury Booths (TLB)</strong> is a luxury photo booth experience brand created for
+                                        premium weddings, corporate galas, fashion events, and elite private celebrations.
+                                        Our setups combine professional studio lighting, curated aesthetics, and instant
+                                        high-quality prints to deliver a celebrity-style photo experience at every event.
                                     </p>
                                     <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed text-center">
                                         From intimate weddings to large corporate events, we've helped thousands of guests become cover
@@ -350,7 +351,7 @@ export default function Hero() {
 
                     <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 text-base sm:text-lg">
                         Choose your city to explore luxury photo booth rental options including Magazine Photo Booth, Mirror Selfie Booth,
-                        and Vintage Photo Booth — with instant premium prints and complete event-ready setup.
+                        and Vintage Photo Booth - with instant premium prints and complete event-ready setup.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-3">
@@ -395,7 +396,8 @@ export default function Hero() {
                         <div className="sm:col-span-2 lg:col-span-1">
                             <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
                             <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                                The Luxury Booths creates celebrity-style moments at your events.
+                                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                                corporate events, and VIP celebrations.
                             </p>
                             <div className="flex space-x-4">
                                 {[
@@ -485,7 +487,7 @@ export default function Hero() {
                             <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
                                 <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
-                                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
+                                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
                             </div>
                         </div>
                     </div>

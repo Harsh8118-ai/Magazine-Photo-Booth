@@ -186,7 +186,8 @@ const MirrorSelfieBooth = () => {
             <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                The Luxury Booths creates celebrity-style moments at your events.
+                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                corporate events, and VIP celebrations.
               </p>
               <div className="flex space-x-4">
                 {[
@@ -276,7 +277,7 @@ const MirrorSelfieBooth = () => {
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
                 <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
-                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
+                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Hero = () => {
     {
       icon: Clock,
       title: "Instant Prints",
-      description: "Guests receive printed photographs within 30 seconds — a meaningful return gift",
+      description: "Guests receive printed photographs within 30 seconds - a meaningful return gift",
     },
     {
       icon: FileImage,

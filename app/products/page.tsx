@@ -80,7 +80,7 @@ const products = [
       "Professional photography support",
     ],
     pricing: "Starting ₹35,000",
-    href: "/products/magazine-photo-booth",
+    href: "/magazine-photo-booth",
     image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
   },
   {
@@ -96,7 +96,7 @@ const products = [
       "Premium print quality output",
     ],
     pricing: "Starting ₹25,000",
-    href: "/products/mirror-selfie-booth",
+    href: "/mirror-selfie-booth",
     image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
   },
   {
@@ -112,7 +112,7 @@ const products = [
       "Theme-matched event experience",
     ],
     pricing: "Starting ₹25,000 + prints",
-    href: "/products/vintage-photo-booth",
+    href: "/vintage-photo-booth",
     image: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
   },
 ]
@@ -222,7 +222,7 @@ export default function ProductsPage() {
           </h2>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
             We deliver premium photo booth experiences with professional execution, luxury aesthetics, instant prints,
-            and fully customized branding — ideal for weddings, exhibitions, product launches, and celebrity events across India.
+            and fully customized branding - ideal for weddings, exhibitions, product launches, and celebrity events across India.
           </p>
 
           <p className="text-gray-400 mt-4 text-sm sm:text-base">

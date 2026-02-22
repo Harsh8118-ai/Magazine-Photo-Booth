@@ -90,7 +90,7 @@ export default function MagazinePhotoBoothCity({
           {/* ✅ Dynamic paragraph with City */}
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
             The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in {cityName}.</strong>
-            </p>
+          </p>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
             forever.
@@ -207,7 +207,7 @@ export default function MagazinePhotoBoothCity({
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/products/magazine-photo-booth/${city.slug}`}
+                href={`/magazine-photo-booth/${city.slug}`}
                 className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
               >
                 {city.name} <span className="text-gray-400">({city.state})</span>
@@ -273,7 +273,8 @@ export default function MagazinePhotoBoothCity({
                 The Luxury Booths
               </h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                The Luxury Booths creates celebrity-style moments at your events.
+                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                corporate events, and VIP celebrations.
               </p>
 
               <div className="flex space-x-4">
@@ -378,7 +379,7 @@ export default function MagazinePhotoBoothCity({
                 <p className="flex flex-row">
                   <a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a>
                 </p>
-                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
+                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
               </div>
             </div>
           </div>

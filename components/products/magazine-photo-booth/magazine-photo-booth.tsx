@@ -70,13 +70,13 @@ export default function MagazinePhotoBooth() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance text-gradient">
-            Magazine Photo Booth Rental In India
+            Magazine Photo Booth Rental In Delhi NCR
           </h1  >
-          
+
           {/* ✅ Dynamic paragraph with City */}
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
-            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in India.</strong>
-            </p>
+            The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in Delhi NCR.</strong>
+          </p>
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 text-balance">
             Transform your guests into Vogue-style magazine cover stars with instant, high-quality prints they'll treasure
             forever.
@@ -90,7 +90,7 @@ export default function MagazinePhotoBooth() {
                 <div className="relative rounded-xl overflow-hidden glass-enhanced border border-gold/30">
                   <Image
                     src="/magazine-photo-booth.webp"
-                    alt="magazine-photo-booth in India"
+                    alt="magazine-photo-booth in Delhi NCR"
                     width={400}
                     height={500}
                     className="object-cover"
@@ -103,11 +103,11 @@ export default function MagazinePhotoBooth() {
               {/* Right Highlights */}
               <div className="w-full sm:w-auto flex-1">
                 <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 text-gradient text-center sm:text-left">
-                  Perfect for Every Premium Event in India
+                  Perfect for Every Premium Event in Delhi NCR
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
                   Our Vogue Magazine Photo Booth is designed for events where presentation, branding, and guest experience truly matter.
-                  With editorial-style visuals and luxury execution, it delivers a Vogue Magazine Photo Booth experience for Premium Events across India.
+                  With editorial-style visuals and luxury execution, it delivers a Vogue Magazine Photo Booth experience for Premium Events across Delhi NCR.
                 </p>
 
 
@@ -154,9 +154,9 @@ export default function MagazinePhotoBooth() {
 
               </div>
             </div>
-                <p className="text-center mx-auto text-gold/80 italic mt-12 max-w-3xl">
-                  With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts effortlessly to different event styles and themes across India.
-                </p>
+            <p className="text-center mx-auto text-gold/80 italic mt-12 max-w-3xl">
+              With customizable layouts, premium materials, and professional execution, our magazine photo booth adapts effortlessly to different event styles and themes across Delhi NCR.
+            </p>
           </section>
 
 
@@ -179,7 +179,7 @@ export default function MagazinePhotoBooth() {
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/products/magazine-photo-booth/${city.slug}`}
+                href={`/magazine-photo-booth/${city.slug}`}
                 className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
               >
                 {city.name} <span className="text-gray-400">({city.state})</span>
@@ -248,7 +248,8 @@ export default function MagazinePhotoBooth() {
             <div className="sm:col-span-2 lg:col-span-1">
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                The Luxury Booths creates celebrity-style moments at your events.
+                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                corporate events, and VIP celebrations.
               </p>
               <div className="flex space-x-4">
                 {[
@@ -338,7 +339,7 @@ export default function MagazinePhotoBooth() {
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
                 <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
-                <p>📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</p>
+                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
               </div>
             </div>
           </div>

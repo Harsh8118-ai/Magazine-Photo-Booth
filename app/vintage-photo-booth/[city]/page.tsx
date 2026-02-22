@@ -1,27 +1,34 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Script from "next/script"
-import MagazinePhotoBoothCity from "@/components/products/magazine-photo-booth/[city]/magazine-photo-booth";
+import VintagePhotoBoothCity from "@/components/products/vintage-photo-booth/[city]/vintage-photo-booth"
 
 
-const cities: Record<string, { name: string; state: string; canonicalSlug?: string }> = {
+const cities: Record<
+  string,
+  { name: string; state: string; canonicalSlug?: string }
+> = {
   delhi: { name: "Delhi", state: "Delhi NCR" },
   ghaziabad: { name: "Ghaziabad", state: "Delhi NCR" },
   noida: { name: "Noida", state: "Delhi NCR" },
   gurugram: { name: "Gurugram", state: "Delhi NCR" },
   gurgaon: { name: "Gurgaon", state: "Delhi NCR", canonicalSlug: "gurugram" },
   faridabad: { name: "Faridabad", state: "Delhi NCR" },
+
   jaipur: { name: "Jaipur", state: "Rajasthan" },
   udaipur: { name: "Udaipur", state: "Rajasthan" },
+
   mumbai: { name: "Mumbai", state: "Maharashtra" },
   pune: { name: "Pune", state: "Maharashtra" },
-  bangalore: { name: "Bangalore", state: "Karnataka" },
 
+  bangalore: { name: "Bangalore", state: "Karnataka" },
 }
+
 
 export async function generateStaticParams() {
   return Object.keys(cities).map((city) => ({ city }))
 }
+
 
 export async function generateMetadata({
   params,
@@ -33,26 +40,29 @@ export async function generateMetadata({
   if (!data) return {}
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const canonicalUrl = `https://theluxurybooths.com/products/magazine-photo-booth/${canonicalSlug}`
+  const canonicalUrl = `https://theluxurybooths.com/products/vintage-photo-booth/${canonicalSlug}`
 
-  const title = `Magazine Photo Booth Rental in ${data.name} | The Luxury Booths`
-  const description = `Book a luxury magazine photo booth rental in ${data.name} for weddings, corporate events, exhibitions & private parties. Get instant Vogue-style cover prints with premium setup and professional lighting.`
+  const title = `Vintage Photo Booth Rental in ${data.name} | Instant Prints for Weddings`
+  const description = `Vintage photo booth rental in ${data.name} with instant printed photographs. A luxury wedding return gift customized with names, date & theme. Trusted by premium events.`
 
   return {
     title,
     description,
-    alternates: { canonical: canonicalUrl },
+
+    alternates: {
+      canonical: canonicalUrl,
+    },
+
     keywords: [
-      `magazine photo booth rental ${data.name.toLowerCase()}`,
-      `vogue magazine photo booth rental ${data.name.toLowerCase()}`,
-      `vogue magazine photo booth ${data.name.toLowerCase()}`,
-      `magazine photo booth ${data.name.toLowerCase()}`,
-      `luxury photo booth ${data.name.toLowerCase()}`,
+      `vintage photo booth rental ${data.name.toLowerCase()}`,
+      `vintage photo booth ${data.name.toLowerCase()}`,
+      `retro photo booth ${data.name.toLowerCase()}`,
       `wedding photo booth ${data.name.toLowerCase()}`,
-      `corporate photo booth ${data.name.toLowerCase()}`,
+      `instant prints photo booth ${data.name.toLowerCase()}`,
+      `luxury photo booth ${data.name.toLowerCase()}`,
     ],
 
-    openGraph: {                        
+    openGraph: {
       title,
       description,
       url: canonicalUrl,
@@ -60,10 +70,10 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/magazine-photo-booth.webp",
+          url: "/vintage-photo-booth.webp",
           width: 1200,
           height: 630,
-          alt: `Magazine Photo Booth in ${data.name}`,
+          alt: `Vintage Photo Booth in ${data.name}`,
         },
       ],
     },
@@ -72,7 +82,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/magazine-photo-booth.webp"],
+      images: ["/vintage-photo-booth.webp"],
     },
 
     robots: {
@@ -87,7 +97,8 @@ export async function generateMetadata({
   }
 }
 
-export default async function CityMagazineBoothPage({
+
+export default async function CityVintageBoothPage({
   params,
 }: {
   params: Promise<{ city: string }>
@@ -97,15 +108,15 @@ export default async function CityMagazineBoothPage({
   if (!data) return notFound()
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const pageUrl = `https://theluxurybooths.com/products/magazine-photo-booth/${canonicalSlug}`
+  const pageUrl = `https://theluxurybooths.com/products/vintage-photo-booth/${canonicalSlug}`
 
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: `Magazine Photo Booth Rental in ${data.name}`,
-    description: `Luxury magazine cover photo booth rental in ${data.name} for weddings, corporate events, exhibitions & private parties.`,
-    serviceType: "Magazine Photo Booth Rental",
+    name: `Vintage Photo Booth Rental in ${data.name}`,
+    description: `Vintage photo booth rental in ${data.name} for weddings, corporate events, and private celebrations with instant printed photographs.`,
+    serviceType: "Vintage Photo Booth Rental",
     url: pageUrl,
     areaServed: {
       "@type": "City",
@@ -127,23 +138,22 @@ export default async function CityMagazineBoothPage({
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
-      price: "35000",
+      price: "25000",
       availability: "https://schema.org/InStock",
       url: pageUrl,
     },
   }
 
-
   return (
     <>
       <Script
-        id={`schema-magazine-city-${city}`}
+        id={`schema-vintage-city-${city}`}
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
-      <MagazinePhotoBoothCity
+
+      <VintagePhotoBoothCity
         cityName={data.name}
         stateName={data.state}
       />

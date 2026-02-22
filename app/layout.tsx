@@ -29,9 +29,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://theluxurybooths.com"),
 
-  title: "Best Photo Booth Rental in India | The Luxury Booths.",
+  title: "Luxury Photo Booth Brand for Premium Events in Delhi NCR | The Luxury Booths",
   description:
-    "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
+    "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror selfie booths, and bespoke luxury setups.",
   alternates: {
     canonical: "https://theluxurybooths.com",
   },
@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   keywords: [
     "photo booth",
     "photobooth",
+    "photoshoot booth",
+    "photo booth rental",
+    "photobooths for rent",
     "photo booth near me",
     "photobooth near me",
     "photobooth noida",
@@ -66,9 +69,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Best Photo Booth Rental in India | The Luxury Booths.",
+    title: "Luxury Photo Booth Brand for Premium Events in Delhi NCR | The Luxury Booths",
     description:
-      "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
+      "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror selfie booths, and bespoke luxury setups.",
     url: "https://theluxurybooths.com",
     siteName: "The Luxury Booths",
     images: [
@@ -86,9 +89,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Best Photo Booth Rental in India | The Luxury Booths.",
+    title: "Luxury Photo Booth Brand for Premium Events in Delhi NCR | The Luxury Booths",
     description:
-      "The Luxury Booths brings premium photo booth rental in India with instant celebrity-style prints to luxury weddings, corporate events, and vvip parties.",
+      "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror selfie booths, and bespoke luxury setups.",
     images: ["/the-luxury-booths.webp"],
   },
 
@@ -131,54 +134,30 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": ["LocalBusiness", "EventService", "Brand"],
               name: "The Luxury Booths",
-              description: "The Photo Booths for weddings, corporate events, and parties",
+              description:
+                "Luxury photo booth experience brand specializing in premium weddings, high-end corporate events, fashion activations, and VIP celebrations.",
               url: "https://theluxurybooths.com",
               telephone: "+91-9266037002",
               email: "theluxurybooths@gmail.com",
+              priceRange: "₹15,000–₹1,25,000",
+              areaServed: ["Delhi NCR", "Noida", "Gurugram", "Ghaziabad", "Delhi"],
+              sameAs: [
+                "https://www.instagram.com/theluxurybooths",
+                "https://www.linkedin.com/in/theluxurybooths"
+              ],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Noida",
                 addressRegion: "UP",
-                addressCountry: "IN",
+                addressCountry: "IN"
               },
-              geo: {
-                "@type": "GeoCoordinates",
-                "latitude": "28.5355",
-                "longitude": "77.3910"
-              },
-              openingHours: "Mo-Su 00:00-23:59",
-              priceRange: "₹35,000–₹75,000",
-              areaServed: ["Delhi NCR", "Noida", "Gurugram", "India"],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.9",
-                reviewCount: "200",
-              },
-              service: [
-                {
-                  "@type": "Service",
-                  name: "Magazine Photo Booth Rental",
-                  description:
-                    "Luxury magazine cover photo booth experience with instant premium prints and celebrity-style setup.",
-                  url: "https://theluxurybooths.com/products/magazine-photo-booth",
-                },
-                {
-                  "@type": "Service",
-                  name: "Mirror Selfie Booth Rental",
-                  description:
-                    "Interactive mirror selfie booth for weddings, parties, and corporate activations with instant prints.",
-                  url: "https://theluxurybooths.com/products/mirror-selfie-booth",
-                },
-                {
-                  "@type": "Service",
-                  name: "Vintage Photo Booth Rental",
-                  description:
-                    "Classic vintage photo booth setup for retro-style celebrations and premium event experiences.",
-                  url: "https://theluxurybooths.com/products/vintage-photo-booth",
-                },
-              ]
+                reviewCount: "200"
+              }
             }),
           }}
         />

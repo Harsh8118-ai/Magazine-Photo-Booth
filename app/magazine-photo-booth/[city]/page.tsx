@@ -33,7 +33,7 @@ export async function generateMetadata({
   if (!data) return {}
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const canonicalUrl = `https://theluxurybooths.com/products/magazine-photo-booth/${canonicalSlug}`
+  const canonicalUrl = `https://theluxurybooths.com/magazine-photo-booth/${canonicalSlug}`
 
   const title = `Magazine Photo Booth Rental in ${data.name} | The Luxury Booths`
   const description = `Book a luxury magazine photo booth rental in ${data.name} for weddings, corporate events, exhibitions & private parties. Get instant Vogue-style cover prints with premium setup and professional lighting.`
@@ -97,7 +97,7 @@ export default async function CityMagazineBoothPage({
   if (!data) return notFound()
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const pageUrl = `https://theluxurybooths.com/products/magazine-photo-booth/${canonicalSlug}`
+  const pageUrl = `https://theluxurybooths.com/magazine-photo-booth/${canonicalSlug}`
 
 
   const jsonLd = {

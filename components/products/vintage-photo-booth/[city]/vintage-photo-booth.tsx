@@ -1,18 +1,29 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
-import { Facebook, Instagram, X, Linkedin } from "lucide-react";
+import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import Pricing from "./pricing"
-import WhatsAppButton from "./whatsapp-button"
-import Hero from "./hero"
+import Pricing from "../pricing"
+import WhatsAppButton from "../whatsapp-button"
+import Hero from "../hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 
-const VintagePhotoBooth = () => {
+type VintagePhotoBoothCityProps = {
+  cityName?: string
+  stateName?: string
+}
+
+export default function VintagePhotoBoothCity({
+  cityName,
+  stateName,
+}: VintagePhotoBoothCityProps) {
+  const locationText = cityName
+    ? `${cityName}${stateName ? `, ${stateName}` : ""}`
+    : "Delhi NCR"
 
   const faqs = [
     {
-      question: "Why is the Vintage Photo Booth a perfect wedding return gift?",
+      question: `Why is the Vintage Photo Booth a perfect wedding return gift in ${cityName}?`,
       answer:
         "Guests receive a printed photograph customized with the couple’s names and wedding date. It’s a personal keepsake they can frame and cherish long after the wedding — unlike traditional gifts that are often forgotten.",
     },
@@ -29,18 +40,20 @@ const VintagePhotoBooth = () => {
     {
       question: "Do guests get digital copies?",
       answer:
-        "Yes, absolutely! Digital copies are available via QR codes and WhatsApp sharing, making it easy for guests to get their photos instantly.",
+        "Yes, absolutely! Digital copies are available via QR codes and WhatsApp sharing.",
     },
     {
       question: "Can we customize the print design?",
       answer:
-        "Yes, we add event branding, names, date, and theme colors to every print. Your event will be uniquely represented on each photo.",
+        "Yes, we customize every print with event names, dates, and theme colors.",
     },
-    {
-      question: "Will your team operate the booth?",
-      answer:
-        "2 trained professionals will be present throughout the event to operate the booth and ensure the best experience for your guests.",
-    },
+  ]
+
+  const features = [
+    "Beautiful retro wooden design",
+    "Perfect for weddings, birthdays, baby showers & corporate events",
+    "Works indoors and outdoors",
+    "Ideal for aesthetic themes: rustic, vintage, boho, pastel & romantic",
   ]
 
   const galleryImages = [
@@ -55,13 +68,6 @@ const VintagePhotoBooth = () => {
     { id: 9, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-9.webp", alt: "Product launch event featuring vintage retro photo booth" },
 
   ];
-
-  const features = [
-    "Beautiful retro wooden design",
-    "Perfect for weddings, birthdays, baby showers, corporate events",
-    "Works indoors and outdoors",
-    "Ideal for aesthetic themes: rustic, vintage, outdoor, boho, pastel, romantic",
-  ]
 
   const cities = [
     { slug: "delhi", name: "Delhi", state: "Delhi" },
@@ -81,63 +87,63 @@ const VintagePhotoBooth = () => {
 
       {/* Header */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <Link href="/products" className="flex items-center gap-2 text-amber-600 hover:text-amber-500 transition-colors">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+          <Link
+            href="/products/vintage-photo-booth"
+            className="flex items-center gap-2 text-amber-500 hover:text-amber-400"
+          >
             <ArrowLeft size={20} />
             <span className="hidden sm:block">Back</span>
           </Link>
-          <h1 className="text-xl sm:text-3xl font-serif font-bold text-amber-100">Vintage Photo Booth</h1>
+          <h1 className="text-xl sm:text-3xl font-serif font-bold text-amber-100">
+            Vintage Photo Booth in {cityName}
+          </h1>
           <div className="w-20" />
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/20 to-transparent">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 text-amber-100 text-center text-balance">
-            Vintage Photo Booth with Instant Prints <br /><span className="text-2xl sm:text-2xl lg:text-3xl"> - A Luxury Return Gift for Wedding Guests</span>
+      {/* Hero */}
+      <section className="pt-24 pb-16 px-4 bg-gradient-to-b from-amber-900/20 to-transparent">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-6xl font-serif font-bold text-amber-100 mb-4">
+            Vintage Photo Booth Rental in {cityName}
           </h2>
 
-          <p className="text-lg sm:text-xl text-amber-200 text-center max-w-3xl mx-auto mb-2">
-            Guests come dressed for your wedding. We make sure they leave with a printed memory of it.
+          <p className="text-lg sm:text-xl text-amber-200 max-w-3xl mx-auto mb-2">
+            Guests come dressed for your celebration. We make sure they leave with a printed memory of it.
           </p>
 
-          <p className="text-base sm:text-lg text-amber-300/80 text-center max-w-3xl mx-auto mb-8">
-            A handcrafted vintage camera-style photo booth that clicks beautiful photographs across your event and prints them instantly - customized with your names, date, and wedding theme.
+          <p className="text-amber-300/80 max-w-4xl mx-auto mb-8">
+            A handcrafted vintage camera-style photo booth delivering instant prints customized with names, dates, and themes - now available in {locationText}.
           </p>
 
-          {/* Hero Image */}
           <Hero />
 
-          <p className="text-center text-amber-300/80 max-w-4xl mx-auto mt-4">
-            We provide Vintage Photo Booth rental across Delhi NCR including Delhi, Noida, Gurugram, Faridabad, and Ghaziabad for luxury weddings and premium celebrations.
+          <p className="text-amber-300/80 mt-4 max-w-4xl mx-auto">
+            Serving {cityName} and nearby locations with premium Vintage Photo Booth rentals for luxury weddings and celebrations.
           </p>
-
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      {/* Features */}
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Product Features</h3>
+          <h3 className="text-3xl font-serif font-bold text-center text-amber-100 mb-8">
+            Product Features
+          </h3>
+
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {features.map((feature, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 text-amber-200"
-              >
-                <span className="text-amber-600 mt-1">✓</span>
-                <span>{feature}</span>
+            {features.map((item, i) => (
+              <li key={i} className="flex gap-3 text-amber-200">
+                <span className="text-amber-500">✓</span>
+                {item}
               </li>
             ))}
           </ul>
 
-          {/* USP Quote */}
-          <div
-            className="mt-12 p-6 bg-amber-900/30 border-l-4 border-amber-600 rounded-lg"
-          >
-            <p className="text-lg font-serif italic text-amber-100">
-              "A calm, elegant photo booth that blends into your décor and gives every guest a memory to take home."
+          <div className="mt-12 p-6 bg-amber-900/30 border-l-4 border-amber-600 rounded-lg">
+            <p className="italic font-serif text-amber-100">
+              “A calm, elegant photo booth that blends into décor and gives guests a memory to take home.”
             </p>
           </div>
         </div>
@@ -149,32 +155,31 @@ const VintagePhotoBooth = () => {
             More than a photo booth. A keepsake.
           </p>
           <p className="text-amber-200 leading-relaxed">
-            Instead of traditional return gifts that are often forgotten, the Vintage Photo Booth gives guests a printed photograph from your wedding — personal, emotional, and timeless.
+            Instead of traditional return gifts that are often forgotten, the Vintage Photo Booth gives guests a printed photograph from your wedding - personal, emotional, and timeless.
           </p>
         </div>
       </section>
 
-
-      {/* Pricing Calculator */}
+      {/* Pricing */}
       <Pricing />
 
-      {/* FAQ Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      {/* FAQ */}
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Frequently Asked Questions</h3>
+          <h3 className="text-3xl font-serif font-bold text-center text-amber-100 mb-8">
+            Frequently Asked Questions
+          </h3>
 
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-              >
-                <AccordionItem value={`faq-${index}`} className="glass-enhanced px-6 border-amber-700/50">
-                  <AccordionTrigger className="text-amber-100 hover:text-amber-300 font-semibold py-4">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-amber-200/80 pb-4">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              </div>
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="border-amber-700/50">
+                <AccordionTrigger className="text-amber-100">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-amber-200/80">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
           </Accordion>
         </div>
@@ -382,5 +387,3 @@ const VintagePhotoBooth = () => {
     </main>
   )
 }
-
-export default VintagePhotoBooth

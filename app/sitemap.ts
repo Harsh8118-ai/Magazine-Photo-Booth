@@ -54,19 +54,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/products/magazine-photo-booth`,
+      url: `${baseUrl}/magazine-photo-booth`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/products/mirror-selfie-booth`,
+      url: `${baseUrl}/mirror-selfie-booth`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/products/vintage-photo-booth`,
+      url: `${baseUrl}/vintage-photo-booth`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -81,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const magazineCityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${baseUrl}/products/magazine-photo-booth/${city}`,
+    url: `${baseUrl}/magazine-photo-booth/${city}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.9,
