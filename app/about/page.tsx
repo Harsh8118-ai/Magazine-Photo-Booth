@@ -11,10 +11,8 @@ import { Facebook, Instagram, Linkedin, X } from "lucide-react"
 export const metadata = {
   title:
     "About The Luxury Booths | Luxury Photo Booth Brand in Delhi NCR",
-
   description:
     "The Luxury Booths (TLB) is a luxury photo booth brand based in Delhi NCR, specializing in premium weddings, high-end corporate events, fashion activations, and VIP celebrations across India.",
-
   alternates: {
     canonical: "https://theluxurybooths.com/about",
   },
@@ -180,6 +178,26 @@ export default function AboutPage() {
         </SectionWrapper>
       </ParallaxSection>
 
+
+      {/* =========================
+          TRUSTED IN DELHI NCR
+         ========================= */}
+      <ParallaxSection speed={0.25}>
+        <SectionWrapper id="experience-not-rental" className="py-20 px-4 sm:px-6">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="font-display text-3xl sm:text-5xl font-bold mb-6 text-gradient">
+              Luxury Photo Booth Brand Trusted in Delhi NCR
+            </h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              The Luxury Booths is trusted by event planners, wedding designers,
+              and corporate brands across Delhi NCR — including Noida, South Delhi,
+              Gurugram, and premium destination venues.
+            </p>
+          </div>
+        </SectionWrapper>
+      </ParallaxSection>
+
+
       {/* =========================
           SIGNATURE EXPERIENCES
          ========================= */}
@@ -282,7 +300,7 @@ export default function AboutPage() {
           is expected.
         </p>
         <p className="text-gray-400 text-sm mt-4">
-          Headquartered in Delhi NCR, we frequently serve events in Noida, Gurgaon, South Delhi, and surrounding premium venues.
+          Headquartered in Delhi NCR, we frequently serve events in Noida, Gurgaon, Delhi, and surrounding premium venues.
         </p>
       </SectionWrapper>
 

@@ -40,8 +40,7 @@ export const metadata: Metadata = {
     "photo booth",
     "photobooth",
     "photoshoot booth",
-    "photo booth rental",
-    "photobooths for rent",
+    "photobooths brand",
     "photo booth near me",
     "photobooth near me",
     "photobooth noida",
@@ -171,7 +170,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "The Luxury Booths",
-              alternateName: "Photo Booth Rentals",
+              alternateName: "Luxury Photo Booth Experience Brand",
               url: "https://theluxurybooths.com",
             }),
           }}
