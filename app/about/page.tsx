@@ -152,7 +152,7 @@ export default function AboutPage() {
         <p className="max-w-4xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed">
           <strong className="text-white">The Luxury Booths (TLB)</strong> is a luxury photo booth
           experience brand specializing in premium weddings, high-end corporate events,
-          fashion activations, and VIP celebrations across India. Known for Vogue-style
+          fashion activations, and VIP celebrations based in Delhi NCR, serving select premium events across India. Known for Vogue-style
           magazine photo booths, mirror selfie experiences, and bespoke vintage setups,
           The Luxury Booths delivers studio-quality photography with instant luxury prints
           designed for elite events.
