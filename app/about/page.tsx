@@ -183,7 +183,7 @@ export default function AboutPage() {
           TRUSTED IN DELHI NCR
          ========================= */}
       <ParallaxSection speed={0.25}>
-        <SectionWrapper id="experience-not-rental" className="py-20 px-4 sm:px-6">
+        <SectionWrapper id="brand-trust-delhi-ncr" className="py-20 px-4 sm:px-6">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="font-display text-3xl sm:text-5xl font-bold mb-6 text-gradient">
               Luxury Photo Booth Brand Trusted in Delhi NCR

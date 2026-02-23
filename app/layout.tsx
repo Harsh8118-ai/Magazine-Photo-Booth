@@ -37,9 +37,6 @@ export const metadata: Metadata = {
   },
 
   keywords: [
-    "photo booth",
-    "photobooth",
-    "photoshoot booth",
     "photobooths brand",
     "luxury photo booth brand",
     "premium photo booth experience",
@@ -50,11 +47,8 @@ export const metadata: Metadata = {
     "mirror selfie booth",
     "vintage photo booth",
     "retro photo booth",
-    "wedding photo booth",
+    "luxury wedding photo booth Delhi NCR",
     "corporate events",
-    "Delhi NCR photo booth",
-    "Noida photo booth",
-    "Gurugram photo booth",
     "instant prints"
   ],
   authors: [{ name: "The Luxury Booths" }],
