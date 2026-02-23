@@ -352,7 +352,7 @@ export default function VintagePhotoBoothCity({
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#about-section"
+                  <Link href="/about"
                     className="hover:text-white transition-colors"
                   >
                     About Us
