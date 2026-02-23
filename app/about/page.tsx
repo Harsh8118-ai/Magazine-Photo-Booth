@@ -26,7 +26,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/luxury magazine photo booth rental setup.webp",
+        url: "/magazine-photo-booth.webp",
         width: 1200,
         height: 630,
         alt: "The Luxury Booths – Luxury Photo Booth Experience Brand",
@@ -39,7 +39,7 @@ export const metadata = {
     title: "About The Luxury Booths | Luxury Photo Booth Brand",
     description:
       "The Luxury Booths is a premium luxury photo booth experience brand in Delhi NCR for weddings, corporate events, and VIP celebrations across India.",
-    images: ["/luxury magazine photo booth rental setup.webp"],
+    images: ["/magazine-photo-booth.webp"],
   },
 
   robots: {
