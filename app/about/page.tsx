@@ -190,7 +190,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
               The Luxury Booths is trusted by event planners, wedding designers,
-              and corporate brands across Delhi NCR — including Noida, South Delhi,
+              and corporate brands across Delhi NCR - including Noida, South Delhi,
               Gurugram, and premium destination venues.
             </p>
           </div>
