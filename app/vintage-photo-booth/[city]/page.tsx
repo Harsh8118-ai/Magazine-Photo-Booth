@@ -40,7 +40,7 @@ export async function generateMetadata({
   if (!data) return {}
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const canonicalUrl = `https://theluxurybooths.com/products/vintage-photo-booth/${canonicalSlug}`
+  const canonicalUrl = `https://theluxurybooths.com/vintage-photo-booth/${canonicalSlug}`
 
   const title = `Vintage Photo Booth Rental in ${data.name} | Instant Prints for Weddings`
   const description = `Vintage photo booth rental in ${data.name} with instant printed photographs. A luxury wedding return gift customized with names, date & theme. Trusted by premium events.`
@@ -108,7 +108,7 @@ export default async function CityVintageBoothPage({
   if (!data) return notFound()
 
   const canonicalSlug = data.canonicalSlug ?? city
-  const pageUrl = `https://theluxurybooths.com/products/vintage-photo-booth/${canonicalSlug}`
+  const pageUrl = `https://theluxurybooths.com/vintage-photo-booth/${canonicalSlug}`
 
 
   const jsonLd = {

@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://theluxurybooths.com/products/vintage-photo-booth",
+    canonical: "https://theluxurybooths.com/vintage-photo-booth",
   },
 }
 

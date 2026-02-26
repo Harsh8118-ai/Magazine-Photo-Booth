@@ -7,13 +7,13 @@ export const metadata = {
     "Luxury mirror selfie booth with personalized vinyl text, LED lights, and red-carpet setup. Perfect for weddings, birthdays, and premium events.",
   keywords: ["mirror selfie booth", "red carpet photo booth", "luxury event booth", "personalized mirror booth"],
   alternates: {
-    canonical: "https://theluxurybooths.com/products/mirror-selfie-booth",
+    canonical: "https://theluxurybooths.com/mirror-selfie-booth",
   },
   openGraph: {
     title: "Mirror Selfie Booth for Luxury Events",
     description: "Luxury mirror selfie booth with personalized vinyl text, LED lights, and red-carpet setup. Perfect for weddings, birthdays, and premium events.",
     keywords: ["mirror selfie booth", "red carpet photo booth", "luxury event booth", "personalized mirror booth"],
-    url: "https://theluxurybooths.com/products/mirror-selfie-booth",
+    url: "https://theluxurybooths.com/mirror-selfie-booth",
     images: [{ url: "/og-mirror-selfie.png" }],
   },
 }
