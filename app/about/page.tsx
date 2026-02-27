@@ -84,7 +84,7 @@ export default function AboutPage() {
         "Real-time effects & overlays",
         "Premium print quality output",
       ],
-      pricing: "Starting ₹25,000",
+      pricing: "Starting ₹15,000",
       href: "/mirror-selfie-booth",
       image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
     },
