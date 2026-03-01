@@ -161,11 +161,6 @@ export default function MagazinePhotoBoothCity({
                         "Attract attention, increase footfall, and encourage social sharing with an interactive photo experience that stands out on the show floor.",
                     },
                     {
-                      title: "Celebrity & Influencer Events",
-                      description:
-                        "Editorial-style visuals crafted for instant sharing, making the magazine photo booth ideal for influencer and celebrity-driven events.",
-                    },
-                    {
                       title: "Private Parties & Milestone Celebrations",
                       description:
                         "Add a premium entertainment element to birthdays, anniversaries, and milestone celebrations with a truly luxury photo experience.",
@@ -188,32 +183,6 @@ export default function MagazinePhotoBoothCity({
               </div>
             </div>
           </section>
-        </div>
-      </section>
-
-      {/* Avaiable Cities  */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
-            Available in These Cities
-          </h2>
-
-          <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 text-base sm:text-lg">
-            We provide luxury magazine photo booth services with premium setup and instant Vogue-style prints across major cities in India.
-            Select your city to see location-specific details.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {cities.map((city) => (
-              <Link
-                key={city.slug}
-                href={`/magazine-photo-booth/${city.slug}`}
-                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
-              >
-                {city.name} <span className="text-gray-400">({city.state})</span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -258,6 +227,34 @@ export default function MagazinePhotoBoothCity({
 
       {/* Middle Sections */}
       <MiddleOneSection />
+
+      {/* Avaiable Cities  */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
+            Available in These Cities
+          </h2>
+
+          <p className="text-center text-gray-300 max-w-3xl mx-auto mb-10 text-base sm:text-lg">
+            We provide luxury magazine photo booth services with premium setup and instant Vogue-style prints across major cities in India.
+            Select your city to see location-specific details.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {cities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/magazine-photo-booth/${city.slug}`}
+                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
+              >
+                {city.name} <span className="text-gray-400">({city.state})</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       <MiddleTwoSection />
 
       {/* Footer */}
