@@ -134,11 +134,6 @@ export default function MagazinePhotoBooth() {
                         "Attract attention, increase footfall, and encourage social sharing with an interactive photo experience that stands out on the show floor.",
                     },
                     {
-                      title: "Celebrity & Influencer Events",
-                      description:
-                        "Editorial-style visuals crafted for instant sharing, making the magazine photo booth ideal for influencer and celebrity-driven events.",
-                    },
-                    {
                       title: "Private Parties & Milestone Celebrations",
                       description:
                         "Add a premium entertainment element to birthdays, anniversaries, and milestone celebrations with a truly luxury photo experience.",
@@ -162,6 +157,97 @@ export default function MagazinePhotoBooth() {
 
         </div>
       </section>
+
+      {/* Quote Section */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gold/10 via-transparent to-gold/10">
+        <div className="max-w-3xl mx-auto text-center animate-fade-up">
+          <p className="text-3xl sm:text-4xl font-display font-bold text-gold mb-6 text-balance">
+            "Step Inside. Become the Cover Star."
+          </p>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
+            Our magazine photo booth doesn't just capture moments-it creates iconic,
+            celebrity-style magazine covers that guests will cherish and share for years to come.
+          </p>
+          <p className="text-gold/80 italic">
+            The perfect blend of luxury, fun, and unforgettable memories.
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section Web*/}
+      <section className="hidden sm:block py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
+            Why Choose Our Magazine Booth
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <div
+                  key={index}
+                  className="glass-enhanced p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2"
+                >
+                  <Icon className="size-8 sm:size-10 text-gold mb-4 transition-colors group-hover:text-yellow-300" />
+                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
+                  <p className="text-sm text-gray-400">{feature.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section Mobile*/}
+      <section
+        className="sm:hidden py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="">
+              <div>
+                <h2 className="font-display text-3xl sm:text-5xl font-bold mb-8 text-gradient">Why Choose Us</h2>
+
+                <div className="space-y-6">
+                  {features.map((item, index) => (
+                    <div
+                      key={index}
+                    >
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center flex-shrink-0">
+                          <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold mb-2 font-display">{item.title}</h3>
+                          <p className="text-gray-400 text-sm sm:text-base">{item.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                  <div className="flex">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-5 w-5 sm:h-6 sm:w-6 text-gold fill-current"
+                        aria-label={`Rating star ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-base sm:text-lg font-semibold">5/5 from 200+ reviews</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* <MiddleOne /> */}
+      <MiddleOneSection />
 
       {/* Avaiable Cities  */}
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
@@ -188,51 +274,6 @@ export default function MagazinePhotoBooth() {
           </div>
         </div>
       </section>
-
-
-      {/* Quote Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gold/10 via-transparent to-gold/10">
-        <div className="max-w-3xl mx-auto text-center animate-fade-up">
-          <p className="text-3xl sm:text-4xl font-display font-bold text-gold mb-6 text-balance">
-            "Step Inside. Become the Cover Star."
-          </p>
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-            Our magazine photo booth doesn't just capture moments-it creates iconic,
-            celebrity-style magazine covers that guests will cherish and share for years to come.
-          </p>
-          <p className="text-gold/80 italic">
-            The perfect blend of luxury, fun, and unforgettable memories.
-          </p>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
-            Why Choose Our Magazine Booth
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
-                <div
-                  key={index}
-                  className="glass-enhanced p-6 rounded-lg border border-gold/20 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2"
-                >
-                  <Icon className="size-8 sm:size-10 text-gold mb-4 transition-colors group-hover:text-yellow-300" />
-                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-sm text-gray-400">{feature.description}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* <MiddleOne /> */}
-      <MiddleOneSection />
 
       {/* <MiddleTwo /> */}
       <MiddleTwoSection />
