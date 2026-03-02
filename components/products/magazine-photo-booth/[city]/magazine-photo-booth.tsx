@@ -227,7 +227,7 @@ export default function MagazinePhotoBoothCity({
 
       {/* Middle Sections */}
       <div id="pricing">
-      <MiddleOneSection />
+        <MiddleOneSection />
       </div>
 
       {/* Avaiable Cities  */}
@@ -392,13 +392,13 @@ export default function MagazinePhotoBoothCity({
       </footer>
 
       <Link
-              href="#pricing"
-              className="sm:hidden fixed right-4 bottom-24 z-50"
-            >
-              <button className="px-5 py-3 rounded-full  glass-enhanced font-semibold shadow-lg hover:scale-105 transition-all neon-glow">
-                View Pricing
-              </button>
-            </Link>
+        href="#pricing"
+        className="sm:hidden fixed right-4 bottom-24 z-50"
+      >
+        <button className="px-5 py-3 rounded-full  glass-enhanced font-semibold shadow-lg hover:scale-105 transition-all neon-glow">
+          View Pricing
+        </button>
+      </Link>
     </main>
   )
 }
