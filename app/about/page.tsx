@@ -300,7 +300,7 @@ export default function AboutPage() {
           is expected.
         </p>
         <p className="text-gray-400 text-sm mt-4">
-          Headquartered in Delhi NCR, we frequently serve events in Noida, Gurgaon, Delhi, and surrounding premium venues.
+          Headquartered in Delhi NCR, we frequently serve events in Noida, Gurugram, Delhi, and surrounding premium venues.
         </p>
       </SectionWrapper>
 

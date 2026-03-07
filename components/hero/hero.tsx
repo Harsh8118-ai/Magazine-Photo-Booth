@@ -22,7 +22,6 @@ const cities: { slug: string; name: string; state: string }[] = [
     { slug: "ghaziabad", name: "Ghaziabad", state: "Uttar Pradesh" },
     { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
     { slug: "gurugram", name: "Gurugram", state: "Haryana" },
-    { slug: "gurgaon", name: "Gurgaon", state: "Haryana" },
     { slug: "faridabad", name: "Faridabad", state: "Haryana" },
     { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },

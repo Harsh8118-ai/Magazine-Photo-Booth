@@ -8,7 +8,7 @@ export const faqData = [
     {
         question: "Do you travel to different cities?",
         answer:
-            "Yes, we serve Delhi, Noida, Gurgaon, Jaipur, Jim Corbett, and surrounding regions. We also travel across India for weddings, corporate events, and luxury celebrations.",
+            "Yes, we serve Delhi, Noida, Gurugram, Jaipur, Jim Corbett, and surrounding regions. We also travel across India for weddings, corporate events, and luxury celebrations.",
     },
 
     // SETUP & TECHNICAL REQUIREMENTS

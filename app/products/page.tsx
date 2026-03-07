@@ -226,7 +226,7 @@ export default function ProductsPage() {
           </p>
 
           <p className="text-gray-400 mt-4 text-sm sm:text-base">
-            Available in Noida, Delhi NCR, Gurgaon, Jaipur, Agra, Udaipur, and nearby locations.
+            Available in Noida, Delhi NCR, Gurugram, Jaipur, Agra, Udaipur, and nearby locations.
           </p>
         </section>
 

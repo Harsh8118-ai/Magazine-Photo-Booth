@@ -46,7 +46,7 @@ const MiddleTwoSection = () => {
         },
         {
             url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769348075/vikas-ans-sweta-4.webp",
-            alt: "magazine photo booth setup for wedding couple in Gurgaon"
+            alt: "magazine photo booth setup for wedding couple in Gurugram"
         },
         {
             url: "https://res.cloudinary.com/dpnykjono/image/upload/v1769261764/reyansh-birthday-party-3.webp",

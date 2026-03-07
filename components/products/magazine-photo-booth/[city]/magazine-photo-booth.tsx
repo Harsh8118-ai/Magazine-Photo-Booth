@@ -49,7 +49,6 @@ export default function MagazinePhotoBoothCity({
     { slug: "ghaziabad", name: "Ghaziabad", state: "Uttar Pradesh" },
     { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
     { slug: "gurugram", name: "Gurugram", state: "Haryana" },
-    { slug: "gurgaon", name: "Gurgaon", state: "Haryana" },
     { slug: "faridabad", name: "Faridabad", state: "Haryana" },
     { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
@@ -134,7 +133,7 @@ export default function MagazinePhotoBoothCity({
                   </p>
                 ) : (
                   <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl">
-                    Available across Noida, Delhi NCR, Gurgaon, Jaipur, Udaipur, Agra, and nearby cities. Our team travels
+                    Available across Noida, Delhi NCR, Gurugram, Jaipur, Udaipur, Agra, and nearby cities. Our team travels
                     pan-India for premium weddings, corporate events, and exhibitions.
                   </p>
                 )}
