@@ -65,13 +65,6 @@ const cities: Record<
     areas: ["Golf Course Road", "DLF Cyber City", "Sector 24", "Sohna Road"],
   },
 
-  gurgaon: {
-    name: "Gurgaon",
-    state: "Delhi NCR",
-    nearby: ["Delhi", "Noida", "Faridabad", "Ghaziabad"],
-    areas: ["Golf Course Road", "Cyber City", "Sector 29", "Sohna Road"],
-  },
-
   faridabad: {
     name: "Faridabad",
     state: "Delhi NCR",
@@ -129,7 +122,7 @@ export async function generateMetadata({
 
   if (!cityData) return {}
 
-  const canonicalSlug = city === "gurgaon" ? "gurugram" : city
+  const canonicalSlug = city
 
   const title = `Photo Booth Rental in ${cityData.name} | The Luxury Booths`
   const description = `Book premium Magazine Photo Booth, Mirror Selfie Booth & Vintage Photo Booth in ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events & VIP parties.`

@@ -9,7 +9,6 @@ const cities: Record<string, { name: string; state: string; canonicalSlug?: stri
   ghaziabad: { name: "Ghaziabad", state: "Delhi NCR" },
   noida: { name: "Noida", state: "Delhi NCR" },
   gurugram: { name: "Gurugram", state: "Delhi NCR" },
-  gurgaon: { name: "Gurgaon", state: "Delhi NCR", canonicalSlug: "gurugram" },
   faridabad: { name: "Faridabad", state: "Delhi NCR" },
   jaipur: { name: "Jaipur", state: "Rajasthan" },
   udaipur: { name: "Udaipur", state: "Rajasthan" },
@@ -98,7 +97,6 @@ export default async function CityMagazineBoothPage({
 
   const canonicalSlug = data.canonicalSlug ?? city
   const pageUrl = `https://theluxurybooths.com/magazine-photo-booth/${canonicalSlug}`
-
 
   const jsonLd = {
     "@context": "https://schema.org",

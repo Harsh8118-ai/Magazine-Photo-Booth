@@ -12,15 +12,11 @@ const cities: Record<
   ghaziabad: { name: "Ghaziabad", state: "Delhi NCR" },
   noida: { name: "Noida", state: "Delhi NCR" },
   gurugram: { name: "Gurugram", state: "Delhi NCR" },
-  gurgaon: { name: "Gurgaon", state: "Delhi NCR", canonicalSlug: "gurugram" },
   faridabad: { name: "Faridabad", state: "Delhi NCR" },
-
   jaipur: { name: "Jaipur", state: "Rajasthan" },
   udaipur: { name: "Udaipur", state: "Rajasthan" },
-
   mumbai: { name: "Mumbai", state: "Maharashtra" },
   pune: { name: "Pune", state: "Maharashtra" },
-
   bangalore: { name: "Bangalore", state: "Karnataka" },
 }
 

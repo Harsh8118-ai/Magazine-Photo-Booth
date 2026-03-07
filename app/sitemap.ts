@@ -8,7 +8,6 @@ const cities = [
   "ghaziabad",
   "noida",
   "gurugram",
-  "gurgaon",
   "faridabad",
   "jaipur",
   "udaipur",
@@ -26,7 +25,7 @@ const blogSlugs = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  const now = new Date("2026-03-08")
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -48,16 +47,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.95
+    },
+    {
       url: `${baseUrl}/products`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/magazine-photo-booth`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.95,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/mirror-selfie-booth`,
