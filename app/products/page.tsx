@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
+import { SectionWrapper } from "@/components/section-wrapper"
+import { Button3D } from "@/components/3d-button"
 
 export const metadata: Metadata = {
   title: "Photo Booth Rental in India | Magazine, Mirror & Vintage",
@@ -117,6 +119,17 @@ const products = [
   },
 ]
 
+const galleryImages = [
+  { id: 1, src: "/Images/1.webp", alt: "Vogue-Magazine Photo Booth" },
+  { id: 3, src: "/Images/3.webp", alt: "Photo Booth in Delhi NCR" },
+  { id: 6, src: "/Images/6.webp", alt: "Magazine Photo Booth Rental In Delhi NCR" },
+  { id: 7, src: "/Images/7.webp", alt: "Magazine Photo Booth in Wedding, Corporate and VVIP Events" },
+  { id: 2, src: "/Images/2.webp", alt: "Mirror photo booth at an event with vintage booth experience" },
+  { id: 4, src: "/Images/4.webp", alt: "Mirror selfie photo booth with wooden vintage design" },
+  { id: 5, src: "/Images/5.webp", alt: "Vintage booth red carpet setup with instant print photo booth" },
+  { id: 8, src: "/Images/8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
+];
+
 export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -168,47 +181,47 @@ export default function ProductsPage() {
                 className="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/30 hover:scale-[1.02] transition-all duration-300"
               >
                 <Link href={product.href} className="block h-full">
-                {/* Product Image */}
-                <div className="relative aspect-[3/4] w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
-                  <Image
-                    src={product.image}
-                    alt={`${product.name} by The Luxury Booths`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  {/* Product Image */}
+                  <div className="relative aspect-[3/4] w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} by The Luxury Booths`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     // className="object-cover"
-                  />
-                </div>
-
-                {/* Product Content */}
-                <div className="p-5 sm:p-6 flex flex-col h-full">
-                  <h2 className="text-xl sm:text-2xl font-bold mb-2">
-                    {product.name}
-                  </h2>
-
-                  <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
-                    {product.description}
-                  </p>
-
-                  {/* Features List */}
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start text-gray-200 text-sm sm:text-[15px]"
-                      >
-                        <span className="text-gold mr-2">✓</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Pricing */}
-                  <div className="border-t border-white/10 pt-4 mb-4">
-                    <p className="text-gold text-xl font-semibold">
-                      {product.pricing}
-                    </p>
+                    />
                   </div>
-                </div>
+
+                  {/* Product Content */}
+                  <div className="p-5 sm:p-6 flex flex-col h-full">
+                    <h2 className="text-xl sm:text-2xl font-bold mb-2">
+                      {product.name}
+                    </h2>
+
+                    <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
+                      {product.description}
+                    </p>
+
+                    {/* Features List */}
+                    <ul className="space-y-2 mb-6">
+                      {product.features.map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start text-gray-200 text-sm sm:text-[15px]"
+                        >
+                          <span className="text-gold mr-2">✓</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Pricing */}
+                    <div className="border-t border-white/10 pt-4 mb-4">
+                      <p className="text-gold text-xl font-semibold">
+                        {product.pricing}
+                      </p>
+                    </div>
+                  </div>
                 </Link>
               </article>
             ))}
@@ -245,6 +258,51 @@ export default function ProductsPage() {
             Book Now
           </Link>
         </section>
+
+        {/* Event Gallery Section */}
+        <SectionWrapper
+          id="gallery-section"
+          ariaLabel="Photo gallery of past events"
+          className="py-16 sm:py-20 px-4 sm:px-6"
+        >
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
+              Event Gallery
+            </h2>
+
+            <div className="columns-2 sm:columns-3 gap-3 space-y-3">
+              {galleryImages.map((image) => (
+                <div
+                  key={image.id}
+                  className="w-full break-inside-avoid cursor-pointer overflow-hidden rounded-lg border border-white/10 hover:border-gold/50 transition"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={300}
+                    height={450}
+                    sizes="(max-width: 768px) 45vw, 300px"
+                    className="w-full h-auto rounded-lg"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <a href="/gallery">
+                <Button3D 
+                  variant="outline"
+                  className="border-purple-400 px-10 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                  aria-label="View Full Gallery"
+                >
+                  View Gallery
+                </Button3D>
+              </a>
+            </div>
+
+          </div>
+        </SectionWrapper>
 
         {/* Mobile bottom spacing */}
         <div className="h-10 sm:h-0" />

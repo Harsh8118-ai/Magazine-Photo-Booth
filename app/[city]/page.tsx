@@ -108,8 +108,11 @@ const cities: Record<
 }
 
 function getCityData(citySlug: string) {
-  const city = cities[citySlug?.toLowerCase()]
-  return city || null
+  const cityKey = citySlug
+    ?.toLowerCase()
+    .replace("photo-booth-rental-in-", "")
+
+  return cities[cityKey] || null
 }
 
 export async function generateMetadata({
@@ -120,7 +123,12 @@ export async function generateMetadata({
   const { city } = await params
   const cityData = getCityData(city)
 
-  if (!cityData) return {}
+  if (!cityData) {
+  return {
+    title: "The Luxury Booths",
+    description: "Luxury Photo Booth Rentals",
+  }
+}
 
   const canonicalSlug = city
 
@@ -178,7 +186,7 @@ export default async function CityHomePage({
 
   if (!cityData) return notFound()
 
-  const canonicalSlug = city === "gurgaon" ? "gurugram" : city
+  const canonicalSlug = city
 
 
   const schemaCity = {

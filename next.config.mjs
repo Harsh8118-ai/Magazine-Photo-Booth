@@ -4,15 +4,6 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
   images: { unoptimized: true },
 
-  async rewrites() {
-    return [
-      {
-        source: "/photo-booth-rental-in-:city",
-        destination: "/:city",
-      },
-    ]
-  },
-
   async redirects() {
     return [
       {
