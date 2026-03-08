@@ -1,4 +1,4 @@
-import MagazinePhotoBooth from "@/components/magazine-photo-booth/magazine-photo-booth"
+import MagazinePhotoBooth from "@/components/products/magazine-photo-booth/magazine-photo-booth"
 import type { Metadata } from "next"
 
 

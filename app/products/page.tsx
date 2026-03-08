@@ -84,7 +84,7 @@ const products = [
     ],
     pricing: "Starting ₹35,000",
     href: "/magazine-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Magazine.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
   },
   {
     id: "mirror-selfie-booth",
@@ -100,7 +100,7 @@ const products = [
     ],
     pricing: "Starting ₹15,000",
     href: "/mirror-selfie-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Mirror.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
   },
   {
     id: "vintage-photo-booth",

@@ -1,4 +1,4 @@
-import VintagePhotoBooth from "@/components/vintage-photo-booth/vintage-photo-booth"
+import VintagePhotoBooth from "@/components/products/vintage-photo-booth/vintage-photo-booth"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {

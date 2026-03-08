@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Script from "next/script"
-import MagazinePhotoBoothCity from "@/components/magazine-photo-booth/[city]/magazine-photo-booth";
+import MagazinePhotoBoothCity from "@/components/products/magazine-photo-booth/[city]/magazine-photo-booth";
 
 
 const cities: Record<string, { name: string; state: string; canonicalSlug?: string }> = {
