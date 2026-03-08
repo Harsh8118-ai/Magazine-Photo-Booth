@@ -132,7 +132,7 @@ const BlogInstagramWorthyWedding = () => {
                   Premium Photo Booths
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  A <a href="/products/magazine-photo-booth">magazine photo booth</a> gives
+                  A <a href="/magazine-photo-booth">magazine photo booth</a> gives
                   guests editorial-style portraits they love sharing online.
                 </p>
               </div>
@@ -213,7 +213,7 @@ const BlogInstagramWorthyWedding = () => {
               View Real Weddings
             </a>
             <span className="mx-2">·</span>
-            <a href="/products/magazine-photo-booth" className="text-gold hover:underline">
+            <a href="/magazine-photo-booth" className="text-gold hover:underline">
               Magazine Photo Booth
             </a>
           </div>

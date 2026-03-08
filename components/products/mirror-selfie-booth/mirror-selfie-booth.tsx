@@ -214,17 +214,17 @@ const MirrorSelfieBooth = () => {
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/products/magazine-photo-booth" className="hover:text-white transition-colors">
+                  <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
                     Magazine Photo Booth
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
+                  <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
                     Mirror Selfie Booth
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/vintage-photo-booth" className="hover:text-white transition-colors">
+                  <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                     Vintage Photo Booth
                   </Link>
                 </li>

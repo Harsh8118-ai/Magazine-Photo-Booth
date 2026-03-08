@@ -110,7 +110,7 @@ const BlogLuxuryBooths = () => {
                   Magazine-Style Presentation
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  Our <a href="/products/magazine-photo-booth">Magazine Photo Booth</a> setups
+                  Our <a href="/magazine-photo-booth">Magazine Photo Booth</a> setups
                   focus on clean layouts, premium typography, and elegant print finishes.
                 </p>
               </div>

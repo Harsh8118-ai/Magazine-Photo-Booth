@@ -270,7 +270,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
               <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mt-4">
                 Products
               </div>
-              <Link href="/products/magazine-photo-booth">
+              <Link href="/magazine-photo-booth">
                 <button
                   onClick={() => setShowCommandPalette(false)}
                   className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
@@ -279,7 +279,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
                   <span>Magazine Photo Booth</span>
                 </button>
               </Link>
-              <Link href="/products/mirror-selfie-booth">
+              <Link href="/mirror-selfie-booth">
                 <button
                   onClick={() => setShowCommandPalette(false)}
                   className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"
@@ -288,7 +288,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
                   <span>Mirror Selfie Booth</span>
                 </button>
               </Link>
-              <Link href="/products/vintage-photo-booth">
+              <Link href="/vintage-photo-booth">
                 <button
                   onClick={() => setShowCommandPalette(false)}
                   className="w-full flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 text-left"

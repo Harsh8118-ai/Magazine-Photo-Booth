@@ -89,7 +89,7 @@ export default function VintagePhotoBoothCity({
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            href="/products/vintage-photo-booth"
+            href="/vintage-photo-booth"
             className="flex items-center gap-2 text-amber-500 hover:text-amber-400"
           >
             <ArrowLeft size={20} />
@@ -196,7 +196,7 @@ export default function VintagePhotoBoothCity({
             {cities.map((c) => (
               <Link
                 key={c.slug}
-                href={`/products/vintage-photo-booth/${c.slug}`}
+                href={`/vintage-photo-booth/${c.slug}`}
                 className="px-4 py-2 rounded-full border border-amber-700/40 text-amber-200 hover:border-amber-500"
               >
                 {c.name} ({c.state})
@@ -311,17 +311,17 @@ export default function VintagePhotoBoothCity({
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/products/magazine-photo-booth" className="hover:text-white transition-colors">
+                  <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
                     Magazine Photo Booth
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/mirror-selfie-booth" className="hover:text-white transition-colors">
+                  <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
                     Mirror Selfie Booth
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/vintage-photo-booth" className="hover:text-white transition-colors">
+                  <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                     Vintage Photo Booth
                   </Link>
                 </li>

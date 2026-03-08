@@ -1,4 +1,4 @@
-import MirrorSelfieBooth from "@/components/products/mirror-selfie-booth/mirror-selfie-booth"
+import MirrorSelfieBooth from "@/components/mirror-selfie-booth/mirror-selfie-booth"
 
 
 export const metadata = {

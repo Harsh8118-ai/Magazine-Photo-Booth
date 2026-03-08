@@ -211,7 +211,7 @@ const BlogMagazineWeddingTrend = () => {
           <div className="mt-3 text-sm">
             <a href="/about" className="text-gold hover:underline">About Us</a> ·
             <a href="/gallery" className="ml-2 text-gold hover:underline">View Our Work</a> ·
-            <a href="/products/magazine-photo-booth" className="ml-2 text-gold hover:underline">
+            <a href="/magazine-photo-booth" className="ml-2 text-gold hover:underline">
               Magazine Photo Booth
             </a>
           </div>

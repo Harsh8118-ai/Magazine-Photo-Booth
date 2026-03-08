@@ -242,7 +242,7 @@ const BlogBrandedEventActivations = () => {
             delivering premium branded event activations across Delhi NCR and India.
           </p>
           <div className="mt-3 text-sm">
-            <a href="/products/magazine-photo-booth" className="text-gold hover:underline">
+            <a href="/magazine-photo-booth" className="text-gold hover:underline">
               Magazine Photo Booth
             </a>
             <span className="mx-2">·</span>

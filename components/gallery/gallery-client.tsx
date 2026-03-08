@@ -130,7 +130,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/products/magazine-photo-booth/${city.slug}`}
+                href={`/magazine-photo-booth/${city.slug}`}
                 className="px-4 py-2 rounded-full bg-black border border-gray-800 text-gray-300 text-sm hover:border-purple-500 hover:text-white transition"
               >
                 Magazine Photo Booth in {city.name}

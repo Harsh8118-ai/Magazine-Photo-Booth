@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Script from "next/script"
-import VintagePhotoBoothCity from "@/components/products/vintage-photo-booth/[city]/vintage-photo-booth"
+import VintagePhotoBoothCity from "@/components/vintage-photo-booth/[city]/vintage-photo-booth"
 
 
 const cities: Record<
