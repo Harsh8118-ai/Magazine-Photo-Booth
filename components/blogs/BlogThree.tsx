@@ -136,7 +136,7 @@ const BlogInstagramWorthyWedding = () => {
                   guests editorial-style portraits they love sharing online.
                 </p>
               </div>
-            </div>
+            </div> 
           </section>
 
           {/* Real Insight */}
