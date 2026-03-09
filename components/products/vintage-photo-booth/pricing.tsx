@@ -7,8 +7,8 @@ const Pricing = () => {
   const [printCount, setPrintCount] = useState(200)
   const [open, setOpen] = useState(false);
 
-  const basePrice = 25000
-  const extraPrintCost = 25
+  const basePrice = 30000
+  const extraPrintCost = 90
 
   const calculatePrice = (prints: number) => {
     if (prints <= 200) return basePrice
@@ -40,7 +40,7 @@ const Pricing = () => {
       <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-2 text-center">Choose Your Print Package</h3>
-          <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price - ₹25,000</p>
+          <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price - ₹30,000</p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ const Pricing = () => {
               </div>
               {priceBreakdown > 0 && (
                 <div className="flex justify-between text-amber-300">
-                  <span>Extra {printCount - 200} prints × ₹25</span>
+                  <span>Extra {printCount - 200} prints </span>
                   <span>₹{priceBreakdown.toLocaleString()}</span>
                 </div>
               )}

@@ -134,7 +134,7 @@ export default async function CityVintageBoothPage({
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
-      price: "25000",
+      price: "30000",
       availability: "https://schema.org/InStock",
       url: pageUrl,
     },

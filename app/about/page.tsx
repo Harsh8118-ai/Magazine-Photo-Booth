@@ -100,7 +100,7 @@ export default function AboutPage() {
         "Rustic & premium styling",
         "Theme-matched event experience",
       ],
-      pricing: "Starting ₹25,000 + prints",
+      pricing: "Starting ₹30,000 + prints",
       href: "/vintage-photo-booth",
       image: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
     },

@@ -3,8 +3,8 @@ import { useState } from "react"
 
 const WhatsAppButton = () => {
   const [printCount, setPrintCount] = useState(200)
-  const basePrice = 25000
-  const extraPrintCost = 25
+  const basePrice = 30000
+  const extraPrintCost = 90
 
   const calculatePrice = (prints: number) => {
     if (prints <= 200) return basePrice
