@@ -28,7 +28,7 @@ export function WhatsAppCTA() {
           </div>
         )}
 
-        <Button
+        <Button 
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
