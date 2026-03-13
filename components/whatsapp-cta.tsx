@@ -12,7 +12,7 @@ export function WhatsAppCTA() {
   }
 
   const generateWhatsAppURL = () => {
-    const phoneNumber = "9266037002"
+    const phoneNumber = "9266037002" 
     const message = generateWhatsAppMessage()
     const utmParams = "utm_source=website&utm_medium=whatsapp&utm_campaign=booking_inquiry"
     return `https://wa.me/${phoneNumber}?text=${message}&${utmParams}` 
