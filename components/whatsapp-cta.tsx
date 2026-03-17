@@ -8,7 +8,7 @@ export function WhatsAppCTA() {
 
   const generateWhatsAppMessage = () => {
     const message = "Hi! I’m interested in booking The Luxury Booths for an upcoming event. Please share availability, packages, and pricing details."
-    return encodeURIComponent(message) 
+    return encodeURIComponent(message)
   }
 
   const generateWhatsAppURL = () => {
