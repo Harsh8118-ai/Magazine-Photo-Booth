@@ -75,15 +75,17 @@ const BlogBrandedEventActivations = () => {
         </header>
 
         {/* Hero Image */}
-        <div className="mb-12">
+        <div className="mb-12 max-w-3xs mx-auto">
+
           <Image
-            src="https://res.cloudinary.com/dpnykjono/image/upload/v1760000000/corporate-event-activation.webp"
-            alt="Branded corporate event activation with luxury photo booth in Delhi NCR"
+            src="/the-luxury-booths.webp"
+            alt="Magazine photo booth for wedding event"
             width={1200}
-            height={700}
-            className="rounded-2xl border border-neutral-800"
+            height={630}
+            className="rounded-2xl border border-neutral-800 w-full h-auto"
             priority
           />
+
         </div>
 
         {/* Article */}

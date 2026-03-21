@@ -5,7 +5,7 @@ const blogPosts = [
     excerpt:
       "Discover why magazine photo booths have become the most sought-after wedding trend in India for 2026, offering luxury aesthetics, premium keepsake prints, and unforgettable guest experiences.",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
     readTime: "9 min read",
     category: "Wedding Trends",
   },
@@ -15,7 +15,7 @@ const blogPosts = [
     excerpt:
       "Explore the best photo booth ideas for luxury weddings, from magazine-style setups to minimal designs that elevate guest experience and wedding aesthetics.",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
     readTime: "10 min read",
     category: "Wedding Ideas",
   },
@@ -25,7 +25,7 @@ const blogPosts = [
     excerpt:
       "Learn how to make your wedding Instagram-worthy with expert tips on lighting, layouts, premium photo booths, and guest experience design.",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
     readTime: "8 min read",
     category: "Wedding Styling",
   },
@@ -36,7 +36,7 @@ const blogPosts = [
     excerpt:
       "Learn how branded event activations in Delhi NCR use luxury photo booths to deliver measurable engagement, brand recall, and marketing ROI.",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
     readTime: "10 min read",
     category: "Corporate Events",
   },
@@ -47,7 +47,7 @@ const blogPosts = [
     excerpt:
       "Learn what a magazine photo booth is and why it is trending at weddings and events. Discover magazine cover style photo booths, luxury prints, and premium guest experiences.",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
     readTime: "10 min read",
     category: "Photo Booth Guide",
   },
@@ -63,7 +63,7 @@ const blogPosts = [
       "Discover why magazine photo booths are ideal for corporate events and how they increase brand visibility, engagement, and marketing impact.",
 
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+      "/the-luxury-booths.webp",
 
     readTime: "8 min read",
 

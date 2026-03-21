@@ -69,9 +69,9 @@ const BlogLuxuryPhotoBoothIdeas = () => {
         </header>
 
         {/* Hero Image */}
-        <div className="mb-12">
+        <div className="mb-12 max-w-3xs mx-auto">
           <Image
-            src="https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp"
+            src="/the-luxury-booths.webp"
             alt="Luxury photo booth setup at an elegant wedding reception"
             width={1200}
             height={700}

@@ -35,7 +35,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -58,7 +58,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Discover why magazine photo booth is the most popular luxury wedding trend in India and how it enhances guest experience.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -101,7 +101,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -121,7 +121,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Explore luxury wedding photo booth ideas that elevate guest experience and wedding aesthetics.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -164,7 +164,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -184,7 +184,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Make your wedding stylish and memorable with Instagram worthy ideas including premium photo booths.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -227,7 +227,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -247,7 +247,7 @@ const blogSeo: Record<string, Metadata> = {
                 "See how brands use luxury photo booths for engagement and marketing impact.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -290,7 +290,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -310,7 +310,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Premium photo booth experience for weddings and corporate events in India.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -353,7 +353,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
 
                     width: 1200,
                     height: 630,
@@ -376,7 +376,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Complete guide explaining magazine cover style photo booths for weddings and luxury events.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },
@@ -419,7 +419,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                        "/the-luxury-booths.webp",
                     width: 1200,
                     height: 630,
                 },
@@ -438,7 +438,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Learn how magazine photo booths improve brand engagement at corporate events.",
 
             images: [
-                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                "/the-luxury-booths.webp",
             ],
 
         },

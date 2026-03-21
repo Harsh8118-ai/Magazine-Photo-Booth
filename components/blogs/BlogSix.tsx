@@ -94,10 +94,10 @@ const BlogMagazineCorporate = () => {
 
 
         {/* Image */}
-        <div className="mb-12">
+        <div className="mb-12 max-w-3xs mx-auto">
 
           <img
-            src="https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp"
+            src="/the-luxury-booths.webp"
             alt="Magazine photo booth branding experience at corporate event"
             className="rounded-2xl border border-neutral-800"
           />
@@ -415,7 +415,7 @@ const BlogMagazineCorporate = () => {
       </div>
 
 
-    </div>
+    </div> 
 
   )
 
