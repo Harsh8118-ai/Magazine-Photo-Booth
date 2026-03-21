@@ -478,6 +478,11 @@ export default function Hero() {
                                     </Link>
 
                                 </li>
+                                <li>
+                                    <Link href={`/blog`} className="hover:text-white transition-colors">
+                                        Blog
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
 

@@ -695,6 +695,11 @@ export default async function CityHomePage({
                     Reviews
                   </Link>
                 </li>
+                <li>
+                  <Link href={`/blog`} className="hover:text-white transition-colors">
+                    Blog
+                  </Link>
+                </li>
               </ul>
             </div>
 
