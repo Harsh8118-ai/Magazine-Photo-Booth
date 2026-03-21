@@ -388,6 +388,68 @@ const blogSeo: Record<string, Metadata> = {
 
     },
 
+    "magazine-photo-booth-for-corporate-events": {
+
+        title:
+            "Magazine Photo Booth for Corporate Events: Brand Engagement & Marketing Impact",
+
+        description:
+            "Discover why magazine photo booths are ideal for corporate events. Learn how branded magazine booths increase engagement, brand visibility, and marketing impact.",
+
+        alternates: {
+            canonical:
+                "https://theluxurybooths.com/blog/magazine-photo-booth-for-corporate-events",
+        },
+
+        openGraph: {
+
+            title:
+                "Magazine Photo Booth for Corporate Events",
+
+            description:
+                "See how magazine booths help brands create engaging experiences at corporate events.",
+
+            url:
+                "https://theluxurybooths.com/blog/magazine-photo-booth-for-corporate-events",
+
+            siteName: "The Luxury Booths",
+
+            type: "article",
+
+            images: [
+                {
+                    url:
+                        "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+
+        },
+
+        twitter: {
+
+            card: "summary_large_image",
+
+            title:
+                "Magazine Booth for Corporate Events",
+
+            description:
+                "Learn how magazine photo booths improve brand engagement at corporate events.",
+
+            images: [
+                "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+            ],
+
+        },
+
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+    },
+
 }
 
 export default blogSeo

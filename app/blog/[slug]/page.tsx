@@ -1,14 +1,13 @@
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
-
+import blogSeo from "@/hooks/blogSeo"
 import BlogLuxuryBooths from "@/components/blogs/MainBlog"
 import BlogMagazineWeddingTrend from "@/components/blogs/BlogOne"
 import BlogLuxuryPhotoBoothIdeas from "@/components/blogs/BlogTwo"
 import BlogInstagramWorthyWedding from "@/components/blogs/BlogThree"
 import BlogBrandedEventActivations from "@/components/blogs/BlogFour"
-
-import blogSeo from "@/hooks/blogSeo"
 import BlogWhatIsMagazineBooth from "@/components/blogs/BlogFive"
+import BlogMagazineCorporate from "@/components/blogs/BlogSix"
 
 
 
@@ -34,6 +33,8 @@ const blogComponentMap = {
   "branded-event-activations-delhi-ncr": <BlogBrandedEventActivations />,
 
   "what-is-a-magazine-photo-booth": <BlogWhatIsMagazineBooth />,
+
+  "magazine-photo-booth-for-corporate-events": <BlogMagazineCorporate />,
 
 } as const
 

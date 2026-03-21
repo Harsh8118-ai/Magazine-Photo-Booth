@@ -49,8 +49,26 @@ const blogPosts = [
     image:
       "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
     readTime: "10 min read",
+    category: "Photo Booth Guide",
+  },
+
+  {
+    title:
+      "Magazine Photo Booth for Corporate Events: Brand Engagement & Marketing Impact",
+
+    slug:
+      "magazine-photo-booth-for-corporate-events",
+
+    excerpt:
+      "Discover why magazine photo booths are ideal for corporate events and how they increase brand visibility, engagement, and marketing impact.",
+
+    image:
+      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+
+    readTime: "8 min read",
+
     category: "Corporate Events",
-  }
+  },
 
 ]
 
