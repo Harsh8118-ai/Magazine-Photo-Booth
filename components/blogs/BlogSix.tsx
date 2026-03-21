@@ -415,7 +415,7 @@ const BlogMagazineCorporate = () => {
       </div>
 
 
-    </div>
+    </div> 
 
   )
 
