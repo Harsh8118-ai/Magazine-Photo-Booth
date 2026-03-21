@@ -30,16 +30,28 @@ const blogPosts = [
     category: "Wedding Styling",
   },
   {
-  title:
-    "Branded Event Activations in Delhi NCR: How Luxury Photo Booths Drive Real Marketing ROI in 2026",
-  slug: "branded-event-activations-delhi-ncr",
-  excerpt:
-    "Learn how branded event activations in Delhi NCR use luxury photo booths to deliver measurable engagement, brand recall, and marketing ROI.",
-  image:
-    "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
-  readTime: "10 min read",
-  category: "Corporate Events",
-}
+    title:
+      "Branded Event Activations in Delhi NCR: How Luxury Photo Booths Drive Real Marketing ROI in 2026",
+    slug: "branded-event-activations-delhi-ncr",
+    excerpt:
+      "Learn how branded event activations in Delhi NCR use luxury photo booths to deliver measurable engagement, brand recall, and marketing ROI.",
+    image:
+      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+    readTime: "10 min read",
+    category: "Corporate Events",
+  },
+  {
+    title:
+      "What is a Magazine Photo Booth? Complete Guide for Weddings & Events",
+    slug: "what-is-a-magazine-photo-booth",
+    excerpt:
+      "Learn what a magazine photo booth is and why it is trending at weddings and events. Discover magazine cover style photo booths, luxury prints, and premium guest experiences.",
+    image:
+      "https://res.cloudinary.com/dpnykjono/image/upload/v1757750038/Main_Blog_nd7wlh.webp",
+    readTime: "10 min read",
+    category: "Corporate Events",
+  }
+
 ]
 
 export default blogPosts
