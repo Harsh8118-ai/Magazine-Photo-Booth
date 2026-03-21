@@ -23,6 +23,7 @@ const blogSlugs = [
   "instagram-worthy-wedding-ideas",
   "branded-event-activations-delhi-ncr",
   "what-is-a-magazine-photo-booth",
+  "magazine-photo-booth-for-corporate-events",
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
