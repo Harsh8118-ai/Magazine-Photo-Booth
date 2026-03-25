@@ -12,6 +12,14 @@ const blogSeo: Record<string, Metadata> = {
         description:
             "Magazine photo booth is becoming the top wedding trend in India. Discover why couples are choosing magazine cover style photo booths for luxury weddings, premium prints, and unforgettable guest experiences.",
 
+        keywords: [
+            "vogue magazine photo booth wedding",
+            "magazine photo booth for wedding",
+            "wedding photo booth",
+            "magazine cover photo booth",
+            "event photo booth",
+        ],
+        
         alternates: {
             canonical:
                 `${baseUrl}/blog/magazine-photo-booth-wedding-trend-india-2026`,
@@ -35,7 +43,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "/the-luxury-booths.webp",
+                        "/magazine-photo-booth-wedding.webp",
 
                     width: 1200,
                     height: 630,
@@ -58,7 +66,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Discover why magazine photo booth is the most popular luxury wedding trend in India and how it enhances guest experience.",
 
             images: [
-                "/the-luxury-booths.webp",
+                "/magazine-photo-booth-wedding.webp",
             ],
 
         },
@@ -66,6 +74,11 @@ const blogSeo: Record<string, Metadata> = {
         robots: {
             index: true,
             follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                "max-image-preview": "large",
+            },
         },
 
     },
@@ -395,7 +408,13 @@ const blogSeo: Record<string, Metadata> = {
 
         description:
             "Discover why magazine photo booths are ideal for corporate events. Learn how branded magazine booths increase engagement, brand visibility, and marketing impact.",
+        keywords: [
+            "vogue magazine photo booth",
+            "magazine photo booth for corporate events",
+            "corporate photo booth",
+            "event photo booth",
 
+        ],
         alternates: {
             canonical:
                 "https://theluxurybooths.com/blog/magazine-photo-booth-for-corporate-events",
@@ -419,7 +438,7 @@ const blogSeo: Record<string, Metadata> = {
             images: [
                 {
                     url:
-                        "/the-luxury-booths.webp",
+                        "/magazine-photo-booth-corporate-events.webp",
                     width: 1200,
                     height: 630,
                 },
@@ -438,7 +457,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Learn how magazine photo booths improve brand engagement at corporate events.",
 
             images: [
-                "/the-luxury-booths.webp",
+                "/magazine-photo-booth-corporate-events.webp",
             ],
 
         },
@@ -446,6 +465,11 @@ const blogSeo: Record<string, Metadata> = {
         robots: {
             index: true,
             follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                "max-image-preview": "large",
+            },
         },
 
     },
