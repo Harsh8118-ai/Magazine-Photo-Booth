@@ -155,7 +155,7 @@ export function TestimonialCarousel() {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-purple-400 scale-125" : "bg-gray-600 hover:bg-gray-500"
                 }`}
             />
-          ))}
+          ))} 
         </div>
       </Card>
     </div>
