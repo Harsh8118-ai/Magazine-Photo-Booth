@@ -345,7 +345,7 @@ const blogSeo: Record<string, Metadata> = {
 
         alternates: {
             canonical:
-                "https://theluxurybooths.com/blog/what-is-magazine-photo-booth",
+                "https://theluxurybooths.com/blog/what-is-a-magazine-photo-booth",
         },
 
         openGraph: {
@@ -357,7 +357,7 @@ const blogSeo: Record<string, Metadata> = {
                 "Discover how magazine photo booths work and why they are popular for luxury weddings, corporate events, and premium celebrations.",
 
             url:
-                "https://theluxurybooths.com/blog/what-is-magazine-photo-booth",
+                "https://theluxurybooths.com/blog/what-is-a-magazine-photo-booth",
 
             siteName: "The Luxury Booths",
 

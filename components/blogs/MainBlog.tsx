@@ -1,10 +1,5 @@
 import { Calendar, Clock, User, Star, Camera, Sparkles, Shield } from "lucide-react"
 
-export const metadata = {
-  title: "The Luxury Booths: Redefining Photo Booth Experiences in India",
-  description:
-    "Discover how The Luxury Booths creates premium photo booth experiences for weddings and events through design, reliability, and professional execution.",
-}
 
 const BlogLuxuryBooths = () => {
   return (

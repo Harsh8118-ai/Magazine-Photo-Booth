@@ -1,12 +1,6 @@
 import Image from "next/image"
 import { Calendar, Clock, User, Star, Camera, Sparkles, Layout } from "lucide-react"
 
-export const metadata = {
-  title: "How to Make Your Wedding Instagram-Worthy",
-  description:
-    "Learn how to make your wedding Instagram-worthy with expert styling tips, photo booth ideas, lighting tricks, and guest experience insights.",
-}
-
 const BlogInstagramWorthyWedding = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">

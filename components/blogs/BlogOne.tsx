@@ -1,59 +1,5 @@
 import { Calendar, Clock, User, Star, Camera, Sparkles, TrendingUp } from "lucide-react"
-import type { Metadata } from "next"
 
-export const metadata = {
-  title:
-    "Magazine Photo Booth for Weddings in India (2026 Trend Guide)",
-
-  description:
-    "Magazine photo booth is becoming the top wedding trend in India. Discover why couples are choosing magazine cover style photo booths for luxury weddings, premium prints, and unforgettable guest experiences.",
-
-  alternates: {
-    canonical:
-      "https://theluxurybooths.com/blog/magazine-photo-booth-wedding-trend-india-2026",
-  },
-
-  openGraph: {
-    title:
-      "Magazine Photo Booth Wedding Trend in India (2026 Guide)",
-
-    description:
-      "Explore why magazine photo booths are trending in Indian weddings. Learn benefits, ideas, and why couples choose magazine cover style photo booths for luxury celebrations.",
-
-    url:
-      "https://theluxurybooths.com/blog/magazine-photo-booth-wedding-trend-india-2026",
-
-    siteName: "The Luxury Booths",
-
-    type: "article",
-
-    images: [
-      {
-        url: "/magazine-photo-booth.webp",
-        width: 1200,
-        height: 630,
-        alt: "Magazine photo booth wedding trend in India",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title:
-      "Magazine Photo Booth Wedding Trend in India (2026)",
-
-    description:
-      "Discover why magazine photo booth is the most popular luxury wedding trend in India and how it enhances guest experience.",
-
-    images: ["/magazine-photo-booth.webp"],
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
 
 const BlogMagazineWeddingTrend = () => {
   return (

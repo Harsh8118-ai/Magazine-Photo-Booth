@@ -1,11 +1,6 @@
 import Image from "next/image"
 import { Calendar, Clock, User, Star, Camera, Sparkles, BarChart3, Building2 } from "lucide-react"
 
-export const metadata = {
-  title: "Branded Event Activations in Delhi NCR: Marketing ROI Guide 2026",
-  description:
-    "Discover how branded event activations in Delhi NCR use luxury photo booths to drive engagement, brand recall, and real marketing ROI in 2026.",
-}
 
 const BlogBrandedEventActivations = () => {
   return (

@@ -1,11 +1,6 @@
 import Image from "next/image"
 import { Calendar, Clock, User, Star, Camera, Sparkles, Crown } from "lucide-react"
 
-export const metadata = {
-  title: "Best Photo Booth Ideas for Luxury Weddings",
-  description:
-    "Explore the best photo booth ideas for luxury weddings, from magazine-style booths to elegant minimal setups that elevate guest experience and wedding aesthetics.",
-}
 
 const BlogLuxuryPhotoBoothIdeas = () => {
   return (
