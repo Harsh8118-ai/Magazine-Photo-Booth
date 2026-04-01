@@ -187,7 +187,7 @@ export default function RootLayout({
         </Script>
 
         {/* ---Meta Pixel Code  */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        <Script id="1444884754013282" strategy="afterInteractive">
           {`
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
