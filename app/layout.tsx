@@ -186,7 +186,7 @@ export default function RootLayout({
   `}
         </Script>
 
-
+        {/* ---Meta Pixel Code  */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
   !function(f,b,e,v,n,t,s)
@@ -210,7 +210,6 @@ export default function RootLayout({
 `}
         </Script>
 
-        
         <noscript>
           <img
             height="1"
@@ -219,6 +218,7 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
           />
         </noscript>
+        {/* Meta Pixel Code---  */}
 
 
       </head>
