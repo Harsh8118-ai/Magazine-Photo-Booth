@@ -187,7 +187,7 @@ export default function RootLayout({
         </Script>
 
         {/* ---Meta Pixel Code  */}
-        <Script id="1444884754013282" strategy="afterInteractive">
+        <Script id="facebook-pixel" strategy="afterInteractive">
           {`
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
@@ -205,17 +205,18 @@ export default function RootLayout({
   }(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('init', '1444884754013282');
   fbq('track', 'PageView');
 `}
         </Script>
 
+        {/* Fallback for noscript */}
         <noscript>
           <img
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1444884754013282&ev=PageView&noscript=1"
           />
         </noscript>
         {/* Meta Pixel Code---  */}
