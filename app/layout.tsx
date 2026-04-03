@@ -210,7 +210,7 @@ export default function RootLayout({
 `}
         </Script>
 
-        {/* Fallback for noscript */} 
+        {/* Fallback for noscript */}  
         <noscript>
           <img
             height="1"
