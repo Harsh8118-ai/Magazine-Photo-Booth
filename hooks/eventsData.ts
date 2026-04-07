@@ -76,38 +76,38 @@ export const eventData = {
       "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
     ],
   },
-  "simcorp-noida": {
-    name: "Simcorp India LLP",
-    date: "2025-12-06",
-    type: "Corporate",
-    location: "Noida",
-    photoCount: 742,
-    driveLink: "https://drive.google.com/drive/folders/birthday-001",
-    topMoments: [
-      { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
-    ],
-    videos: [
-      "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
-    ],
-  },
-  "tariq-sumaiya-ghaziabad": {
-    name: "Tariq & Sumaiya",
-    date: "2025-12-20",
-    type: "Wedding",
-    location: "Ghaziabad",
-    photoCount: 982,
-    driveLink: "https://drive.google.com/drive/folders/birthday-001",
-    topMoments: [
-      { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
-    ],
-    videos: [
-      "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
-    ],
-  },
+  // "simcorp-noida": {
+  //   name: "Simcorp India LLP",
+  //   date: "2025-12-06",
+  //   type: "Corporate",
+  //   location: "Noida",
+  //   photoCount: 742,
+  //   driveLink: "https://drive.google.com/drive/folders/birthday-001",
+  //   topMoments: [
+  //     { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
+  //   ],
+  //   videos: [
+  //     "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
+  //   ],
+  // },
+  // "tariq-sumaiya-ghaziabad": {
+  //   name: "Tariq & Sumaiya",
+  //   date: "2025-12-20",
+  //   type: "Wedding",
+  //   location: "Ghaziabad",
+  //   photoCount: 982,
+  //   driveLink: "https://drive.google.com/drive/folders/birthday-001",
+  //   topMoments: [
+  //     { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
+  //   ],
+  //   videos: [
+  //     "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
+  //   ],
+  // },
     "taazaa-noida": {
     name: "Taazaa Tech Pvt. Ltd.",
     date: "2026-01-07",
@@ -149,20 +149,20 @@ export const eventData = {
       "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
     ],
   },  
-  "inorphis-nexus-greater-noida": {
-    name: "inMorphis Services Pvt. Ltd.",
-    date: "2026-01-16",
-    type: "Corporate",
-    location: "Greater Noida",
-    photoCount: 834,
-    driveLink: "https://drive.google.com/drive/folders/birthday-001",
-    topMoments: [
-      { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
-    ],
-    videos: [
-      "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
-      "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
-    ],
-  },
+  // "inorphis-nexus-greater-noida": {
+  //   name: "inMorphis Services Pvt. Ltd.",
+  //   date: "2026-01-16",
+  //   type: "Corporate",
+  //   location: "Greater Noida",
+  //   photoCount: 834,
+  //   driveLink: "https://drive.google.com/drive/folders/birthday-001",
+  //   topMoments: [
+  //     { id: 1, url: "/celebrity-magazine-cover.png", title: "" },
+  //   ],
+  //   videos: [
+  //     "https://videos.pexels.com/video-files/853889/853889-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1279365/1279365-sd_640_360_25fps.mp4",
+  //     "https://videos.pexels.com/video-files/1001303/1001303-sd_640_360_25fps.mp4",
+  //   ],
+  // },
 } as const
