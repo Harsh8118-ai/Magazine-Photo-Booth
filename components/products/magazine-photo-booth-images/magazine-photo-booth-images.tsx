@@ -211,7 +211,7 @@ export default function MagazinePhotoBoothImages() {
 
             <div
               key={i}
-              className="mb-4 break-inside-avoid group"
+              className="mb-4 break-inside-avoid group"  
             >
 
               <Image
