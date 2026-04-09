@@ -179,13 +179,6 @@ export default function MagazinePhotoBoothImages() {
 
       </section>
 
-
-
-
-
-
-
-
       {/* PINTEREST GRID */}
       <section className="max-w-7xl mx-auto px-6 pb-20">
 
@@ -254,11 +247,6 @@ export default function MagazinePhotoBoothImages() {
         </div>
 
       </section>
-
-
-
-
-
 
 
       {/* SEO CONTENT */}
