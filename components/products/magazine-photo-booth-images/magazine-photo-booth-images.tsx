@@ -305,41 +305,26 @@ export default function MagazinePhotoBoothImages() {
         <div className="grid md:grid-cols-3 gap-5">
 
           <Link
-
             href="/magazine-photo-booth"
-
             className="border border-white/10 rounded-xl p-6 hover:border-gold transition"
-
           >
-
             Magazine Photo Booth Overview
-
           </Link>
 
 
           <Link
-
             href="/gallery"
-
             className="border border-white/10 rounded-xl p-6 hover:border-gold transition"
-
           >
-
             Full Event Gallery
-
           </Link>
 
 
           <Link
-
             href="/magazine-photo-booth-design"
-
             className="border border-white/10 rounded-xl p-6 hover:border-gold transition"
-
           >
-
             Magazine Booth Design Ideas
-
           </Link>
 
         </div>
