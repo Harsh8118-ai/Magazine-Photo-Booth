@@ -119,6 +119,8 @@ const MiddleTwoSection = () => {
                             {images.map((image, index) => (
                                 <ScrollReveal key={index} direction="scale" delay={index * 0.05}>
                                     <div className="break-inside-avoid overflow-hidden rounded-xl glass-enhanced scale-on-hover cursor-pointer">
+                                        
+                                        <a href="/magazine-photo-booth-images">
                                         <Image
                                             src={image.url}
                                             alt={image.alt}
@@ -127,7 +129,7 @@ const MiddleTwoSection = () => {
                                             className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                                             loading="lazy"
                                             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                                        />
+                                        /></a>
                                     </div>
                                 </ScrollReveal>
                             ))}
@@ -135,7 +137,7 @@ const MiddleTwoSection = () => {
                         {/* </div> */}
 
                         <div className="text-center">
-                            <a href="/gallery">
+                            <a href="/magazine-photo-booth-images">
                                 <Button3D
                                     variant="outline"
                                     className="border-purple-400 px-10 py-5 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"

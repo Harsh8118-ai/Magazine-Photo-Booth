@@ -321,10 +321,10 @@ export default function MagazinePhotoBoothImages() {
 
 
           <Link
-            href="/magazine-photo-booth-design"
+            href="/vintage-photo-booth"
             className="border border-white/10 rounded-xl p-6 hover:border-gold transition"
           >
-            Magazine Booth Design Ideas
+            Vintage Photo Booth
           </Link>
 
         </div>
