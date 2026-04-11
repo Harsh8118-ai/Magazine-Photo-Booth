@@ -1,4 +1,4 @@
-import MagazinePhotoBoothImages from "@/components/products/magazine-photo-booth-images/magazine-photo-booth-images"
+import MagazinePhotoBoothImages from "@/components/products/magazine-photo-booth/images/magazine-photo-booth-images"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://theluxurybooths.com/magazine-photo-booth-images",
+    canonical: "https://theluxurybooths.com/magazine-photo-booth/images",
   },
 }
 
