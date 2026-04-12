@@ -122,21 +122,11 @@ export default function MagazinePhotoBoothForSale() {
 
 
           </Link>
-
-
-
           <p className="text-xl sm:text-3xl font-bold text-gradient">
-
             Magazine Photo Booth for Sale
-
           </p>
-
-
-
           <div className="w-15" />
-
         </div>
-
       </div>
 
 
@@ -146,21 +136,14 @@ export default function MagazinePhotoBoothForSale() {
       <section className="pt-32 pb-16 text-center max-w-5xl mx-auto px-6">
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
-
           Buy Magazine Photo Booth Setup for Business
-
         </h1>
 
 
-
         <p className="text-gray-400 leading-relaxed">
-
           Start your own premium photo booth business with luxury walk-in magazine cover photo booth.
-
           Ideal for event planners, photographers and agencies looking to offer celebrity style photo experience
-
           with strong ROI potential and viral marketing impact.
-
         </p>
 
       </section>
@@ -170,15 +153,9 @@ export default function MagazinePhotoBoothForSale() {
       {/* PRODUCT OVERVIEW */}
 
       <section className="max-w-6xl mx-auto px-6 pb-20">
-
         <h2 className="text-3xl font-bold mb-6 text-gradient">
-
           What is Magazine Photo Booth Setup
-
         </h2>
-
-
-
         <p className="text-gray-400 leading-relaxed mb-4">
 
           Magazine photo booth is a walk-in magazine cover style frame that creates premium celebrity style photos
