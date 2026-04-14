@@ -157,13 +157,9 @@ export default function MagazinePhotoBoothForSale() {
           What is Magazine Photo Booth Setup
         </h2>
         <p className="text-gray-400 leading-relaxed mb-4">
-
           Magazine photo booth is a walk-in magazine cover style frame that creates premium celebrity style photos
-
           for weddings, corporate events and brand activations. This magazine booth setup is designed to attract guests
-
           and generate high engagement content for social media.
-
         </p>
 
 
