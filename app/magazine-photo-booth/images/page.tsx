@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Explore premium magazine photo booth images including wedding magazine booth, vogue style photo booth, magazine cover booth design and luxury event setups. View real event gallery and design inspiration.",
   keywords: [
     "magazine photo booth images",
-    "magazine photo booth design images",
+    "magazine booth images",
     "vogue magazine photo booth images",
     "magazine cover photo booth images",
     "magazine booth images",
