@@ -102,10 +102,7 @@ export default function MagazinePhotoBoothForSale() {
 
       />
 
-
-
       {/* HEADER */}
-
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
 
         <div className="max-w-7xl mx-auto pl-2 py-4 flex items-center justify-between">
@@ -129,7 +126,22 @@ export default function MagazinePhotoBoothForSale() {
         </div>
       </div>
 
+      {/* IMAGE SEO */}
+      <section className="max-w-4xl mx-auto pt-20 px-6">
+        <div className="w-full mx-auto">
+          <Image
+            src="/magazine-photo-booth-corporate-events.webp"
+            alt="magazine photo booth setup for business"
+            width={1200}
+            height={800}
+            sizes="(max-width: 768px) 100vw, 800px"
+            className="rounded-xl border border-white/10 w-full h-auto object-contain"
+            priority
+          />
 
+        </div>
+
+      </section>
 
       {/* HERO */}
 
@@ -169,6 +181,50 @@ export default function MagazinePhotoBoothForSale() {
           The magazine cover booth combines professional lighting, custom typography and instant photo prints
 
           to create a luxury event experience that stands out from traditional photo booths.
+
+        </p>
+
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+
+        <h2 className="text-3xl font-bold mb-6 text-gradient">
+          How Magazine Photo Booth Business Works
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+
+          Magazine photo booth business allows event professionals to offer premium photography experience for weddings, corporate events and brand activations.
+
+          Businesses purchase magazine booth setup once and provide the service multiple times, generating recurring income.
+
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+
+          Guests love magazine cover photos because they create fashion magazine style appearance which increases sharing on social media platforms like Instagram.
+
+        </p>
+
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+
+        <h2 className="text-3xl font-bold mb-6 text-gradient">
+          Profit Potential of Photo Booth Business
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+
+          Photo booth business setup offers strong return on investment because demand is increasing in luxury weddings and premium events.
+
+          Many event planners charge premium pricing for magazine booth experience because it improves event engagement and perceived value.
+
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+
+          With proper marketing and event partnerships, magazine booth business can become a strong revenue generating service.
 
         </p>
 
@@ -279,6 +335,28 @@ export default function MagazinePhotoBoothForSale() {
           <li>QR code integration option</li>
 
         </ul>
+
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+
+        <h2 className="text-3xl font-bold mb-6 text-gradient">
+          Magazine Booth vs Traditional Photo Booth
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed mb-4">
+
+          Traditional photo booths capture photos but magazine booth creates premium brand experience.
+
+          Walk in magazine cover frame creates fashion editorial look which attracts more attention at events.
+
+        </p>
+
+        <p className="text-gray-400 leading-relaxed">
+
+          Magazine booth increases perceived value of event compared to simple selfie booth setup.
+
+        </p>
 
       </section>
 
@@ -404,6 +482,21 @@ export default function MagazinePhotoBoothForSale() {
 
       </section>
 
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+
+        <h2 className="text-3xl font-bold mb-6 text-gradient">
+          Also Known As
+        </h2>
+
+        <p className="text-gray-400 leading-relaxed">
+
+          People search magazine photo booth using different names like magazine booth setup, magazine cover booth, walk in photo booth frame,
+          photo booth business kit, premium photo booth investment, custom magazine booth design, event photo booth business opportunity.
+
+        </p>
+
+      </section>
+
 
 
       {/* CTA */}
@@ -416,28 +509,35 @@ export default function MagazinePhotoBoothForSale() {
 
         </h2>
 
-
-
         <p className="text-gray-400 mb-8">
 
           Secure your magazine photo booth setup and start offering premium event experience.
 
         </p>
 
+        <div className="text-center mb-10">
+
+          <Link href="/" className="text-gold block mb-2">
+            Home
+          </Link>
+
+          <Link href="/pricing" className="text-gold block mb-2">
+            Pricing
+          </Link>
+
+          <Link href="/magazine-photo-booth/images" className="text-gold block">
+            Magazine Booth Images
+          </Link>
+
+        </div>
 
 
         <Link
-
           href="/contact"
-
           className="px-10 py-4 rounded-xl bg-gradient-to-r from-gold to-yellow-300 text-black font-semibold"
-
         >
-
           Get Purchase Details
-
         </Link>
-
       </section>
 
 
