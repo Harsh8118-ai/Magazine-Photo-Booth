@@ -126,7 +126,7 @@ export default function MagazinePhotoBoothForSale() {
         </div>
       </div>
 
-      {/* IMAGE SEO */} 
+      {/* IMAGE SEO */}
       <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">
         <div className="w-full mx-auto">
           <Image
