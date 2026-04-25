@@ -91,7 +91,6 @@ export default function MagazinePhotoBoothForSale() {
 
     <main className="min-h-screen bg-black text-white">
 
-
       <Script
 
         id="faq-schema"
