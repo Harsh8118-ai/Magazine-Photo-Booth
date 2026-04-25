@@ -102,7 +102,7 @@ export default function MagazinePhotoBoothForSale() {
 
       />
 
-      {/* HEADER */}
+      {/* HEADER */}  
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
 
         <div className="max-w-7xl mx-auto pl-2 py-4 flex items-center justify-between">
