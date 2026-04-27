@@ -123,7 +123,7 @@ export default function MagazinePhotoBoothForSale() {
           </p>
           <div className="w-15" />
         </div>
-      </div>
+      </div>  
 
       {/* IMAGE SEO */}   
       <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">
