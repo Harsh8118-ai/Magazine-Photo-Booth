@@ -126,7 +126,7 @@ export default function MagazinePhotoBoothForSale() {
       </div>  
 
       {/* IMAGE SEO */} 
-      <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">
+      <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">  
         <div className="w-full mx-auto">
           <Image
             src="/magazine-photo-booth-corporate-events.webp"
