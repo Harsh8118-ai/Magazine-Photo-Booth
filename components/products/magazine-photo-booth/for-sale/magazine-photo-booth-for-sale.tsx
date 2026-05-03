@@ -97,7 +97,7 @@ export default function MagazinePhotoBoothForSale() {
 
         type="application/ld+json"
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}  
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
 
       />
 
