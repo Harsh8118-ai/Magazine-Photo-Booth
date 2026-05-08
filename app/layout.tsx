@@ -169,11 +169,11 @@ export default function RootLayout({
           }}
         />
 
+        {/* ---GA4 Code  */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7L0PKPVM2S"
           strategy="afterInteractive"
         />
-
         <Script id="ga4-init" strategy="afterInteractive">
           {`
     window.dataLayer = window.dataLayer || [];
@@ -185,6 +185,22 @@ export default function RootLayout({
     });
   `}
         </Script>
+        {/* ------- */}
+
+        {/* ----Clarity Code  */}
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);
+        t.async=1;
+        t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnyjlnbs6f");
+  `}
+        </Script>
+
 
         {/* ---Meta Pixel Code  */}
         <Script id="facebook-pixel" strategy="afterInteractive">
@@ -210,7 +226,7 @@ export default function RootLayout({
 `}
         </Script>
 
-        {/* Fallback for noscript */}  
+        {/* Fallback for noscript */}
         <noscript>
           <img
             height="1"
