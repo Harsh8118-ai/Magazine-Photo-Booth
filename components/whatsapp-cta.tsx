@@ -8,14 +8,28 @@ export function WhatsAppCTA() {
 
   const generateWhatsAppMessage = () => {
     const message = "Hi! I’m interested in booking The Luxury Booths for an upcoming event. Please share availability, packages, and pricing details."
-    return encodeURIComponent(message)  
+    return encodeURIComponent(message)
   }
 
   const generateWhatsAppURL = () => {
-    const phoneNumber = "9266037002" 
+    const phoneNumber = "9266037002"
     const message = generateWhatsAppMessage()
     const utmParams = "utm_source=website&utm_medium=whatsapp&utm_campaign=booking_inquiry"
-    return `https://wa.me/${phoneNumber}?text=${message}&${utmParams}` 
+    return `https://wa.me/${phoneNumber}?text=${message}&${utmParams}`
+  }
+
+  const handleWhatsAppClick = () => {
+    if (window.gtag) {
+      window.gtag("event", "whatsapp_click", {
+        event_category: "engagement",
+        event_label: "floating_whatsapp_button",
+        value: 1,
+      })
+    }
+
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "Contact")
+    }
   }
 
   return (
@@ -28,12 +42,12 @@ export function WhatsAppCTA() {
           </div>
         )}
 
-        <Button 
+        <Button
           asChild
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className="w-12 h-12 sm:w-14 sm:h-14 mb-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 !p-0 hover:scale-110" >
-          <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+          <a href={generateWhatsAppURL()} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" onClick={handleWhatsAppClick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
