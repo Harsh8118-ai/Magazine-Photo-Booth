@@ -252,7 +252,6 @@ export default function RootLayout({
         </noscript>
         {/* Meta Pixel Code---  */}
 
-
       </head>
 
       <body className="bg-black text-white overflow-x-hidden">
