@@ -70,7 +70,7 @@ export default function AboutPage() {
       ],
       pricing: "Starting ₹35,000",
       href: "/magazine-photo-booth",
-      image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
+      image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530206/Products/Magazine.webp",
     },
     {
       id: "mirror-selfie-booth",
@@ -86,7 +86,7 @@ export default function AboutPage() {
       ],
       pricing: "Starting ₹15,000",
       href: "/mirror-selfie-booth",
-      image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
+      image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530221/Products/Mirror.webp",
     },
     {
       id: "vintage-photo-booth",
@@ -102,7 +102,7 @@ export default function AboutPage() {
       ],
       pricing: "Starting ₹30,000 + prints",
       href: "/vintage-photo-booth",
-      image: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
+      image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1771402905/vintage-booth.webp",
     },
   ]
 

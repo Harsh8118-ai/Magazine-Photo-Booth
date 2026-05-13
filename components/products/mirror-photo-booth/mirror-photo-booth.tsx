@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft,Facebook,Instagram,Linkedin,X,Zap } from "lucide-react"
+import { ArrowLeft, Facebook, Instagram, Linkedin, X, Zap } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 import Hero from "./hero"
 import Pricing from "./pricing"
@@ -341,6 +341,7 @@ const MirrorPhotoBooth = () => {
                   alt={image.alt}
                   width={300}
                   height={450}
+                  sizes="(max-width: 768px) 50vw, 182px"
                   className="w-full h-auto rounded-xl"
                   loading="lazy"
                 />

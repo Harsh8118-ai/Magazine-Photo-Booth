@@ -391,7 +391,7 @@ const VintagePhotoBooth = () => {
                   alt={image.alt}
                   width={300}
                   height={450}
-                  sizes="(max-width: 768px) 45vw, 300px"
+                   sizes="(max-width: 768px) 50vw, 182px"
                   className="w-full h-auto rounded-lg"
                   loading="lazy"
                 />

@@ -84,7 +84,7 @@ const products = [
     ],
     pricing: "Starting ₹35,000",
     href: "/magazine-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530206/Products/Magazine.webp",
   },
   {
     id: "mirror-selfie-booth",
@@ -100,7 +100,7 @@ const products = [
     ],
     pricing: "Starting ₹15,000",
     href: "/mirror-selfie-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530221/Products/Mirror.webp",
   },
   {
     id: "vintage-photo-booth",
@@ -116,7 +116,7 @@ const products = [
     ],
     pricing: "Starting ₹30,000 + prints",
     href: "/vintage-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1771402905/vintage-booth.webp",
   },
 ]
 
@@ -282,7 +282,7 @@ export default function ProductsPage() {
                     alt={image.alt}
                     width={300}
                     height={450}
-                    sizes="(max-width: 768px) 45vw, 300px"
+                     sizes="(max-width: 768px) 50vw, 182px"
                     className="w-full h-auto rounded-lg"
                     loading="lazy"
                   />

@@ -39,7 +39,7 @@ const GalleryAndCTA = () => {
                   alt={image.alt}
                   width={300}
                   height={450}
-                  sizes="(max-width: 768px) 45vw, 300px"
+                   sizes="(max-width: 768px) 50vw, 182px"
                   loading="lazy"
                   className="w-full h-auto rounded-lg"
                 />

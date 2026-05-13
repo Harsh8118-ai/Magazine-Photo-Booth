@@ -40,6 +40,7 @@ const Hero = () => {
             alt="Vintage Photo Booth Hero"
             width={350}
             height={450}
+            sizes="(max-width: 768px) 50vw, 182px"
             className="object-contain"
             priority
           />
