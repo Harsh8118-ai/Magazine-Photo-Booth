@@ -16,7 +16,7 @@ export default function CityProductsSection({
       description: "The original luxury magazine photo booth experience with instant cover prints",
       extraLine: `Most booked in ${cityName} for weddings & receptions`,
       icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
-      link: `/magazine-photo-booth`,
+      link: `/magazine-photo-booth/${cityName.toLowerCase()}`,
       features: ["Instant prints", "Magazine covers", "Premium quality"],
     },
     {
@@ -25,7 +25,7 @@ export default function CityProductsSection({
       description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
       extraLine: `Perfect for corporate events & brand activations in ${cityName}`,
       icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
-      link: `/mirror-selfie-booth`,
+      link: `/mirror-selfie-booth/`,
       features: ["Custom text", "LED lighting", "Luxury setup"],
     },
     {
@@ -34,7 +34,7 @@ export default function CityProductsSection({
       description: "Retro wooden booth with DSLR photography and instant prints in 30 seconds",
       extraLine: `Loved for premium venues & celebrations near ${cityName}`,
       icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
-      link: `/vintage-photo-booth`,
+      link: `/vintage-photo-booth/${cityName.toLowerCase()}`,
       features: ["DSLR quality", "Instant prints", "Wooden design"],
     },
   ]

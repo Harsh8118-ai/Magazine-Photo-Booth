@@ -40,7 +40,6 @@ const Pricing = () => {
       <section className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-2 text-center">Choose Your Print Package</h3>
-          <p className="text-amber-300 text-center mb-8">Start with 200 premium prints • Base price - ₹30,000</p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

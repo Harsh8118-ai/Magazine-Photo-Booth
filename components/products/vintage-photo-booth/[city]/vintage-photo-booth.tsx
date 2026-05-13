@@ -7,6 +7,7 @@ import Pricing from "../pricing"
 import WhatsAppButton from "../whatsapp-button"
 import Hero from "../hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
+import FloatingPricingButton from "@/components/floating-pricing-button"
 
 type VintagePhotoBoothCityProps = {
   cityName?: string
@@ -89,7 +90,7 @@ export default function VintagePhotoBoothCity({
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link
-            href="/vintage-photo-booth"
+            href="/products"
             className="flex items-center gap-2 text-amber-500 hover:text-amber-400"
           >
             <ArrowLeft size={20} />
@@ -160,8 +161,260 @@ export default function VintagePhotoBoothCity({
         </div>
       </section>
 
+      {/* Why Vintage Booths Are Trending */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-4 text-balance">
+              Why Vintage Photo Booths Are Trending in {cityName} Weddings
+            </h2>
+
+            <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
+              Modern weddings in {cityName} are moving beyond traditional entertainment.
+              Couples now want experiences that feel emotional, aesthetic, and memorable —
+              and vintage photo booths bring all three together beautifully.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Card 1 */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Aesthetic Wedding Experiences
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Luxury weddings today focus heavily on aesthetics and guest experiences.
+                A vintage booth blends beautifully with rustic, royal, pastel, floral,
+                and heritage-themed wedding decor.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Candid Guest Memories
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Guests naturally interact, laugh, and create genuine moments inside the booth.
+                These candid memories often become some of the most loved photographs from the event.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Instant Print Nostalgia
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Instant printed photographs create a nostalgic feeling that digital galleries cannot replace.
+                Guests leave with a physical memory they can hold, frame, and revisit for years.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Luxury Wedding Keepsakes
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Couples in {cityName} are replacing generic return gifts with meaningful keepsakes.
+                Customized vintage photo prints feel personal, elegant, and emotionally valuable.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+              <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
+                A Social-Media-Worthy Wedding Attraction
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed max-w-4xl">
+                Vintage photo booths are not just functional — they become part of the wedding décor itself.
+                Their handcrafted retro appearance attracts guests naturally and creates highly shareable
+                moments for Instagram stories, reels, and wedding highlights.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Wedding Return Gift Section */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-4 text-balance">
+              Luxury Wedding Return Gift Alternative
+            </h2>
+
+            <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
+              Modern couples are moving beyond traditional wedding favors and choosing meaningful experiences instead.
+              A Vintage Photo Booth gives every guest a personalized printed memory from the celebration —
+              elegant, emotional, and unforgettable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Return Gift Alternative */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                A Modern Alternative to Traditional Return Gifts
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Instead of generic gifts that guests may forget, printed photographs create emotional value
+                because they preserve real memories from your wedding day.
+              </p>
+            </div>
+
+            {/* Luxury Keepsake */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Luxury Wedding Keepsakes
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Customized instant prints feel premium, personal, and timeless —
+                making them one of the most loved keepsakes guests take home from weddings.
+              </p>
+            </div>
+
+            {/* Personalized Memories */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Personalized Guest Memories
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Every print can include wedding names, dates, monograms, or custom themes,
+                making each photograph unique to your celebration.
+              </p>
+            </div>
+
+            {/* Emotional Value */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Memories Guests Actually Preserve
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Unlike decorative favors, guests often keep and frame printed wedding photographs
+                because they hold genuine emotional meaning.
+              </p>
+            </div>
+
+            {/* Closing Statement */}
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+              <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
+                A Wedding Experience Guests Remember Long After the Celebration
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed max-w-4xl">
+                The Vintage Photo Booth is more than entertainment —
+                it becomes part of the emotional memory of your wedding.
+                Guests leave not just with photographs, but with a meaningful keepsake connected to your special day.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
+      <div id="pricing">
       <Pricing />
+      </div>
+
+      {/* Corporate Events Section */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-4 text-balance">
+              Vintage Photo Booth for Corporate Events in {cityName}
+            </h2>
+
+            <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
+              Vintage photo booths are becoming a popular attraction at premium corporate events in {cityName}.
+              From luxury brand launches to employee celebrations, they create memorable guest experiences
+              while adding an elegant visual presence to the event.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Brand Activations */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Brand Activations
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Vintage booths naturally attract crowds and encourage participation,
+                making them ideal for interactive brand activations and audience engagement.
+              </p>
+            </div>
+
+            {/* Employee Engagement */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Employee Engagement
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Corporate parties, annual meets, and office celebrations become more memorable
+                when employees can take home personalized printed photographs from the event.
+              </p>
+            </div>
+
+            {/* Experiential Marketing */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Experiential Marketing
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Modern brands focus heavily on experiences. A vintage booth adds an emotional,
+                interactive layer that guests genuinely remember and share online.
+              </p>
+            </div>
+
+            {/* Luxury Launches */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Luxury Product Launches
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                The handcrafted retro design fits beautifully into luxury launches,
+                premium networking events, hospitality experiences, and VIP gatherings.
+              </p>
+            </div>
+
+            {/* Retro Branding */}
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+              <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
+                Retro Branding That Guests Remember
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed max-w-4xl">
+                Unlike generic event setups, vintage photo booths create a visually distinctive experience.
+                Their retro appearance becomes a conversation point, encourages social sharing,
+                and helps brands leave a stronger emotional impression on attendees.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* FAQ */}
       <section className="py-20 px-4">
@@ -234,6 +487,88 @@ export default function VintagePhotoBoothCity({
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* Instant Prints Section */}
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-4 text-balance">
+              Instant Printed Photographs for Guests
+            </h2>
+
+            <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
+              Every guest receives a beautifully printed photograph within seconds —
+              turning moments from your event into physical memories they can actually keep.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Instant Prints */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Instant Photo Prints
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Guests receive high-quality printed photographs instantly at the event,
+                creating a nostalgic and memorable experience that digital galleries cannot replace.
+              </p>
+            </div>
+
+            {/* Custom Branding */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Custom Branding & Design
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Every print can be customized with event branding, wedding themes,
+                colors, hashtags, logos, and personalized layouts.
+              </p>
+            </div>
+
+            {/* Wedding Names */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Wedding Names & Dates
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                Add the couple’s names, wedding date, or celebration details directly onto the prints
+                to make every photograph feel personal and unique.
+              </p>
+            </div>
+
+            {/* Corporate Logos */}
+            <div className="rounded-2xl border border-amber-700/30 bg-amber-900/20 p-6 backdrop-blur-sm">
+              <h3 className="text-xl font-semibold text-amber-100 mb-3">
+                Corporate Logos & Event Identity
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed">
+                For corporate events and activations, company logos and campaign branding
+                can be added to every print for stronger brand visibility.
+              </p>
+            </div>
+
+            {/* Personalized Memories */}
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+              <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
+                Personalized Memories Guests Actually Keep
+              </h3>
+
+              <p className="text-amber-200/80 leading-relaxed max-w-4xl">
+                Unlike generic return gifts or event souvenirs, printed photographs carry emotional value.
+                Guests often preserve them for years because they capture a real moment shared with friends,
+                family, and loved ones.
+              </p>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -384,6 +719,7 @@ export default function VintagePhotoBoothCity({
         </div>
         <div className="py-9 sm:hidden"><span></span></div>
       </footer>
+      <FloatingPricingButton />
     </main>
   )
 }

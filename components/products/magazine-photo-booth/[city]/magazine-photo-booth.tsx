@@ -6,6 +6,7 @@ import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import MiddleOneSection from "../middle-1.client"
 import MiddleTwoSection from "../middle-2.client"
+import FloatingPricingButton from "@/components/floating-pricing-button"
 
 type MagazinePhotoBoothProps = {
   cityName?: string
@@ -381,7 +382,7 @@ export default function MagazinePhotoBoothCity({
               </div>
             </div>
           </div>
-
+          <FloatingPricingButton />
           <FooterClientTwo />
         </div>
 
@@ -389,15 +390,6 @@ export default function MagazinePhotoBoothCity({
           <span />
         </div>
       </footer>
-
-      <Link
-        href="#pricing"
-        className="sm:hidden fixed right-4 bottom-24 z-50"
-      >
-        <button className="px-5 py-3 rounded-full  glass-enhanced font-semibold shadow-lg hover:scale-105 transition-all neon-glow">
-          View Pricing
-        </button>
-      </Link>
     </main>
   )
 }
