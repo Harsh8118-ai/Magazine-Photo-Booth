@@ -30,7 +30,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://theluxurybooths.com"),
 
-  title: "Luxury Photo Booth Brand for Premium Events in Delhi NCR | The Luxury Booths",
+  title: "Luxury Photo Booth Experience for Premium Events in Delhi NCR | The Luxury Booths",
   description:
     "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror selfie booths, and bespoke luxury setups.",
   alternates: {

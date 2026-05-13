@@ -132,7 +132,7 @@ export async function generateMetadata({
 
   const canonicalSlug = city
 
-  const title = `Photo Booth Rental in ${cityData.name} | The Luxury Booths`
+  const title = `The Luxury Photo Booth Rental Experience in ${cityData.name} | The Luxury Booths`
   const description = `Premium Luxury Photo Booth Experiences in  ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events & VIP parties.`
 
   const canonicalUrl = `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`
