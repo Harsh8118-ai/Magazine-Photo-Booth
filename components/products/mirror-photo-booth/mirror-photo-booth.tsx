@@ -194,7 +194,6 @@ const MirrorPhotoBooth = () => {
             instant premium prints, animations, and social sharing
             makes the magic mirror booth one of the most engaging event experiences today.
           </p>
-
         </div>
 
       </section>
