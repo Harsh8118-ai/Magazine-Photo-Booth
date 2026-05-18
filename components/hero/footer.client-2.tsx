@@ -2,16 +2,6 @@
 import { useState } from "react"
 import dynamic from "next/dynamic"
 
-const GalleryModal = dynamic(
-    () =>
-        import("@/components/gallery-modal").then(
-            (mod) => mod.GalleryModal
-        ),
-    {
-        ssr: false,
-    }
-)
-
 const LegalModal = dynamic(
     () =>
         import("@/components/legal-modal").then(
@@ -23,16 +13,12 @@ const LegalModal = dynamic(
 )
 
 export default function FooterClientTwo() {
-    const [isGalleryOpen, setIsGalleryOpen] = useState(false)
     const [legalModal, setLegalModal] = useState<{ isOpen: boolean; type: "privacy" | "terms" | "cookies" | null }>({
         isOpen: false,
         type: null,
     })
 
-    const galleryImages = Array.from(
-        { length: 12 },
-        (_, index) => `/magazine-photobooth.png?height=400&width=400&query=magazine photo booth event ${index + 1}`,
-    )
+    
 
     const openLegalModal = (type: "privacy" | "terms" | "cookies") => {
         setLegalModal({ isOpen: true, type })
@@ -85,7 +71,6 @@ export default function FooterClientTwo() {
                 </div>
             </div>
 
-            <GalleryModal isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} images={galleryImages} />
             <LegalModal isOpen={legalModal.isOpen} onClose={closeLegalModal} type={legalModal.type!} />
         </>
     )

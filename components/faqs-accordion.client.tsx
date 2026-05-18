@@ -31,7 +31,7 @@ export function FaqAccordionClient({ faqs }: { faqs: FAQ[] }) {
             {openIndex === index && (
               <div className="px-6 pb-6">
                 <div className="border-t border-gray-700 pt-4">
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             )}

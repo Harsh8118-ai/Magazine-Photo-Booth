@@ -80,7 +80,7 @@ const MiddleOneSection = () => {
             </ParallaxSection>
 
             {/* Video Clips Carousel */}
-            <ScrollReveal direction="up" delay={0.2}>
+            {/* <ScrollReveal direction="up" delay={0.2}>
                 <MultiVideoReels
                     title="Our Instagram Reels"
                     videoUrls={[
@@ -94,7 +94,7 @@ const MiddleOneSection = () => {
                     and corporate events in India.
                 </p>
 
-            </ScrollReveal>
+            </ScrollReveal> */}
         </>
     )
 }

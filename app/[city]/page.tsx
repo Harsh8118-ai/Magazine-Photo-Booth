@@ -344,7 +344,7 @@ export default async function CityHomePage({
       <CityProductsSection citySlug={city} cityName={cityData.name} />
 
       {/* Video Clips Carousel */}
-      <div>
+      {/* <div>
         <MultiVideoReels
           title={`Our Instagram Reels (${cityData.name} + More)`}
           videoUrls={[
@@ -353,7 +353,7 @@ export default async function CityHomePage({
             "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
           ]}
         />
-      </div>
+      </div> */}
 
       {/* Event Gallery Section */}
       <SectionWrapper

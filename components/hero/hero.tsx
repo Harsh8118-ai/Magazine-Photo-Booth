@@ -126,7 +126,7 @@ export default function Hero() {
             <ProductsSection />
 
             {/* Video Clips Carousel */}
-            <div>
+            {/* <div>
                 <MultiVideoReels
                     title="Our Instagram Reels"
                     videoUrls={[
@@ -135,7 +135,7 @@ export default function Hero() {
                         "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4"
                     ]}
                 />
-            </div>
+            </div> */}
 
             {/* Event Gallery Section */}
             <SectionWrapper
@@ -159,7 +159,7 @@ export default function Hero() {
                                     alt={image.alt}
                                     width={300}
                                     height={450}
-                                     sizes="(max-width: 768px) 50vw, 182px"
+                                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px"
                                     className="w-full h-auto rounded-lg"
                                     loading="lazy"
                                 />
