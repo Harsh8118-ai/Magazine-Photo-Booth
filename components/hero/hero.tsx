@@ -8,13 +8,11 @@ import ProductsSection from "./product"
 import HeroClient from "./hero.client"
 import { FaqsSection } from "@/components/faqs-section"
 import { Button3D } from "@/components/3d-button"
-import { ParallaxSection } from "@/components/parallax-section"
 import WhatsAppCTA from "@/components/whatsapp-cta.client"
 import { AvailabilityChecker } from "@/components/availability-checker"
 import { TestimonialCarousel } from "@/components/testimonial-carousel"
 import { FloatingNavigation } from "@/components/floating-navigation"
 import MultiVideoReels from "@/components/multi-video-reels.client"
-import Floating3DScene from "@/components/floating-3d-scene.client"
 
 const cities: { slug: string; name: string; state: string }[] = [
     { slug: "delhi-ncr", name: "Delhi NCR", state: "Delhi NCR" },
@@ -66,10 +64,6 @@ export default function Hero() {
                 ariaLabel="Hero section with main heading and call-to-action"
                 className="relative min-h-screen flex items-center justify-center overflow-hidden"
             >
-                {/* Floating Background */}
-                <div className="hidden lg:block">
-                    <Floating3DScene />
-                </div>
 
 
                 {/* Hero Content */}
@@ -183,7 +177,7 @@ export default function Hero() {
             </SectionWrapper>
 
             {/* Why Choose Us Section */}
-            <ParallaxSection speed={0.2}>
+            <div>
                 <SectionWrapper
                     id="why-choose-us-section"
                     ariaLabel="Reasons to choose The Luxury Booths"
@@ -271,7 +265,7 @@ export default function Hero() {
                         </div>
                     </div>
                 </SectionWrapper>
-            </ParallaxSection>
+            </div>
 
             {/* What Our Clients Say */}
             <SectionWrapper
@@ -285,7 +279,7 @@ export default function Hero() {
             </SectionWrapper>
 
             {/* About Us Section */}
-            <ParallaxSection speed={0.3}>
+            <div>
                 <SectionWrapper
                     id="about-section"
                     ariaLabel="Information about Magazine Photo Booth"
@@ -339,7 +333,7 @@ export default function Hero() {
                         </div>
                     </div>
                 </SectionWrapper>
-            </ParallaxSection>
+            </div>
 
             {/* ✅ Available Cities (City Landing Page) */}
             <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
