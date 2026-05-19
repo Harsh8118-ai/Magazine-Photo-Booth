@@ -170,22 +170,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* ---GA4 Code  */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-7L0PKPVM2S"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7L0PKPVM2S', {
-      page_path: window.location.pathname,
-       send_page_view: false
-    });
-  `}
-        </Script>
 
         {/* ---GTM CODE  */}
         <Script id="gtm-script" strategy="afterInteractive">
