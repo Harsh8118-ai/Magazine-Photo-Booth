@@ -5,26 +5,24 @@ import { useEffect } from "react"
 
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void
-    fbq: (...args: any[]) => void
+    dataLayer: Record<string, any>[]
   }
 }
-
-const GA_ID = "G-7L0PKPVM2S"
 
 export function Analytics() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
   useEffect(() => {
-    if (!window.gtag) return
+    window.dataLayer = window.dataLayer || []
 
     const url = searchParams.toString()
-  ? `${pathname}?${searchParams.toString()}`
-  : pathname
+      ? `${pathname}?${searchParams.toString()}`
+      : pathname
 
-    window.gtag("config", GA_ID, {
-      page_path: url,
+    window.dataLayer.push({
+      event: "pageview",
+      page: url,
     })
   }, [pathname, searchParams])
 

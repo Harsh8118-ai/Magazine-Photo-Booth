@@ -1,4 +1,10 @@
 "use client"
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void
+    dataLayer: Record<string, any>[]
+  }
+}
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 
@@ -19,18 +25,17 @@ export function WhatsAppCTA() {
   }
 
   const handleWhatsAppClick = () => {
-    if (window.gtag) {
-      window.gtag("event", "whatsapp_click", {
-        event_category: "engagement",
-        event_label: "floating_whatsapp_button",
-        value: 1,
-      })
-    }
+  window.dataLayer = window.dataLayer || []
 
-    if (typeof window !== "undefined" && typeof window.fbq === "function") {
-      window.fbq("track", "Contact")
-    }
+  window.dataLayer.push({
+    event: "whatsapp_click",
+    button_location: "floating_whatsapp_button",
+  })
+
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "Contact")
   }
+}
 
   return (
     <div className="fixed right-2 sm:right-6 lg:left-6 lg:right-auto z-50 bottom-[calc(1rem+env(safe-area-inset-bottom))] sm:bottom-[calc(2.5rem+env(safe-area-inset-bottom))] lg:bottom-[calc(3rem+env(safe-area-inset-bottom))]" >
