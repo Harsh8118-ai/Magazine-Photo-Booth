@@ -10,7 +10,6 @@ import { SectionWrapper } from "@/components/section-wrapper"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import HeroClient from "@/components/hero/hero.client"
 import { FaqsSection } from "@/components/faqs-section"
-import { Button3D } from "@/components/3d-button"
 import { ParallaxSection } from "@/components/parallax-section"
 import WhatsAppCTA from "@/components/whatsapp-cta.client"
 import { AvailabilityChecker } from "@/components/availability-checker"
@@ -19,6 +18,7 @@ import { FloatingNavigation } from "@/components/floating-navigation"
 import MultiVideoReels from "@/components/multi-video-reels.client"
 import Floating3DScene from "@/components/floating-3d-scene.client"
 import CityProductsSection from "@/components/city-products-section"
+import { MobileNavigation } from "@/components/floating-navigation-mobile"
 
 
 const cities: Record<
@@ -263,7 +263,13 @@ export default async function CityHomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaCity) }}
       />
 
-      <FloatingNavigation sections={navigationSections} />
+      <div className="hidden lg:block">
+        <FloatingNavigation sections={navigationSections} />
+      </div>
+
+      <div className="lg:hidden">
+        <MobileNavigation sections={navigationSections} />
+      </div>
 
       {/* Hero Section */}
       <SectionWrapper
@@ -272,10 +278,6 @@ export default async function CityHomePage({
         ariaLabel="Hero section with main heading and call-to-action"
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* Floating Background */}
-        <div className="hidden lg:block">
-          <Floating3DScene />
-        </div>
 
         {/* Hero Content */}
         <div className={`relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6`}>
@@ -377,7 +379,7 @@ export default async function CityHomePage({
                   alt={image.alt}
                   width={300}
                   height={450}
-                   sizes="(max-width: 768px) 50vw, 182px"
+                  sizes="(max-width: 768px) 50vw, 182px"
                   className="w-full h-auto rounded-lg"
                   loading="lazy"
                 />
@@ -387,20 +389,19 @@ export default async function CityHomePage({
 
           <div className="text-center">
             <a href="/gallery">
-              <Button3D
-                variant="outline"
-                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+              <div
+                className="border-purple-400 rounded-xl border-2 m-auto mx-24 sm:mx-96 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-500 hover:text-black bg-transparent shadow-xs  dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
                 aria-label="View Full Gallery"
               >
                 View Gallery
-              </Button3D>
+              </div>
             </a>
           </div>
         </div>
       </SectionWrapper>
 
       {/* Why Choose Us Section */}
-      <ParallaxSection speed={0.2}>
+      <div>
         <SectionWrapper
           id="why-choose-us-section"
           ariaLabel="Reasons to choose The Luxury Booths"
@@ -496,7 +497,7 @@ export default async function CityHomePage({
             </div>
           </div>
         </SectionWrapper>
-      </ParallaxSection>
+      </div>
 
       {/* What Our Clients Say */}
       <SectionWrapper
@@ -510,7 +511,7 @@ export default async function CityHomePage({
       </SectionWrapper>
 
       {/* About Us Section */}
-      <ParallaxSection speed={0.3}>
+      <div>
         <SectionWrapper
           id="about-section"
           ariaLabel="Information about Magazine Photo Booth"
@@ -568,7 +569,7 @@ export default async function CityHomePage({
             </div>
           </div>
         </SectionWrapper>
-      </ParallaxSection>
+      </div>
 
       {/* ✅ Available Cities (City Landing Page) */}
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">

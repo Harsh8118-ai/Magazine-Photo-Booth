@@ -1,94 +1,37 @@
-"use client"
-import { useState, useEffect, useRef } from "react"
-import dynamic from "next/dynamic"
 import { Calendar, Package } from "lucide-react"
 
-const AnimatedCounter = dynamic(
-    () =>
-        import("@/components/animated-counter").then(
-            (mod) => mod.AnimatedCounter
-        ),
-    {
-        ssr: false,
-        loading: () => <div className="h-20" />,
-    }
-)
 
-const Button3D = dynamic(
-    () =>
-        import("@/components/3d-button").then(
-            (mod) => mod.Button3D
-        ),
-    {
-        ssr: false,
-    }
-)
+
 
 export default function HeroClient() {
-    const [load3D, setLoad3D] = useState(false)
 
-    useEffect(() => {
-        if ("requestIdleCallback" in window) {
-            requestIdleCallback(() => setLoad3D(true))
-        } else {
-            setTimeout(() => setLoad3D(true), 2000)
-        }
-    }, [])
+    const buttonBase =
+        "relative overflow-hidden transition-all duration-300 ease-out rounded-md inline-flex items-center justify-center transform-gpu"
 
-    const [startCount, setStartCount] = useState(false)
-    const statsRef = useRef<HTMLDivElement | null>(null)
+    const buttonEffect =
+        "glass border-2 border-white/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-600/20 before:to-blue-600/20 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:to-transparent after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100 hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setStartCount(true)
-                    observer.disconnect()
-                }
-            },
-            { threshold: 0.4 }
-        )
-
-        if (statsRef.current) observer.observe(statsRef.current)
-
-        return () => observer.disconnect()
-    }, [])
-
-
-
-    const scrollToSection = (sectionId: string) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" })
-        }
-    }
+    const buttonSize =
+        "text-base sm:text-lg px-6 sm:px-8 py-3 font-semibold"
 
     return (
         <>
-           
-
-            {/* Stats Bar - Improved mobile responsiveness and SEO */}
             <div
-                ref={statsRef}
                 className="glass-enhanced rounded-2xl p-4 sm:p-6 max-w-3xl mx-auto"
                 role="region"
                 aria-label="Company statistics"
             >
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
                     <div>
-                        {startCount && (
-                            <AnimatedCounter end={12500}
-                                duration={1800}
-                                suffix="+" className="text-2xl sm:text-3xl font-bold text-gold mb-2" />
-                        )}
+                        <span
+                            className="text-2xl sm:text-3xl font-bold text-gold mb-2"
+                        > +1200</span>
                         <div className="text-xs sm:text-sm text-gray-400">Magazine Covers Printed</div>
                     </div>
                     <div>
-                        {startCount && (
-                            <AnimatedCounter end={250}
-                                duration={1800}
-                                suffix="+" className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2" />
-                        )}
+                        <span className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">
+                            +250
+                        </span>
                         <div className="text-xs sm:text-sm text-gray-400">Successful Events</div>
                     </div>
                     <div>
@@ -98,26 +41,30 @@ export default function HeroClient() {
                 </div>
             </div>
 
-             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <Button3D
-                    size="lg"
-                    onClick={() => scrollToSection("features-section")}
-                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+
+                <a href="/#features-section">
+                <button
                     aria-label="Book your The Luxury Booth now"
+                    className={`${buttonBase} ${buttonEffect} ${buttonSize} bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700`}
                 >
-                    <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    Book Now
-                </Button3D>
-                <Button3D
-                    variant="outline"
-                    size="lg"
-                    onClick={() => scrollToSection("products")}
-                    className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-semibold border-gold text-gold hover:bg-gold hover:text-black bg-transparent"
+                    <span className="relative z-10 flex items-center">
+                        <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                        Book Now
+                    </span>
+                </button></a>
+
+                <a href="/#products">
+                <button
                     aria-label="View our packages and pricing"
+                    className={`${buttonBase} ${buttonEffect} ${buttonSize} border-gold text-gold hover:bg-gold hover:text-black bg-transparent`}
                 >
-                    <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    See Packages
-                </Button3D>
+                    <span className="relative z-10 flex items-center">
+                        <Package className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+                        See Packages
+                    </span>
+                </button></a>
+
             </div>
         </>
     )

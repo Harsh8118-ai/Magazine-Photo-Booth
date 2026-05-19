@@ -176,45 +176,6 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-40 lg:hidden">
-        <div className="glass-enhanced rounded-2xl p-2 flex space-x-2 backdrop-blur-xl border border-white/10">
-          {sections.slice(0, 5).map((section) => {
-            const Icon = ICON_MAP[section.icon]
-            const isActive = activeSection === section.id && !section.isExternal
-
-            if (section.isExternal && section.href) {
-              return (
-                <Link key={section.id} href={section.href}>
-                  <button className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 hover:bg-white/10">
-                    <Icon className="h-4 w-4 text-gray-400 hover:text-purple-400" />
-                  </button>
-                </Link>
-              )
-            }
-
-            return (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                  isActive ? "bg-gradient-to-r from-purple-600 to-blue-600 neon-glow" : "hover:bg-white/10"
-                }`}
-              >
-                <Icon className={`h-4 w-4 ${isActive ? "text-white" : "text-gray-400"}`} />
-              </button>
-            )
-          })}
-
-          <button
-            onClick={() => setShowCommandPalette(true)}
-            className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300 border-l border-white/10 ml-2 pl-2"
-          >
-            <Command className="h-4 w-4 text-gray-400" />
-          </button>
-        </div>
-      </nav>
-
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}

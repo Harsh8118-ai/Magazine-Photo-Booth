@@ -7,12 +7,12 @@ import FooterClientTwo from "./footer.client-2"
 import ProductsSection from "./product"
 import HeroClient from "./hero.client"
 import { FaqsSection } from "@/components/faqs-section"
-import { Button3D } from "@/components/3d-button"
 import WhatsAppCTA from "@/components/whatsapp-cta.client"
 import { AvailabilityChecker } from "@/components/availability-checker"
 import { TestimonialCarousel } from "@/components/testimonial-carousel"
 import { FloatingNavigation } from "@/components/floating-navigation"
 import MultiVideoReels from "@/components/multi-video-reels.client"
+import { MobileNavigation } from "../floating-navigation-mobile";
 
 const cities: { slug: string; name: string; state: string }[] = [
     { slug: "delhi-ncr", name: "Delhi NCR", state: "Delhi NCR" },
@@ -55,7 +55,13 @@ export default function Hero() {
 
     return (
         <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
-            <FloatingNavigation sections={navigationSections} />
+            <div className="hidden lg:block">
+                <FloatingNavigation sections={navigationSections} />
+            </div>
+
+            <div className="lg:hidden">
+                <MobileNavigation sections={navigationSections} />
+            </div>
 
             {/* Hero Section */}
             <SectionWrapper
@@ -64,7 +70,6 @@ export default function Hero() {
                 ariaLabel="Hero section with main heading and call-to-action"
                 className="relative min-h-screen flex items-center justify-center overflow-hidden"
             >
-
 
                 {/* Hero Content */}
                 <div className={`relative z-20 text-center max-w-4xl mx-auto px-4 sm:px-6`}>
@@ -117,7 +122,9 @@ export default function Hero() {
             </SectionWrapper>
 
             {/* Products Section  */}
+            <div id="products">
             <ProductsSection />
+            </div>
 
             {/* Video Clips Carousel */}
             {/* <div>
@@ -163,13 +170,13 @@ export default function Hero() {
 
                     <div className="text-center">
                         <a href="/gallery">
-                            <Button3D
-                                variant="outline"
-                                className="border-purple-400 px-10 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-400 hover:text-black bg-transparent"
+                            <div
+                                
+                                className="border-purple-400 rounded-xl border-2 m-auto mx-24 sm:mx-96 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-500 hover:text-black bg-transparent shadow-xs  dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
                                 aria-label="View Full Gallery"
                             >
                                 View Gallery
-                            </Button3D>
+                            </div>
                         </a>
                     </div>
 
@@ -208,7 +215,7 @@ export default function Hero() {
                                                 key={index}
                                             >
                                                 <div className="flex items-start space-x-4">
-                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center flex-shrink-0">
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
                                                         <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
                                                     </div>
                                                     <div>
@@ -237,7 +244,7 @@ export default function Hero() {
 
                             <div>
                                 <div className="relative">
-                                    <div className="glass-enhanced rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
+                                    <div className="glass-enhanced-mobile rounded-2xl p-6 sm:p-8 scale-on-hover gpu-accelerated">
                                         <Image
                                             src="/photo-booth-team.webp"
                                             alt="Our team in action"
@@ -295,7 +302,7 @@ export default function Hero() {
                                         width={208}
                                         height={208}
                                         loading="lazy"
-                                        className="w-full sm:w-80 h-full object-cover rounded-2xl glass-enhanced"
+                                        className="w-full sm:w-80 h-full object-cover rounded-2xl glass-enhanced-mobile"
                                     />
                                 </div>
                             </div>
@@ -352,7 +359,7 @@ export default function Hero() {
                             <Link
                                 key={city.slug}
                                 href={`/photo-booth-rental-in-${city.slug}`}
-                                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
+                                className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 text-sm sm:text-base"
                             >
                                 {city.name} <span className="text-gray-400">({city.state})</span>
                             </Link>
@@ -405,7 +412,7 @@ export default function Hero() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={`Visit our ${social.name} page`}
-                                        className={`w-10 h-10 glass rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer hover:neon-glow ${social.color}`}
+                                        className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
                                     >
                                         {social.icon}
                                     </a>
