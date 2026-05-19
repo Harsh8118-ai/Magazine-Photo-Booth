@@ -125,7 +125,7 @@ const MirrorPhotoBooth = () => {
       </div>
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-900/20 to-transparent">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-purple-900/20 to-transparent">
 
         <div className="max-w-6xl mx-auto">
 
@@ -174,7 +174,7 @@ const MirrorPhotoBooth = () => {
       </section>
 
       {/* Why Trending */}
-      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-purple-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 bg-linear-to-b from-purple-900/10 to-transparent">
 
         <div className="max-w-5xl mx-auto text-center">
 
@@ -226,7 +226,7 @@ const MirrorPhotoBooth = () => {
       </section>
 
       {/* Story */}
-      <section className="py-12 sm:py-20 px-4 bg-gradient-to-r from-purple-900/20 via-transparent to-purple-900/20">
+      <section className="py-12 sm:py-20 px-4 bg-linear-to-r from-purple-900/20 via-transparent to-purple-900/20">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -253,7 +253,7 @@ const MirrorPhotoBooth = () => {
       <Pricing />
 
       {/* FAQ */}
-      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-purple-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 bg-linear-to-b from-purple-900/10 to-transparent">
 
         <div className="max-w-4xl mx-auto">
 
@@ -355,7 +355,7 @@ const MirrorPhotoBooth = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-12 sm:py-20 px-4 bg-gradient-to-t from-purple-900/20 to-transparent">
+      <section className="py-12 sm:py-20 px-4 bg-linear-to-t from-purple-900/20 to-transparent">
 
         <div className="max-w-2xl mx-auto text-center">
 

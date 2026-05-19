@@ -160,7 +160,7 @@ export default function MagazinePhotoBoothImages() {
 
               ${activeCategory === cat
 
-                  ? "bg-gradient-to-r from-gold to-yellow-300 text-black shadow-lg"
+                  ? "bg-linear-to-r from-gold to-yellow-300 text-black shadow-lg"
 
                   : "border border-white/20 text-gray-300 hover:border-gold hover:text-white"
 
@@ -331,7 +331,7 @@ export default function MagazinePhotoBoothImages() {
 
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+      <section className="py-20 px-6 bg-linear-to-b from-transparent via-gold/10 to-transparent">
 
       <div className="max-w-7xl mx-auto">
 
@@ -403,7 +403,7 @@ export default function MagazinePhotoBoothImages() {
 
           <Link
             href="/products"
-            className="px-8 py-3 rounded-xl bg-gradient-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition"
+            className="px-8 py-3 rounded-xl bg-linear-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition"
           >
 
             View All Booths

@@ -25,7 +25,7 @@ export default function EventClient({ eventId }: { eventId: string }) {
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* ✅ Header */}
-      <header className="sticky top-0 z-50 bg-gradient-to-b from-purple-600/20 to-black border-b border-gray-800 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 bg-linear-to-b from-purple-600/20 to-black border-b border-gray-800 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
           <Link
             href="/gallery"
@@ -75,7 +75,7 @@ export default function EventClient({ eventId }: { eventId: string }) {
               className="group cursor-pointer glass-enhanced rounded-2xl border border-white/10 overflow-hidden hover:border-gold/30 transition-all"
             >
               {/* ✅ Portrait friendly container */}
-              <div className="relative aspect-[3/4] w-full bg-black/30">
+              <div className="relative aspect-3/4 w-full bg-black/30">
                 <Image
                   src={moment.url || "/placeholder.svg"}
                   alt={moment.title}
@@ -133,7 +133,7 @@ export default function EventClient({ eventId }: { eventId: string }) {
 
       {/* ✅ Download Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16 border-t border-white/5">
-        <div className="glass-enhanced border border-purple-500/40 rounded-2xl p-6 sm:p-10 text-center bg-gradient-to-r from-purple-600/15 to-purple-600/5">
+        <div className="glass-enhanced border border-purple-500/40 rounded-2xl p-6 sm:p-10 text-center bg-linear-to-r from-purple-600/15 to-purple-600/5">
           <h2 className="text-xl sm:text-2xl font-bold mb-3">
             Download All Event Photos
           </h2>
@@ -158,7 +158,7 @@ export default function EventClient({ eventId }: { eventId: string }) {
 
       {/* ✅ Final CTA: Book Us */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-white/5">
-        <div className="glass-enhanced border border-white/10 rounded-2xl p-6 sm:p-10 text-center bg-gradient-to-r from-black via-purple-600/10 to-purple-600/20">
+        <div className="glass-enhanced border border-white/10 rounded-2xl p-6 sm:p-10 text-center bg-linear-to-r from-black via-purple-600/10 to-purple-600/20">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white">
             Book Us for Your Next Event
           </h2>

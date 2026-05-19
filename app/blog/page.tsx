@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <div className="container mx-auto w-full px-4 py-16 bg-gradient-to-r from-black via-neutral-900 to-black">
+      <div className="container mx-auto w-full px-4 py-16 bg-linear-to-r from-black via-neutral-900 to-black">
         <div className="max-w-6xl mx-auto">
 
           {/* Page Header */}
@@ -103,7 +103,7 @@ export default function BlogPage() {
 
                 <Link href="/blog/about-the-luxury-booths">
 
-                  <button className="bg-gradient-to-r from-gold to-amber-600 hover:from-amber-600 hover:to-gold px-6 py-3 rounded-lg font-semibold transition-colors">
+                  <button className="bg-linear-to-r from-gold to-amber-600 hover:from-amber-600 hover:to-gold px-6 py-3 rounded-lg font-semibold transition-colors">
                     Read Article
                   </button>
 

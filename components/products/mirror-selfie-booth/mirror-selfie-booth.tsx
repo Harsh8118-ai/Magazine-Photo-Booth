@@ -48,7 +48,7 @@ const MirrorSelfieBooth = () => {
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-transparent opacity-50" />
+        <div className="absolute inset-0 bg-linear-to-b from-purple-900/20 to-transparent opacity-50" />
 
         <div className="max-w-6xl mx-auto relative z-10 animate-fade-up">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 sm:mb-6 text-center text-balance">
@@ -80,7 +80,7 @@ const MirrorSelfieBooth = () => {
 
               {/* Right: Text */}
               <div className="w-full flex justify-center animate-fade-right">
-                <div className="bg-gradient-to-r from-gold/10 via-purple-900/20 to-gold/10 p-8 sm:p-10 rounded-2xl shadow-lg max-w-xl text-center">
+                <div className="bg-linear-to-r from-gold/10 via-purple-900/20 to-gold/10 p-8 sm:p-10 rounded-2xl shadow-lg max-w-xl text-center">
                   <p className="text-3xl sm:text-4xl font-display font-bold text-gold mb-6">
                     "Where Every Moment Becomes Iconic"
                   </p>
@@ -103,7 +103,7 @@ const MirrorSelfieBooth = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-2 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent">
+      <section className="py-2 sm:py-6 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-purple-900/10 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
             Premium Features
@@ -128,7 +128,7 @@ const MirrorSelfieBooth = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-purple-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-purple-900/10 to-transparent">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-8">
             Premium Pricing

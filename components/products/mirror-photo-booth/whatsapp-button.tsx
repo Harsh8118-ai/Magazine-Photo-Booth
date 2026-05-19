@@ -29,7 +29,7 @@ const WhatsAppCTA = ({
   return (
     <button
       onClick={sendWhatsAppBookingMessage}
-      className="w-full px-6 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white font-bold hover:scale-[1.02] transition-all"
+      className="w-full px-6 py-4 rounded-xl bg-linear-to-r from-purple-500 to-fuchsia-500 text-white font-bold hover:scale-[1.02] transition-all"
     >
       Book Mirror Booth Now
     </button>

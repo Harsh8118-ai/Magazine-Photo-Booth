@@ -43,7 +43,7 @@ export default function CityProductsSection({
     <SectionWrapper
       id="products"
       ariaLabel="Photo booth products showcase"
-      className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+      className="reveal visible reveal-up reveal-delay-2 py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-4 text-gradient">

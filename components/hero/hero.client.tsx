@@ -9,7 +9,7 @@ export default function HeroClient() {
         "relative overflow-hidden transition-all duration-300 ease-out rounded-md inline-flex items-center justify-center transform-gpu"
 
     const buttonEffect =
-        "glass border-2 border-white/20 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-600/20 before:to-blue-600/20 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:to-transparent after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100 hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
+        "glass border-2 border-white/20 before:absolute before:inset-0 before:bg-linear-to-r before:from-purple-600/20 before:to-blue-600/20 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 after:absolute after:inset-0 after:bg-linear-to-r after:from-white/10 after:to-transparent after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100 hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
 
     const buttonSize =
         "text-base sm:text-lg px-6 sm:px-8 py-3 font-semibold"
@@ -46,7 +46,7 @@ export default function HeroClient() {
                 <a href="/#features-section">
                 <button
                     aria-label="Book your The Luxury Booth now"
-                    className={`${buttonBase} ${buttonEffect} ${buttonSize} bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700`}
+                    className={`${buttonBase} ${buttonEffect} ${buttonSize} bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700`}
                 >
                     <span className="relative z-10 flex items-center">
                         <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />

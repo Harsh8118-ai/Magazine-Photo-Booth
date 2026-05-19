@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
     return (
         <button
             onClick={sendWhatsAppBookingMessage}
-            className="w-full block text-center px-6 py-3 bg-gradient-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
+            className="w-full block text-center px-6 py-3 bg-linear-to-r from-gold to-yellow-300 text-black font-bold rounded-lg hover:shadow-lg hover:shadow-gold/50 transition-all transform hover:scale-105"
         >
             Book Now
         </button>

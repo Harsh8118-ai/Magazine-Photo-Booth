@@ -4,7 +4,7 @@ import { Calendar, Clock, User, Star, Camera, Sparkles, BarChart3, Building2 } f
 
 const BlogBrandedEventActivations = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-neutral-950 to-neutral-900">
+    <div className="min-h-screen bg-linear-to-r from-neutral-950 to-neutral-900">
 
       {/* Schema */}
       <script
@@ -43,7 +43,7 @@ const BlogBrandedEventActivations = () => {
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Branded Event Activations in
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
               Delhi NCR
             </span>
           </h1>

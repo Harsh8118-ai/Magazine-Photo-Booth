@@ -113,7 +113,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 bg-black/20 z-50">
         <div
-          className="h-full bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300"
+          className="h-full bg-linear-to-r from-purple-600 to-blue-600 transition-all duration-300"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -148,7 +148,7 @@ export function FloatingNavigation({ sections }: FloatingNavigationProps) {
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
                 className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group relative ${
-                  isActive ? "bg-gradient-to-r from-purple-600 to-blue-600 neon-glow" : "hover:bg-white/10"
+                  isActive ? "bg-linear-to-r from-purple-600 to-blue-600 neon-glow" : "hover:bg-white/10"
                 }`}
                 title={section.label}
               >

@@ -3,7 +3,7 @@ import { Calendar, Clock, User, Star, Camera, Sparkles, TrendingUp } from "lucid
 
 const BlogMagazineWeddingTrend = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+    <div className="min-h-screen bg-linear-to-r from-purple-900/20 to-blue-900/20">
 
       {/* Schema Markup */}
       <script
@@ -49,7 +49,7 @@ const BlogMagazineWeddingTrend = () => {
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Why the Magazine Photo Booth is{" "}
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
               the #1 Wedding Trend in India for 2026
             </span>
           </h1>

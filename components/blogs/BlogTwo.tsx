@@ -4,7 +4,7 @@ import { Calendar, Clock, User, Star, Camera, Sparkles, Crown } from "lucide-rea
 
 const BlogLuxuryPhotoBoothIdeas = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+    <div className="min-h-screen bg-linear-to-r from-purple-900/20 to-blue-900/20">
 
       {/* Schema Markup */}
       <script
@@ -42,7 +42,7 @@ const BlogLuxuryPhotoBoothIdeas = () => {
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Best Photo Booth Ideas
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
               for Luxury Weddings
             </span>
           </h1>

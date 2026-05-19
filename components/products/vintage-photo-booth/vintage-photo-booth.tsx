@@ -93,7 +93,7 @@ const VintagePhotoBooth = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/20 to-transparent">
+      <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/20 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold mb-4 text-amber-100 text-center text-balance">
             Vintage Photo Booth with Instant Prints <br /><span className="text-2xl sm:text-2xl lg:text-3xl"> - A Luxury Return Gift for Wedding Guests</span>
@@ -118,7 +118,7 @@ const VintagePhotoBooth = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Product Features</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,7 +156,7 @@ const VintagePhotoBooth = () => {
       </section>
 
       {/* Why Vintage Booths Are Trending */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -223,7 +223,7 @@ const VintagePhotoBooth = () => {
             </div>
 
             {/* Card 5 */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 A Social-Media-Worthy Wedding Attraction
               </h3>
@@ -240,7 +240,7 @@ const VintagePhotoBooth = () => {
       </section>
 
       {/* Wedding Return Gift Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -306,7 +306,7 @@ const VintagePhotoBooth = () => {
             </div>
 
             {/* Closing Statement */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 A Wedding Experience Guests Remember Long After the Celebration
               </h3>
@@ -329,7 +329,7 @@ const VintagePhotoBooth = () => {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-serif font-bold text-amber-100 mb-8 text-center">Frequently Asked Questions</h3>
 
@@ -402,7 +402,7 @@ const VintagePhotoBooth = () => {
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 via-amber-800/20 to-amber-900/20">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-amber-900/20 via-amber-800/20 to-amber-900/20">
         <div
           className="max-w-3xl mx-auto text-center"
         >
@@ -425,7 +425,7 @@ const VintagePhotoBooth = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-amber-900/20 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-t from-amber-900/20 to-transparent">
         <div
           className="max-w-2xl mx-auto text-center"
         >

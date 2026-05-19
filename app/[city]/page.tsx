@@ -320,7 +320,7 @@ export default async function CityHomePage({
       <SectionWrapper
         id="features-section"
         ariaLabel="Interactive features to try before booking"
-        className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-center mb-12 sm:mb-16 text-gradient">
@@ -403,7 +403,7 @@ export default async function CityHomePage({
         <SectionWrapper
           id="why-choose-us-section"
           ariaLabel="Reasons to choose The Luxury Booths"
-          className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+          className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-r from-purple-900/20 to-blue-900/20"
         >
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
@@ -501,7 +501,7 @@ export default async function CityHomePage({
       <SectionWrapper
         id="testimonials-section"
         ariaLabel="Customer testimonials and reviews"
-        className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-purple-900/20 to-blue-900/20"
+        className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-r from-purple-900/20 to-blue-900/20"
       >
         <div className="max-w-7xl mx-auto">
           <TestimonialCarousel />
@@ -570,7 +570,7 @@ export default async function CityHomePage({
       </div>
 
       {/* ✅ Available Cities (City Landing Page) */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-gold/10 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
             Luxury Photo Booth Rental by City
@@ -605,7 +605,7 @@ export default async function CityHomePage({
       <SectionWrapper
         id="faq-section"
         ariaLabel="Frequently asked questions and logistics information"
-        className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+        className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900"
       >
         <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
           {/* ✅ Keep your existing FAQ component */}

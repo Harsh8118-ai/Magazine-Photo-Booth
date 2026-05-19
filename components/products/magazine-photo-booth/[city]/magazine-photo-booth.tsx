@@ -79,7 +79,7 @@ export default function MagazinePhotoBoothCity({
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gold/20 to-transparent opacity-50" />
+        <div className="absolute inset-0 bg-linear-to-b from-gold/20 to-transparent opacity-50" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* ✅ Dynamic H1 with City */}
@@ -97,7 +97,7 @@ export default function MagazinePhotoBoothCity({
           </p>
 
           {/* Use Cases Section */}
-          <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+          <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-gold/10 to-transparent">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-start sm:gap-12 lg:gap-20">
               {/* Left Image */}
               <div className="w-full sm:w-auto flex justify-center sm:justify-start mb-8 sm:mb-0">
@@ -187,7 +187,7 @@ export default function MagazinePhotoBoothCity({
       </section>
 
       {/* Quote Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gold/10 via-transparent to-gold/10">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-gold/10 via-transparent to-gold/10">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
           <p className="text-3xl sm:text-4xl font-display font-bold text-gold mb-6 text-balance">
             "Step Inside. Become the Cover Star."
@@ -201,7 +201,7 @@ export default function MagazinePhotoBoothCity({
       </section>
 
       {/* Features Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-gold/10 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-12 text-center text-gradient">
             Why Choose Our Magazine Booth
@@ -231,7 +231,7 @@ export default function MagazinePhotoBoothCity({
       </div>
 
       {/* Avaiable Cities  */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-transparent via-gold/10 to-transparent">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
             Available in These Cities

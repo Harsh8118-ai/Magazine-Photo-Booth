@@ -233,7 +233,7 @@ export function AdvancedBookingSystem() {
                 eventDetails: "",
               })
             }}
-            className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+            className="bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
           >
             Submit Another Inquiry
           </Button3D>
@@ -448,7 +448,7 @@ export function AdvancedBookingSystem() {
                   placeholder="Tell us about your event, venue details, theme, special requirements, or any questions you have..."
                   value={inquiryData.eventDetails}
                   onChange={(e) => handleInputChange("eventDetails", e.target.value)}
-                  className="glass border-gold/30 text-white  min-h-[120px]"
+                  className="glass border-gold/30 text-white  min-h-30"
                 />
               </div>
 
@@ -530,7 +530,7 @@ export function AdvancedBookingSystem() {
                     <Button3D
                       onClick={handleSubmitInquiry}
                       disabled={!isFormValid() || isSubmitting}
-                      className="w-full bg-gradient text-lg py-3"
+                      className="w-full bg-linear text-lg py-3"
                     >
                       <Lock className="mr-2 h-5 w-5 text-gold" />
                       {isSubmitting ? "Submitting..." : "Lock This Date"}

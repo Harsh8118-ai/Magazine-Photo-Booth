@@ -104,7 +104,7 @@ export default function VintagePhotoBoothCity({
       </div>
 
       {/* Hero */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-to-b from-amber-900/20 to-transparent">
+      <section className="pt-24 pb-16 px-4 bg-linear-to-b from-amber-900/20 to-transparent">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl sm:text-6xl font-serif font-bold text-amber-100 mb-4">
             Vintage Photo Booth Rental in {cityName}
@@ -162,7 +162,7 @@ export default function VintagePhotoBoothCity({
       </section>
 
       {/* Why Vintage Booths Are Trending */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -229,7 +229,7 @@ export default function VintagePhotoBoothCity({
             </div>
 
             {/* Card 5 */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 A Social-Media-Worthy Wedding Attraction
               </h3>
@@ -246,7 +246,7 @@ export default function VintagePhotoBoothCity({
       </section>
 
       {/* Wedding Return Gift Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -312,7 +312,7 @@ export default function VintagePhotoBoothCity({
             </div>
 
             {/* Closing Statement */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 A Wedding Experience Guests Remember Long After the Celebration
               </h3>
@@ -334,7 +334,7 @@ export default function VintagePhotoBoothCity({
       </div>
 
       {/* Corporate Events Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -400,7 +400,7 @@ export default function VintagePhotoBoothCity({
             </div>
 
             {/* Retro Branding */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 Retro Branding That Guests Remember
               </h3>
@@ -491,7 +491,7 @@ export default function VintagePhotoBoothCity({
       </section>
 
       {/* Instant Prints Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-900/10 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-amber-900/10 to-transparent">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
@@ -556,7 +556,7 @@ export default function VintagePhotoBoothCity({
             </div>
 
             {/* Personalized Memories */}
-            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-gradient-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
+            <div className="md:col-span-2 rounded-2xl border border-amber-700/30 bg-linear-to-r from-amber-900/30 to-amber-800/20 p-6 sm:p-8">
               <h3 className="text-2xl font-serif font-bold text-amber-100 mb-4">
                 Personalized Memories Guests Actually Keep
               </h3>
@@ -572,7 +572,7 @@ export default function VintagePhotoBoothCity({
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 via-amber-800/20 to-amber-900/20">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-amber-900/20 via-amber-800/20 to-amber-900/20">
         <div
           className="max-w-3xl mx-auto text-center"
         >
@@ -595,7 +595,7 @@ export default function VintagePhotoBoothCity({
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-amber-900/20 to-transparent">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-t from-amber-900/20 to-transparent">
         <div
           className="max-w-2xl mx-auto text-center"
         >

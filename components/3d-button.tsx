@@ -79,9 +79,9 @@ export function Button3D({
       className={cn(
         "relative overflow-hidden transition-all duration-300 ease-out",
         "glass border-2 border-white/20",
-        "before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-600/20 before:to-blue-600/20 before:opacity-0 before:transition-opacity before:duration-300",
+        "before:absolute before:inset-0 before:bg-linear-to-r before:from-purple-600/20 before:to-blue-600/20 before:opacity-0 before:transition-opacity before:duration-300",
         "hover:before:opacity-100",
-        "after:absolute after:inset-0 after:bg-gradient-to-r after:from-white/10 after:to-transparent after:opacity-0 after:transition-opacity after:duration-300",
+        "after:absolute after:inset-0 after:bg-linear-to-r after:from-white/10 after:to-transparent after:opacity-0 after:transition-opacity after:duration-300",
         "hover:after:opacity-100",
         !prefersReducedMotion && "transform-gpu",
         className,

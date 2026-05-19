@@ -3,7 +3,7 @@ import { Calendar, Clock, User, Star, Camera, Sparkles, Shield } from "lucide-re
 
 const BlogLuxuryBooths = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+    <div className="min-h-screen bg-linear-to-r from-purple-900/20 to-blue-900/20">
 
       {/* Schema Markup */}
       <script
@@ -43,7 +43,7 @@ const BlogLuxuryBooths = () => {
           {/* Optimized H1 */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             The Luxury Booths:
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
               Redefining Photo Booth Experiences in India
             </span>
           </h1>

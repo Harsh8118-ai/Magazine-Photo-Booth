@@ -16,7 +16,7 @@ const packages = [
     tag: "Starter",
     border: "border-white/10",
     buttonStyle:
-      "bg-gradient-to-r from-gold to-yellow-300 text-black hover:shadow-lg hover:shadow-gold/20",
+      "bg-linear-to-r from-gold to-yellow-300 text-black hover:shadow-lg hover:shadow-gold/20",
     highlights: [
       "Luxury Magazine Photo Booth Setup",
       "Premium lighting + professional backdrop setup",
@@ -34,7 +34,7 @@ const packages = [
     tag: "Most Booked",
     border: "border-gold/40",
     buttonStyle:
-      "bg-gradient-to-r from-gold to-yellow-300 text-black hover:shadow-lg hover:shadow-gold/25",
+      "bg-linear-to-r from-gold to-yellow-300 text-black hover:shadow-lg hover:shadow-gold/25",
     highlights: [
       "Everything included in Magazine Booth Setup",
       "Professional Photographer Included",
@@ -53,7 +53,7 @@ const packages = [
     tag: "Luxury",
     border: "border-purple-500/40",
     buttonStyle:
-      "bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:opacity-90 hover:shadow-[0_0_35px_rgba(168,85,247,0.28)]",
+      "bg-linear-to-r from-purple-500 to-blue-500 text-white hover:opacity-90 hover:shadow-[0_0_35px_rgba(168,85,247,0.28)]",
     highlights: [
       "Everything included in Setup + Photography",
       "200 Instant Premium Prints Included",
@@ -79,7 +79,7 @@ export default function WhatsAppButton() {
   }
 
   return (
-    <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">

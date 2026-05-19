@@ -133,7 +133,7 @@ const galleryImages = [
 
 export default function ProductsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
+    <main className="min-h-screen bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* ✅ Fixed Header (Back Button + Page Title) */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-3">
@@ -183,7 +183,7 @@ export default function ProductsPage() {
               >
                 <Link href={product.href} className="block h-full">
                   {/* Product Image */}
-                  <div className="relative aspect-[3/4] w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
+                  <div className="relative aspect-3/4 w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
                     <Image
                       src={product.image}
                       alt={`${product.name} by The Luxury Booths`}
@@ -253,7 +253,7 @@ export default function ProductsPage() {
           </p>
           <Link
             href="/#booking"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-neon-purple to-neon-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-neon-purple/40 transition-shadow"
+            className="inline-block px-8 py-3 bg-linear-to-r from-neon-purple to-neon-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-neon-purple/40 transition-shadow"
           >
             Book Now
           </Link>

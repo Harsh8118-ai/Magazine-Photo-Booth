@@ -101,7 +101,7 @@ const Pricing = () => {
 
             <button
               onClick={sendWhatsAppBookingMessage}
-              className="w-full block text-center px-6 py-3 bg-gradient-to-r from-amber-600 to-amber-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-amber-600/50 transition-all transform hover:scale-105"
+              className="w-full block text-center px-6 py-3 bg-linear-to-r from-amber-600 to-amber-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-amber-600/50 transition-all transform hover:scale-105"
             >
               Book Now
             </button>

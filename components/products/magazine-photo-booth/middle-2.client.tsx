@@ -95,7 +95,7 @@ const MiddleTwoSection = () => {
                 <SectionWrapper
                     id="venue-requirements-section"
                     ariaLabel="Frequently asked questions and logistics information"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+                    className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900"
                 >
                     <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
                         <VenueRequirements />
@@ -104,13 +104,13 @@ const MiddleTwoSection = () => {
             </ScrollReveal>
 
             {/* MPB Business Section  */}
-            <section className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+            <section className="py-16 sm:py-24 px-4 sm:px-6 bg-linear-to-b from-transparent via-gold/10 to-transparent">
 
                 <div className="max-w-6xl mx-auto">
 
                     <div className="glass-enhanced border border-gold/20 rounded-2xl p-8 sm:p-12 relative overflow-hidden">
 
-                        <div className="absolute inset-0 bg-gradient-to-r from-gold/10 via-transparent to-gold/10 opacity-40 pointer-events-none" />
+                        <div className="absolute inset-0 bg-linear-to-r from-gold/10 via-transparent to-gold/10 opacity-40 pointer-events-none" />
 
                         <div className="relative z-10">
 
@@ -194,7 +194,7 @@ const MiddleTwoSection = () => {
 
                                     href="/magazine-photo-booth/for-sale"
 
-                                    className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-gradient-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                                    className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-linear-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
 
                                 >
 
@@ -214,7 +214,7 @@ const MiddleTwoSection = () => {
             </section>
 
             {/* Various Keywords */}
-            <section className="py-14 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-transparent via-gold/10 to-transparent">
+            <section className="py-14 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-transparent via-gold/10 to-transparent">
 
                 <div className="max-w-5xl mx-auto">
 
@@ -319,7 +319,7 @@ const MiddleTwoSection = () => {
                 <SectionWrapper
                     id="faq-section"
                     ariaLabel="Frequently Asked Questions"
-                    className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black via-amber-900/10 to-black"
+                    className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black via-amber-900/10 to-black"
                 >
                     <div className="max-w-4xl mx-auto">
                         <h3 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-12 text-center">

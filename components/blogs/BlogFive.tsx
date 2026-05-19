@@ -4,7 +4,7 @@ const BlogWhatIsMagazineBooth = () => {
 
   return (
 
-    <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+    <div className="min-h-screen bg-linear-to-r from-purple-900/20 to-blue-900/20">
 
 
       {/* Schema Markup */}
@@ -64,7 +64,7 @@ const BlogWhatIsMagazineBooth = () => {
 
             What is a Magazine Photo Booth?
 
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
 
               Complete Guide for Weddings & Events
 

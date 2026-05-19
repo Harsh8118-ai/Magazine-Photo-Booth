@@ -4,7 +4,7 @@ const BlogMagazineCorporate = () => {
 
   return (
 
-    <div className="min-h-screen bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+    <div className="min-h-screen bg-linear-to-r from-purple-900/20 to-blue-900/20">
 
 
       {/* Schema */}
@@ -61,7 +61,7 @@ const BlogMagazineCorporate = () => {
 
             Magazine Photo Booth for Corporate Events
 
-            <span className="block bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-gold to-amber-400 bg-clip-text text-transparent">
 
               How Brands Stand Out Through Experience
 

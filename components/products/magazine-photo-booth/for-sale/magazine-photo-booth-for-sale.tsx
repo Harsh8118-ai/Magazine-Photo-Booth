@@ -533,7 +533,7 @@ export default function MagazinePhotoBoothForSale() {
 
         <Link
           href="/contact"
-          className="px-10 py-4 rounded-xl bg-gradient-to-r from-gold to-yellow-300 text-black font-semibold"
+          className="px-10 py-4 rounded-xl bg-linear-to-r from-gold to-yellow-300 text-black font-semibold"
         >
           Get Purchase Details
         </Link>

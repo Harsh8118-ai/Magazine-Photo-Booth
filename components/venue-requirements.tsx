@@ -55,7 +55,7 @@ export function VenueRequirements() {
               <ul className="space-y-2">
                 {req.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start text-sm text-gray-500">
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 shrink-0" />
                     <span>{detail}</span>
                   </li>
                 ))}
