@@ -378,7 +378,7 @@ export default function Hero() {
             <SectionWrapper
                 id="faq-section"
                 ariaLabel="Frequently asked questions and logistics information"
-                className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900"
+                className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b-from-black to-gray-900"
             >
                 <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
                     <FaqsSection />

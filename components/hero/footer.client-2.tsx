@@ -36,7 +36,7 @@ export default function FooterClientTwo() {
                         <p className="text-gray-400 text-sm sm:text-base">
                             &copy; 2024 The Luxury Booths. All rights reserved.
                         </p>
-                        <p className="text-gray-500 text-xs sm:text-sm mt-1">
+                        <p className="text-gray-400 text-xs font-comic sm:text-sm mt-1">
                             Licensed & Insured
                         </p>
                     </div>
