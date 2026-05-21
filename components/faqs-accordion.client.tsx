@@ -22,9 +22,9 @@ export function FaqAccordionClient({ faqs }: { faqs: FAQ[] }) {
                 {faq.question}
               </h3>
               {openIndex === index ? (
-                <ChevronUp className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <ChevronUp className="h-5 w-5 text-purple-400 shrink-0" />
               ) : (
-                <ChevronDown className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                <ChevronDown className="h-5 w-5 text-purple-400 shrink-0" />
               )}
             </button>
 
