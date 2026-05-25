@@ -35,7 +35,7 @@ export function FaqAccordionClient({ faqs }: { faqs: FAQ[] }) {
                 </div>
               </div>
             )}
-          </CardContent>
+          </CardContent>    
         </CardTwo>
       ))}
     </div>
