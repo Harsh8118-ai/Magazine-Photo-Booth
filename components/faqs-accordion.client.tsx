@@ -26,7 +26,7 @@ export function FaqAccordionClient({ faqs }: { faqs: FAQ[] }) {
               ) : ( 
                 <ChevronDown className="h-5 w-5 text-purple-400 shrink-0" />
               )}
-            </button>
+            </button>   
 
             {openIndex === index && (
               <div className="px-6 pb-6">
