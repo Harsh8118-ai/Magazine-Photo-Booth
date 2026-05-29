@@ -19,7 +19,7 @@ export function FaqAccordionClient({ faqs }: { faqs: FAQ[] }) {
               className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
             >
               <h3 className="font-display text-lg font-semibold pr-4">
-                {faq.question}
+                {faq.question}    
               </h3>
               {openIndex === index ? (
                 <ChevronUp className="h-5 w-5 text-purple-400 shrink-0" />
