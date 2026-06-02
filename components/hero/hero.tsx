@@ -444,6 +444,11 @@ export default function Hero() {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                                        Strip Photo Booth
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href="/" className="hover:text-white transition-colors">
                                         Polaroid Photo Booth (coming soon)
                                     </Link>

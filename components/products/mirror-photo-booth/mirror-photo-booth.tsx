@@ -384,11 +384,11 @@ const MirrorPhotoBooth = () => {
           </p>
 
           <a href="#pricing">
-          <button
-            className="w-full px-6 py-4 rounded-xl bg-linear-to-r from-purple-500 to-fuchsia-500 text-white font-bold hover:scale-[1.02] transition-all"
-          >
-            Book Mirror Booth Now
-          </button></a>
+            <button
+              className="w-full px-6 py-4 rounded-xl bg-linear-to-r from-purple-500 to-fuchsia-500 text-white font-bold hover:scale-[1.02] transition-all"
+            >
+              Book Mirror Booth Now
+            </button></a>
 
         </div>
 
@@ -468,8 +468,8 @@ const MirrorPhotoBooth = () => {
                 </li>
 
                 <li>
-                  <Link href="/mirror-photo-booth">
-                    Mirror Photo Booth
+                  <Link href="/mirror-selfie-booth">
+                    Mirror Selfie Booth
                   </Link>
                 </li>
 
@@ -481,6 +481,16 @@ const MirrorPhotoBooth = () => {
                 <li>
                   <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
                     Mirror Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                    Strip Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-white transition-colors">
+                    Polaroid Photo Booth (coming soon)
                   </Link>
                 </li>
 

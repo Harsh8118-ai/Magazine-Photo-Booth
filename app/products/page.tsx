@@ -134,6 +134,23 @@ const products = [
     href: "/mirror-photo-booth",
     image: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398156/Mirror-1-8.webp",
   },
+  {
+    id: "strip-photo-booth",
+    name: "Strip Photo Booth",
+    description:
+      "A trendy luxury strip photo booth experience with instant custom photo strips, DSLR photography, and premium event-themed designs.",
+    features: [
+      "Instant custom strip prints",
+      "DSLR quality photography",
+      "Luxury event-themed templates",
+      "QR & WhatsApp digital sharing",
+      "Perfect for weddings & parties",
+    ],
+    pricing: "Starting ₹25,000 + prints",
+    href: "/strip-photo-booth",
+    image:
+      "https://res.cloudinary.com/dpnykjono/image/upload/v1780402924/Strip-5.webp",
+  },
 ]
 
 const galleryImages = [
@@ -335,7 +352,7 @@ export default function ProductsPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Visit our ${social.name} page`}
-                      className={`w-10 h-10 glass rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer hover:neon-glow ${social.color}`}
+                      className={`w - 10 h - 10 glass rounded - full flex items - center justify - center transition - all duration - 300 cursor - pointer hover: neon - glow ${social.color}`}
                     >
                       {social.icon}
                     </a>
@@ -361,9 +378,14 @@ export default function ProductsPage() {
                       Vintage Photo Booth
                     </Link>
                   </li>
-                   <li>
+                  <li>
                     <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
                       Mirror Photo Booth
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                      Strip Photo Booth
                     </Link>
                   </li>
                   <li>
@@ -408,7 +430,7 @@ export default function ProductsPage() {
 
                   </li>
                   <li>
-                    <Link href={`/blog`} className="hover:text-white transition-colors">
+                    <Link href={`/ blog`} className="hover:text-white transition-colors">
                       Blog
                     </Link>
                   </li>
