@@ -32,7 +32,7 @@ const Pricing = () => {
         </h3>
 
         <p className="text-center text-purple-300 mb-10">
-          Luxury interactive mirror booth with instant prints & premium guest experience
+          Luxury interactive mirror booth with unlimited instant prints & premium guest experience
         </p>
 
         <motion.div
@@ -66,9 +66,8 @@ const Pricing = () => {
                       setHours(option)
                       setOpen(false)
                     }}
-                    className={`px-4 py-3 cursor-pointer hover:bg-purple-900/20 transition-all ${
-                      hours === option ? "bg-purple-900/30 text-purple-300" : "text-white"
-                    }`}
+                    className={`px-4 py-3 cursor-pointer hover:bg-purple-900/20 transition-all ${hours === option ? "bg-purple-900/30 text-purple-300" : "text-white"
+                      }`}
                   >
                     {option} Hours
                   </div>
@@ -83,7 +82,7 @@ const Pricing = () => {
           <div className="space-y-4 mb-8 border-b border-purple-500/20 pb-6">
 
             <div className="flex justify-between text-gray-300">
-              <span>Base Package (3 Hours)</span>
+              <span>Base Package (3 Hours + Unlimited Prints)</span>
               <span>₹{basePrice.toLocaleString()}</span>
             </div>
 
@@ -118,7 +117,7 @@ const Pricing = () => {
             <ul className="space-y-3 text-sm text-gray-400">
 
               <li>✓ Interactive touchscreen mirror booth</li>
-              <li>✓ Instant premium prints</li>
+              <li>✓ Unlimited instant premium prints</li>
               <li>✓ Unlimited sessions</li>
               <li>✓ Custom branding & overlays</li>
               <li>✓ WhatsApp sharing</li>

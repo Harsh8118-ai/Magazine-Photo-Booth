@@ -520,7 +520,7 @@ export default async function CityHomePage({
               <div className="">
                 <div>
                   <Image
-                    src="https://res.cloudinary.com/dpnykjono/image/upload/AboutUs.webp"
+                    src="https://res.cloudinary.com/dpnykjono/image/upload/v1769712833/simcorp_przalj.webp"
                     alt="About Us"
                     width={208}
                     height={208}

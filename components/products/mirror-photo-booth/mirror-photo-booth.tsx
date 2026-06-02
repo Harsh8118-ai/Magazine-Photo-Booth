@@ -8,6 +8,7 @@ import Hero from "./hero"
 import Pricing from "./pricing"
 import WhatsAppCTA from "./whatsapp-button"
 import FooterClientTwo from "@/components/hero/footer.client-2"
+import FloatingPricingButton from "@/components/floating-pricing-button"
 
 const MirrorPhotoBooth = () => {
 
@@ -263,7 +264,9 @@ const MirrorPhotoBooth = () => {
       </section>
 
       {/* Pricing */}
-      <Pricing />
+      <div id="pricing">
+        <Pricing />
+      </div>
 
       {/* FAQ */}
       <section className="py-12 sm:py-20 px-4 bg-linear-to-b from-purple-900/10 to-transparent">
@@ -380,7 +383,12 @@ const MirrorPhotoBooth = () => {
             Bring interactive luxury entertainment to your next celebration.
           </p>
 
-          <WhatsAppCTA />
+          <a href="#pricing">
+          <button
+            className="w-full px-6 py-4 rounded-xl bg-linear-to-r from-purple-500 to-fuchsia-500 text-white font-bold hover:scale-[1.02] transition-all"
+          >
+            Book Mirror Booth Now
+          </button></a>
 
         </div>
 
@@ -520,7 +528,7 @@ const MirrorPhotoBooth = () => {
             </div>
 
           </div>
-
+          <FloatingPricingButton />
           <FooterClientTwo />
 
         </div>

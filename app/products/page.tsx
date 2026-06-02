@@ -130,9 +130,9 @@ const products = [
       "Luxury red-carpet setup",
       "Custom branding & overlays",
     ],
-    pricing: "Starting ₹35,000 + prints",
+    pricing: "Starting ₹35,000 + duration",
     href: "/mirror-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530221/Products/Mirror.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398156/Mirror-1-8.webp",
   },
 ]
 

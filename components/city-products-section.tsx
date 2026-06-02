@@ -19,15 +19,15 @@ export default function CityProductsSection({
       link: `/magazine-photo-booth/${cityName.toLowerCase()}`,
       features: ["Instant prints", "Magazine covers", "Premium quality"],
     },
-    {
-      id: "mirror",
-      name: "Mirror Selfie Booth",
-      description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
-      extraLine: `Perfect for corporate events & brand activations in ${cityName}`,
-      icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
-      link: `/mirror-selfie-booth/`,
-      features: ["Custom text", "LED lighting", "Luxury setup"],
-    },
+    // {
+    //   id: "mirror",
+    //   name: "Mirror Selfie Booth",
+    //   description: "Elegant mirror booth with personalized text, LED lights, and red carpet setup",
+    //   extraLine: `Perfect for corporate events & brand activations in ${cityName}`,
+    //   icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
+    //   link: `/mirror-selfie-booth/`,
+    //   features: ["Custom text", "LED lighting", "Luxury setup"],
+    // },
     {
       id: "vintage",
       name: "Vintage Photo Booth",
@@ -36,6 +36,16 @@ export default function CityProductsSection({
       icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1771402905/vintage-booth.webp",
       link: `/vintage-photo-booth/${cityName.toLowerCase()}`,
       features: ["DSLR quality", "Instant prints", "Wooden design"],
+    },
+    {
+      id: "mirror-photo",
+      name: "Mirror Photo Booth",
+      description: "Luxury interactive magic mirror booth with touchscreen animations and instant premium prints",
+      extraLine: `Perfect for corporate events & brand activations in ${cityName}`,
+      icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398156/Mirror-1-8.webp",
+      link: "/mirror-photo-booth",
+      color: "purple",
+      features: ["Touchscreen mirror", "Instant premium prints", "Interactive animations",],
     },
   ]
 
@@ -58,9 +68,8 @@ export default function CityProductsSection({
           {products.map((product, index) => (
             <div
               key={product.id}
-              className={`reveal visible ${
-                index % 2 === 0 ? "reveal-left" : "reveal-right"
-              } reveal-delay-${Math.min(index + 2, 5)}`}
+              className={`reveal visible ${index % 2 === 0 ? "reveal-left" : "reveal-right"
+                } reveal-delay-${Math.min(index + 2, 5)}`}
             >
               <Link href={product.link} className="block h-full">
                 <div className="h-full glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20 hover:border-gold/50 transition-all cursor-pointer group">
