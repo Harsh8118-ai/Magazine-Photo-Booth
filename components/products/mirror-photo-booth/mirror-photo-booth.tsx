@@ -58,33 +58,43 @@ const MirrorPhotoBooth = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/mirror-photo-booth-gallery-1.webp",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398156/Mirror-1.webp",
       alt: "mirror photo booth wedding Delhi",
     },
     {
       id: 2,
-      src: "/mirror-photo-booth-gallery-2.webp",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-2.webp",
       alt: "magic mirror booth experience",
     },
     {
       id: 3,
-      src: "/mirror-photo-booth-gallery-3.webp",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-3.webp",
       alt: "interactive mirror photo booth",
     },
     {
       id: 4,
-      src: "/mirror-photo-booth-gallery-4.webp",
-      alt: "mirror selfie booth setup",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-4.webp",
+      alt: "mirror photo booth setup",
     },
     {
       id: 5,
-      src: "/mirror-photo-booth-gallery-5.webp",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-5.webp",
       alt: "luxury wedding mirror booth",
     },
     {
       id: 6,
-      src: "/mirror-photo-booth-gallery-6.webp",
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-6.webp",
       alt: "corporate mirror booth",
+    },
+    {
+      id: 7,
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-7.webp",
+      alt: "mirror selfie booth",
+    },
+    {
+      id: 8,
+      src: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-8.webp",
+      alt: "retro mirror booth",
     },
   ]
 
@@ -96,6 +106,9 @@ const MirrorPhotoBooth = () => {
     { slug: "faridabad", name: "Faridabad", state: "Haryana" },
     { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
+    { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },
+    { slug: "pune", name: "Pune", state: "Maharashtra" },
+    { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
   ]
 
   return (
@@ -130,7 +143,7 @@ const MirrorPhotoBooth = () => {
         <div className="max-w-6xl mx-auto">
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-center mb-6 text-balance">
-            Luxury Mirror Photo Booth Rental in Delhi NCR
+            Retro Mirror Photo Booth Rental in Delhi NCR
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-4">
@@ -303,13 +316,13 @@ const MirrorPhotoBooth = () => {
           <div className="flex flex-wrap justify-center gap-3">
 
             {cities.map((city) => (
-              <Link
+              <span
                 key={city.slug}
-                href={`/mirror-photo-booth/${city.slug}`}
+                // href={`/mirror-photo-booth/${city.slug}`}
                 className="px-4 py-2 rounded-full border border-purple-500/30 text-gray-300 hover:border-purple-400"
               >
                 {city.name} ({city.state})
-              </Link>
+              </span>
             ))}
 
           </div>

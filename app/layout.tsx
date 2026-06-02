@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
   title: "Luxury Photo Booth Experience for Premium Events in Delhi NCR | The Luxury Booths",
   description:
-    "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror selfie booths, and bespoke luxury setups.",
+    "The Luxury Booths is a premium luxury photo booth experience brand for high-end weddings, corporate events, and VIP celebrations across Delhi NCR. Vogue-style magazine booths, mirror photo booths, and bespoke luxury setups.",
   alternates: {
     canonical: "https://theluxurybooths.com",
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "vogue magazine booth",
     "vogue photo booth",
     "magazine photo booth",
-    "mirror selfie booth",
+    "mirror photo booth",
     "vintage photo booth",
     "retro photo booth",
     "luxury wedding photo booth Delhi NCR",
