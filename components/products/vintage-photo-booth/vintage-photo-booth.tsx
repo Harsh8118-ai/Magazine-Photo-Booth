@@ -161,7 +161,7 @@ const VintagePhotoBooth = () => {
 
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100 mb-4 text-balance">
-              Why Vintage Photo Booths Are Trending in Weddings 
+              Why Vintage Photo Booths Are Trending in Weddings
             </h2>
 
             <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
@@ -391,7 +391,7 @@ const VintagePhotoBooth = () => {
                   alt={image.alt}
                   width={300}
                   height={450}
-                   sizes="(max-width: 768px) 50vw, 182px"
+                  sizes="(max-width: 768px) 50vw, 182px"
                   className="w-full h-auto rounded-lg"
                   loading="lazy"
                 />
@@ -488,6 +488,11 @@ const VintagePhotoBooth = () => {
                 <li>
                   <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                     Vintage Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
                   </Link>
                 </li>
                 <li>

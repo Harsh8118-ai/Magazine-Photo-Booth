@@ -9,7 +9,7 @@ import FooterClientTwo from "@/components/hero/footer.client-2"
 export const metadata: Metadata = {
   title: "Photo Booth Rental in India | Magazine, Mirror & Vintage",
   description:
-    "Explore premium photo booth rental products by The Luxury Booths — Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Ideal for luxury weddings, corporate events, exhibitions & private parties across India.",
+    "Explore premium photo booth rental products by The Luxury Booths - Magazine Photo Booth, Mirror Selfie Booth, and Vintage Photo Booth. Ideal for luxury weddings, corporate events, exhibitions & private parties across India.",
 
   alternates: {
     canonical: "https://theluxurybooths.com/products",
@@ -118,6 +118,22 @@ const products = [
     href: "/vintage-photo-booth",
     image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1771402905/vintage-booth.webp",
   },
+  {
+    id: "mirror-photo-booth",
+    name: "Mirror Photo Booth",
+    description:
+      "Luxury interactive magic mirror booth with touchscreen animations, instant premium prints, and immersive guest experiences.",
+    features: [
+      "Interactive touchscreen mirror",
+      "Instant premium-quality prints",
+      "Fun animations & voice prompts",
+      "Luxury red-carpet setup",
+      "Custom branding & overlays",
+    ],
+    pricing: "Starting ₹35,000 + prints",
+    href: "/mirror-photo-booth",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530221/Products/Mirror.webp",
+  },
 ]
 
 const galleryImages = [
@@ -134,10 +150,8 @@ const galleryImages = [
 export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* ✅ Fixed Header (Back Button + Page Title) */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-3">
-          {/* Back Button */}
           <Link
             href="/"
             className="flex items-center gap-2 text-gold hover:text-yellow-300 transition-colors"
@@ -146,12 +160,10 @@ export default function ProductsPage() {
             <span className="hidden sm:block font-medium">Back</span>
           </Link>
 
-          {/* Center Title */}
           <p className="text-lg sm:text-2xl font-bold text-center text-gradient">
             Products
           </p>
 
-          {/* Spacer for balance */}
           <div className="w-14 sm:w-20" />
         </div>
       </div>
@@ -173,7 +185,6 @@ export default function ProductsPage() {
           </div>
         </header>
 
-        {/* Products Grid */}
         <section className="px-4 pb-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
@@ -182,7 +193,7 @@ export default function ProductsPage() {
                 className="glass rounded-2xl overflow-hidden border border-white/10 hover:border-gold/30 hover:scale-[1.02] transition-all duration-300"
               >
                 <Link href={product.href} className="block h-full">
-                  {/* Product Image */}
+
                   <div className="relative aspect-3/4 w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
                     <Image
                       src={product.image}
@@ -192,7 +203,6 @@ export default function ProductsPage() {
                     />
                   </div>
 
-                  {/* Product Content */}
                   <div className="p-5 sm:p-6 flex flex-col h-full">
                     <h2 className="text-xl sm:text-2xl font-bold mb-2">
                       {product.name}
@@ -202,7 +212,6 @@ export default function ProductsPage() {
                       {product.description}
                     </p>
 
-                    {/* Features List */}
                     <ul className="space-y-2 mb-6">
                       {product.features.map((feature, idx) => (
                         <li
@@ -215,7 +224,6 @@ export default function ProductsPage() {
                       ))}
                     </ul>
 
-                    {/* Pricing */}
                     <div className="border-t border-white/10 pt-4 mb-4">
                       <p className="text-gold text-xl font-semibold">
                         {product.pricing}
@@ -228,7 +236,6 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* SEO Trust Section */}
         <section className="px-4 py-12 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Why Choose The Luxury Booths?
@@ -243,7 +250,6 @@ export default function ProductsPage() {
           </p>
         </section>
 
-        {/* CTA Section */}
         <section className="px-4 py-12 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Ready to Book Your Photo Booth?
@@ -259,7 +265,6 @@ export default function ProductsPage() {
           </Link>
         </section>
 
-        {/* Event Gallery Section */}
         <SectionWrapper
           id="gallery-section"
           ariaLabel="Photo gallery of past events"
@@ -281,7 +286,7 @@ export default function ProductsPage() {
                     alt={image.alt}
                     width={300}
                     height={450}
-                     sizes="(max-width: 768px) 50vw, 182px"
+                    sizes="(max-width: 768px) 50vw, 182px"
                     className="w-full h-auto rounded-lg"
                     loading="lazy"
                   />
@@ -304,7 +309,6 @@ export default function ProductsPage() {
           </div>
         </SectionWrapper>
 
-        {/* Footer - Enhanced with legal links */}
         <footer
           id="contact-section"
           className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
@@ -355,6 +359,11 @@ export default function ProductsPage() {
                   <li>
                     <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                       Vintage Photo Booth
+                    </Link>
+                  </li>
+                   <li>
+                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                      Mirror Photo Booth
                     </Link>
                   </li>
                   <li>
@@ -422,7 +431,6 @@ export default function ProductsPage() {
           <div className="py-9 sm:hidden"><span></span></div>
         </footer>
 
-        {/* Mobile bottom spacing */}
         <div className="h-10 sm:h-0" />
       </div>
     </main>

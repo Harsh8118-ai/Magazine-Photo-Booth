@@ -430,7 +430,7 @@ export default async function CityHomePage({
                     ].map((item, index) => (
                       <div key={index}>
                         <div className="flex items-start space-x-4">
-                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center flex-shrink-0">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full glass-enhanced flex items-center justify-center shrink-0">
                             <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-gold" />
                           </div>
                           <div>
@@ -709,6 +709,11 @@ export default async function CityHomePage({
                     Vintage Photo Booth
                   </Link>
                 </li>
+                <li>
+                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                      Mirror Photo Booth
+                    </Link>
+                  </li>
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">
                     Polaroid Photo Booth (coming soon)

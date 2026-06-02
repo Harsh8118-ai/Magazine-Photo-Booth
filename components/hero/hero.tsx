@@ -123,7 +123,7 @@ export default function Hero() {
 
             {/* Products Section  */}
             <div id="products">
-            <ProductsSection />
+                <ProductsSection />
             </div>
 
             {/* Video Clips Carousel */}
@@ -171,7 +171,7 @@ export default function Hero() {
                     <div className="text-center">
                         <a href="/gallery">
                             <div
-                                
+
                                 className="border-purple-400 rounded-xl border-2 m-auto mx-24 sm:mx-96 py-5 mt-3 text-xl text-purple-400 hover:bg-purple-500 hover:text-black bg-transparent shadow-xs  dark:bg-input/30 dark:border-input dark:hover:bg-input/50"
                                 aria-label="View Full Gallery"
                             >
@@ -436,6 +436,11 @@ export default function Hero() {
                                 <li>
                                     <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                                         Vintage Photo Booth
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                                        Mirror Photo Booth
                                     </Link>
                                 </li>
                                 <li>

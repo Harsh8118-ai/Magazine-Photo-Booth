@@ -214,7 +214,7 @@ const MirrorPhotoBooth = () => {
                 key={index}
                 className="flex items-start gap-3 text-gray-300"
               >
-                <Zap className="size-5 text-purple-400 mt-1 flex-shrink-0" />
+                <Zap className="size-5 text-purple-400 mt-1 shrink-0" />
                 <span>{feature}</span>
               </li>
             ))}
@@ -455,6 +455,11 @@ const MirrorPhotoBooth = () => {
                 <li>
                   <Link href="/vintage-photo-booth">
                     Vintage Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
                   </Link>
                 </li>
 

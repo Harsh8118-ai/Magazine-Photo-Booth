@@ -330,7 +330,7 @@ export default function VintagePhotoBoothCity({
 
       {/* Pricing */}
       <div id="pricing">
-      <Pricing />
+        <Pricing />
       </div>
 
       {/* Corporate Events Section */}
@@ -479,7 +479,7 @@ export default function VintagePhotoBoothCity({
                   alt={image.alt}
                   width={300}
                   height={450}
-                   sizes="(max-width: 768px) 50vw, 182px"
+                  sizes="(max-width: 768px) 50vw, 182px"
                   className="w-full h-auto rounded-lg"
                   loading="lazy"
                 />
@@ -658,6 +658,11 @@ export default function VintagePhotoBoothCity({
                 <li>
                   <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                     Vintage Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
                   </Link>
                 </li>
                 <li>

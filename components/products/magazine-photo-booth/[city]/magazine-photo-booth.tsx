@@ -87,7 +87,7 @@ export default function MagazinePhotoBoothCity({
             Magazine Photo Booth Rental in {cityName}
           </h1>
 
-          {/* ✅ Dynamic paragraph with City */} 
+          {/* ✅ Dynamic paragraph with City */}
           <p className="text-lg sm:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-2 text-balance">
             The Luxury Booths provides premium <strong>Vogue Magazine Photo Booth Rental in {cityName}.</strong>
           </p>
@@ -333,6 +333,11 @@ export default function MagazinePhotoBoothCity({
                 <li>
                   <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
                     Vintage Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
                   </Link>
                 </li>
                 <li>

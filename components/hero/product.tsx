@@ -31,6 +31,15 @@ export default function ProductsSection() {
             color: "amber",
             features: ["DSLR quality", "Instant prints", "Wooden design"],
         },
+        {
+            id: "mirror-photo",
+            name: "Mirror Photo Booth",
+            description:"Luxury interactive magic mirror booth with touchscreen animations and instant premium prints",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530221/Products/Mirror.webp",
+            link: "/mirror-photo-booth",
+            color: "purple",
+            features: ["Touchscreen mirror","Instant premium prints","Interactive animations",],
+        },
     ]
 
     return (
@@ -67,14 +76,14 @@ export default function ProductsSection() {
 
                                         <div className="mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
                                             <div className="mx-auto rounded-sm overflow-hidden">
-                                            <Image
-                                                src={product.icon}
-                                                alt={product.name}
-                                                width={208}
-                                                height={208}
-                                                loading="lazy"
-                                                className="object-contain"
-                                            />
+                                                <Image
+                                                    src={product.icon}
+                                                    alt={product.name}
+                                                    width={208}
+                                                    height={208}
+                                                    loading="lazy"
+                                                    className="object-contain"
+                                                />
                                             </div></div></div>
 
                                     <ul className="space-y-2 mb-6">

@@ -216,7 +216,7 @@ export default function AboutPage() {
                 >
                   <Link href={product.href} className="block h-full">
                     {/* Product Image */}
-                    <div className="relative aspect-[3/4] w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
+                    <div className="relative aspect-3/4 w-1/2 mx-auto overflow-hidden bg-gray-800 mt-3 rounded-2xl">
                       <Image
                         src={product.image}
                         alt={`${product.name} by The Luxury Booths`}
@@ -408,6 +408,11 @@ export default function AboutPage() {
                     Vintage Photo Booth
                   </Link>
                 </li>
+                <li>
+                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                      Mirror Photo Booth
+                    </Link>
+                  </li>
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">
                     Polaroid Photo Booth (coming soon)

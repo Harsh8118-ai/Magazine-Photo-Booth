@@ -157,7 +157,7 @@ const MirrorSelfieBooth = () => {
                   "Designer wooden easel for custom frames and event instructions",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
-                    <Check className="size-5 text-gold mt-0.5 flex-shrink-0" />
+                    <Check className="size-5 text-gold mt-0.5 shrink-0" />
                     <span className="text-sm">{item}</span>
                   </li>
                 ))}
@@ -228,6 +228,11 @@ const MirrorSelfieBooth = () => {
                     Vintage Photo Booth
                   </Link>
                 </li>
+                <li>
+                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                      Mirror Photo Booth
+                    </Link>
+                  </li>
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">
                     Polaroid Photo Booth (coming soon)
