@@ -285,6 +285,294 @@ export default function Hero() {
                 </div>
             </SectionWrapper>
 
+            {/* Testominials  */}
+            <section className="relative py-24 sm:py-32 px-4 sm:px-6 overflow-hidden bg-black">
+
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.15),transparent_35%)]"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.12),transparent_35%)]"></div>
+
+                <div className="relative z-10 max-w-7xl mx-auto">
+
+                    <div className="text-center mb-20">
+
+                        <p className="uppercase tracking-[0.35em] text-sm text-gold mb-5">
+                            Trusted By Leading Brands
+                        </p>
+
+                        <h2 className="font-display text-4xl sm:text-6xl font-bold text-white leading-tight mb-6">
+                            Luxury Experiences For <br />
+                            Brands, Weddings & Premium Events
+                        </h2>
+
+                        <p className="max-w-4xl mx-auto text-gray-400 text-lg leading-relaxed">
+                            The Luxury Booths has delivered magazine photo booth experiences for
+                            corporate events, luxury weddings, banquets, exhibitions,
+                            private celebrations, and event management companies across India.
+                            From Delhi NCR and Gurgaon to Jaipur, Mumbai and Bangalore,
+                            TLB creates premium guest experiences through luxury photo activations.
+                        </p>
+
+                    </div>
+
+                    <div className="mb-24">
+
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+
+                            {[
+                                {
+                                    name: "SimCorp",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony-3.webp",
+                                },
+                                {
+                                    name: "ZANA Resorts",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony.webp",
+                                },
+                                {
+                                    name: "TAAZAA",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony-4.webp",
+                                },
+                                {
+                                    name: "Blooms Event",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony-2.webp",
+                                },
+                                {
+                                    name: "nMorphis",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony-5.webp",
+                                },
+
+                            ].map((brand, index) => (
+
+                                <div
+                                    key={index}
+                                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/4 backdrop-blur-2xl p- flex items-center justify-center hover:border-gold/40 transition-all duration-500"
+                                >
+
+                                    <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                                        <img src={brand.logo} alt={brand.name} className="h-52 rounded-lg mt-3 object-contain opacity-80 group-hover:opacity-100 transition duration-500 mb-4" />
+                                        <p className="text-sm sm:text-base font-medium tracking-wide text-gray-300 group-hover:text-white transition-colors duration-500 "> {brand.name} </p> </div>
+
+                                </div>
+
+                            ))}
+
+                        </div>
+
+                    </div>
+
+                    <div className="text-center mb-16">
+
+                        <p className="uppercase tracking-[0.35em] text-sm text-purple-300 mb-5">
+                            Client Experiences
+                        </p>
+
+                        <h2 className="font-display text-4xl sm:text-6xl font-bold text-white mb-6">
+                            Experiences Guests <br />
+                            Actually Remember
+                        </h2>
+
+                        <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed">
+                            Every testimonial below represents a real luxury event experience
+                            delivered by TLB through magazine booths, wedding activations,
+                            and corporate photo experiences.
+                        </p>
+
+                    </div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                        {[
+                            {
+                                quote:
+                                    "The magazine booth became the most engaging attraction at our event. Guests kept returning throughout the evening.",
+                                name: "SimCorp Team",
+                                role: "Corporate Event • Gurgaon",
+                                logo: "/logos/simcorp.webp",
+                                image:
+                                    "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop",
+                            },
+
+                            {
+                                quote:
+                                    "TLB delivered a luxury guest experience that genuinely elevated the entire wedding atmosphere.",
+                                name: "Rhea & Arjun",
+                                role: "Luxury Wedding • Jaipur",
+                                logo: "/logos/wedding-planner.webp",
+                                image:
+                                    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+                            },
+
+                            {
+                                quote:
+                                    "The setup, lighting, and guest interaction felt premium from start to finish. Truly a standout activation.",
+                                name: "Elite Event Company",
+                                role: "Event Agency • Delhi NCR",
+                                logo: "/logos/event-company.webp",
+                                image:
+                                    "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop",
+                            },
+                        ].map((item, index) => (
+
+                            <div
+                                key={index}
+                                className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:border-gold/40 transition-all duration-700"
+                            >
+
+                                <div className="absolute inset-0">
+
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-700"
+                                    />
+
+                                    <div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/75 to-black"></div>
+
+                                </div>
+
+
+                                <div className="relative z-10 p-8 sm:p-10 h-full flex flex-col justify-between">
+
+
+                                    <div>
+
+
+                                        {/* <img
+                                            src={item.logo}
+                                            alt={item.name}
+                                            className="h-10 object-contain mb-6 opacity-90"
+                                        /> */}
+
+                                        <div className="flex mb-6">
+
+                                            {Array.from({ length: 5 }).map((_, i) => (
+
+                                                <svg
+                                                    key={i}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    className="w-5 h-5 text-yellow-400 mr-1"
+                                                >
+                                                    <path d="M12 .587l3.668 7.431L24 9.748l-6 5.847 1.417 8.268L12 19.771l-7.417 4.092L6 15.595 0 9.748l8.332-1.73z" />
+                                                </svg>
+
+                                            ))}
+
+                                        </div>
+
+                                        <p className="text-lg text-gray-200 leading-relaxed">
+                                            “{item.quote}”
+                                        </p>
+
+                                    </div>
+
+                                    <div className="pt-8 mt-8 border-t border-white/10">
+
+                                        <h4 className="text-xl font-semibold text-white mb-1">
+                                            {item.name}
+                                        </h4>
+
+                                        <p className="text-sm tracking-wide text-gray-400">
+                                            {item.role}
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                    <div className="max-w-5xl mx-auto mt-24 text-center">
+
+                        <h3 className="font-display text-3xl sm:text-4xl font-bold text-white mb-8">
+                            Premium Magazine Photo Booth Experiences Across India
+                        </h3>
+
+                        <p className="text-lg text-gray-400 leading-relaxed">
+                            The Luxury Booths specializes in luxury magazine photo booth experiences
+                            for weddings, corporate events, banquets, exhibitions, luxury parties,
+                            and private celebrations. Our team works with event planners,
+                            hospitality venues, corporate organizations, and wedding agencies
+                            to create high-engagement guest experiences through premium photo activations.
+                        </p>
+
+                        <div className="flex flex-wrap justify-center gap-4 mt-10">
+
+                            <a
+                                href="/magazine-photo-booth"
+                                className="px-5 py-3 rounded-full border border-gold/20 text-gray-200 hover:border-gold/50 transition"
+                            >
+                                Magazine Booth
+                            </a>
+
+                            <a
+                                href="/mirror-selfie-booth"
+                                className="px-5 py-3 rounded-full border border-white/10 text-gray-200 hover:border-purple-400 transition"
+                            >
+                                Mirror Booth
+                            </a>
+
+                            <a
+                                href="/corporate-events"
+                                className="px-5 py-3 rounded-full border border-white/10 text-gray-200 hover:border-blue-400 transition"
+                            >
+                                Corporate Events
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        {[
+                            {
+                                number: "200+",
+                                label: "Luxury Events",
+                            },
+                            {
+                                number: "50+",
+                                label: "Corporate Activations",
+                            },
+                            {
+                                number: "20+",
+                                label: "Event Companies",
+                            },
+                            {
+                                number: "100K+",
+                                label: "Guest Interactions",
+                            },
+                        ].map((stat, index) => (
+
+                            <div
+                                key={index}
+                                className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 text-center"
+                            >
+
+                                <h3 className="text-4xl sm:text-5xl font-bold text-white mb-3">
+                                    {stat.number}
+                                </h3>
+
+                                <p className="text-gray-400 tracking-wide">
+                                    {stat.label}
+                                </p>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
             {/* About Us Section */}
             <div>
                 <SectionWrapper
