@@ -316,7 +316,7 @@ export default function Hero() {
 
                     <div className="mb-24">
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
 
                             {[
                                 {
@@ -339,6 +339,10 @@ export default function Hero() {
                                     name: "nMorphis",
                                     logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1780954596/Testimony-5.webp",
                                 },
+                                {
+                                    name: "Arora Clinic",
+                                    logo: "https://res.cloudinary.com/dpnykjono/image/upload/v1781003887/Testimony-6.webp"
+                                }
 
                             ].map((brand, index) => (
 
