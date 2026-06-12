@@ -8,7 +8,7 @@ export default function ProductsSection() {
             id: "magazine",
             name: "Magazine Photo Booth",
             description: "The original luxury magazine photo booth experience with instant cover prints",
-            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
+            icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1781264412/Products/Magazine.webp",
             link: "/magazine-photo-booth",
             color: "gold",
             features: ["Instant prints", "Magazine covers", "Premium quality"],

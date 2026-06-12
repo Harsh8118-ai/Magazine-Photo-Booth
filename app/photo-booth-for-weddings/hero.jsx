@@ -78,6 +78,100 @@ export default function Hero() {
         ],
     };
 
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+
+        name: "Wedding Photo Booth Experiences",
+
+        description:
+            "Luxury wedding photo booth experiences featuring magazine booths, mirror booths, instant prints, editorial portraits, and immersive guest engagement.",
+
+        provider: {
+            "@type": "Organization",
+            name: "The Luxury Booths",
+            url: "https://theluxurybooths.com",
+        },
+
+        areaServed: {
+            "@type": "Country",
+            name: "India",
+        },
+
+        serviceType: [
+            "Wedding Photo Booth",
+            "Magazine Booth",
+            "Mirror Booth",
+            "Luxury Wedding Entertainment",
+            "Wedding Guest Experience",
+        ],
+
+        url: "https://theluxurybooths.com/photo-booth-for-weddings",
+    };
+
+    const organizationSchema = {
+        "@context": "https://schema.org",
+
+        "@type": "Organization",
+
+        name: "The Luxury Booths",
+
+        url: "https://theluxurybooths.com",
+
+        logo:
+            "https://theluxurybooths.com/logo.png",
+
+        email:
+            "theluxurybooths@gmail.com",
+
+        telephone:
+            "+91-9266037002",
+
+        sameAs: [
+            "https://www.instagram.com/theluxurybooths",
+            "https://www.linkedin.com/in/theluxurybooths",
+            "https://www.facebook.com/profile.php?id=61570489859940",
+        ],
+    };
+
+    const webPageSchema = {
+        "@context": "https://schema.org",
+
+        "@type": "WebPage",
+
+        name:
+            "Photo Booth for Weddings",
+
+        description:
+            "Luxury wedding photo booth experiences designed for unforgettable guest memories and premium celebrations.",
+
+        url:
+            "https://theluxurybooths.com/photo-booth-for-weddings",
+
+        isPartOf: {
+            "@type": "WebSite",
+            name: "The Luxury Booths",
+            url: "https://theluxurybooths.com",
+        },
+
+        about: [
+            {
+                "@type": "Thing",
+                name: "Wedding Photo Booth",
+            },
+
+            {
+                "@type": "Thing",
+                name: "Luxury Wedding Entertainment",
+            },
+
+            {
+                "@type": "Thing",
+                name: "Magazine Booth",
+            },
+        ],
+    };
+
     return (
         <>
             <WhatsAppCTA />
@@ -87,6 +181,30 @@ export default function Hero() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(faqSchema),
+                }}
+            />
+
+            <Script
+                id="service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(serviceSchema),
+                }}
+            />
+
+            <Script
+                id="organization-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(organizationSchema),
+                }}
+            />
+
+            <Script
+                id="webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(webPageSchema),
                 }}
             />
 
@@ -186,7 +304,7 @@ export default function Hero() {
                                 </Link>
 
                                 <Link
-                                    href="/magazine-photo-booth"
+                                    href="/products"
                                     className="
                                         rounded-full
                                         border
@@ -243,30 +361,14 @@ export default function Hero() {
 
                             {/* Floating Card */}
 
-                            <div
-                                className="
-                                    absolute
-                                    -bottom-10
-                                    left-6
-                                    rounded-[28px]
-                                    border
-                                    border-white/10
-                                    bg-white/5
-                                    p-6
-                                    backdrop-blur-2xl
-                                "
-                            >
-
+                            <div className="absolute -bottom-10 left-6 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl">
                                 <p className="text-xs uppercase tracking-[0.25em] text-[#D4AF37]">
                                     Premium Experience
                                 </p>
-
                                 <h3 className="mt-4 text-2xl font-light leading-snug">
-
                                     Designed To
                                     <br />
                                     Be Remembered
-
                                 </h3>
 
                             </div>
@@ -305,37 +407,47 @@ export default function Hero() {
 
                             {/* Large Image */}
 
-                            <div className="relative min-h-175 overflow-hidden rounded-[36px] border border-white/10 lg:col-span-2 lg:row-span-2">
+                            <div className="hidden sm:block relative min-h-175 overflow-hidden rounded-[36px] border border-white/10 lg:col-span-2 lg:row-span-2">
 
                                 <Image
-                                    src="/wedding/gallery-1.webp"
+                                    src="https://res.cloudinary.com/dpnykjono/image/upload/v1781258087/For-Weddings-1.webp"
                                     alt="Luxury wedding magazine booth by TLB"
                                     fill
                                     className="object-cover"
                                 />
 
+
+                            </div>
+
+                            <div className="sm:hidden relative min-h-105 overflow-hidden rounded-[36px] border border-white/10">
+                                <Image
+                                    src="https://res.cloudinary.com/dpnykjono/image/upload/v1781258087/For-Weddings-1.webp"
+                                    alt="Luxury wedding magazine booth by TLB"
+                                    fill
+                                    className="object-cover"
+                                />
                             </div>
 
                             {/* Small Cards */}
 
                             {[
                                 {
-                                    src: "/wedding/gallery-2.webp",
+                                    src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-4.webp",
                                     alt: "Wedding guests enjoying luxury photo booth experience",
                                 },
 
                                 {
-                                    src: "/wedding/gallery-3.webp",
+                                    src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_500,c_fill/Mirror-Booth_rheieh.webp",
                                     alt: "Luxury mirror booth for weddings",
                                 },
 
                                 {
-                                    src: "/wedding/gallery-4.webp",
+                                    src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_500,c_fill/v1780402924/Strip-5.webp",
                                     alt: "Luxury wedding instant print booth",
                                 },
 
                                 {
-                                    src: "/wedding/gallery-5.webp",
+                                    src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_500,c_fill/Mirror-1-8.webp",
                                     alt: "Glam booth portraits at luxury wedding",
                                 },
 
@@ -436,27 +548,30 @@ export default function Hero() {
 
                             {[
                                 {
-                                    title: "Magazine Booth",
+                                    title: "Magazine Photo Booth",
                                     description:
                                         "Editorial-style wedding portraits inspired by luxury fashion magazines.",
                                     image:
-                                        "/wedding/magazine-booth.webp",
+                                        "https://res.cloudinary.com/dpnykjono/image/upload/v1769257579/taazaa-2.webp",
+                                    url: "/magazine-photo-booth"
                                 },
 
                                 {
-                                    title: "Mirror Booth",
+                                    title: "Mirror Photo Booth",
                                     description:
                                         "Interactive mirror experiences designed for immersive guest engagement.",
                                     image:
-                                        "/wedding/mirror-booth.webp",
+                                        "https://res.cloudinary.com/dpnykjono/image/upload/v1780398155/Mirror-1-3.webp",
+                                    url: "/mirror-photo-booth"
                                 },
 
                                 {
-                                    title: "Glam Booth",
+                                    title: "Vintage Photo Booth",
                                     description:
-                                        "Luxury portrait experiences with cinematic beauty lighting.",
+                                        "A handcrafted vintage photo booth that clicks photographs across your event and prints them instantly",
                                     image:
-                                        "/wedding/glam-booth.webp",
+                                        "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1769715337/vintage-booth-9.webp",
+                                    url: "/vintage-photo-booth"
                                 },
 
                             ].map((booth, index) => (
@@ -469,29 +584,30 @@ export default function Hero() {
                                         border
                                         border-white/10
                                         bg-white/3">
+                                    <Link href={booth.url}>
+                                        <div className="relative h-105">
 
-                                    <div className="relative h-105">
+                                            <Image
+                                                src={booth.image}
+                                                alt={booth.title}
+                                                fill
+                                                className="object-cover"
+                                            />
 
-                                        <Image
-                                            src={booth.image}
-                                            alt={booth.title}
-                                            fill
-                                            className="object-cover"
-                                        />
+                                        </div>
 
-                                    </div>
 
-                                    <div className="p-8">
+                                        <div className="p-8">
 
-                                        <h3 className="text-2xl font-light">
-                                            {booth.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-light">
+                                                {booth.title}
+                                            </h3>
 
-                                        <p className="mt-5 leading-relaxed text-white/60">
-                                            {booth.description}
-                                        </p>
+                                            <p className="mt-5 leading-relaxed text-white/60">
+                                                {booth.description}
+                                            </p>
 
-                                    </div>
+                                        </div></Link>
 
                                 </div>
 
@@ -510,12 +626,10 @@ export default function Hero() {
                         {/* IMAGE */}
 
                         <div
-                            className="
-        relative overflow-hidden rounded-[40px] border border-white/10 lg:-mt-20 lg:ml-10 shadow-[0_40px_120px_rgba(0,0,0,0.5)]"
-                        >
+                            className="relative overflow-hidden rounded-[40px] border border-white/10 lg:-mt-20 lg:ml-10 shadow-[0_40px_120px_rgba(0,0,0,0.5)]">
 
                             <Image
-                                src="/wedding/experience.webp"
+                                src="https://res.cloudinary.com/dpnykjono/image/upload/v1781262040/For-Weddings-2.webp"
                                 alt="Luxury wedding guest experience by TLB"
                                 width={900}
                                 height={1100}
@@ -796,7 +910,7 @@ export default function Hero() {
                             </Link>
 
                             <Link
-                                href="/pricing"
+                                href="/products"
                                 className="transition hover:text-[#D4AF37]"
                             >
                                 Pricing
@@ -885,131 +999,131 @@ export default function Hero() {
 
                 {/* Footer */}
                 <footer
-                                id="contact-section"
-                                className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
-                                role="contentinfo"
-                            >
-                                <div className="max-w-7xl mx-auto">
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
-                                        <div className="sm:col-span-2 lg:col-span-1">
-                                            <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
-                                            <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                                                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
-                                                corporate events, and VIP celebrations.
-                                            </p>
-                                            <div className="flex space-x-4">
-                                                {[
-                                                    { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
-                                                    { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
-                                                    { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
-                                                    { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
-                                                ].map((social) => (
-                                                    <a
-                                                        key={social.name}
-                                                        href={social.url}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        aria-label={`Visit our ${social.name} page`}
-                                                        className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
-                                                    >
-                                                        {social.icon}
-                                                    </a>
-                                                ))}
-                                            </div>
-                                        </div>
-                
-                                        <div>
-                                            <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
-                                            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                                                <li>
-                                                    <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
-                                                        Magazine Photo Booth
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
-                                                        Mirror Selfie Booth
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
-                                                        Vintage Photo Booth
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
-                                                        Mirror Photo Booth
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
-                                                        Strip Photo Booth
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/" className="hover:text-white transition-colors">
-                                                        Polaroid Photo Booth (coming soon)
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                
-                                        <div>
-                                            <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
-                                            <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                
-                                                <li>
-                                                    <Link href="/#hero-section"
-                                                        className="hover:text-white transition-colors"
-                                                    >
-                                                        Home
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/products"
-                                                        className="hover:text-white transition-colors"
-                                                    >
-                                                        Product
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/about"
-                                                        className="hover:text-white transition-colors"
-                                                    >
-                                                        About Us
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link href="/#testimonials-section"
-                                                        className="hover:text-white transition-colors"
-                                                    >
-                                                        Reviews
-                                                    </Link>
-                
-                                                </li>
-                                                <li>
-                                                    <Link href={`/blog`} className="hover:text-white transition-colors">
-                                                        Blog
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
-                
-                                        <div>
-                                            <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
-                                            <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                                                <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                                                <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
-                                                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <FooterClientTwo />
-                
+                    id="contact-section"
+                    className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
+                    role="contentinfo"
+                >
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+                            <div className="sm:col-span-2 lg:col-span-1">
+                                <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
+                                <p className="text-gray-400 mb-4 text-sm sm:text-base">
+                                    The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                                    corporate events, and VIP celebrations.
+                                </p>
+                                <div className="flex space-x-4">
+                                    {[
+                                        { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
+                                        { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
+                                        { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
+                                        { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
+                                    ].map((social) => (
+                                        <a
+                                            key={social.name}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`Visit our ${social.name} page`}
+                                            className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
+                                        >
+                                            {social.icon}
+                                        </a>
+                                    ))}
                                 </div>
-                                <div className="py-9 sm:hidden"><span></span></div>
-                            </footer>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
+                                <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+                                    <li>
+                                        <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
+                                            Magazine Photo Booth
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
+                                            Mirror Selfie Booth
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
+                                            Vintage Photo Booth
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                                            Mirror Photo Booth
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                                            Strip Photo Booth
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/" className="hover:text-white transition-colors">
+                                            Polaroid Photo Booth (coming soon)
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
+                                <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+
+                                    <li>
+                                        <Link href="/#hero-section"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            Home
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/products"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            Product
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/about"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            About Us
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/#testimonials-section"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            Reviews
+                                        </Link>
+
+                                    </li>
+                                    <li>
+                                        <Link href={`/blog`} className="hover:text-white transition-colors">
+                                            Blog
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
+                                <div className="space-y-2 text-gray-400 text-sm sm:text-base">
+                                    <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
+                                    <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
+                                    <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <FooterClientTwo />
+
+                    </div>
+                    <div className="py-9 sm:hidden"><span></span></div>
+                </footer>
 
             </main>
         </>

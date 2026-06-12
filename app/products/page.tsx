@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Photo Booth Rental Products | The Luxury Booths",
     description:
-      "Explore our premium photo booth rental products — Magazine, Mirror Selfie, and Vintage setups for luxury events across India.",
+      "Explore our premium photo booth rental products - Magazine, Mirror Selfie, and Vintage setups for luxury events across India.",
     images: ["/magazine-photo-booth.webp"],
   },
 
@@ -84,7 +84,7 @@ const products = [
     ],
     pricing: "Starting ₹35,000",
     href: "/magazine-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1766530206/Products/Magazine.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1781264412/Products/Magazine.webp",
   },
   {
     id: "mirror-selfie-booth",
@@ -326,6 +326,7 @@ export default function ProductsPage() {
           </div>
         </SectionWrapper>
 
+        {/* Footer - Enhanced with legal links */}
         <footer
           id="contact-section"
           className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
@@ -352,7 +353,7 @@ export default function ProductsPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Visit our ${social.name} page`}
-                      className={`w - 10 h - 10 glass rounded - full flex items - center justify - center transition - all duration - 300 cursor - pointer hover: neon - glow ${social.color}`}
+                      className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
                     >
                       {social.icon}
                     </a>
@@ -430,7 +431,7 @@ export default function ProductsPage() {
 
                   </li>
                   <li>
-                    <Link href={`/ blog`} className="hover:text-white transition-colors">
+                    <Link href={`/blog`} className="hover:text-white transition-colors">
                       Blog
                     </Link>
                   </li>

@@ -50,7 +50,7 @@ export default function MagazinePhotoBoothImages() {
         "Luxury vogue-style magazine cover photo booth with instant prints, custom branding and premium photography experience.",
       href: "/magazine-photo-booth",
       image:
-        "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
+        "https://res.cloudinary.com/dpnykjono/image/upload/v1781264412/Products/Magazine.webp",
     },
 
     {
@@ -363,7 +363,7 @@ export default function MagazinePhotoBoothImages() {
 
               <div className="p-5">
 
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl mb-4">
+                <div className="relative aspect-3/4 w-full overflow-hidden rounded-xl mb-4">
 
                   <Image
                     src={product.image}

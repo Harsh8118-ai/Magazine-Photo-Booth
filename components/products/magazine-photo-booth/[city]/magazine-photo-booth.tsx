@@ -193,7 +193,7 @@ export default function MagazinePhotoBoothCity({
             "Step Inside. Become the Cover Star."
           </p>
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-4">
-            Our magazine photo booth doesn't just capture moments — it creates iconic, celebrity-style magazine covers that
+            Our magazine photo booth doesn't just capture moments, it creates iconic, celebrity-style magazine covers that
             guests will cherish and share for years to come.
           </p>
           <p className="text-gold/80 italic">The perfect blend of luxury, fun, and unforgettable memories.</p>

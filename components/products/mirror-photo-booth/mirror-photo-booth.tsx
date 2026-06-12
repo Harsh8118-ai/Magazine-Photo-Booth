@@ -179,7 +179,7 @@ const MirrorPhotoBooth = () => {
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed mt-6">
-            Unlike traditional booths, the mirror booth becomes part of the entertainment itself —
+            Unlike traditional booths, the mirror booth becomes part of the entertainment itself
             creating an immersive and unforgettable guest experience.
           </p>
 

@@ -15,7 +15,7 @@ const VintagePhotoBooth = () => {
     {
       question: "Why is the Vintage Photo Booth a perfect wedding return gift?",
       answer:
-        "Guests receive a printed photograph customized with the couple’s names and wedding date. It’s a personal keepsake they can frame and cherish long after the wedding — unlike traditional gifts that are often forgotten.",
+        "Guests receive a printed photograph customized with the couple’s names and wedding date. It’s a personal keepsake they can frame and cherish long after the wedding, unlike traditional gifts that are often forgotten.",
     },
     {
       question: "How many hours is the service for?",
@@ -150,7 +150,7 @@ const VintagePhotoBooth = () => {
             More than a photo booth. A keepsake.
           </p>
           <p className="text-amber-200 leading-relaxed">
-            Instead of traditional return gifts that are often forgotten, the Vintage Photo Booth gives guests a printed photograph from your wedding — personal, emotional, and timeless.
+            Instead of traditional return gifts that are often forgotten, the Vintage Photo Booth gives guests a printed photograph from your wedding - personal, emotional, and timeless.
           </p>
         </div>
       </section>
@@ -166,7 +166,7 @@ const VintagePhotoBooth = () => {
 
             <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
               Modern weddings are moving beyond traditional entertainment.
-              Couples now want experiences that feel emotional, aesthetic, and memorable —
+              Couples now want experiences that feel emotional, aesthetic, memorable 
               and vintage photo booths bring all three together beautifully.
             </p>
           </div>
@@ -229,7 +229,7 @@ const VintagePhotoBooth = () => {
               </h3>
 
               <p className="text-amber-200/80 leading-relaxed max-w-4xl">
-                Vintage photo booths are not just functional — they become part of the wedding décor itself.
+                Vintage photo booths are not just functional, they become part of the wedding décor itself.
                 Their handcrafted retro appearance attracts guests naturally and creates highly shareable
                 moments for Instagram stories, reels, and wedding highlights.
               </p>
@@ -250,7 +250,7 @@ const VintagePhotoBooth = () => {
 
             <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
               Modern couples are moving beyond traditional wedding favors and choosing meaningful experiences instead.
-              A Vintage Photo Booth gives every guest a personalized printed memory from the celebration —
+              A Vintage Photo Booth gives every guest a personalized printed memory from the celebration -
               elegant, emotional, and unforgettable.
             </p>
           </div>
@@ -276,7 +276,7 @@ const VintagePhotoBooth = () => {
               </h3>
 
               <p className="text-amber-200/80 leading-relaxed">
-                Customized instant prints feel premium, personal, and timeless —
+                Customized instant prints feel premium, personal, and timeless
                 making them one of the most loved keepsakes guests take home from weddings.
               </p>
             </div>
@@ -312,7 +312,7 @@ const VintagePhotoBooth = () => {
               </h3>
 
               <p className="text-amber-200/80 leading-relaxed max-w-4xl">
-                The Vintage Photo Booth is more than entertainment —
+                The Vintage Photo Booth is more than entertainment,
                 it becomes part of the emotional memory of your wedding.
                 Guests leave not just with photographs, but with a meaningful keepsake connected to your special day.
               </p>

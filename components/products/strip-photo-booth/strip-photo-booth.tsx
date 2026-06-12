@@ -217,7 +217,7 @@ const StripPhotoBooth = () => {
 
                     <div className="mt-12 p-6 bg-pink-900/20 border-l-4 border-pink-500 rounded-lg">
                         <p className="text-lg font-serif italic text-pink-100">
-                            "Not just photographs — premium mini memories guests take home instantly."
+                            "Not just photographs - premium mini memories guests take home instantly."
                         </p>
                     </div>
 
@@ -281,7 +281,7 @@ const StripPhotoBooth = () => {
                             </h3>
 
                             <p className="text-pink-100/80 leading-relaxed">
-                                Weddings, haldi, sangeet, birthdays, corporate events, and brand activations — strip booths fit every vibe beautifully.
+                                Weddings, haldi, sangeet, birthdays, corporate events, and brand activations - strip booths fit every vibe beautifully.
                             </p>
                         </div>
 

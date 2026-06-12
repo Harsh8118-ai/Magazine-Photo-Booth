@@ -665,6 +665,28 @@ export default function Hero() {
                 </div>
             </section>
 
+            <section className="py-16 px-6">
+                <div className="max-w-4xl mx-auto text-center">
+
+                    <h2 className="font-display text-4xl font-bold mb-6">
+                        Luxury Wedding Photo Booth Experiences
+                    </h2>
+
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                        Looking for a luxury wedding photo booth experience?
+                        Discover magazine booths, mirror booths, instant photography,
+                        and guest engagement ideas designed specifically for premium weddings.
+                    </p>
+
+                    <Link
+                        href="/photo-booth-for-weddings"
+                        className="inline-flex mt-8 rounded-full border border-gold/30 px-6 py-3 hover:border-gold/60"
+                    >
+                        Explore Wedding Experiences
+                    </Link>
+
+                </div>
+            </section>
 
             {/* FAQs & Logistics Section */}
             <SectionWrapper

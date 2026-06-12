@@ -15,7 +15,7 @@ export default function CityProductsSection({
       name: "Magazine Photo Booth",
       description: "The original luxury magazine photo booth experience with instant cover prints",
       extraLine: `Most booked in ${cityName} for weddings & receptions`,
-      icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1766530206/Products/Magazine.webp",
+      icon: "https://res.cloudinary.com/dpnykjono/image/upload/v1781264412/Products/Magazine.webp",
       link: `/magazine-photo-booth/${cityName.toLowerCase()}`,
       features: ["Instant prints", "Magazine covers", "Premium quality"],
     },

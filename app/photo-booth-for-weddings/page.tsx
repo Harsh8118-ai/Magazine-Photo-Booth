@@ -1,34 +1,53 @@
 import type { Metadata } from "next";
 import Hero from "./hero";
 
+
+
 export const metadata: Metadata = {
+    metadataBase: new URL("https://theluxurybooths.com"),
+
+    applicationName: "The Luxury Booths",
+
+    authors: [
+        {
+            name: "The Luxury Booths",
+            url: "https://theluxurybooths.com",
+        },
+    ],
+
+    creator: "The Luxury Booths",
+
+    publisher: "The Luxury Booths",
+
+
     title:
-        "Luxury Wedding Photo Booth Experiences | TLB",
+        "Photo Booth for Weddings | Luxury Wedding Photo Booth Rental | The Luxury Booths",
 
     description:
-        "Luxury wedding photo booth experiences by TLB featuring magazine booths, mirror booths, glam booths, instant prints, and immersive guest engagement experiences for premium weddings.",
+        "Luxury wedding photo booth experiences featuring magazine booths, mirror booths, instant photography, editorial portraits, and immersive guest experiences. Designed to create unforgettable wedding memories and premium celebrations.",
 
     keywords: [
         "photo booth for wedding",
         "wedding photo booth",
         "luxury wedding photo booth",
         "magazine booth wedding",
-        "mirror booth wedding",
-        "glam booth wedding",
-        "instant print booth",
+        "wedding photo booth rental",
+        "photo booth for wedding reception",
+        "luxury wedding entertainment",
+        "wedding photo booth ideas",
+        "magazine photo booth for wedding",
+        "mirror photo booth for wedding",
         "luxury wedding experiences",
-        "premium wedding entertainment",
-        "wedding guest engagement",
         "TLB",
         "The Luxury Booths",
     ],
 
     openGraph: {
         title:
-            "Luxury Wedding Photo Booth Experiences | TLB",
+            "Photo Booth for Weddings | Luxury Wedding Photo Booth Rental | The Luxury Booths",
 
         description:
-            "Luxury wedding photo booth experiences designed for premium weddings and unforgettable guest memories.",
+            "Luxury wedding photo booth experiences featuring magazine booths, mirror booths, instant photography, editorial portraits, and immersive guest experiences. Designed to create unforgettable wedding memories and premium celebrations.",
 
         url:
             "https://theluxurybooths.com/photo-booth-for-weddings",
@@ -37,11 +56,11 @@ export const metadata: Metadata = {
 
         images: [
             {
-                url: "/wedding/hero.webp",
+                url: "https://res.cloudinary.com/dpnykjono/image/upload/v1781184664/For-Weddings.webp",
                 width: 1200,
                 height: 630,
                 alt:
-                    "Luxury Wedding Photo Booth Experience by TLB",
+                    "Luxury Wedding Photo Booth Experience by The Luxury Booths",
             },
         ],
 
@@ -53,12 +72,16 @@ export const metadata: Metadata = {
         card: "summary_large_image",
 
         title:
-            "Luxury Wedding Photo Booth Experiences | TLB",
+            "Photo Booth for Weddings | Luxury Wedding Photo Booth Rental | The Luxury Booths",
 
         description:
-            "Luxury wedding photo booth experiences designed for premium weddings and unforgettable guest memories.",
+            "Luxury wedding photo booth experiences featuring magazine booths, mirror booths, instant photography, editorial portraits, and immersive guest experiences. Designed to create unforgettable wedding memories and premium celebrations.",
 
-        images: ["/wedding/hero.webp"],
+        images: {
+            url: "https://res.cloudinary.com/dpnykjono/image/upload/v1781184664/For-Weddings.webp",
+            alt:
+                "Luxury Wedding Photo Booth Experience by The Luxury Booths",
+        },
     },
 
     alternates: {
@@ -76,6 +99,10 @@ export const metadata: Metadata = {
             "max-video-preview": -1,
             "max-snippet": -1,
         },
+    },
+
+    other: {
+        "article:author": "The Luxury Booths",
     },
 
     category: "Luxury Wedding Experiences",

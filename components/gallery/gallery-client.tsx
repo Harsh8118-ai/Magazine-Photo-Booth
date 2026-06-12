@@ -158,7 +158,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
                   Do you provide instant prints at events?
                 </p>
                 <p className="mt-1">
-                  Yes — guests get instant magazine-style prints on-site, making
+                  Yes, guests get instant magazine-style prints on-site, making
                   it a premium takeaway souvenir.
                 </p>
               </div>
