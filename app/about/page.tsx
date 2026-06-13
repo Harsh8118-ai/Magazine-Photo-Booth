@@ -295,7 +295,7 @@ export default function AboutPage() {
         </h2>
         <p className="text-gray-300 text-lg max-w-4xl mx-auto">
           Based in Delhi NCR, The Luxury Booths serves premium events across India including
-          Delhi, Noida, Gurugram, Mumbai, Jaipur, Udaipur, Bangalore, Pune, and other major cities.
+          Delhi, Noida, Gurugram, Ahmedabad, Mumbai, Jaipur, Udaipur, Bangalore, Pune, and other major cities.
           Our team travels nationwide to deliver consistent luxury experiences wherever excellence
           is expected.
         </p>

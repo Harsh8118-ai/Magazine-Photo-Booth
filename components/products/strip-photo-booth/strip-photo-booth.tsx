@@ -129,6 +129,7 @@ const StripPhotoBooth = () => {
         { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
         { slug: "gurugram", name: "Gurugram", state: "Haryana" },
         { slug: "faridabad", name: "Faridabad", state: "Haryana" },
+        { slug: "ahmedabad", name: "Ahmedabad", state: "Gujarat" },
         { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
         { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
         { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },

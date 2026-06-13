@@ -9,6 +9,7 @@ const cities = [
   "noida",
   "gurugram",
   "faridabad",
+  "ahmedabad",
   "jaipur",
   "udaipur",
   "mumbai",

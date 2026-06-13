@@ -7,7 +7,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/:city(delhi|ghaziabad|noida|gurugram|faridabad|jaipur|udaipur|mumbai|pune)",
+        source: "/:city(delhi|ghaziabad|noida|gurugram|faridabad|ahmedabad|jaipur|udaipur|mumbai|pune)",
         destination: "/photo-booth-rental-in-:city",
         permanent: true,
       },

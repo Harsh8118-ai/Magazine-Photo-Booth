@@ -70,6 +70,13 @@ const cities: Record<
     areas: ["Sector 15", "Sector 16", "Sector 21", "Surajkund Road"],
   },
 
+  ahmedabad: {
+    name: "Ahmedabad",
+    state: "Gujarat",
+    nearby: ["Gandhinagar", "Vadodara", "Anand", "Mehsana"],
+    areas: [ "SG Highway", "Prahlad Nagar", "Bopal", "Satellite", "Thaltej", "Science City", "South Bopal" ],
+  },
+
   jaipur: {
     name: "Jaipur",
     state: "Rajasthan",
@@ -244,6 +251,7 @@ export default async function CityHomePage({
     { slug: "noida", name: "Noida", state: "Uttar Pradesh" },
     { slug: "gurugram", name: "Gurugram", state: "Haryana" },
     { slug: "faridabad", name: "Faridabad", state: "Haryana" },
+    { slug: "ahmedabad", name: "Ahmedabad", state: "Gujarat" },
     { slug: "jaipur", name: "Jaipur", state: "Rajasthan" },
     { slug: "udaipur", name: "Udaipur", state: "Rajasthan" },
     { slug: "mumbai", name: "Mumbai", state: "Maharashtra" },

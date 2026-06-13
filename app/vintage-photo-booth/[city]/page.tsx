@@ -13,6 +13,7 @@ const cities: Record<
   noida: { name: "Noida", state: "Delhi NCR" },
   gurugram: { name: "Gurugram", state: "Delhi NCR" },
   faridabad: { name: "Faridabad", state: "Delhi NCR" },
+  ahmedabad: { name: "Ahmedabad", state: "Gujarat" },
   jaipur: { name: "Jaipur", state: "Rajasthan" },
   udaipur: { name: "Udaipur", state: "Rajasthan" },
   mumbai: { name: "Mumbai", state: "Maharashtra" },
