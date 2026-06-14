@@ -170,7 +170,7 @@ const StripPhotoBooth = () => {
                         Strip Photo Booth Rental in Delhi NCR
                         <br />
                         <span className="text-2xl sm:text-3xl text-pink-300">
-                            Instant Photo Strips for Weddings & Events
+                            Instant Photo Strips for Weddings and Events
                         </span>
                     </h2>
 
