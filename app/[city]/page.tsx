@@ -74,7 +74,7 @@ const cities: Record<
     name: "Ahmedabad",
     state: "Gujarat",
     nearby: ["Gandhinagar", "Vadodara", "Anand", "Mehsana"],
-    areas: [ "SG Highway", "Prahlad Nagar", "Bopal", "Satellite", "Thaltej", "Science City", "South Bopal" ],
+    areas: ["SG Highway", "Prahlad Nagar", "Bopal", "Satellite", "Thaltej", "Science City", "South Bopal"],
   },
 
   jaipur: {
@@ -128,6 +128,7 @@ export async function generateMetadata({
   const { city } = await params
   const cityData = getCityData(city)
 
+
   if (!cityData) {
     return {
       title: "The Luxury Booths",
@@ -136,9 +137,11 @@ export async function generateMetadata({
   }
 
   const canonicalSlug = city
+    .toLowerCase()
+    .replace("photo-booth-rental-in-", "")
 
   const title = `The Luxury Photo Booth Rental Experience in ${cityData.name} | The Luxury Booths`
-  const description = `Premium Luxury Photo Booth Experiences in  ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events & VIP parties.`
+  const description = `Premium Luxury Photo Booth Experiences in  ${cityData.name}. Instant luxury prints, trained staff, and premium event-ready setup for weddings, corporate events and VIP parties.`
 
   const canonicalUrl = `https://theluxurybooths.com/photo-booth-rental-in-${canonicalSlug}`
 
