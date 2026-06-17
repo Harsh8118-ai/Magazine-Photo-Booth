@@ -234,7 +234,7 @@ const StripPhotoBooth = () => {
                     <div className="text-center mb-12">
 
                         <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mb-4 text-balance">
-                            Why Strip Photo Booths Are Trending at Weddings & Events
+                            Why Strip Photo Booths Are Trending at Weddings and Events
                         </h2>
 
                         <p className="text-pink-100 max-w-3xl mx-auto leading-relaxed">
