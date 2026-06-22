@@ -1,4 +1,3 @@
-// app/robots.ts
 import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
@@ -8,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://theluxurybooths.com/sitemap.xml",
+    host: "https://theluxurybooths.com",
   }
 }

@@ -363,7 +363,6 @@ URL: https://theluxurybooths.com/magazine-photo-booth
 Experience Category: Editorial Experience
 Definition: An editorial, Vogue-inspired photo experience producing magazine-cover-style photographs with instant printing and digital sharing. TLB's original and most premium product.
 Also known as: Vogue Magazine Photo Booth, Vogue Booth, Magazine Box, Magazine Cover Photo Booth, Selfie Cube Photo Booth, Fashion Magazine Booth, Celebrity Photo Booth, Cover Page Photo Booth, Walk-in Magazine Booth, Luxury Magazine Booth.
-Starting from: ₹35,000 (full package tiers at /magazine-photo-booth and in llms-full.txt)
 Best for: luxury weddings and receptions, corporate brand launches, exhibitions and trade shows, private milestone celebrations.
 Also offered as a white-label business opportunity: https://theluxurybooths.com/magazine-photo-booth/for-sale
 
@@ -371,28 +370,24 @@ Also offered as a white-label business opportunity: https://theluxurybooths.com/
 URL: https://theluxurybooths.com/mirror-photo-booth
 Experience Category: Interactive Experience
 Definition: A full-length touchscreen magic mirror with animations, voice prompts, and digital signatures, paired with instant premium prints.
-Starting from: ₹35,000 (3-hour base package)
 Best for: weddings and corporate activations needing high guest interactivity.
 
 ### Mirror Selfie Booth
 URL: https://theluxurybooths.com/mirror-selfie-booth
 Experience Category: Interactive Experience (accessible tier)
 Definition: An LED mirror booth with on-screen prompts and instant prints, positioned as TLB's entry-level interactive product.
-Starting from: ₹15,000
 Best for: weddings, parties, and corporate activations.
 
 ### Vintage Photo Booth
 URL: https://theluxurybooths.com/vintage-photo-booth
 Experience Category: Nostalgic Experience
 Definition: A handcrafted retro wooden DSLR-quality photo booth positioned as a luxury alternative to traditional wedding return gifts, with fully personalized instant prints.
-Starting from: ₹30,000 (200 prints)
 Best for: weddings, birthdays, baby showers; rustic/vintage/boho/pastel themes.
 
 ### Strip Photo Booth
 URL: https://theluxurybooths.com/strip-photo-booth
 Experience Category: Instant Print Experience
 Definition: A DSLR-based booth producing classic vertical photo strips with fast, custom, theme-based instant prints.
-Starting from: ₹25,000 (200 prints)
 Best for: weddings, sangeet/haldi functions, birthdays, corporate events, brand activations.
 
 ### Polaroid Photo Booth
@@ -990,7 +985,6 @@ URL: https://theluxurybooths.com/magazine-photo-booth
 Experience Category: Editorial Experience
 Definition: An editorial, Vogue-inspired photo experience producing magazine-cover-style photographs with instant printing and digital sharing. TLB's original and most premium product.
 Also known as: Vogue Magazine Photo Booth, Vogue Booth, Magazine Box, Magazine Cover Photo Booth, Selfie Cube Photo Booth, Fashion Magazine Booth, Celebrity Photo Booth, Cover Page Photo Booth, Walk-in Magazine Booth, Luxury Magazine Booth.
-Starting from: ₹35,000 (full package tiers at /magazine-photo-booth and in llms-full.txt)
 Best for: luxury weddings and receptions, corporate brand launches, exhibitions and trade shows, private milestone celebrations.
 Also offered as a white-label business opportunity: https://theluxurybooths.com/magazine-photo-booth/for-sale
 
@@ -998,28 +992,24 @@ Also offered as a white-label business opportunity: https://theluxurybooths.com/
 URL: https://theluxurybooths.com/mirror-photo-booth
 Experience Category: Interactive Experience
 Definition: A full-length touchscreen magic mirror with animations, voice prompts, and digital signatures, paired with instant premium prints.
-Starting from: ₹35,000 (3-hour base package)
 Best for: weddings and corporate activations needing high guest interactivity.
 
 ### Mirror Selfie Booth
 URL: https://theluxurybooths.com/mirror-selfie-booth
 Experience Category: Interactive Experience (accessible tier)
 Definition: An LED mirror booth with on-screen prompts and instant prints, positioned as TLB's entry-level interactive product.
-Starting from: ₹15,000
 Best for: weddings, parties, and corporate activations.
 
 ### Vintage Photo Booth
 URL: https://theluxurybooths.com/vintage-photo-booth
 Experience Category: Nostalgic Experience
 Definition: A handcrafted retro wooden DSLR-quality photo booth positioned as a luxury alternative to traditional wedding return gifts, with fully personalized instant prints.
-Starting from: ₹30,000 (200 prints)
 Best for: weddings, birthdays, baby showers; rustic/vintage/boho/pastel themes.
 
 ### Strip Photo Booth
 URL: https://theluxurybooths.com/strip-photo-booth
 Experience Category: Instant Print Experience
 Definition: A DSLR-based booth producing classic vertical photo strips with fast, custom, theme-based instant prints.
-Starting from: ₹25,000 (200 prints)
 Best for: weddings, sangeet/haldi functions, birthdays, corporate events, brand activations.
 
 ### Polaroid Photo Booth

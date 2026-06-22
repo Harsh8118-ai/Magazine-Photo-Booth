@@ -18,7 +18,7 @@ export default function FooterClientTwo() {
         type: null,
     })
 
-    
+
 
     const openLegalModal = (type: "privacy" | "terms" | "cookies") => {
         setLegalModal({ isOpen: true, type })
@@ -61,10 +61,19 @@ export default function FooterClientTwo() {
                             Cookie Policy
                         </button>
                         <a
-                            href="mailto:magazinephotobooth@gmail.com"
+                            href="/llms.txt"
+                            rel="nofollow"
                             className="text-gray-400 hover:text-white transition-colors"
                         >
-                            Contact
+                            AI Index
+                        </a>
+
+                        <a
+                            href="/llms-full.txt"
+                            rel="nofollow"
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
+                            AI Knowledge Base
                         </a>
                     </div>
 

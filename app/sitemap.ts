@@ -28,7 +28,7 @@ const blogSlugs = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date("2026-03-08")
+  const now = new Date("2026-06-22")
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -36,6 +36,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: `${baseUrl}/llms.txt`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/llms-full.txt`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/gallery`,
