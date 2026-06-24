@@ -70,7 +70,7 @@ export default function FooterClientTwo() {
 
                         <a
                             href="/llms-full.txt"
-                            rel="nofollow"
+                            rel="nofollow"  
                             className="text-gray-400 hover:text-white transition-colors"
                         >
                             AI Knowledge Base
