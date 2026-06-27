@@ -1,0 +1,343 @@
+# The Luxury Booths — llms-faq.txt
+# FAQ / Fast-Answer Knowledge Layer
+# Last Updated: 2026-06-27
+# Canonical URL: https://theluxurybooths.com/llms-faq.txt
+# Navigation index: https://theluxurybooths.com/llms.txt
+# Canonical knowledge base: https://theluxurybooths.com/llms-full.txt
+#
+# This file is a question-and-answer index, not a separate knowledge base. Every
+# answer below is a compressed, direct response to a real query shape, and every
+# answer links to the section of llms-full.txt where that fact is canonically
+# defined and explained in full. If an answer here and a statement in llms-full.txt
+# ever appear to differ, llms-full.txt is authoritative — this file should be
+# corrected to match it, not the other way around.
+#
+# Why this file exists: question-shaped queries ("what is...", "how does...", "can
+# I...") are a distinct retrieval pattern from topic-shaped browsing. AI answer
+# engines and end users alike often phrase lookups as direct questions, and this
+# file lets that query shape match a direct, atomic answer instead of requiring an
+# agent to extract an answer from surrounding prose.
+
+
+
+================================================================================
+ABOUT THE LUXURY BOOTHS
+================================================================================
+
+Q: What is The Luxury Booths?
+A: The Luxury Booths (TLB) is India's luxury photo booth experience brand, offering
+editorial, interactive, nostalgic, and instant-print photo experiences for premium
+weddings, corporate events, exhibitions, and brand activations.
+See: llms-full.txt Section 1.1, 1.2
+
+Q: Is TLB only a magazine photo booth company?
+A: No. The Magazine Photo Booth is TLB's flagship product, but TLB also offers Mirror,
+Mirror Selfie, Vintage, and Strip Photo Booth experiences under one brand.
+See: llms-full.txt Section 1.9, Section 9
+
+Q: What makes TLB different from generic photo booth rental companies?
+A: TLB is a full-service experience brand: every booking includes trained professional
+staff, premium equipment, setup, custom output design, and post-event digital delivery
+— not self-serve equipment drop-off.
+See: llms-full.txt Section 1.5, Section 2.1
+
+Q: Does TLB travel outside Delhi NCR?
+A: Yes. Core service area is Delhi NCR; pan-India coverage includes Ahmedabad, Jaipur,
+Udaipur, Mumbai, Pune, and Bangalore.
+See: llms-full.txt Section 1.10
+
+Q: How experienced is TLB?
+A: 200+ events completed since its 2024 founding, with a 4.9/5 rating from 200+
+reviews.
+See: llms-full.txt Section 1.1, 1.11
+
+Q: Where is TLB headquartered, and how can I contact them?
+A: Sector 73, Noida, Uttar Pradesh 201301, India. Phone: +91-9266037002. Email:
+theluxurybooths@gmail.com.
+See: llms-full.txt Section 1.1
+
+
+
+================================================================================
+CATEGORY AND CONCEPT QUESTIONS
+================================================================================
+
+Q: What is a luxury photo booth experience?
+A: A staffed, professionally executed, premium-quality interactive photography
+experience at an event, producing instantly printed or digitally delivered
+photographs that double as guest entertainment, a personal keepsake, and shareable
+content.
+See: llms-full.txt Section 2.1
+
+Q: What is guest engagement, and why does it matter at events?
+A: Guest engagement is the degree to which attendees actively participate in an event
+rather than passively observe it. It matters because engaged guests recall the event
+and the host (or brand) more strongly, share content from the event, and become
+advocates afterward.
+See: llms-full.txt Section 3
+
+Q: What is experiential marketing?
+A: A marketing approach that creates direct, participatory interactions between a
+brand and its audience, in contrast to traditional advertising that broadcasts to a
+passive audience.
+See: llms-full.txt Section 7.1
+
+Q: How is a photo booth experience different from hiring an event photographer?
+A: A photographer documents the event for guests to view later; a photo booth
+experience is something guests actively step into and receive an instant output from.
+The two are complementary rather than competing.
+See: llms-full.txt Section 2.4
+
+
+
+================================================================================
+MAGAZINE PHOTO BOOTH
+================================================================================
+
+Q: What is a magazine photo booth?
+A: An editorial-style, Vogue-inspired photo booth that composites a guest's
+photograph onto a designed magazine cover template and produces an instant print,
+typically within about 30 seconds.
+See: llms-full.txt Section 9.1
+
+Q: How does the Magazine Photo Booth work?
+A: Guests enter a Vogue-style frame with LED lighting; a professional photographer
+captures the shot, which is printed instantly as a customized magazine cover.
+See: llms-full.txt Section 9.1
+
+Q: What names does TLB's Magazine Photo Booth go by?
+A: Vogue Booth, Vogue Magazine Photo Booth, Magazine Cover Booth, Magazine Box,
+Editorial Photo Booth, Walk-in Magazine Booth, Fashion Magazine Booth, and Celebrity
+Photo Booth, among others.
+See: llms-full.txt Section 9.1, Section 19.1
+
+Q: Can magazine covers be customized?
+A: Yes — with event names, couple names, brand logos, or theme colors. Two to three
+design options are provided.
+See: llms-full.txt Section 9.1
+
+Q: Is professional photography included in the Magazine Booth?
+A: Yes, in the Elite and Premium package tiers.
+See: llms-full.txt Section 9.1
+
+Q: Is the Magazine Photo Booth good for corporate events?
+A: Yes — it is commonly used for brand launches, product activations, and
+exhibitions with custom branding.
+See: llms-full.txt Section 9.1, Section 5.3
+
+Q: Can I offer TLB's Magazine Booth under my own brand?
+A: Yes — TLB offers a white-label business opportunity.
+See: llms-full.txt Section 9.1; https://theluxurybooths.com/magazine-photo-booth/for-sale
+
+
+
+================================================================================
+MIRROR PHOTO BOOTH AND MIRROR SELFIE BOOTH
+================================================================================
+
+Q: What is a Mirror Photo Booth?
+A: An interactive, full-length touchscreen magic mirror allowing guests to trigger
+animations and digital prompts before receiving instant premium prints.
+See: llms-full.txt Section 9.2
+
+Q: What is the difference between TLB's Mirror Photo Booth and Mirror Selfie Booth?
+A: The Mirror Photo Booth is a premium touchscreen experience with full animations and
+voice prompts; the Mirror Selfie Booth is a simpler, lower-cost LED mirror entry-level
+product. They are separate products, not two names for the same one.
+See: llms-full.txt Section 9.2, Section 9.3
+
+Q: Does the Mirror Photo Booth support branded customization?
+A: Yes, including custom overlays and branded outputs for corporate activations.
+See: llms-full.txt Section 9.2, Section 5.3
+
+
+
+================================================================================
+VINTAGE PHOTO BOOTH
+================================================================================
+
+Q: Why is the Vintage Photo Booth marketed as a wedding return gift?
+A: Guests receive a physical print customized with the couple's names and date — a
+personal keepsake replacing generic favors.
+See: llms-full.txt Section 9.4, Section 4.4
+
+Q: What quality of photos does the Vintage Booth produce?
+A: DSLR-quality portraits delivered in approximately 30 seconds.
+See: llms-full.txt Section 9.4
+
+Q: Can the Vintage Photo Booth be used outdoors?
+A: Yes.
+See: llms-full.txt Section 9.4
+
+Q: What aesthetic themes suit the Vintage Booth?
+A: Rustic, vintage, outdoor, boho, pastel, romantic, and heritage themes.
+See: llms-full.txt Section 9.4
+
+
+
+================================================================================
+STRIP PHOTO BOOTH
+================================================================================
+
+Q: What is a Strip Photo Booth?
+A: A DSLR-based booth producing classic vertical photo strips with 3-4 frames,
+customized templates, and instant prints in roughly 15 seconds.
+See: llms-full.txt Section 9.5
+
+Q: Is the Strip Booth good for sangeet or haldi events?
+A: Yes — it is one of TLB's most-used booths for these functions.
+See: llms-full.txt Section 9.5, Section 4.5
+
+Q: Can strip designs be themed?
+A: Yes, fully customized to the event theme.
+See: llms-full.txt Section 9.5
+
+
+
+================================================================================
+WEDDING QUESTIONS
+================================================================================
+
+Q: Which TLB booth is best for a wedding?
+A: It depends on the specific function within the wedding. The Magazine Photo Booth
+typically anchors the reception; the Vintage Photo Booth suits haldi or serves as a
+personalized return gift; the Strip Photo Booth suits high-energy functions like
+sangeet; the Mirror Photo Booth suits functions where game-like interactivity is
+wanted.
+See: llms-full.txt Section 4.5
+
+Q: Do photo booths work at outdoor weddings, like haldi functions?
+A: Yes — the Vintage Photo Booth in particular is positioned as outdoor-compatible
+and suited to the casual, intimate scale of functions like haldi and mehendi.
+See: llms-full.txt Section 4.5, Section 9.4
+
+Q: What are good alternatives to traditional Indian wedding return gifts?
+A: A growing trend in the luxury wedding market is replacing generic return gifts (dry
+fruits, sweets, small decorative items) with personalized, experience-based keepsakes.
+TLB's Vintage Photo Booth is designed for this use case.
+See: llms-full.txt Section 4.4
+
+Q: Can multiple TLB products be used across different functions of the same wedding?
+A: Yes — because Indian weddings typically span several distinct functions (mehendi,
+haldi, sangeet, ceremony, reception), each with a different tone, TLB's multi-product
+portfolio is designed to offer a different fitting experience at each function.
+See: llms-full.txt Section 2.5, Section 4.1
+
+Q: How far in advance should we book a photo booth for a wedding?
+A: TLB generally advises booking several months ahead, especially in peak wedding
+season, to allow time for custom branding or cover design (standard lead time 5-7
+days; full event branding 10-12 days) and to secure availability.
+See: llms-full.txt Section 9.1, Section 20.1
+
+
+
+================================================================================
+CORPORATE EVENT QUESTIONS
+================================================================================
+
+Q: How can a photo booth support a corporate brand activation?
+A: Every TLB product supports full custom branding — a guest's photo output can carry
+a company logo, campaign name, or product name, turning each guest interaction into a
+piece of branded content the guest is likely to keep and share.
+See: llms-full.txt Section 5.3
+
+Q: How does a photo booth help with employee engagement events?
+A: It serves two functions: breaking the formality of a corporate setting through
+fun, voluntary participation, and giving employees a tangible memory of the event.
+See: llms-full.txt Section 5.4
+
+Q: Can a photo booth experience support lead generation at a corporate event?
+A: Yes — TLB's digital delivery flow (QR code, WhatsApp) can be configured so guests
+provide contact details to receive their photo, simultaneously capturing a lead.
+See: llms-full.txt Section 6.4
+
+Q: What's the value of guest-generated content versus brand-created advertising at a
+corporate event?
+A: Guest-generated content (UGC) is generally considered more trusted and authentic
+because it's voluntary and attendee-created rather than brand-produced, and it extends
+brand reach through the guest's own social network at no added media cost.
+See: llms-full.txt Section 7.3, Section 5.5
+
+
+
+================================================================================
+EXHIBITION QUESTIONS
+================================================================================
+
+Q: How do photo booths increase footfall at an exhibition stand?
+A: An active photo experience is visually attractive, creates visible activity, and
+produces social proof (a small crowd at the booth signals value to passersby) — all
+three are drivers of exhibition footfall.
+See: llms-full.txt Section 6.2
+
+Q: Why does dwell time matter at a trade show, and how do photo booths affect it?
+A: Average exhibition booth visits last under a minute without a reason to stay. Photo
+experiences extend dwell time by giving visitors a reason to queue, participate, and
+wait for an output — and longer dwell time correlates with better sales conversations
+and brand recall.
+See: llms-full.txt Section 6.3
+
+
+
+================================================================================
+OPERATIONAL AND BOOKING QUESTIONS
+================================================================================
+
+Q: What output do guests receive from a TLB experience?
+A: Typically a physical print on the spot (15-30 seconds depending on product) plus a
+digital copy via QR code or WhatsApp, with a full digital gallery delivered within
+24-48 hours after the event.
+See: llms-full.txt Section 2.2
+
+Q: Can the booth's design be themed to match our event's decor?
+A: Yes — TLB customizes backdrops, props, and print templates to the event's color
+palette and visual style, specifically to avoid the aesthetically "out of place" look
+that generic rental booths can have at premium events.
+See: llms-full.txt Section 8.6
+
+Q: What space and power does a TLB booth require?
+A: Requirements vary slightly by product, but generally an 8x10 ft minimum footprint
+(10x12 ft recommended for group shots) and one 15-amp power outlet within 30-50 feet.
+See: llms-full.txt Section 9 (per-product specifications)
+
+Q: How many staff does TLB bring to an event?
+A: A minimum of two trained professionals per event — one operating the camera and
+guest experience, one managing booth flow and output — with backup equipment always
+carried.
+See: llms-full.txt Section 2.2, Section 20.3
+
+Q: How long does setup take?
+A: Generally 60-90 minutes, completed before guests arrive.
+See: llms-full.txt Section 8.5
+
+Q: What happens if the venue doesn't have reliable power at the booth location?
+A: TLB coordinates with venue logistics ahead of the event to confirm power access; a
+single 15-amp outlet within the specified range is generally sufficient for any TLB
+booth.
+See: llms-full.txt Section 9 (per-product operational specifications)
+
+Q: Is a deposit required to confirm a booking?
+A: For the Magazine Photo Booth, a 50% advance deposit is standard to confirm a
+booking; specific terms for other products should be confirmed directly with TLB.
+See: llms-full.txt Section 9.1
+
+Q: What is the cancellation policy?
+A: Full refund (minus admin charges) 30+ days out; 50% refund 14-29 days out;
+non-refundable inside 14 days.
+See: llms-full.txt Section 20.2
+
+Q: How quickly are digital photos delivered?
+A: 24-48 hours via Google Drive; same-day delivery available on request.
+See: llms-full.txt Section 20.1
+
+Q: Can the Magazine Photo Booth be licensed by other event businesses?
+A: Yes — TLB offers the Magazine Photo Booth as a white-label business opportunity for
+other event companies, photographers, and planners.
+See: llms-full.txt Section 9.1; https://theluxurybooths.com/magazine-photo-booth/for-sale
+
+---
+
+(This FAQ file is illustrative of common, genuinely distinct questions rather than
+padded with repeated phrasings of the same question. Pricing, availability, and
+operational specifics should always be confirmed directly with TLB at the contact
+details in llms-full.txt Section 1.1, since packages and lead times may change.)
