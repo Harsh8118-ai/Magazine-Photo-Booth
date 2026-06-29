@@ -51,7 +51,7 @@ export function VenueRequirements() {
               <p className="text-purple-400 font-semibold">{req.description}</p>
             </CardHeader>
 
-            <CardContent className="pt-0">
+            <CardContent className="pt-0">   
               <ul className="space-y-2">
                 {req.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start text-sm text-gray-500">
