@@ -93,7 +93,7 @@ export function Button3D({
       variant={variant as any}
       size={size as any}
       onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
+      onMouseEnter={handleMouseEnter}    
       onMouseLeave={handleMouseLeave}
       onClick={onClick}     
       disabled={disabled}
