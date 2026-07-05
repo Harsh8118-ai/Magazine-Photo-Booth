@@ -96,7 +96,7 @@ export function Button3D({
       onMouseEnter={handleMouseEnter}    
       onMouseLeave={handleMouseLeave}   
       onClick={onClick}     
-      disabled={disabled}
+      disabled={disabled}   
     >
       <span className="relative z-10 font-semibold  flex items-center ">{children}</span>
     </Button>
