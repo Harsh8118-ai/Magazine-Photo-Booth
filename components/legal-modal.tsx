@@ -28,7 +28,7 @@ export function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
                   <li>Contact information (name, email, phone number)</li>
                   <li>Event details (date, location, preferences)</li>
                   <li>Payment information (processed securely through third parties)</li>
-                  <li>Photos taken during events (with your consent)</li>
+                  <li>Photos taken during events (with your consent)</li>   
                 </ul>
               </section>
 
