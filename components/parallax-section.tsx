@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 interface ParallaxSectionProps {
   children: React.ReactNode
   speed?: number
-  className?: string
+  className?: string  
 }
 
 export function ParallaxSection({ children, speed = 0.5, className = "" }: ParallaxSectionProps) {
