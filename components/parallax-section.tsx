@@ -9,7 +9,7 @@ interface ParallaxSectionProps {
   children: React.ReactNode
   speed?: number
   className?: string  
-}
+}  
 
 export function ParallaxSection({ children, speed = 0.5, className = "" }: ParallaxSectionProps) {
   const ref = useRef<HTMLDivElement>(null)
