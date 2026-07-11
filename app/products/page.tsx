@@ -151,6 +151,23 @@ const products = [
     image:
       "https://res.cloudinary.com/dpnykjono/image/upload/v1780402924/Strip-5.webp",
   },
+  {
+    id: "butterfly-drone",
+    name: "Butterfly Drone",
+    description:
+      "A luxury Butterfly Drone experience that delivers rings mid-air with lifelike flapping wings, creating an unforgettable entrance for engagements, weddings, and premium events.",
+    features: [
+      "Cinematic flying ring delivery",
+      "Realistic biomimetic flapping wings",
+      "LED illuminated butterfly design",
+      "Professional operator & rehearsed flight",
+      "Perfect for weddings & luxury events",
+    ],
+    pricing: "Starting ₹40,000",
+    href: "/butterfly-drone",
+    image:
+      "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1781264412/Products/Butterfly-Drone.webp",
+  },
 ]
 
 const galleryImages = [
@@ -216,6 +233,7 @@ export default function ProductsPage() {
                       src={product.image}
                       alt={`${product.name} by The Luxury Booths`}
                       fill
+                      loading="eager"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
@@ -387,6 +405,11 @@ export default function ProductsPage() {
                   <li>
                     <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
                       Strip Photo Booth
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                      Butterfly Drone
                     </Link>
                   </li>
                   <li>

@@ -86,7 +86,7 @@ export function Button3D({
         !prefersReducedMotion && "transform-gpu",
         className,
       )}
-      style={{ handleMouseEnter
+      style={{
         ...tiltStyle,
         ...glowStyle,
       }}

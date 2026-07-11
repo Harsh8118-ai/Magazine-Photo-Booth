@@ -830,6 +830,11 @@ const ButterflyDrone = () => {
                     Strip Photo Booth
                   </Link>
                 </li>
+                <li>
+                  <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                    Butterfly Drone
+                  </Link>
+                </li>
               </ul>
             </div>
 

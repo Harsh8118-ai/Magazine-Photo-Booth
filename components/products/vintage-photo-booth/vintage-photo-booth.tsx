@@ -167,7 +167,7 @@ const VintagePhotoBooth = () => {
 
             <p className="text-amber-200 max-w-3xl mx-auto leading-relaxed">
               Modern weddings are moving beyond traditional entertainment.
-              Couples now want experiences that feel emotional, aesthetic, memorable 
+              Couples now want experiences that feel emotional, aesthetic, memorable
               and vintage photo booths bring all three together beautifully.
             </p>
           </div>
@@ -499,6 +499,11 @@ const VintagePhotoBooth = () => {
                 <li>
                   <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
                     Strip Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                    Butterfly Drone
                   </Link>
                 </li>
                 <li>

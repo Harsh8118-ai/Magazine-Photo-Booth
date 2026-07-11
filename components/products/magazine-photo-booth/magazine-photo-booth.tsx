@@ -335,15 +335,20 @@ export default function MagazinePhotoBooth() {
                   </Link>
                 </li>
                 <li>
-                    <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
-                      Mirror Photo Booth
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
-                      Strip Photo Booth
-                    </Link>
-                  </li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                    Strip Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                    Butterfly Drone
+                  </Link>
+                </li>
                 <li>
                   <Link href="/" className="hover:text-white transition-colors">
                     Polaroid Photo Booth (coming soon)

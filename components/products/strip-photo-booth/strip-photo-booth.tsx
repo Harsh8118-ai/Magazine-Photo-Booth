@@ -488,6 +488,11 @@ const StripPhotoBooth = () => {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                                        Butterfly Drone
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link href="/" className="hover:text-white transition-colors">
                                         Polaroid Photo Booth (coming soon)
                                     </Link>
