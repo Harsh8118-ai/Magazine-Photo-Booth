@@ -116,6 +116,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/butterfly-drone`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/photo-booth-for-weddings`,
       lastModified: now,
       changeFrequency: "monthly",
