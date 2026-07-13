@@ -468,9 +468,6 @@ export default async function CityHomePage({
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 sm:gap-12 mb-12 sm:mb-16">
             <div>
               <article>
-                <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-center">
-                  Check Your Date in {cityData.name}
-                </h3>
                 <AvailabilityChecker />
               </article>
             </div>

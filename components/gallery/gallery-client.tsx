@@ -87,7 +87,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
                       alt={event.name}
                       width={208}
                       height={208}
-                      loading="lazy"
+                      loading="eager"
                       className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function GalleryClient({ events }: { events: Event[] }) {
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
-              href="/#products"
+              href="/products"
               className="px-6 py-3 rounded-xl font-semibold bg-purple-600 text-white text-center hover:opacity-90 transition"
             >
               View Packages
