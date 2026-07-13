@@ -132,7 +132,7 @@ const products = [
     ],
     pricing: "Starting ₹35,000 + duration",
     href: "/mirror-photo-booth",
-    image: "https://res.cloudinary.com/dpnykjono/image/upload/v1780398156/Mirror-1-8.webp",
+    image: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1780398156/Mirror-1-8.webp",
   },
   {
     id: "strip-photo-booth",
@@ -149,7 +149,7 @@ const products = [
     pricing: "Starting ₹25,000 + prints",
     href: "/strip-photo-booth",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/v1780402924/Strip-5.webp",
+      "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1780402924/Strip-5.webp",
   },
   {
     id: "butterfly-drone",
@@ -166,7 +166,7 @@ const products = [
     pricing: "Starting ₹40,000",
     href: "/butterfly-drone",
     image:
-      "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1781264412/Products/Butterfly-Drone.webp",
+      "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-7.webp",
   },
 ]
 

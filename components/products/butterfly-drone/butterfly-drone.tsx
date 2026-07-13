@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Can it be used for proposals as well as ring ceremonies?",
     answer:
-      "Yes. It works beautifully for proposals, engagement ceremonies, and ring ceremonies — anywhere you want the ring to arrive as a genuine surprise moment.",
+      "Yes. It works beautifully for proposals, engagement ceremonies and ring ceremonies, anywhere you want the ring to arrive as a genuine surprise moment.",
   },
   {
     question: "Is it only for ring delivery, or can we use it elsewhere in our event?",
@@ -77,14 +77,14 @@ const faqs = [
 ]
 
 const galleryImages = [
-  { id: 1, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-1.webp", alt: "Butterfly Drone delivering rings at an engagement ceremony" },
-  { id: 2, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-2.webp", alt: "Butterfly drone flying the rings to the bride and groom at a ring ceremony" },
-  { id: 3, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-3.webp", alt: "Close-up of the illuminated LED wings on the butterfly drone" },
-  { id: 4, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-4.webp", alt: "Guests reacting to the butterfly drone ring delivery moment" },
-  { id: 5, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-5.webp", alt: "Butterfly Drone performing a wedding entrance" },
-  { id: 6, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-6.webp", alt: "Operator calibrating the butterfly drone before a ring ceremony" },
-  { id: 7, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-7.webp", alt: "Butterfly drone reveal moment at a corporate product launch" },
-  { id: 8, src: "https://res.cloudinary.com/dpnykjono/image/upload/f_auto,q_auto,w_300/v1/-butterfly-drone-8.webp", alt: "Bride and groom exchanging rings delivered by the butterfly drone" },
+  { id: 1, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone.webp", alt: "Butterfly Drone delivering rings at an engagement ceremony" },
+  { id: 2, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-2.webp", alt: "Butterfly drone flying the rings to the bride and groom at a ring ceremony" },
+  { id: 3, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-3.webp", alt: "Close-up of the illuminated LED wings on the butterfly drone" },
+  { id: 4, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-4.webp", alt: "Guests reacting to the butterfly drone ring delivery moment" },
+  { id: 5, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-5.webp", alt: "Butterfly Drone performing a wedding entrance" },
+  { id: 6, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-6.webp", alt: "Operator calibrating the butterfly drone before a ring ceremony" },
+  { id: 7, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-7.webp", alt: "Butterfly drone reveal moment at a corporate product launch" },
+  { id: 8, src: "https://res.cloudinary.com/dpnykjono/image/upload/w_300,q_auto,f_auto/v1783944184/Butterfly-Drone-8.webp", alt: "Bride and groom exchanging rings delivered by the butterfly drone" },
 ]
 
 const features = [
@@ -131,7 +131,7 @@ const timelineSteps = [
     step: "04",
     title: "Live Performance",
     description:
-      "The choreographed flight runs on your cue — an entrance, a reveal, or a standalone performance slot in your program.",
+      "The choreographed flight runs on your cue an entrance, a reveal, or a standalone performance slot in your program.",
   },
   {
     step: "05",
@@ -161,7 +161,7 @@ const bookingSteps = [
   {
     step: "03",
     title: "Planning & Choreography",
-    description: "Flight timing is planned around your schedule — entrance, reveal, or a dedicated performance slot.",
+    description: "Flight timing is planned around your schedule entrance, reveal or a dedicated performance slot.",
   },
   {
     step: "04",
@@ -307,7 +307,7 @@ const ButterflyDrone = () => {
         </h2>
         <div className="space-y-4 text-pink-100/80 leading-relaxed">
           <p>
-            A butterfly drone is a biomimetic flying device — engineered to replicate the
+            A butterfly drone is a biomimetic flying device engineered to replicate the
             flapping-wing flight of a real butterfly rather than fly on spinning propellers like a
             conventional camera drone. LED-lit wings and a slow, gliding flight path give it a
             lifelike, almost magical quality that reads as a live illusion rather than a piece of
@@ -318,16 +318,16 @@ const ButterflyDrone = () => {
             flight timed to a wedding entrance, a couple's first dance, a corporate product reveal,
             or a standalone performance slot within your event program. It's flown by a trained
             operator within a marked, controlled flight zone for the full duration of the
-            performance — never left running unsupervised.
+            performance  never left running unsupervised.
           </p>
           <p>
             Unlike a static prop or decoration, the appeal is entirely in the moment: guests watch
-            it fly, react in real time, and it becomes the story of the evening — which is why it
+            it fly, react in real time, and it becomes the story of the evening which is why it
             works particularly well as an entrance or reveal moment rather than background
             decor.
           </p>
           <p>
-            A butterfly drone is a biomimetic flying device — engineered to replicate the
+            A butterfly drone is a biomimetic flying device engineered to replicate the
             flapping-wing flight of a real butterfly rather than fly on spinning propellers like a
             conventional camera drone. LED-lit wings and a slow, gliding flight path give it a
             lifelike, almost magical quality that reads as a live illusion rather than a piece of
@@ -567,7 +567,7 @@ const ButterflyDrone = () => {
 
             <p className="text-pink-200 max-w-3xl mx-auto leading-relaxed">
               Every Butterfly Drone performance is carefully planned long before your guests
-              arrive. Our goal isn't simply to fly a drone—it's to create a flawless,
+              arrive. Our goal isn't simply to fly a drone, it's to create a flawless,
               cinematic ring delivery that feels effortless while maintaining complete
               operational control from start to finish.
             </p>
@@ -593,8 +593,8 @@ const ButterflyDrone = () => {
 
             <p>
               During the ceremony, the drone is flown exclusively by a trained operator
-              who controls the entire performance in real time. Every movement—from takeoff
-              to ring delivery and landing—is manually supervised to ensure reliability,
+              who controls the entire performance in real time. Every movement, from takeoff
+              to ring delivery and landing, is manually supervised to ensure reliability,
               safety, and perfect synchronization with your ceremony.
             </p>
 
@@ -833,6 +833,11 @@ const ButterflyDrone = () => {
                 <li>
                   <Link href="/butterfly-drone" className="hover:text-white transition-colors">
                     Butterfly Drone
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-white transition-colors">
+                    Polaroid Photo Booth (coming soon)
                   </Link>
                 </li>
               </ul>

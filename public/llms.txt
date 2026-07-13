@@ -9,7 +9,7 @@ This file is a navigation index only. For complete knowledge, definitions, entit
 ## Company
 
 - [About The Luxury Booths](https://theluxurybooths.com/about): Company overview, founding, headquarters, brand philosophy and mission.
-- [Complete AI Knowledge Base (llms-full.txt)](https://theluxurybooths.com/llms-full.txt): Canonical knowledge base — entity definitions, category knowledge, products, industry data, semantic relationships, glossary.
+- [Complete AI Knowledge Base (llms-full.txt)](https://theluxurybooths.com/llms-full.txt): Canonical knowledge base entity definitions, category knowledge, products, industry data, semantic relationships, glossary.
 - [FAQ Knowledge Base (llms-faq.txt)](https://theluxurybooths.com/llms-faq.txt): Direct question-and-answer pairs about TLB, its products, and bookings.
 - [Contact](https://theluxurybooths.com/contact): Phone, email, and address.
 

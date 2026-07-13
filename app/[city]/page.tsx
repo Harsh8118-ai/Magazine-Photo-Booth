@@ -5,16 +5,14 @@ import { notFound } from "next/navigation"
 import { Star, Zap, Users, Award } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import Script from "next/script"
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { SectionWrapper } from "@/components/section-wrapper"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import HeroClient from "@/components/hero/hero.client"
-import { FaqsSection } from "@/components/faqs-section"
 import WhatsAppCTA from "@/components/whatsapp-cta.client"
 import { AvailabilityChecker } from "@/components/availability-checker"
 import { TestimonialCarousel } from "@/components/testimonial-carousel"
 import { FloatingNavigation } from "@/components/floating-navigation"
-import MultiVideoReels from "@/components/multi-video-reels.client"
 import CityProductsSection from "@/components/city-products-section"
 import { MobileNavigation } from "@/components/floating-navigation-mobile"
 
@@ -262,6 +260,135 @@ export default async function CityHomePage({
     { slug: "bangalore", name: "Bangalore", state: "Karnataka" }
   ]
 
+  const faqs = [
+    {
+      question: "What makes The Luxury Booths different from other photo booth companies?",
+      answer:
+        "We specialize in premium, high-end booth experiences with luxury lighting, custom branding, instant professional-grade prints, and a fully trained team. Every setup is designed to look elegant, modern, and event-ready and never cluttered or basic.",
+    },
+    {
+      question: "Do you travel to different cities?",
+      answer:
+        "Yes, we serve Delhi, Noida, Gurugram, Jaipur, Jim Corbett, and surrounding regions. We also travel across India for weddings, corporate events, and luxury celebrations.",
+    },
+    {
+      question: "How long does setup take?",
+      answer:
+        "Our team requires 60–90 minutes for setup, depending on the booth type. This includes assembling the booth, configuring lighting, setting backdrops, and system testing.",
+    },
+    {
+      question: "How much space do you need?",
+      answer:
+        "We require 8x10 feet for Magazine & Mirror Booth setups, and 6x8 feet for Vintage Booth and Instant Prints. Space requirements can be adjusted based on your venue layout.",
+    },
+    {
+      question: "What are the power requirements?",
+      answer:
+        "A single 15-amp electrical outlet within 30–50 feet of the booth location is sufficient. All our equipment is safe and energy-efficient.",
+    },
+    {
+      question: "Do you need internet/WiFi?",
+      answer:
+        "Internet is needed only if you request live-sharing features like WhatsApp sharing or instant cloud uploads. For printing and photo capture, internet is not required.",
+    },
+    {
+      question: "How does the Magazine Photo Booth work?",
+      answer:
+        "Guests step inside a real magazine-style frame with LED lighting and a cinematic setup. Our photographer captures professional photos, which are then printed instantly with custom magazine-style covers.",
+    },
+    {
+      question: "Can we customize the magazine cover?",
+      answer:
+        "Yes! We offer fully personalized magazine covers featuring your event name, couple names, brand logo, or theme colors. You will receive 2–3 design options to choose from.",
+    },
+    {
+      question: "How much time do you need to design custom covers?",
+      answer:
+        "Custom magazine covers require 5–7 days for design and approval. For full event branding, allow 10–12 days. Express delivery can be arranged depending on the schedule.",
+    },
+    {
+      question: "What is included in the Mirror Booth experience?",
+      answer:
+        "Our Mirror Booth includes interactive animations, touch-to-start features, digital signatures on photos, fun props, premium lighting, and instant prints. It’s perfect for weddings, birthdays, and luxury events.",
+    },
+    {
+      question: "Do guests get instant prints from the Mirror Booth?",
+      answer:
+        "Yes, instant 4x6 or 6x8 prints are available within seconds. Unlimited prints can be included depending on your package.",
+    },
+    {
+      question: "How is the Vintage Photo Booth different?",
+      answer:
+        "The Vintage Booth offers a retro aesthetic with warm tones, classic filters, and old-school charm. Prints resemble timeless film-style photos and great for weddings, themed parties, and premium décor events.",
+    },
+    {
+      question: "Do you offer retro-style printed strips?",
+      answer:
+        "Yes, we offer vintage photo strips and classic retro prints for an authentic old-school experience.",
+    },
+    {
+      question: "How fast are the instant prints?",
+      answer:
+        "Our high-speed dye-sublimation printers deliver professional-quality prints in 10–12 seconds per photo. The print quality is smudge-proof and lasts for decades.",
+    },
+    {
+      question: "Can we add custom branding to the instant prints?",
+      answer:
+        "Absolutely. We can include your logo, wedding monogram, couple initials, event theme, or sponsor branding on each print.",
+    },
+    {
+      question: "What print sizes do you offer?",
+      answer:
+        "We offer 4x6, 5x7, 6x8, vintage strips, and magazine-style prints. You may choose one or include multiple options depending on your package.",
+    },
+    {
+      question: "Is there a limit on prints?",
+      answer:
+        "Most of our packages come with unlimited prints. We also offer custom print limits depending on event size and budget.",
+    },
+    {
+      question: "When will I receive digital photos?",
+      answer:
+        "Digital photos are delivered within 24–48 hours via Google Drive link. Same-day delivery can be arranged on request.",
+    },
+    {
+      question: "How many staff members will be on-site?",
+      answer:
+        "We always provide 2 trained professionals, a camera expert and a booth manager to ensure smooth flow, proper lighting, and guest support.",
+    },
+    {
+      question: "Do you bring backup equipment?",
+      answer:
+        "Yes, we carry backup cameras, lights, printers, and essential gear to ensure uninterrupted service at every event.",
+    },
+    {
+      question: "How early should we book?",
+      answer:
+        "For weddings and peak-season events, we recommend booking 3–4 weeks in advance. For last-minute bookings, slots depend on availability.",
+    },
+    {
+      question: "What is your cancellation policy?",
+      answer:
+        "Cancellations 30+ days before the event get a full refund (minus admin charges). Cancellations within 14–29 days receive 50% refund. Under 14 days, the booking becomes non-refundable.",
+    },
+    {
+      question: `Do you provide setups in ${cityData.name}?`,
+      answer:
+        `Yes, we deliver
+                luxury Magazine, Mirror and Vintage photo booth setups across ${cityData.name}.`,
+    },
+    {
+      question: "Which areas do you cover?",
+      answer:
+        `${areasText ? `We frequently cover ${areasText}.` : `We cover major venues across ${cityData.name}.`}`,
+    },
+    {
+      question: "How early should we book?",
+      answer:
+        "How early should we book?</span> For peak wedding and corporate seasons, we recommend booking early to lock your date.",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-black text-white overflow-x-hidden overflow-y-visible">
 
@@ -353,18 +480,6 @@ export default async function CityHomePage({
 
       {/* ✅ Products Section (City-aware) */}
       <CityProductsSection citySlug={city} cityName={cityData.name} />
-
-      {/* Video Clips Carousel */}
-      {/* <div>
-        <MultiVideoReels
-          title={`Our Instagram Reels (${cityData.name} + More)`}
-          videoUrls={[
-            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
-            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
-            "https://res.cloudinary.com/dpnykjono/video/upload/v1765275714/He_tried._He_failed._He_tried_again_and_that_lift_became_their_favourite_memory_of_the_night._%EF%B8%8F_blvzwi.mp4",
-          ]}
-        />
-      </div> */}
 
       {/* Event Gallery Section */}
       <SectionWrapper
@@ -756,10 +871,10 @@ export default async function CityHomePage({
               </a>
 
               <a
-                href="/corporate-events"
+                href="/photo-booth-for-weddings"
                 className="px-5 py-3 rounded-full border border-white/10 text-gray-200 hover:border-blue-400 transition"
               >
-                Corporate Events
+                For Weddings
               </a>
 
             </div>
@@ -927,38 +1042,28 @@ export default async function CityHomePage({
       </section>
 
       {/* FAQs & Logistics Section */}
-      <SectionWrapper
-        id="faq-section"
-        ariaLabel="Frequently asked questions and logistics information"
-        className="py-16 sm:py-20 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900"
-      >
-        <div className="max-w-7xl mx-auto space-y-16 sm:space-y-20">
-          {/* ✅ Keep your existing FAQ component */}
-          <FaqsSection />
+      <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-gray-900/10 to-transparent">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="font-display text-5xl font-bold text-center mb-16 text-gradient">
+            Frequently Asked Questions
+          </h3>
 
-          {/* ✅ Extra Local SEO FAQ (City based) */}
-          <div className="glass-enhanced rounded-2xl p-6 sm:p-8 border border-gold/20">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-gradient">
-              Photo Booth Rental in {cityData.name} - Quick FAQs
-            </h3>
-
-            <div className="space-y-4 text-gray-300 text-sm sm:text-base">
-              <p>
-                <span className="text-gold font-semibold">Do you provide setups in {cityData.name}?</span> Yes, we deliver
-                luxury Magazine, Mirror and Vintage photo booth setups across {cityData.name}.
-              </p>
-              <p>
-                <span className="text-gold font-semibold">Which areas do you cover?</span>{" "}
-                {areasText ? `We frequently cover ${areasText}.` : `We cover major venues across ${cityData.name}.`}
-              </p>
-              <p>
-                <span className="text-gold font-semibold">How early should we book?</span> For peak wedding and corporate
-                seasons, we recommend booking early to lock your date.
-              </p>
-            </div>
-          </div>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+              >
+                <AccordionItem value={`faq-${index}`} className="glass-enhanced px-6 border-gray-700/50">
+                  <AccordionTrigger className="text-gray-100 hover:text-gray-300 font-semibold py-4">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-200/80 pb-4">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              </div>
+            ))}
+          </Accordion>
         </div>
-      </SectionWrapper>
+      </section>
 
 
       {/* Footer */}

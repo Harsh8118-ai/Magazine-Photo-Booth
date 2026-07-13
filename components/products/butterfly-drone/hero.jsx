@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="relative rounded-xl overflow-hidden">
           {/* TODO: replace with a real, original photo of the Butterfly Drone */}
           <Image
-            src="https://res.cloudinary.com/dpnykjono/image/upload/v1/-butterfly-drone-hero.webp"
+            src="https://res.cloudinary.com/dpnykjono/image/upload/v1783944184/Butterfly-Drone-7.webp"
             alt="Butterfly Drone Hero"
             width={350}
             height={450}
