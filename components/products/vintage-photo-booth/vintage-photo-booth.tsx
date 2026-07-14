@@ -78,7 +78,38 @@ const VintagePhotoBooth = () => {
     { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
   ]
 
-  return (
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `https://theluxurybooths.com/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Magazine Photo Booth",
+        item: "https://theluxurybooths.com/vintage-photo-booth",
+      },
+    ],
+  };
+
+  return (<>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
+
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
 
       {/* Header */}
@@ -566,6 +597,7 @@ const VintagePhotoBooth = () => {
         <div className="py-9 sm:hidden"><span></span></div>
       </footer>
     </main>
+  </>
   )
 }
 

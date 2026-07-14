@@ -72,7 +72,37 @@ export default function MagazinePhotoBoothImages() {
     },
   ]
 
-  return (
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Magazine Photo Booth",
+        item: "https://theluxurybooths.com/magazine-photo-booth",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Images",
+        "item": "https://theluxurybooths.com/magazine-photo-booth/images"
+      }
+    ],
+  };
+
+  return (<>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
 
     <main className="min-h-screen bg-black text-white">
 
@@ -204,7 +234,7 @@ export default function MagazinePhotoBoothImages() {
 
             <div
               key={i}
-              className="mb-4 break-inside-avoid group"  
+              className="mb-4 break-inside-avoid group"
             >
 
               <Image
@@ -333,91 +363,91 @@ export default function MagazinePhotoBoothImages() {
 
       <section className="py-20 px-6 bg-linear-to-b from-transparent via-gold/10 to-transparent">
 
-      <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-center text-gradient mb-4">
 
-          Explore All Photo Booth Products
+            Explore All Photo Booth Products
 
-        </h2>
+          </h2>
 
-        <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-12">
 
-          Discover our luxury photo booth experiences including magazine photo booth,
-          mirror selfie booth and vintage photo booth rental setups designed for weddings,
-          corporate events, exhibitions and premium celebrations.
+            Discover our luxury photo booth experiences including magazine photo booth,
+            mirror selfie booth and vintage photo booth rental setups designed for weddings,
+            corporate events, exhibitions and premium celebrations.
 
-        </p>
+          </p>
 
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {products.map((product) => (
+            {products.map((product) => (
 
-            <Link
-              key={product.name}
-              href={product.href}
-              className="group glass rounded-2xl border border-white/10 hover:border-gold/40 transition-all duration-300 hover:scale-[1.02]"
-            >
+              <Link
+                key={product.name}
+                href={product.href}
+                className="group glass rounded-2xl border border-white/10 hover:border-gold/40 transition-all duration-300 hover:scale-[1.02]"
+              >
 
-              <div className="p-5">
+                <div className="p-5">
 
-                <div className="relative aspect-3/4 w-full overflow-hidden rounded-xl mb-4">
+                  <div className="relative aspect-3/4 w-full overflow-hidden rounded-xl mb-4">
 
-                  <Image
-                    src={product.image}
-                    alt={`${product.name} rental luxury event photo booth`}
-                    fill
-                    sizes="(max-width:768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition duration-500"
-                  />
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} rental luxury event photo booth`}
+                      fill
+                      sizes="(max-width:768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition duration-500"
+                    />
+
+                  </div>
+
+
+                  <h3 className="text-xl font-semibold mb-2">
+
+                    {product.name}
+
+                  </h3>
+
+
+                  <p className="text-gray-400 text-sm leading-relaxed">
+
+                    {product.description}
+
+                  </p>
 
                 </div>
 
+              </Link>
 
-                <h3 className="text-xl font-semibold mb-2">
+            ))}
 
-                  {product.name}
-
-                </h3>
+          </div>
 
 
-                <p className="text-gray-400 text-sm leading-relaxed">
 
-                  {product.description}
+          <div className="text-center mt-12">
 
-                </p>
+            <Link
+              href="/products"
+              className="px-8 py-3 rounded-xl bg-linear-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition"
+            >
 
-              </div>
+              View All Booths
 
             </Link>
 
-          ))}
+          </div>
 
         </div>
 
-
-
-        <div className="text-center mt-12">
-
-          <Link
-            href="/products"
-            className="px-8 py-3 rounded-xl bg-linear-to-r from-gold to-yellow-300 text-black font-semibold hover:shadow-lg transition"
-          >
-
-            View All Booths
-
-          </Link>
-
-        </div>
-
-      </div>
-
-    </section>
+      </section>
 
     </main>
-
+  </>
   )
 
 }

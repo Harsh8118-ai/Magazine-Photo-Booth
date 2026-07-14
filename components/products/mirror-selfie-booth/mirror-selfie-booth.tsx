@@ -32,7 +32,38 @@ const MirrorSelfieBooth = () => {
     },
   ];
 
-  return (
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `https://theluxurybooths.com/products`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Magazine Photo Booth",
+        item: "https://theluxurybooths.com/mirror-selfie-booth",
+      },
+    ],
+  };
+
+  return (<>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
+
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
       {/* Header with back button */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -303,6 +334,7 @@ const MirrorSelfieBooth = () => {
         <div className="py-9 sm:hidden"><span></span></div>
       </footer>
     </main>
+  </>
   )
 }
 

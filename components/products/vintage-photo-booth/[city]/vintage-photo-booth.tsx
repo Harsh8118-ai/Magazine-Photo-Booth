@@ -84,7 +84,38 @@ export default function VintagePhotoBoothCity({
     { slug: "bangalore", name: "Bangalore", state: "Karnataka" },
   ]
 
-  return (
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Magazine Photo Booth",
+        item: "https://theluxurybooths.com/vintage-photo-booth",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${cityName}`,
+        item: `https://theluxurybooths.com/vintage-photo-booth/${cityName?.toLowerCase()}`,
+      },
+    ],
+  };
+
+  return (<>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
+
     <main className="min-h-screen bg-black text-white overflow-x-hidden">
 
       {/* Header */}
@@ -737,5 +768,6 @@ export default function VintagePhotoBoothCity({
       </footer>
       <FloatingPricingButton />
     </main>
+  </>
   )
 }

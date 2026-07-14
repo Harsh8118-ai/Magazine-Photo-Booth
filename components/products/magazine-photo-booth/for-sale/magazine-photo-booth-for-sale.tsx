@@ -85,9 +85,37 @@ export default function MagazinePhotoBoothForSale() {
 
   }
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Magazine Photo Booth",
+        item: "https://theluxurybooths.com/magazine-photo-booth",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "For Sale",
+        "item": "https://theluxurybooths.com/magazine-photo-booth/for-sale"
+      }
+    ],
+  };
 
+  return (<>
 
-  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
 
     <main className="min-h-screen bg-black text-white">
 
@@ -101,7 +129,7 @@ export default function MagazinePhotoBoothForSale() {
 
       />
 
-      {/* HEADER */}    
+      {/* HEADER */}
       <div className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur border-b border-white/10">
 
         <div className="max-w-7xl mx-auto pl-2 py-4 flex items-center justify-between">
@@ -123,10 +151,10 @@ export default function MagazinePhotoBoothForSale() {
           </p>
           <div className="w-15" />
         </div>
-      </div>  
+      </div>
 
-      {/* IMAGE SEO */} 
-      <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">  
+      {/* IMAGE SEO */}
+      <section className="max-w-4xl mx-auto pt-20 px-6 sm:hidden">
         <div className="w-full mx-auto">
           <Image
             src="/magazine-photo-booth-corporate-events.webp"
@@ -542,7 +570,7 @@ export default function MagazinePhotoBoothForSale() {
 
 
     </main>
-
+  </>
   )
 
 }
