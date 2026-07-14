@@ -171,18 +171,316 @@ const products = [
 ]
 
 const galleryImages = [
-  { id: 1, src: "/Images/1.webp", alt: "Vogue-Magazine Photo Booth" },
-  { id: 3, src: "/Images/3.webp", alt: "Photo Booth in Delhi NCR" },
-  { id: 6, src: "/Images/6.webp", alt: "Magazine Photo Booth Rental In Delhi NCR" },
-  { id: 7, src: "/Images/7.webp", alt: "Magazine Photo Booth in Wedding, Corporate and VVIP Events" },
-  { id: 2, src: "/Images/2.webp", alt: "Mirror photo booth at an event with vintage booth experience" },
-  { id: 4, src: "/Images/4.webp", alt: "Mirror selfie photo booth with wooden vintage design" },
-  { id: 5, src: "/Images/5.webp", alt: "Vintage booth red carpet setup with instant print photo booth" },
-  { id: 8, src: "/Images/8.webp", alt: "Guest enjoying vintage retro photo booth with instant prints" },
-];
+
+  {
+    id: 1,
+    src: "/Images/1.webp",
+    alt: "Magazine Photo Booth at luxury wedding in Delhi"
+  },
+
+  {
+    id: 2,
+    src: "/Images/2.webp",
+    alt: "Mirror Photo Booth at corporate event in Noida"
+  },
+
+  {
+    id: 3,
+    src: "/Images/3.webp",
+    alt: "Bride posing inside Magazine Photo Booth"
+  },
+
+  {
+    id: 4,
+    src: "/Images/4.webp",
+    alt: "Luxury Mirror Selfie Booth with instant prints"
+  },
+
+  {
+    id: 5,
+    src: "/Images/5.webp",
+    alt: "Vintage Photo Booth with DSLR camera and instant prints"
+  },
+
+  {
+    id: 6,
+    src: "/Images/6.webp",
+    alt: "Luxury Magazine Booth for destination wedding"
+  },
+
+  {
+    id: 7,
+    src: "/Images/7.webp",
+    alt: "Guests enjoying Magazine Photo Booth at premium wedding reception"
+  },
+
+  {
+    id: 8,
+    src: "/Images/8.webp",
+    alt: "Luxury Vintage Photo Booth experience with customized prints"
+  }
+
+]
 
 export default function ProductsPage() {
-  return (
+  return (<>
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://theluxurybooths.com/#organization",
+          name: "The Luxury Booths",
+          url: "https://theluxurybooths.com",
+          logo: "https://theluxurybooths.com/logo.png",
+          image: "https://theluxurybooths.com/magazine-photo-booth.webp",
+          description:
+            "The Luxury Booths provides premium photo booth rental experiences for weddings, corporate events, luxury celebrations, exhibitions, and celebrity events across India.",
+          telephone: "+91-9266037002",
+          email: "theluxurybooths@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Sector 73",
+            addressLocality: "Noida",
+            addressRegion: "Uttar Pradesh",
+            postalCode: "201301",
+            addressCountry: "IN",
+          },
+          sameAs: [
+            "https://www.instagram.com/theluxurybooths",
+            "https://www.linkedin.com/in/theluxurybooths",
+            "https://www.facebook.com/profile.php?id=61570489859940"
+          ],
+        }),
+      }}
+    />
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+
+          "@context": "https://schema.org",
+
+          "@type": "BreadcrumbList",
+
+          "itemListElement": [
+
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://theluxurybooths.com"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Products",
+              "item": "https://theluxurybooths.com/products"
+            }
+
+          ]
+
+        })
+      }}
+    />
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+
+          "@context": "https://schema.org",
+
+          "@type": "Service",
+
+          "name": "Luxury Photo Booth Rental",
+
+          "provider": {
+            "@id": "https://theluxurybooths.com/#organization"
+          },
+
+          "url": "https://theluxurybooths.com/products",
+
+          "serviceType": "Photo Booth Rental",
+
+          "description": "Luxury Magazine Photo Booth, Mirror Booth, Vintage Booth and interactive photo experiences for weddings, corporate events and premium celebrations.",
+
+          "areaServed": [
+
+            {
+              "@type": "Country",
+              "name": "India"
+            }
+
+          ],
+
+          "offers": {
+
+            "@type": "Offer",
+
+            "priceCurrency": "INR",
+
+            "price": "15000",
+
+            "availability": "https://schema.org/InStock"
+
+          }
+
+        })
+      }}
+    />
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+
+          "@context": "https://schema.org",
+
+          "@type": "ItemList",
+
+          "name": "Luxury Photo Booth Products",
+
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+
+          "numberOfItems": 6,
+
+          "itemListElement": [
+
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://theluxurybooths.com/magazine-photo-booth"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://theluxurybooths.com/mirror-selfie-booth"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://theluxurybooths.com/vintage-photo-booth"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://theluxurybooths.com/mirror-photo-booth"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://theluxurybooths.com/strip-photo-booth"
+            },
+
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://theluxurybooths.com/butterfly-drone"
+            }
+
+          ]
+
+        })
+      }}
+    />
+
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+
+          "@context": "https://schema.org",
+
+          "@type": "FAQPage",
+
+          "mainEntity": [
+
+            {
+              "@type": "Question",
+              "name": "Which photo booth is best for weddings?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Magazine Photo Booth is our most popular option for luxury weddings."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "What is included in the rental?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Professional setup, DSLR photography, instant prints, digital sharing, customized branding, and booth attendants."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Do you travel outside Delhi NCR?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide premium photo booth rental services across India."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "How many prints are included?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Print quantities depend on your selected package."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Can I customize branding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Templates, overlays, welcome screens and branding can all be customized."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "How much space is required?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most setups require approximately an 8×8 ft space."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "Do you provide attendants?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every event includes trained booth operators."
+              }
+            },
+
+            {
+              "@type": "Question",
+              "name": "How early should I book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend booking 3–8 weeks before your event."
+              }
+            }
+
+          ]
+
+        })
+      }}
+    />
     <main className="min-h-screen bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-3">
@@ -217,6 +515,119 @@ export default function ProductsPage() {
               , interactive mirror selfies, or vintage photo memories. Designed for premium events across India.
             </p>
           </div>
+
+          {/* Premium Photo Booth Rental Services */}
+          <section className="px-4 pb-16 mt-5 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
+                Premium Photo Booth Rental Services Across India
+              </h2>
+
+              <div className="space-y-6 text-gray-300 text-base sm:text-lg leading-8">
+
+                <p>
+                  <strong className="text-white">The Luxury Booths</strong> offers premium
+                  photo booth rental experiences for luxury weddings, corporate events,
+                  destination weddings, exhibitions, product launches, celebrity events,
+                  birthday celebrations, award nights, fashion shows, mall activations,
+                  and private parties across India.
+                </p>
+
+                <p>
+                  Every experience is carefully designed to become more than just a photo
+                  booth. We create interactive entertainment that attracts guests,
+                  encourages engagement, produces high-quality photographs, and gives
+                  everyone a memorable keepsake to take home. From elegant Magazine Photo
+                  Booths to interactive Mirror Booths and timeless Vintage Booths, every
+                  setup is professionally managed from start to finish.
+                </p>
+
+                <p>
+                  Our premium booths feature DSLR photography, instant studio-quality
+                  prints, customized event branding, luxury booth styling, digital sharing
+                  via QR Code and WhatsApp, personalized print templates, premium props,
+                  and experienced booth attendants who ensure a seamless guest
+                  experience throughout your event.
+                </p>
+
+                <p>
+                  Whether you are planning an intimate wedding or a large corporate
+                  activation, our team customizes every booth according to your event
+                  theme, brand identity, venue aesthetics, and guest experience goals.
+                  We have successfully delivered luxury photo booth experiences for
+                  premium weddings, exhibitions, conferences, luxury brands, and
+                  celebrity celebrations across Delhi NCR and multiple cities throughout
+                  India.
+                </p>
+
+                <p>
+                  Explore our collection below and discover which photo booth experience
+                  perfectly matches your event.
+                </p>
+
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-10">
+
+            <div className="max-w-6xl mx-auto">
+
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+
+                <div className="glass rounded-xl p-6">
+
+                  <h2 className="text-4xl font-bold text-gold">
+                    500+
+                  </h2>
+
+                  <p className="text-gray-300 mt-2">
+                    Events Completed
+                  </p>
+
+                </div>
+
+                <div className="glass rounded-xl p-6">
+
+                  <h2 className="text-4xl font-bold text-gold">
+                    50,000+
+                  </h2>
+
+                  <p className="text-gray-300 mt-2">
+                    Photos Printed
+                  </p>
+
+                </div>
+
+                <div className="glass rounded-xl p-6">
+
+                  <h2 className="text-4xl font-bold text-gold">
+                    100,000+
+                  </h2>
+
+                  <p className="text-gray-300 mt-2">
+                    Guests Served
+                  </p>
+
+                </div>
+
+                <div className="glass rounded-xl p-6">
+
+                  <h2 className="text-4xl font-bold text-gold">
+                    India
+                  </h2>
+
+                  <p className="text-gray-300 mt-2">
+                    Luxury Weddings • Corporate Events
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+          </section>
         </header>
 
         <section className="px-4 pb-12 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -259,16 +670,120 @@ export default function ProductsPage() {
                       ))}
                     </ul>
 
-                    <div className="border-t border-white/10 pt-4 mb-4">
-                      <p className="text-gold text-xl font-semibold">
+                    <div className="border-t border-white/10 pt-5 space-y-3">
+
+                      <p className="text-gold text-2xl font-bold">
                         {product.pricing}
                       </p>
+
+                      <div className="space-y-2">
+
+                        <div className="flex items-center text-gray-300 font-medium">
+                          ✓ View Details
+                        </div>
+
+                      </div>
+
                     </div>
                   </div>
                 </Link>
               </article>
             ))}
           </div>
+        </section>
+
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+
+            <h2 className="text-3xl font-bold text-center mb-10">
+              Which Photo Booth Should You Choose?
+            </h2>
+
+            <div className="overflow-x-auto rounded-2xl border border-white/10">
+
+              <table className="w-full text-left">
+
+                <thead className="bg-white/5">
+                  <tr>
+                    <th className="p-4">Photo Booth</th>
+                    <th className="p-4">Best For</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr className="border-t border-white/10">
+                    <td className="p-4 font-semibold">Magazine Photo Booth</td>
+                    <td className="p-4">Luxury Weddings & Celebrity Events</td>
+                  </tr>
+
+                  <tr className="border-t border-white/10">
+                    <td className="p-4 font-semibold">Mirror Photo Booth</td>
+                    <td className="p-4">Corporate Events & Brand Activations</td>
+                  </tr>
+
+                  <tr className="border-t border-white/10">
+                    <td className="p-4 font-semibold">Vintage Photo Booth</td>
+                    <td className="p-4">Rustic Weddings & Theme Parties</td>
+                  </tr>
+
+                  <tr className="border-t border-white/10">
+                    <td className="p-4 font-semibold">Strip Photo Booth</td>
+                    <td className="p-4">Birthdays, Parties & Youth Events</td>
+                  </tr>
+
+                  <tr className="border-t border-white/10">
+                    <td className="p-4 font-semibold">Butterfly Drone</td>
+                    <td className="p-4">Ring Ceremony & Wedding Entry</td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+        </section>
+
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+
+          <div className="max-w-6xl mx-auto">
+
+            <h2 className="text-3xl font-bold text-center mb-10">
+              Perfect For Every Premium Event
+            </h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+              {[
+                "Luxury Weddings",
+                "Corporate Events",
+                "Destination Weddings",
+                "Product Launches",
+                "Mall Activations",
+                "Birthday Parties",
+                "Award Shows",
+                "Fashion Shows",
+                "Exhibitions",
+                "Brand Activations",
+                "Celebrity Events",
+                "Private Celebrations",
+              ].map((item) => (
+
+                <div
+                  key={item}
+                  className="glass rounded-xl border border-white/10 p-5 text-center hover:border-gold transition"
+                >
+                  {item}
+                </div>
+
+              ))}
+
+            </div>
+
+          </div>
+
         </section>
 
         <section className="px-4 py-12 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
@@ -283,6 +798,63 @@ export default function ProductsPage() {
           <p className="text-gray-400 mt-4 text-sm sm:text-base">
             Available in Noida, Delhi NCR, Gurugram, Jaipur, Agra, Udaipur, and nearby locations.
           </p>
+        </section>
+
+        <section className="px-4 py-20 sm:px-6 lg:px-8">
+
+          <div className="max-w-6xl mx-auto">
+
+            <h2 className="text-3xl font-bold text-center mb-12">
+              What Our Clients Say
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
+
+              <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="text-yellow-400 text-xl mb-4">
+                  ★★★★★
+                </div>
+
+                <p className="text-gray-300 italic">
+                  "The Magazine Booth became the highlight of the wedding. Guests couldn't stop talking about it."
+                </p>
+
+                <p className="mt-5 font-semibold">
+                  — Wedding Planner
+                </p>
+              </div>
+
+              <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="text-yellow-400 text-xl mb-4">
+                  ★★★★★
+                </div>
+
+                <p className="text-gray-300 italic">
+                  "Our corporate activation generated huge engagement because of the Mirror Booth."
+                </p>
+
+                <p className="mt-5 font-semibold">
+                  — Brand Manager
+                </p>
+              </div>
+
+              <div className="glass rounded-xl p-6 border border-white/10">
+                <div className="text-yellow-400 text-xl mb-4">
+                  ★★★★★
+                </div>
+
+                <p className="text-gray-300 italic">
+                  "Professional team, premium setup and amazing print quality."
+                </p>
+
+                <p className="mt-5 font-semibold">
+                  — Event Organizer
+                </p>
+              </div>
+
+            </div>
+
+          </div>
         </section>
 
         <section className="px-4 py-12 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
@@ -343,6 +915,125 @@ export default function ProductsPage() {
 
           </div>
         </SectionWrapper>
+
+        <section className="px-4 py-20 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-6">
+
+              {[
+                {
+                  q: "Which photo booth is best for weddings?",
+                  a: "Our Magazine Photo Booth is the most popular choice for luxury weddings, while the Vintage Booth is ideal for rustic and heritage-themed celebrations."
+                },
+                {
+                  q: "What is included in the photo booth rental?",
+                  a: "Every booking includes professional setup, DSLR photography, instant prints, customized templates, premium props, digital sharing, and experienced booth attendants."
+                },
+                {
+                  q: "Do you travel outside Delhi NCR?",
+                  a: "Yes. We provide photo booth rental services across India including Jaipur, Agra, Udaipur, Mumbai, Bangalore, Hyderabad, Pune, Chandigarh and other cities."
+                },
+                {
+                  q: "How many prints are included?",
+                  a: "The number of prints depends on your selected package. Additional prints can always be added."
+                },
+                {
+                  q: "Can I customize the booth branding?",
+                  a: "Absolutely. We personalize print templates, booth branding, overlays, backdrops, welcome screens, and digital frames according to your event."
+                },
+                {
+                  q: "How much space is required?",
+                  a: "Most booths require approximately an 8×8 ft area, although the exact requirement depends on the selected setup."
+                },
+                {
+                  q: "Do you provide professional attendants?",
+                  a: "Yes. Every luxury booth is managed by trained professionals who assist guests throughout the event."
+                },
+                {
+                  q: "How early should I book?",
+                  a: "We recommend booking at least 3–8 weeks in advance, especially during wedding season."
+                }
+
+              ].map((faq) => (
+
+                <div
+                  key={faq.q}
+                  className="glass rounded-xl border border-white/10 p-6"
+                >
+                  <h3 className="text-xl font-semibold mb-3">
+                    {faq.q}
+                  </h3>
+
+                  <p className="text-gray-300 leading-7">
+                    {faq.a}
+                  </p>
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </div>
+        </section>
+
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+
+          <div className="max-w-5xl mx-auto text-center">
+
+            <h2 className="text-3xl font-bold mb-6">
+              Cities We Serve
+            </h2>
+
+            <p className="text-gray-300 mb-8">
+              We provide premium photo booth rental services across Delhi NCR and
+              major cities throughout India.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+
+              <Link href="/photo-booth-rental-in-delhi" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Delhi
+              </Link>
+
+              <Link href="/photo-booth-rental-in-noida" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Noida
+              </Link>
+
+              <Link href="/photo-booth-rental-in-gurgaon" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Gurgaon
+              </Link>
+
+              <Link href="/photo-booth-rental-in-jaipur" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Jaipur
+              </Link>
+
+              <Link href="/photo-booth-rental-in-udaipur" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Udaipur
+              </Link>
+
+              <Link href="/photo-booth-rental-in-ahmedabad" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Ahmedabad
+              </Link>
+
+              <Link href="/photo-booth-rental-in-mumbai" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Mumbai
+              </Link>
+
+              <Link href="/photo-booth-rental-in-pune" className="glass px-5 py-3 rounded-xl hover:border-gold border border-white/10">
+                Pune
+              </Link>
+
+            </div>
+
+          </div>
+
+        </section>
 
         {/* Footer - Enhanced with legal links */}
         <footer
@@ -480,5 +1171,6 @@ export default function ProductsPage() {
         <div className="h-10 sm:h-0" />
       </div>
     </main>
+  </>
   )
 }
