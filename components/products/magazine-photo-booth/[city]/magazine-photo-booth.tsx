@@ -85,7 +85,7 @@ export default function MagazinePhotoBoothCity({
         "@type": "ListItem",
         position: 4,
         name: `${cityName}`,
-        item: `https://theluxurybooths.com/magazine-photo-booth/${cityName}`,
+        item: `https://theluxurybooths.com/magazine-photo-booth/${cityName?.toLowerCase()}`,
       },
     ],
   };
