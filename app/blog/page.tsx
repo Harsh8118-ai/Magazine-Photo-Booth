@@ -56,8 +56,36 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://theluxurybooths.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `https://theluxurybooths.com/blog`,
+      },
+    ],
+  };
+
+
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+
       <div className="container mx-auto w-full px-4 py-16 bg-linear-to-r from-black via-neutral-900 to-black">
         <div className="max-w-6xl mx-auto">
 
