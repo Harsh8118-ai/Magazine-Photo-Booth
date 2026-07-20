@@ -78,7 +78,7 @@ export default function BlogPage() {
 
 
   return (
-    <>
+    <>   
 
       <script
         type="application/ld+json"
