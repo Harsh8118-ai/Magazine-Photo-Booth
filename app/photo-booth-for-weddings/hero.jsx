@@ -195,7 +195,7 @@ export default function Hero() {
     return (
         <>
             <WhatsAppCTA />
-
+   
             <Script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
