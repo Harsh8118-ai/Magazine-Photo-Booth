@@ -63,5 +63,5 @@ export const metadata: Metadata = {
 }
 
 export default function MagazinePhotoBoothImagesPage() {
-  return <MagazinePhotoBoothForSale />
+  return <MagazinePhotoBoothForSale />   
 }
