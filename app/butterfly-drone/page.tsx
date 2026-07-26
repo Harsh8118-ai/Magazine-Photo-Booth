@@ -76,5 +76,5 @@ export const metadata: Metadata = {
 }
 
 export default function ButterflyDronePage() {
-  return <ButterflyDrone />
+  return <ButterflyDrone />   
 }
