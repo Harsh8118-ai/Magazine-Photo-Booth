@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://theluxurybooths.com/vintage-photo-booth",
   },
-}
+}   
 
 export default function VintagePhotoBoothPage() {
   return <VintagePhotoBooth />
