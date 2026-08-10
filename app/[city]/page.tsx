@@ -1033,7 +1033,7 @@ export default async function CityHomePage({
             className="inline-flex mt-8 rounded-full border border-gold/30 px-6 py-3 hover:border-gold/60"
           >
             Explore Wedding Experiences
-          </Link>
+          </Link>  
 
         </div>
       </section>
