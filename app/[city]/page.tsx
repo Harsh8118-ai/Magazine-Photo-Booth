@@ -1036,7 +1036,7 @@ export default async function CityHomePage({
           </Link>    
 
         </div>
-      </section>   
+      </section>     
 
       {/* FAQs & Logistics Section */}
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-gray-900/10 to-transparent">
