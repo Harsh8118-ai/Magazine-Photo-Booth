@@ -1042,7 +1042,7 @@ export default async function CityHomePage({
       <section className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-gray-900/10 to-transparent">
         <div className="max-w-4xl mx-auto">
           <h3 className="font-display text-5xl font-bold text-center mb-16 text-gradient">
-            Frequently Asked Questions
+            Frequently Asked Questions   
           </h3>
 
           <Accordion type="single" collapsible className="space-y-4">
