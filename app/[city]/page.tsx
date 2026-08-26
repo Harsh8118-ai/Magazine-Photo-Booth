@@ -1058,7 +1058,7 @@ export default async function CityHomePage({
                 </AccordionItem>
               </div>
             ))}
-          </Accordion>
+          </Accordion>   
         </div>
       </section>
 
