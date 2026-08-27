@@ -1063,7 +1063,7 @@ export default async function CityHomePage({
       </section>
 
 
-      {/* Footer */}
+      {/* Footer */}    
       <footer
         id="contact-section"
         className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
