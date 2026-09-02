@@ -998,7 +998,7 @@ export default async function CityHomePage({
 
           <div className="flex flex-wrap justify-center gap-3">
             {cities.map((city) => (
-              <Link
+              <Link   
                 key={city.slug}
                 href={`/photo-booth-rental-in-${city.slug}`}
                 className="px-4 py-2 rounded-full border border-gold/30 glass text-gray-200 hover:text-white hover:border-gold/60 hover:neon-glow transition-all text-sm sm:text-base"
