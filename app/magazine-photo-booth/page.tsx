@@ -52,6 +52,6 @@ export const metadata: Metadata = {
 
 }
 
-export default function MagazinePhotoBoothPage() {
+export default function MagazinePhotoBoothPage() {  
   return <MagazinePhotoBooth />
 }
