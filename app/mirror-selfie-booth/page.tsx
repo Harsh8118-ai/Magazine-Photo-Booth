@@ -18,6 +18,6 @@ export const metadata = {
   },
 }
 
-export default function MirrorSelfieBoothPage() {
+export default function MirrorSelfieBoothPage() {   
   return <MirrorSelfieBooth />
 }
