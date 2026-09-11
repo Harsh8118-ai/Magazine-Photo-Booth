@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
     type: "website",
 
-    images: ["/-butterfly-drone.webp"],
+    images: ["/butterfly-drone.webp"],
   },
 
   twitter: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description:
       "Luxury Butterfly Drone rental for weddings, corporate events, luxury celebrations, and experiential marketing across Delhi NCR and India.",
 
-    images: ["/-butterfly-drone.webp"],
+    images: ["/butterfly-drone.webp"],
   },
 
   robots: {
