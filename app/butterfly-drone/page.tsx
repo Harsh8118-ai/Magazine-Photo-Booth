@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://theluxurybooths.com/butterfly-drone",
+    canonical: "https://theluxurybooths.com/butterfly-drone",   
   },
 }
 
