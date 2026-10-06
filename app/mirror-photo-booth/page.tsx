@@ -47,4 +47,4 @@ export const metadata: Metadata = {
 
 export default function MirrorPhotoBoothPage() {
   return <MirrorPhotoBooth />   
-}          
+}             
