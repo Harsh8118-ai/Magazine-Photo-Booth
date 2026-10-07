@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
     },
-  },
+  },    
   alternates: {
     canonical: "https://theluxurybooths.com/mirror-photo-booth",
   },
