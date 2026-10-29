@@ -301,9 +301,9 @@ export default function ImbesharamClient() {
               </p>
 
               <h2 className="mt-3 text-2xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-                IMBESHARAM
+                IMbesharam
                 <span className="mt-1 block text-white/45">×</span>
-                <span className="mt-1 block">THE LUXURY BOOTHS</span>
+                <span className="mt-1 block">The Luxury Booths</span>
               </h2>
 
               <p className="mt-4 max-w-sm text-sm leading-6 text-white/55 sm:text-base sm:leading-7">
