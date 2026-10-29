@@ -50,8 +50,7 @@ export const metadata: Metadata = {
   },
 }      
 
-export defa
-ult function VintagePhotoBoothPage() {
+export default function VintagePhotoBoothPage() {
   return <VintagePhotoBooth />
 }
            
