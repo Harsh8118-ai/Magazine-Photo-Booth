@@ -698,7 +698,7 @@ const ButterflyDrone = () => {
             {cities.map((c) => (
               <Link
                 key={c.slug}
-                href={`/-butterfly-drone/${c.slug}`}
+                href={`/butterfly-drone/${c.slug}`}
                 className="px-4 py-2 rounded-full border border-pink-700/40 text-pink-200 hover:border-pink-500"
               >
                 {c.name} ({c.state})
@@ -801,7 +801,7 @@ const ButterflyDrone = () => {
               <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <li>
-                  <Link href="/-butterfly-drone" className="hover:text-white transition-colors">
+                  <Link href="/butterfly-drone" className="hover:text-white transition-colors">
                     Butterfly Drone
                   </Link>
                 </li>

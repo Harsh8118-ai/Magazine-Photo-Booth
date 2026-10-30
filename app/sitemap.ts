@@ -3,7 +3,6 @@ import type { MetadataRoute } from "next"
 const baseUrl = "https://theluxurybooths.com"
 
 const cities = [
-  "delhi-ncr",
   "delhi",
   "ghaziabad",
   "noida",
@@ -72,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/photo-booth-rental-in-delhi-ncr`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/magazine-photo-booth`,
@@ -150,6 +155,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }))
 
+  const butterflyCityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/butterfly-drone/${city}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }))
+
   const blogRoutes: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: now,
@@ -162,6 +174,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cityLandingRoutes,
     ...magazineCityRoutes,
     ...vintageCityRoutes,
+    ...butterflyCityRoutes,
     ...blogRoutes,
   ]
 }
