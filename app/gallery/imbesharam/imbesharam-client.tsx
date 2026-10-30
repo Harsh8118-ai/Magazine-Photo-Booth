@@ -310,7 +310,7 @@ export default function ImbesharamClient() {
                 Two brands. One experience. Your moments, captured and
                 ready to revisit.
               </p>
-            </div>
+            </div>   
 
             <div className="mt-6 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/35 sm:text-xs">
               <span className="size-1.5 rounded-full bg-[#F42B78]" />
