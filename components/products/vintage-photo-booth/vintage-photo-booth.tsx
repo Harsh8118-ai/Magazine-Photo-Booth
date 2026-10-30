@@ -97,7 +97,7 @@ const VintagePhotoBooth = () => {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Magazine Photo Booth",
+        name: "Vintage Photo Booth",
         item: "https://theluxurybooths.com/vintage-photo-booth",
       },
     ],

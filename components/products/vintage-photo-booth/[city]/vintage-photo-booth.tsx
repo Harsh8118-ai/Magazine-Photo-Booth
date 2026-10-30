@@ -97,7 +97,7 @@ export default function VintagePhotoBoothCity({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Magazine Photo Booth",
+        name: "Vintage Photo Booth",
         item: "https://theluxurybooths.com/vintage-photo-booth",
       },
       {

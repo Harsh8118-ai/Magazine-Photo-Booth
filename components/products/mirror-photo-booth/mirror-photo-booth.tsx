@@ -132,7 +132,7 @@ const MirrorPhotoBooth = () => {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Magazine Photo Booth",
+        name: "Mirror Photo Booth",
         item: "https://theluxurybooths.com/mirror-photo-booth",
       },
     ],
