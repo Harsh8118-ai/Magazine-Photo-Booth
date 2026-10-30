@@ -250,13 +250,10 @@ const ButterflyDroneCity = ({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Products", item: `${SITE_URL}/products` },
-      { "@type": "ListItem", position: 3, name: "Butterfly Drone", item: PAGE_URL },
-      ...(cityName
-        ? [{ "@type": "ListItem", position: 4, name: cityName, item: pageUrl }]
-        : []),
-    ],
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://theluxurybooths.com" },
+      { "@type": "ListItem", position: 2, name: "Butterfly Drone", item: 'https://theluxurybooths.com/butterfly-drone' },
+      { "@type": "ListItem", position: 3, name: `${cityName}`, item: `https://theluxurybooths.com/butterfly-drone/${cityName?.toLowerCase()}` },
+    ]
   }
 
   return (
