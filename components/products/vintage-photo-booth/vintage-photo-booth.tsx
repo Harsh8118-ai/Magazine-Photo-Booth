@@ -7,7 +7,7 @@ import Pricing from "./pricing"
 import WhatsAppButton from "./whatsapp-button"
 import Hero from "./hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
-import FloatingPricingButton from "@/components/floating-pricing-button";
+import FloatingPricingButton from "@/components/floating-pricing-button"
 
 const VintagePhotoBooth = () => {
 

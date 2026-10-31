@@ -1,12 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, View } from "lucide-react"
-import { Camera, Zap, Users, Star } from "lucide-react"
-import { Facebook, Instagram, X, Linkedin } from "lucide-react";
+import { ArrowLeft, Camera, Zap, Users, Star, Facebook, Instagram, X, Linkedin } from "lucide-react"
 import MiddleOneSection from "./middle-1.client"
 import MiddleTwoSection from "./middle-2.client"
 import FooterClientTwo from "@/components/hero/footer.client-2"
-import FloatingPricingButton from "@/components/floating-pricing-button";
+import FloatingPricingButton from "@/components/floating-pricing-button"
 
 export default function MagazinePhotoBooth() {
 
