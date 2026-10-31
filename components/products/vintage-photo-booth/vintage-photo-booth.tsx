@@ -4,7 +4,6 @@ import { ArrowLeft } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Pricing from "./pricing"
-import WhatsAppButton from "./whatsapp-button"
 import Hero from "./hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import FloatingPricingButton from "@/components/floating-pricing-button"
@@ -465,7 +464,11 @@ const VintagePhotoBooth = () => {
             Add Timeless Elegance to Your Event
           </h2>
           <p className="text-amber-200 mb-8">Experience the charm of vintage photography at your celebration</p>
-          <WhatsAppButton />
+          <a href="#pricing"><button
+        className="w-full block text-center px-6 py-3 bg-linear-to-r from-amber-600 to-amber-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-amber-600/50 transition-all transform hover:scale-105"
+      >
+        Book Now
+      </button></a>
         </div>
       </section>
 

@@ -5,7 +5,6 @@ import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 import Pricing from "./pricing"
-import WhatsAppButton from "./whatsapp-button"
 import Hero from "./hero"
 
 import FooterClientTwo from "@/components/hero/footer.client-2"

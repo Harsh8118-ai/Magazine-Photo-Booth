@@ -6,7 +6,6 @@ import { ArrowLeft, Facebook, Instagram, Linkedin, X, Zap } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 import Hero from "./hero"
 import Pricing from "./pricing"
-import WhatsAppCTA from "./whatsapp-button"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import FloatingPricingButton from "@/components/floating-pricing-button"
 

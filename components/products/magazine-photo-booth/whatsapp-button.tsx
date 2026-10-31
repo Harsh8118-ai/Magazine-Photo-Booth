@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { CheckCircle, Crown, Camera, Printer, Sparkles } from "lucide-react"
 
@@ -147,7 +147,7 @@ export default function WhatsAppButton() {
                   <div className="grid grid-cols-1 gap-2">
                     {pkg.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-2 text-sm text-gray-200">
-                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
                         <span>{h}</span>
                       </div>
                     ))}

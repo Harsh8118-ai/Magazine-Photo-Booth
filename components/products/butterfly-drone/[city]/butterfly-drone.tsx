@@ -4,7 +4,6 @@ import { ArrowLeft } from "lucide-react"
 import { Facebook, Instagram, X, Linkedin } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Pricing from "../pricing"
-import WhatsAppButton from "../whatsapp-button"
 import Hero from "../hero"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import FloatingPricingButton from "@/components/floating-pricing-button"
@@ -792,7 +791,11 @@ const ButterflyDroneCity = ({
               ? `Add a Butterfly Drone ring delivery to your engagement or ring ceremony in ${cityName}.`
               : "Add a Butterfly Drone ring delivery to your engagement or ring ceremony"}
           </p>
-          <WhatsAppButton />
+          <a href="#pricing"><button
+        className="w-full block text-center px-6 py-3 bg-linear-to-r from-pink-600 to-pink-700 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-pink-600/50 transition-all transform hover:scale-105"
+      >
+        Book Now
+      </button></a>
         </div>
       </section>
 
