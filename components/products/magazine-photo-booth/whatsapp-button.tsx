@@ -1,6 +1,10 @@
-// "use client"
-
-import { CheckCircle, Crown, Camera, Printer, Sparkles } from "lucide-react"
+import {
+  CheckCircle,
+  Crown,
+  Camera,
+  Printer,
+  Sparkles,
+} from "lucide-react"
 
 type PackageKey = "regular" | "elite" | "premium"
 
@@ -67,25 +71,16 @@ const packages = [
 ]
 
 export default function WhatsAppButton() {
-  const sendWhatsAppBookingMessage = (pkg: (typeof packages)[number]) => {
-    const message =
-      `Hello! I want to book the *Magazine Photo Booth*.\n\n` +
-      `📦 Package: *${pkg.name}* (${pkg.subtitle})\n` +
-      `💰 Price: ₹${pkg.price.toLocaleString()}\n\n` +
-      `Please share availability and next steps.`
-
-    const url = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`
-    window.open(url, "_blank")
-  }
-
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-linear-to-b from-black to-gray-900">
       <div className="max-w-4xl mx-auto">
+
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-gradient mb-3">
             Packages & Pricing
           </h2>
+
           <p className="text-gray-400 text-sm sm:text-lg max-w-xl mx-auto">
             Select a package and book instantly on WhatsApp.
           </p>
@@ -102,6 +97,16 @@ export default function WhatsAppButton() {
                 : pkg.key === "elite"
                   ? "shadow-[0_0_35px_rgba(255,215,0,0.10)]"
                   : ""
+
+            // Generate WhatsApp URL on the server
+            const message =
+              `Hello! I want to book the *Magazine Photo Booth*.\n\n` +
+              `📦 Package: *${pkg.name}* (${pkg.subtitle})\n` +
+              `💰 Price: ₹${pkg.price.toLocaleString("en-IN")}\n\n` +
+              `Please share availability and next steps.`
+
+            const whatsappUrl =
+              `https://wa.me/${COMPANY_WHATSAPP}?text=${encodeURIComponent(message)}`
 
             return (
               <div
@@ -123,44 +128,61 @@ export default function WhatsAppButton() {
                     <h3 className="font-display text-xl sm:text-2xl font-bold text-white leading-tight">
                       {pkg.name}
                     </h3>
-                    <p className="text-gray-400 text-sm mt-1">{pkg.subtitle}</p>
+
+                    <p className="text-gray-400 text-sm mt-1">
+                      {pkg.subtitle}
+                    </p>
                   </div>
                 </div>
 
                 {/* Price */}
                 <div className="mt-4 flex items-end justify-between gap-4">
                   <div>
-                    <p className="text-xs text-gray-500">Starting From</p>
+                    <p className="text-xs text-gray-500">
+                      Starting From
+                    </p>
+
                     <p className="text-2xl sm:text-3xl font-bold text-gold font-display">
-                      ₹{pkg.price.toLocaleString()}
+                      ₹{pkg.price.toLocaleString("en-IN")}
                     </p>
                   </div>
 
                   <div className="text-right">
-                    <p className="text-xs text-gray-500">Transport</p>
-                    <p className="text-sm text-gray-300">Extra</p>
+                    <p className="text-xs text-gray-500">
+                      Transport
+                    </p>
+
+                    <p className="text-sm text-gray-300">
+                      Extra
+                    </p>
                   </div>
                 </div>
 
                 {/* Highlights */}
                 <div className="mt-5">
                   <div className="grid grid-cols-1 gap-2">
-                    {pkg.highlights.map((h, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-gray-200">
+                    {pkg.highlights.map((highlight) => (
+                      <div
+                        key={highlight}
+                        className="flex items-start gap-2 text-sm text-gray-200"
+                      >
                         <CheckCircle className="h-4 w-4 text-green-400 mt-0.5 shrink-0" />
-                        <span>{h}</span>
+
+                        <span>{highlight}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* CTA */}
-                <button
-                  onClick={() => sendWhatsAppBookingMessage(pkg)}
-                  className={`mt-6 w-full py-3 rounded-xl font-bold text-sm sm:text-base transition-all active:scale-[0.99] ${pkg.buttonStyle}`}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-6 w-full block text-center py-3 rounded-xl font-bold text-sm sm:text-base transition-all active:scale-[0.99] ${pkg.buttonStyle}`}
                 >
                   Book Now
-                </button>
+                </a>
               </div>
             )
           })}
@@ -170,15 +192,22 @@ export default function WhatsAppButton() {
         <div className="mt-8 glass-enhanced rounded-2xl p-5 sm:p-7 text-center border border-white/10">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Printer className="h-5 w-5 text-gold" />
-            <p className="text-white font-semibold">Booking Note</p>
+
+            <p className="text-white font-semibold">
+              Booking Note
+            </p>
           </div>
 
           <p className="text-gray-300 text-sm sm:text-base">
-            <span className="text-gold font-semibold">50% advance</span> required to confirm booking.
+            <span className="text-gold font-semibold">
+              50% advance
+            </span>{" "}
+            required to confirm booking.
           </p>
 
           <p className="text-gray-500 text-xs sm:text-sm mt-2">
-            Final pricing may vary depending on event requirements and travel distance.
+            Final pricing may vary depending on event requirements and travel
+            distance.
           </p>
         </div>
       </div>
