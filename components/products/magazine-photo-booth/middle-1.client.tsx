@@ -3,7 +3,6 @@ import { Camera, Zap, Users, CheckCircle, Star, Award, } from "lucide-react"
 import { SectionWrapper } from "@/components/section-wrapper"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { ParallaxSection } from "@/components/parallax-section"
-import { MultiVideoReels } from "@/components/multi-video-reels"
 import { CardContent, CardTwo } from "@/components/ui/card"
 import WhatsAppButton from "./whatsapp-button"
 
