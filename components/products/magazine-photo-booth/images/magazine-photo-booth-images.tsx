@@ -116,6 +116,7 @@ export default function MagazinePhotoBoothImages() {
           <Link
             href="/magazine-photo-booth"
             className="flex items-center text-gold hover:text-yellow-300 transition-colors"
+            aria-label="Back"
           >
             <ArrowLeft size={20} />
             <span className="hidden sm:block ml-2">Back</span>

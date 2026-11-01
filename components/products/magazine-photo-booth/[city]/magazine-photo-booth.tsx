@@ -96,6 +96,7 @@ export default function MagazinePhotoBoothCity({
           <Link
             href="/products"
             className="flex items-center text-gold hover:text-yellow-300 transition-colors"
+            aria-label="Back"
           >
             <ArrowLeft size={20} />
             <span className="hidden sm:block">Back</span>
