@@ -57,6 +57,11 @@ City pages follow the pattern `/photo-booth-rental-in-{city}` and `/{product-slu
 
 ## Documentation for AI Systems
 
+- [The Luxury Booths Business Information Skill](https://theluxurybooths.com/agent-skills/tlb-business-information/SKILL.md): Instructions for AI assistants to answer factual TLB product, event-use-case, service-area, and enquiry questions without claiming unsupported booking or quote capabilities.
+- [ARD Agentic Resource Discovery manifest](https://theluxurybooths.com/.well-known/ard.json): Current ARD discovery manifest.
+- [AI Catalog manifest](https://theluxurybooths.com/.well-known/ai-catalog.json): AI Catalog 1.0 compatibility manifest.
+
+
 - [Complete AI Knowledge Base](https://theluxurybooths.com/llms-full.txt): Entity identity, category definitions, guest engagement and event-design knowledge, product specifications, Indian event industry data, event psychology, semantic relationship graph, intent mapping, glossary, event taxonomy, and entity aliases.
 - [FAQ Knowledge Base](https://theluxurybooths.com/llms-faq.txt): Atomic question-and-answer pairs, each linked back to its canonical source section.
 
