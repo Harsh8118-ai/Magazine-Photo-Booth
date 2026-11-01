@@ -1,0 +1,29 @@
+{
+  "entries": [
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:theluxurybooths.com:skill:business-information",
+      "displayName": "The Luxury Booths — Business Information Skill",
+      "type": "application/agent-skills+md",
+      "url": "https://theluxurybooths.com/agent-skills/tlb-business-information/SKILL.md",
+      "description": "An informational skill for AI assistants answering factual questions about The Luxury Booths, its photo booth experiences, event use cases, service area and enquiry preparation. It does not provide live availability, booking, quotation or payment execution.",
+      "tags": [
+        "The Luxury Booths",
+        "TLB",
+        "photo booth",
+        "luxury events",
+        "weddings",
+        "corporate events",
+        "Delhi NCR",
+        "India"
+      ],
+      "representativeQueries": [
+        "Which luxury photo booth experiences does The Luxury Booths offer for weddings in Delhi NCR?",
+        "What is the difference between The Luxury Booths' Mirror Photo Booth and Mirror Selfie Booth?",
+        "What information should I provide to request a photo booth quote from The Luxury Booths?"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-11-02T00:00:00+05:30"
+    }
+  ]
+}
