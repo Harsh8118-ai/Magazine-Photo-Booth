@@ -819,9 +819,9 @@ export default async function CityHomePage({
 
                   <div className="pt-8 mt-8 border-t border-white/10">
 
-                    <h4 className="text-xl font-semibold text-white mb-1">
+                    <p className="text-xl font-semibold text-white mb-1">
                       {item.name}
-                    </h4>
+                    </p>
 
                     <p className="text-sm tracking-wide text-gray-400">
                       {item.role}
