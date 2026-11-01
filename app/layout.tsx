@@ -119,6 +119,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${comicNeue.variable} ${inter.variable} antialiased`}>
       <head>
+        <link rel="ard" href="https://theluxurybooths.com/.well-known/ard.json" type="application/json" />
+        <link rel="ai-catalog" href="https://theluxurybooths.com/.well-known/ai-catalog.json" type="application/ai-catalog+json" />
 
         <Script
           id="localbusiness-schema"
