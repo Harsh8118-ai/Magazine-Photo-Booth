@@ -135,7 +135,7 @@ export default function RootLayout({
                 "Luxury photo booth experience brand specializing in premium weddings, high-end corporate events, fashion activations, and VIP celebrations.",
               url: "https://theluxurybooths.com",
               telephone: "+91-9266037002",
-              email: "theluxurybooths@gmail.com",
+              email: "enquiry@theluxurybooths.com",
               priceRange: "₹15,000–₹1,25,000",
               areaServed: ["Delhi NCR", "Noida", "Gurugram", "Ghaziabad", "Delhi"],
               sameAs: [

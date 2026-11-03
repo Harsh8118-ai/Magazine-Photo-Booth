@@ -68,7 +68,7 @@ City pages follow the pattern `/photo-booth-rental-in-{city}` and `/{product-slu
 ## Contact
 
 - Phone: +91-9266037002
-- Email: theluxurybooths@gmail.com
+- Email: enquiry@theluxurybooths.com
 - Address: Sector 73, Noida, Uttar Pradesh 201301, India
 - [Instagram](https://www.instagram.com/theluxurybooths)
 - [Facebook](https://www.facebook.com/profile.php?id=61570489859940)

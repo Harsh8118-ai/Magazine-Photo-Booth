@@ -122,7 +122,7 @@ export default function Hero() {
             "https://theluxurybooths.com/logo.png",
 
         email:
-            "theluxurybooths@gmail.com",
+            "enquiry@theluxurybooths.com",
 
         telephone:
             "+91-9266037002",
@@ -1143,7 +1143,7 @@ export default function Hero() {
                                 <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
                                 <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                                     <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                                    <p className="flex flex-row"><a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a></p>
+                                    <p className="flex flex-row"><a href="mailto:enquiry@theluxurybooths.com">✉️ enquiry@theluxurybooths.com</a></p>
                                     <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
                                 </div>
                             </div>

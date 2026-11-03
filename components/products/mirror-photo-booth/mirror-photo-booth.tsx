@@ -566,7 +566,7 @@ const MirrorPhotoBooth = () => {
 
               <div className="space-y-2 text-gray-400 text-sm sm:text-base">
                 <p>📞 +91-9266037002</p>
-                <p>✉️ theluxurybooths@gmail.com</p>
+                <p>✉️ enquiry@theluxurybooths.com</p>
                 <p>📍 Noida, Uttar Pradesh</p>
               </div>
             </div>

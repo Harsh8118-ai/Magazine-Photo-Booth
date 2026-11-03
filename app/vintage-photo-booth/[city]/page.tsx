@@ -124,7 +124,7 @@ export default async function CityVintageBoothPage({
       name: "The Luxury Booths",
       url: "https://theluxurybooths.com",
       telephone: "+91-9266037002",
-      email: "theluxurybooths@gmail.com",
+      email: "enquiry@theluxurybooths.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Noida",

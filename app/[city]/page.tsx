@@ -208,7 +208,7 @@ export default async function CityHomePage({
       name: "The Luxury Booths",
       url: "https://theluxurybooths.com",
       telephone: "+91-9266037002",
-      email: "theluxurybooths@gmail.com",
+      email: "enquiry@theluxurybooths.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Noida",
@@ -1197,7 +1197,7 @@ export default async function CityHomePage({
                   <a href="tel:+919266037002">📞 +91-9266037002</a>
                 </p>
                 <p className="flex flex-row">
-                  <a href="mailto:theluxurybooths@gmail.com">✉️ theluxurybooths@gmail.com</a>
+                  <a href="mailto:enquiry@theluxurybooths.com">✉️ enquiry@theluxurybooths.com</a>
                 </p>
                 <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
 
