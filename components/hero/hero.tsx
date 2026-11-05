@@ -517,7 +517,7 @@ export default function Hero() {
                                     "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop",
                             },
                         ].map((item, index) => (
-
+  
                             <div
                                 key={index}
                                 className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/5 backdrop-blur-2xl hover:border-gold/40 transition-all duration-700"
