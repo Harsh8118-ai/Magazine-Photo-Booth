@@ -516,7 +516,7 @@ export default function Hero() {
                                 image:
                                     "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop",
                             },
-                        ].map((item, index) => (      
+                        ].map((item, index) => (         
   
                             <div
                                 key={index}
