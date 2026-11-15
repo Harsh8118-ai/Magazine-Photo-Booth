@@ -319,8 +319,8 @@ export default function CorporatePhotoBoothPage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-2xl">
-            <div className="absolute -inset-5 rounded-[2rem] bg-[#D4AF37]/10 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
+            <div className="absolute -inset-5 rounded-4xl bg-[#D4AF37]/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-4xl border border-white/10">
               <Image
                 src="/magazine-photo-booth-corporate-events.webp"
                 alt="Magazine-style branded photo booth experience for corporate events by The Luxury Booths"
@@ -328,9 +328,9 @@ export default function CorporatePhotoBoothPage() {
                 height={1400}
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-4/5 w-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-7 pt-24">
+              <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/85 to-transparent p-7 pt-24">
                 <p className="text-xs uppercase tracking-[.28em] text-[#E4C46A]">The TLB experience</p>
                 <p className="mt-2 text-2xl font-light">A photo moment with your brand in the frame.</p>
               </div>
@@ -339,7 +339,7 @@ export default function CorporatePhotoBoothPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] px-5 py-12 sm:px-8">
+      <section className="border-y border-white/10 bg-white/2.5 px-5 py-12 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[.75fr_1.25fr] md:items-center">
           <div>
             <p className="text-xs uppercase tracking-[.3em] text-[#D4AF37]">Made for business events</p>
@@ -387,10 +387,10 @@ export default function CorporatePhotoBoothPage() {
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {experiences.map((item) => (
-              <article key={item.title} className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025]">
+              <article key={item.title} className="overflow-hidden rounded-2xl border border-white/10 bg-white/2.5">
                 <Link href={item.href} className="group block">
                   <div className="relative overflow-hidden">
-                    <Image src={item.image} alt={item.alt} width={720} height={900} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-105" />
+                    <Image src={item.image} alt={item.alt} width={720} height={900} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="aspect-4/5 w-full object-cover transition duration-700 group-hover:scale-105" />
                     <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/65 px-3 py-1 text-[10px] uppercase tracking-wider">{item.tag}</span>
                   </div>
                   <div className="p-5">
@@ -421,7 +421,7 @@ export default function CorporatePhotoBoothPage() {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-5">
             <div className="relative col-span-2 overflow-hidden rounded-2xl border border-white/10">
-              <Image src="/magazine-photo-booth-corporate-events.webp" alt="Custom corporate magazine booth creative" width={1200} height={650} sizes="(max-width: 768px) 100vw, 60vw" className="aspect-[16/8] w-full object-cover" />
+              <Image src="/magazine-photo-booth-corporate-events.webp" alt="Custom corporate magazine booth creative" width={1200} height={650} sizes="(max-width: 768px) 100vw, 60vw" className="aspect-16/8 w-full object-cover" />
             </div>
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] p-5 sm:p-7">
               <ImageIcon className="text-[#D4AF37]" size={24} />
@@ -447,7 +447,7 @@ export default function CorporatePhotoBoothPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {corporatePhotos.map((photo) => (
               <div key={photo.src} className="overflow-hidden rounded-xl border border-white/10">
-                <Image src={photo.src} alt={photo.alt} width={700} height={850} sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" className="aspect-[4/5] w-full object-cover" loading="lazy" />
+                <Image src={photo.src} alt={photo.alt} width={700} height={850} sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" className="aspect-4/5 w-full object-cover" loading="lazy" />
               </div>
             ))}
           </div>
@@ -505,7 +505,7 @@ export default function CorporatePhotoBoothPage() {
       </section>
 
       <section id="enquiry" className="relative px-5 py-24 sm:px-8 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D4AF37]/[0.07] to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#D4AF37]/[0.07] to-transparent" />
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.9fr_1.1fr]">
           <div>
             <p className="text-xs uppercase tracking-[.3em] text-[#D4AF37]">Start a conversation</p>
@@ -517,7 +517,7 @@ export default function CorporatePhotoBoothPage() {
               <p><span className="text-[#D4AF37]">Base:</span> Noida, Delhi NCR · Events across India</p>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-9">
+          <form onSubmit={handleSubmit} className="rounded-3xl border border-white/10 bg-white/4 p-6 sm:p-9">
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="text-xs text-white/60">Your name *
                 <input required minLength={2} autoComplete="name" value={formState.name} onChange={(e) => setFormState({ ...formState, name: e.target.value })} className="mt-2 w-full rounded-xl border border-white/15 bg-black px-4 py-3 text-sm text-white outline-none focus:border-[#D4AF37]" />
