@@ -15,6 +15,7 @@ import {
   Printer,
   Sparkles,
   Users,
+  Facebook, Instagram, X, Linkedin, ArrowLeft
 } from "lucide-react"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 import { WhatsAppCTA } from "@/components/whatsapp-cta"
@@ -282,6 +283,33 @@ export default function CorporatePhotoBoothPage() {
       <CorporateStructuredData />
       <Breadcrumbs />
 
+      <div className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/40 backdrop-blur-xl">
+      
+                          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      
+                              <Link
+                                  href="/"
+                                  className="flex items-center gap-2 text-white/70 transition hover:text-white"
+                              >
+      
+                                  <ArrowLeft size={18} />
+      
+                                  <span className="hidden sm:block text-sm">
+                                      Back
+                                  </span>
+      
+                              </Link>
+      
+                              <h1 className="text-xs sm:text-lg uppercase tracking-[0.3em] text-[#D4AF37]">
+                                  Photo Booth for Corporate Events
+                              </h1>
+      
+                              <div className="w-15" />
+      
+                          </div>
+      
+                      </div>
+
       <section className="relative isolate px-5 pb-24 pt-12 sm:px-8 sm:pb-32 lg:pt-16">
         <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#D4AF37]/10 blur-[130px]" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.02fr_.98fr]">
@@ -289,9 +317,9 @@ export default function CorporatePhotoBoothPage() {
             <p className="text-xs font-semibold uppercase tracking-[.32em] text-[#D4AF37]">
               Corporate photo booth experiences · India
             </p>
-            <h1 className="mt-7 max-w-3xl text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+            <h2 className="mt-7 max-w-3xl text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
               Make your brand part of the <span className="text-[#D4AF37]">moment.</span>
-            </h1>
+            </h2>
             <p className="mt-7 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
               Premium photo booth experiences for corporate events, brand activations,
               product launches and exhibitions. Bring people into your brand story with
@@ -565,19 +593,137 @@ export default function CorporatePhotoBoothPage() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#090909] px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/55">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <Link href="/products" className="hover:text-white">All experiences</Link>
-            <Link href="/magazine-photo-booth" className="hover:text-white">Magazine Photo Booth</Link>
-            <Link href="/photo-booth-for-weddings" className="hover:text-white">Wedding experiences</Link>
-            <Link href="/blog/branded-event-activations-delhi-ncr" className="hover:text-white">Corporate activation guide</Link>
-            <Link href="/blog/magazine-photo-booth-for-corporate-events" className="hover:text-white">Corporate magazine booth guide</Link>
-            <Link href="/gallery" className="hover:text-white">Event gallery</Link>
+      {/* Footer */}
+      <footer
+        id="contact-section"
+        className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
+        role="contentinfo"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
+              <p className="text-gray-400 mb-4 text-sm sm:text-base">
+                The Luxury Booths is a luxury photo booth experience brand for premium weddings,
+                corporate events, and VIP celebrations.
+              </p>
+              <div className="flex space-x-4">
+                {[
+                  { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
+                  { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
+                  { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
+                  { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
+                ].map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit our ${social.name} page`}
+                    className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
+              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+                <li>
+                  <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
+                    Magazine Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
+                    Mirror Selfie Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
+                    Vintage Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
+                    Mirror Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
+                    Strip Photo Booth
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/butterfly-drone" className="hover:text-white transition-colors">
+                    Butterfly Drone
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-white transition-colors">
+                    Polaroid Photo Booth (coming soon)
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
+              <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
+
+                <li>
+                  <Link href="/#hero-section"
+                    className="hover:text-white transition-colors"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products"
+                    className="hover:text-white transition-colors"
+                  >
+                    Product
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about"
+                    className="hover:text-white transition-colors"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#testimonials-section"
+                    className="hover:text-white transition-colors"
+                  >
+                    Reviews
+                  </Link>
+
+                </li>
+                <li>
+                  <Link href={`/blog`} className="hover:text-white transition-colors">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
+              <div className="space-y-2 text-gray-400 text-sm sm:text-base">
+                <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
+                <p className="flex flex-row"><a href="mailto:enquiry@theluxurybooths.com">✉️ enquiry@theluxurybooths.com</a></p>
+                <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
+              </div>
+            </div>
           </div>
+
           <FooterClientTwo />
+
         </div>
+        <div className="py-9 sm:hidden"><span></span></div>
       </footer>
       <WhatsAppCTA />
     </main>

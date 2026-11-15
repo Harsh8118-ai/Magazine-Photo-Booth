@@ -610,23 +610,29 @@ export default function Hero() {
 
                             <a
                                 href="/magazine-photo-booth"
-                                className="px-5 py-3 rounded-full border border-gold/20 text-gray-200 hover:border-gold/50 transition"
+                                className="px-5 py-3 rounded-full border border-white/20 text-gray-200 hover:border-gold/50 transition"
                             >
                                 Magazine Booth
                             </a>
 
                             <a
                                 href="/mirror-selfie-booth"
-                                className="px-5 py-3 rounded-full border border-white/10 text-gray-200 hover:border-purple-400 transition"
+                                className="px-5 py-3 rounded-full border border-white/20 text-gray-200 hover:border-purple-400 transition"
                             >
                                 Mirror Booth
                             </a>
 
                             <a
                                 href="/photo-booth-for-weddings"
-                                className="px-5 py-3 rounded-full border border-white/10 text-gray-200 hover:border-blue-400 transition"
+                                className="px-5 py-3 rounded-full border border-white/20 text-gray-200 hover:border-blue-400 transition"
                             >
                                 For Weddings
+                            </a>
+                             <a
+                                href="/photo-booth-for-corporate-events"
+                                className="px-5 py-3 rounded-full border border-white/20 text-gray-200 hover:border-red-400 transition"
+                            >
+                                For Corporate Events
                             </a>
 
                         </div>
