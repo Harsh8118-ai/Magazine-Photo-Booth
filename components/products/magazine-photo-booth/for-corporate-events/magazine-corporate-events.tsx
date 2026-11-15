@@ -1,67 +1,266 @@
 import Image from "next/image"
 import Link from "next/link"
 import {
-  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
-  Building2,
   Camera,
   Check,
+  Download,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
   Megaphone,
   PartyPopper,
   Presentation,
+  Printer,
+  QrCode,
   Sparkles,
   Users,
-Facebook, Instagram, X, Linkedin
+  Building2,
+  Facebook,
+  X,
 } from "lucide-react"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 
-const PAGE_URL = "https://theluxurybooths.com/magazine-photo-booth/for-corporate-events"
+const PAGE_URL =
+  "https://theluxurybooths.com/magazine-photo-booth/for-corporate-events"
 const WHATSAPP = "919266037002"
-const enquiryUrl = (message: string) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`
+const PHONE = "+919266037002"
+const EMAIL = "enquiry@theluxurybooths.com"
+
+const enquiryUrl = (message: string) =>
+  `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`
+
+/**
+ * Add the final Cloudinary image URLs below.
+ * Keep images relevant to the exact step / section described by each key.
+ */
+const EXPERIENCE_IMAGES = {
+  hero: "",
+  booth: "",
+  guest: "",
+  camera: "",
+  result: "",
+  qr: "",
+  print: "",
+}
+
+const COVER_IMAGES = {
+  editorial: "",
+  corporate: "",
+  launch: "",
+}
+
+const EVENT_IMAGES = {
+  launches: "",
+  conferences: "",
+  celebrations: "",
+  activations: "",
+}
 
 const faqs = [
   {
     question: "What is a Magazine Photo Booth for a corporate event?",
-    answer: "It is an interactive photo experience in which guests become the cover star of a magazine-style design. The cover artwork can be planned around the company, campaign or event identity, subject to the creative scope agreed for the event.",
+    answer:
+      "It is an interactive photo experience in which guests become the cover star of a magazine-style design. The cover artwork can be planned around the company, campaign or event identity, subject to the creative scope agreed for the event.",
   },
   {
     question: "Can the magazine cover be customised with our company branding?",
-    answer: "Yes. Share your logo, brand guidelines, campaign artwork and event theme during the enquiry. The final design, placement and production details are confirmed with the TLB team before the event.",
+    answer:
+      "Yes. Share your logo, brand guidelines, campaign artwork and event theme during the enquiry. The final design, placement and production details are confirmed with The Luxury Booths team before the event.",
   },
   {
     question: "Which corporate events are suitable for this booth?",
-    answer: "It can be considered for product launches, exhibitions, trade shows, conferences, annual days, award nights, employee engagement events, networking evenings and brand activations.",
+    answer:
+      "It can be considered for product launches, exhibitions, trade shows, conferences, annual days, award nights, employee engagement events, networking evenings and brand activations.",
   },
   {
     question: "Do guests receive printed magazine covers?",
-    answer: "The experience is designed around a magazine-cover style photo output. Print format, quantity, digital delivery and any additional inclusions should be confirmed in the event proposal so they match your brief.",
+    answer:
+      "The experience can include a magazine-cover style photo output. Print format, quantity, digital delivery and any additional inclusions are confirmed in the event proposal so they match your brief.",
   },
   {
     question: "Can you set up the Magazine Photo Booth outside Delhi NCR?",
-    answer: "The Luxury Booths is based in Delhi NCR and serves events across India. Travel, logistics, availability and event-specific requirements are reviewed before confirming an outstation booking.",
+    answer:
+      "The Luxury Booths is based in Delhi NCR and serves events across India. Travel, logistics, availability and event-specific requirements are reviewed before confirming an outstation booking.",
   },
   {
     question: "What details should I share to get a quotation?",
-    answer: "Please share the event date, city and venue, event type, expected attendee count, operating hours, branding requirements and any preferred output or creative references. These details help the team scope the experience.",
+    answer:
+      "Please share the event date, city and venue, event type, expected attendee count, operating hours, branding requirements and any preferred output or creative references. These details help the team scope the experience.",
+  },
+]
+
+const steps = [
+  {
+    number: "01",
+    title: "The booth",
+    caption: "A life-size magazine frame becomes the centrepiece of the experience.",
+    image: EXPERIENCE_IMAGES.booth,
+    alt: "Illuminated walk-in magazine photo booth installation",
+    icon: Sparkles,
+  },
+  {
+    number: "02",
+    title: "Step in & pose",
+    caption: "Guests step into the frame and make the cover moment their own.",
+    image: EXPERIENCE_IMAGES.guest,
+    alt: "Guest posing at a magazine photo booth",
+    icon: Users,
+  },
+  {
+    number: "03",
+    title: "The camera captures",
+    caption: "The camera captures the moment in front of the magazine frame.",
+    image: EXPERIENCE_IMAGES.camera,
+    alt: "Camera setup capturing a guest at the magazine photo booth",
+    icon: Camera,
+  },
+  {
+    number: "04",
+    title: "Your cover is ready",
+    caption: "The photograph becomes a personalised magazine-cover image.",
+    image: EXPERIENCE_IMAGES.result,
+    alt: "Finished personalised magazine cover photograph",
+    icon: Sparkles,
+  },
+  {
+    number: "05",
+    title: "Scan. Download. Share.",
+    caption: "Guests scan the event QR code to access their digital photo.",
+    image: EXPERIENCE_IMAGES.qr,
+    alt: "Guest accessing a magazine photo through a QR code",
+    icon: QrCode,
+  },
+  {
+    number: "06",
+    title: "Take home the print",
+    caption: "A printed cover can turn the moment into a physical keepsake.",
+    image: EXPERIENCE_IMAGES.print,
+    alt: "Printed personalised magazine-cover photo keepsake",
+    icon: Printer,
+  },
+]
+
+const coverStyles = [
+  {
+    title: "Editorial & fashion",
+    text: "A polished magazine-inspired look for guests who want their cover-star moment.",
+    image: COVER_IMAGES.editorial,
+    alt: "Editorial magazine-cover photo design",
+    tag: "01 / EDITORIAL",
+  },
+  {
+    title: "Corporate identity",
+    text: "A cover direction that can incorporate your event identity and approved brand assets.",
+    image: COVER_IMAGES.corporate,
+    alt: "Corporate branded magazine-cover photo design",
+    tag: "02 / CORPORATE",
+  },
+  {
+    title: "Launch campaign",
+    text: "A campaign-led design concept for launches, exhibitions and brand activations.",
+    image: COVER_IMAGES.launch,
+    alt: "Product launch magazine-cover photo design",
+    tag: "03 / CAMPAIGN",
   },
 ]
 
 const eventTypes = [
-  { icon: Megaphone, title: "Brand activations", text: "Turn campaign participation into a personalised cover moment that guests can take away and associate with your brand." },
-  { icon: Sparkles, title: "Product launches", text: "Build a launch-specific editorial look around a new product, collection, service or brand story." },
-  { icon: Presentation, title: "Conferences & exhibitions", text: "Give attendees a distinctive interaction at your stand, conference or networking space." },
-  { icon: Users, title: "Employee engagement", text: "Create a shared experience for teams at annual days, town halls, celebrations and recognition events." },
-  { icon: Building2, title: "Corporate milestones", text: "Add a personalised photo moment to anniversaries, partner events, award nights and company celebrations." },
-  { icon: PartyPopper, title: "Client & partner events", text: "Offer invited guests a polished keepsake that feels connected to the occasion rather than generic event merchandise." },
+  {
+    icon: Megaphone,
+    title: "Brand activations",
+    text: "Turn campaign participation into a personalised cover moment guests can associate with your brand.",
+    image: EVENT_IMAGES.activations,
+    alt: "Brand activation at a premium corporate event",
+  },
+  {
+    icon: Sparkles,
+    title: "Product launches",
+    text: "Build a launch-specific editorial look around a new product, collection, service or brand story.",
+    image: EVENT_IMAGES.launches,
+    alt: "Product launch event experience",
+  },
+  {
+    icon: Presentation,
+    title: "Conferences & exhibitions",
+    text: "Give attendees a distinctive interaction at your stand, conference or networking space.",
+    image: EVENT_IMAGES.conferences,
+    alt: "Corporate conference and exhibition event",
+  },
+  {
+    icon: Users,
+    title: "Employee engagement",
+    text: "Create a shared experience for teams at annual days, town halls and recognition events.",
+    image: EVENT_IMAGES.celebrations,
+    alt: "Corporate employee celebration event",
+  },
+  {
+    icon: Building2,
+    title: "Corporate milestones",
+    text: "Add a personalised photo moment to anniversaries, partner events and award nights.",
+    image: EVENT_IMAGES.celebrations,
+    alt: "Corporate milestone celebration",
+  },
+  {
+    icon: PartyPopper,
+    title: "Client & partner events",
+    text: "Offer invited guests a polished keepsake that feels connected to the occasion.",
+    image: EVENT_IMAGES.activations,
+    alt: "Premium client and partner event",
+  },
 ]
 
-const steps = [
-  ["Share your event brief", "Tell us the date, venue, audience size, event format and what the experience should achieve."],
-  ["Shape the magazine creative", "Discuss the cover concept, brand identity, event messaging and artwork direction."],
-  ["Confirm the event plan", "Align on setup, operating hours, venue logistics, staffing and the agreed output."],
-  ["Create the cover moment", "Guests take part in the experience and receive the agreed magazine-style photo output."],
-]
+function Media({
+  src,
+  alt,
+  className = "",
+  aspect = "aspect-[4/5]",
+  priority = false,
+}: {
+  src: string
+  alt: string
+  className?: string
+  aspect?: string
+  priority?: boolean
+}) {
+  return (
+    <div
+      className={`group relative isolate overflow-hidden rounded-[1.35rem] bg-[#171613] ${aspect} ${className}`}
+    >
+      {src ? (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1100px"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+        />
+      ) : (
+        <div className="absolute inset-0 flex flex-col items-center justify-center border border-dashed border-white/15 px-5 text-center">
+          <Sparkles size={22} className="mb-3 text-[#C8A85B]/75" />
+          <span className="text-[10px] uppercase tracking-[.2em] text-white/50">
+            Image placeholder
+          </span>
+          <span className="mt-2 max-w-55 text-xs leading-5 text-white/30">
+            Add the relevant Cloudinary URL in the image configuration.
+          </span>
+        </div>
+      )}
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/25 via-transparent to-transparent opacity-70" />
+    </div>
+  )
+}
+
+function SectionEyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-[10px] font-medium uppercase tracking-[.28em] text-[#C8A85B] sm:text-[11px]">
+      {children}
+    </p>
+  )
+}
 
 function StructuredData() {
   const graph = {
@@ -72,7 +271,8 @@ function StructuredData() {
         "@id": `${PAGE_URL}#webpage`,
         url: PAGE_URL,
         name: "Magazine Photo Booth for Corporate Events | The Luxury Booths",
-        description: "Branded magazine-cover photo booth experiences for corporate events, product launches, conferences and brand activations.",
+        description:
+          "An interactive magazine-cover photo booth experience for corporate events, brand activations, product launches and conferences.",
         isPartOf: { "@id": "https://theluxurybooths.com/#website" },
         about: { "@id": `${PAGE_URL}#service` },
         breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
@@ -82,9 +282,17 @@ function StructuredData() {
         "@type": "Service",
         "@id": `${PAGE_URL}#service`,
         name: "Magazine Photo Booth for Corporate Events",
-        serviceType: ["Corporate magazine photo booth", "Branded magazine-cover photo experience", "Corporate event photo booth rental"],
-        description: "Magazine-cover style photo booth experience planned around corporate events, brand activations, product launches, conferences and exhibitions.",
-        provider: { "@type": "Organization", name: "The Luxury Booths", url: "https://theluxurybooths.com" },
+        serviceType: [
+          "Corporate magazine photo booth",
+          "Branded magazine-cover photo experience",
+        ],
+        description:
+          "Magazine-cover style photo booth experience for corporate events and brand activations.",
+        provider: {
+          "@type": "Organization",
+          name: "The Luxury Booths",
+          url: "https://theluxurybooths.com",
+        },
         areaServed: [
           { "@type": "AdministrativeArea", name: "Delhi NCR, India" },
           { "@type": "Country", name: "India" },
@@ -96,9 +304,24 @@ function StructuredData() {
         "@type": "BreadcrumbList",
         "@id": `${PAGE_URL}#breadcrumb`,
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://theluxurybooths.com/" },
-          { "@type": "ListItem", position: 2, name: "Magazine Photo Booth", item: "https://theluxurybooths.com/magazine-photo-booth" },
-          { "@type": "ListItem", position: 3, name: "For Corporate Events", item: PAGE_URL },
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://theluxurybooths.com/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Magazine Photo Booth",
+            item: "https://theluxurybooths.com/magazine-photo-booth",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "For Corporate Events",
+            item: PAGE_URL,
+          },
         ],
       },
       {
@@ -113,328 +336,511 @@ function StructuredData() {
     ],
   }
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }} />
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(graph).replace(/</g, "\\u003c"),
+      }}
+    />
+  )
 }
 
 export default function MagazineCorporateEvents() {
+  const heroMessage =
+    "Hello The Luxury Booths, I would like to enquire about a Magazine Photo Booth for a corporate event. Please share availability and details."
+
+  const detailedMessage =
+    "Hello The Luxury Booths, I would like to enquire about a Magazine Photo Booth for my corporate event.\n\nEvent date:\nCity / venue:\nEvent type:\nExpected attendees:\nOperating hours:\nBranding requirements:\n"
+
   return (
-    <main className="overflow-hidden bg-[#080808] text-white">
+    <main className="overflow-hidden bg-[#090909] text-[#F5F1E8]">
       <StructuredData />
 
-      <div className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/40 backdrop-blur-xl">
+      {/* Compact sticky navigation */}
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#090909]/80 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
+          <Link
+            href="/magazine-photo-booth"
+            className="inline-flex items-center gap-2 text-xs text-white/65 transition hover:text-white"
+          >
+            <ArrowRight className="rotate-180" size={15} />
+            <span className="hidden sm:inline">Magazine Photo Booth</span>
+            <span className="sm:hidden">Back</span>
+          </Link>
 
-                    <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <Link
+            href="/"
+            aria-label="The Luxury Booths home"
+            className="text-[10px] font-medium uppercase tracking-[.25em] text-[#D4B66A] sm:text-xs"
+          >
+            The Luxury Booths
+          </Link>
 
-                        <Link
-                            href="/"
-                            className="flex items-center gap-2 text-white/70 transition hover:text-white"
-                        >
+          <a
+            href={enquiryUrl(heroMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#D4B66A] px-4 py-2.5 text-[11px] font-semibold text-black transition hover:bg-[#E7D19A] sm:px-5 sm:text-xs"
+          >
+            Enquire <ArrowUpRight size={14} />
+          </a>
+        </div>
+      </header>
 
-                            <ArrowLeft size={18} />
+      {/* Hero */}
+      <section className="relative px-5 pb-16 pt-32 sm:px-8 sm:pb-24 sm:pt-40">
+        <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#C8A85B]/8 blur-[120px]" />
+        <div className="relative mx-auto max-w-6xl text-center">
+          <SectionEyebrow>Corporate events · Brand experiences · Delhi NCR & India</SectionEyebrow>
+          <h1 className="mx-auto mt-6 max-w-5xl text-[2.65rem] font-light leading-[1.04] tracking-[-.045em] sm:text-6xl lg:text-[5.4rem]">
+            Your guests.
+            <br className="sm:hidden" />{" "}
+            <span className="font-serif italic text-[#D4B66A]">The cover stars.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/60 sm:text-base sm:leading-8">
+            A walk-in magazine photo booth that turns guests into the face of
+            their own cover — with a digital photo to share and an optional
+            printed keepsake, based on your event package.
+          </p>
+          <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+            <a
+              href={enquiryUrl(heroMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#D4B66A] px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-[#E7D19A]"
+            >
+              Plan your experience <ArrowRight size={16} />
+            </a>
+            <Link
+              href="/magazine-photo-booth/images"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm text-white/80 transition hover:border-white/50 hover:text-white"
+            >
+              Explore the gallery <ArrowUpRight size={15} />
+            </Link>
+          </div>
+          <div className="mt-9 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[.16em] text-white/40 sm:text-[11px]">
+            <span>Brand activations</span>
+            <span>Product launches</span>
+            <span>Conferences</span>
+            <span>Corporate celebrations</span>
+          </div>
+        </div>
 
-                            <span className="hidden sm:block text-sm">
-                                Back
-                            </span>
+        <div className="mx-auto mt-12 max-w-7xl sm:mt-16">
+          <Media
+            src={EXPERIENCE_IMAGES.hero || EXPERIENCE_IMAGES.booth}
+            alt="Magazine photo booth installation at a corporate event"
+            aspect="aspect-[5/4] sm:aspect-[16/7]"
+            className="rounded-3xl sm:rounded-4xl"
+            priority
+          />
+          <div className="mt-3 flex items-center justify-between text-[9px] uppercase tracking-[.2em] text-white/35 sm:text-[10px]">
+            <span>An experience they step into</span>
+            <span>01 — The magazine moment</span>
+          </div>
+        </div>
+      </section>
 
-                        </Link>
-
-                        <h1 className="text-xs sm:text-lg uppercase tracking-[0.3em] text-[#D4AF37]">
-                            Magazine Photo Booth for Corporate Events
-                        </h1>
-
-                        <div className="w-15" />
-
-                    </div>
-
-                </div>
-
-      <section className="relative isolate px-5 pb-24 pt-12 sm:px-8 sm:pb-32 lg:pt-20">
-        <div className="pointer-events-none absolute -left-40 top-0 h-112 w-md rounded-full bg-[#D4AF37]/10 blur-[140px]" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_.92fr] lg:gap-16">
+      {/* Intro */}
+      <section className="border-y border-white/[0.07] bg-[#10100E] px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end lg:gap-20">
           <div>
-            <p className="text-[10px] font-medium uppercase tracking-[.34em] text-[#D4AF37]">The editorial guest experience</p>
-            <h2 className="mt-6 max-w-3xl text-4xl font-light leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
-              Put your people <span className="font-serif italic text-[#D4AF37]">on the cover.</span>
+            <SectionEyebrow>More than a photo opportunity</SectionEyebrow>
+            <h2 className="mt-4 text-3xl font-light leading-tight tracking-tight sm:text-5xl">
+              Give every guest
+              <span className="font-serif italic text-[#D4B66A]"> a cover story.</span>
             </h2>
-            <p className="mt-7 max-w-xl text-base leading-8 text-white/65 sm:text-lg">
-              Make your next corporate event feel like a cover story. The Magazine Photo Booth turns guests into the centre of a custom magazine-style photo experience, shaped around your brand and occasion.
-            </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href={enquiryUrl("Hello The Luxury Booths, I would like to enquire about a Magazine Photo Booth for a corporate event. Please share availability and details.")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#D4AF37] px-7 py-4 text-sm font-semibold text-black transition hover:bg-[#efd477]">
-                Enquire for your event <ArrowRight size={16} />
-              </a>
-              <Link href="/magazine-photo-booth/images" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm text-white/80 transition hover:border-[#D4AF37] hover:text-[#D4AF37]">
-                Explore booth images <ArrowUpRight size={16} />
-              </Link>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/10 pt-6 text-xs text-white/45">
-              <span>Brand activations</span><span>Product launches</span><span>Conferences</span><span>Corporate celebrations</span>
-            </div>
           </div>
-          <div className="relative mx-auto w-full max-w-150">
-            <div className="absolute -inset-5 rounded-4xl border border-[#D4AF37]/15" />
-            <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#151515] shadow-2xl shadow-black/50">
-              <Image src="/magazine-photo-booth-corporate-events.webp" alt="Magazine Photo Booth setup for corporate events by The Luxury Booths" width={1200} height={1200} priority sizes="(max-width: 1024px) 100vw, 48vw" className="aspect-4/4.5 w-full object-cover" />
-              <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/90 via-black/30 to-transparent p-6 sm:p-8">
-                <p className="text-[10px] uppercase tracking-[.28em] text-[#E4C66E]">Your brand. Their moment.</p>
-                <p className="mt-2 font-serif text-2xl italic sm:text-3xl">A cover worth keeping.</p>
-              </div>
-            </div>
-            <p className="mt-4 text-center text-[10px] uppercase tracking-[.2em] text-white/35">A personalised magazine-cover photo experience</p>
-          </div>
+          <p className="max-w-2xl text-sm leading-7 text-white/55 sm:text-base sm:leading-8">
+            The Magazine Photo Booth creates an interactive moment around a
+            larger-than-life magazine frame. Guests pose for their photograph
+            and receive a magazine-inspired visual that can be aligned with
+            your event theme or brand identity. Final artwork, digital delivery
+            and print inclusions are agreed during planning.
+          </p>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[#101010] px-5 py-20 sm:px-8 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.78fr_1.22fr] lg:gap-20">
-          <div>
-            <p className="text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">More than a photo opportunity</p>
-            <h2 className="mt-5 text-3xl font-light leading-tight sm:text-5xl">A brand experience guests become part of.</h2>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2">
-            <div className="border-l border-[#D4AF37]/50 pl-5">
-              <Camera className="text-[#D4AF37]" size={22} />
-              <h3 className="mt-4 text-lg">Personal participation</h3>
-              <p className="mt-2 text-sm leading-7 text-white/55">Guests do not just view the campaign. They step into the frame and become part of the event's visual story.</p>
-            </div>
-            <div className="border-l border-[#D4AF37]/50 pl-5">
-              <Sparkles className="text-[#D4AF37]" size={22} />
-              <h3 className="mt-4 text-lg">Event-led creative</h3>
-              <p className="mt-2 text-sm leading-7 text-white/55">The magazine-cover concept can be planned around the event theme, brand identity and campaign direction.</p>
-            </div>
-            <div className="border-l border-[#D4AF37]/50 pl-5">
-              <Users className="text-[#D4AF37]" size={22} />
-              <h3 className="mt-4 text-lg">A natural conversation starter</h3>
-              <p className="mt-2 text-sm leading-7 text-white/55">A distinctive cover moment gives colleagues, clients and visitors an easy reason to participate together.</p>
-            </div>
-            <div className="border-l border-[#D4AF37]/50 pl-5">
-              <Check className="text-[#D4AF37]" size={22} />
-              <h3 className="mt-4 text-lg">A keepsake with context</h3>
-              <p className="mt-2 text-sm leading-7 text-white/55">The agreed photo output can carry the event's visual identity beyond the venue as a personalised reminder.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
+      {/* Experience walkthrough */}
+      <section className="px-5 py-16 sm:px-8 sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">Designed around your occasion</p>
-            <h2 className="mt-5 text-3xl font-light sm:text-5xl">One experience. Many corporate moments.</h2>
-            <p className="mt-5 text-sm leading-7 text-white/55">The creative direction and event plan should reflect what brings your audience together.</p>
+          <div className="mb-10 flex flex-col justify-between gap-5 sm:mb-14 sm:flex-row sm:items-end">
+            <div>
+              <SectionEyebrow>See how it works</SectionEyebrow>
+              <h2 className="mt-3 text-3xl font-light tracking-tight sm:text-5xl">
+                Six steps. <span className="font-serif italic">One cover story.</span>
+              </h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-white/45">
+              From the first step inside to the final photo output, explore
+              the guest journey.
+            </p>
           </div>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
-            {eventTypes.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="bg-[#0b0b0b] p-7 sm:p-8">
-                <Icon size={23} className="text-[#D4AF37]" />
-                <h3 className="mt-5 text-lg font-medium">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/55">{text}</p>
+
+          <div className="grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-16">
+            {steps.map(({ number, title, caption, image, alt, icon: Icon }) => (
+              <article key={number} className="group min-w-0">
+                <div className="relative">
+                  <Media src={image} alt={alt} />
+                  <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] tracking-[.2em] text-white/85 backdrop-blur-md">
+                    {number} / 06
+                  </span>
+                </div>
+                <div className="mt-5 flex items-start gap-3">
+                  <div className="mt-0.5 rounded-full border border-[#C8A85B]/30 p-2 text-[#D4B66A]">
+                    <Icon size={16} strokeWidth={1.6} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium tracking-tight sm:text-xl">{title}</h3>
+                    <p className="mt-1.5 max-w-sm text-sm leading-6 text-white/45">{caption}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#101010] px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative overflow-hidden rounded-2xl border border-white/10">
-            <Image src="/magazine-photo-booth.webp" alt="Magazine Photo Booth installation by The Luxury Booths" width={1200} height={900} sizes="(max-width: 1024px) 100vw, 50vw" className="aspect-5/4 w-full object-cover" />
-          </div>
-          <div>
-            <p className="text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">Custom creative direction</p>
-            <h2 className="mt-5 text-3xl font-light leading-tight sm:text-5xl">Make the cover feel like your brand.</h2>
-            <p className="mt-6 text-sm leading-7 text-white/60">From the cover concept to the final photo layout, the creative brief is where your event identity comes through. Share your brand assets and references early so the artwork can be reviewed and aligned before event day.</p>
-            <ul className="mt-7 space-y-3 text-sm text-white/65">
-              {["Company or campaign-led cover concept", "Logo, event title and approved brand elements", "Creative aligned with the event's visual theme", "Print and digital output requirements discussed in advance"].map((item) => (
-                <li key={item} className="flex items-start gap-3"><Check size={16} className="mt-0.5 shrink-0 text-[#D4AF37]" />{item}</li>
-              ))}
-            </ul>
-            <p className="mt-6 text-xs leading-6 text-white/35">Final customisation, output formats and inclusions are subject to the event brief and written confirmation.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
+      {/* Cover design showcase */}
+      <section className="border-y border-white/[0.07] bg-[#10100E] px-5 py-16 sm:px-8 sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">How it comes together</p>
-            <h2 className="mt-5 text-3xl font-light sm:text-5xl">A considered process from brief to event day.</h2>
+          <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+            <SectionEyebrow>Make it yours</SectionEyebrow>
+            <h2 className="mt-3 text-3xl font-light tracking-tight sm:text-5xl">
+              One experience.
+              <span className="font-serif italic text-[#D4B66A]"> Different covers.</span>
+            </h2>
+            <p className="mt-5 text-sm leading-7 text-white/50 sm:text-base">
+              Explore possible creative directions. Final cover design and
+              branding are developed around the agreed event brief.
+            </p>
           </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map(([title, text], index) => (
-              <div key={title} className="border-t border-[#D4AF37]/45 pt-5">
-                <span className="text-xs tracking-[.2em] text-[#D4AF37]">0{index + 1}</span>
-                <h3 className="mt-5 text-lg">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/55">{text}</p>
-              </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {coverStyles.map((cover) => (
+              <article key={cover.title} className="group">
+                <div className="relative">
+                  <Media src={cover.image} alt={cover.alt} aspect="aspect-[4/5]" />
+                  <span className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/55 px-3 py-1.5 text-[9px] tracking-[.18em] text-white/80 backdrop-blur-md">
+                    {cover.tag}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-lg font-medium">{cover.title}</h3>
+                <p className="mt-2 max-w-sm text-sm leading-6 text-white/45">{cover.text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[#101010] px-5 py-24 sm:px-8">
+      {/* Corporate use cases */}
+      <section className="px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 max-w-2xl sm:mb-14">
+            <SectionEyebrow>Made for participation</SectionEyebrow>
+            <h2 className="mt-4 text-3xl font-light leading-tight sm:text-5xl">
+              A memorable moment for
+              <span className="font-serif italic text-[#D4B66A]"> every occasion.</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-white/50">
+              A flexible photo experience for corporate gatherings, customer
+              engagement and brand-led events.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {eventTypes.map(({ icon: Icon, title, text, image, alt }) => (
+              <article
+                key={title}
+                className="group overflow-hidden rounded-[1.35rem] border border-white/9 bg-[#10100E]"
+              >
+                <Media
+                  src={image}
+                  alt={alt}
+                  aspect="aspect-[16/10]"
+                  className="rounded-none"
+                />
+                <div className="p-6 sm:p-7">
+                  <Icon size={21} className="text-[#D4B66A]" strokeWidth={1.6} />
+                  <h3 className="mt-4 text-lg font-medium">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-white/50">{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brand customisation */}
+      <section className="border-y border-white/[0.07] bg-[#10100E] px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center lg:gap-20">
+          <div>
+            <SectionEyebrow>Designed around your event</SectionEyebrow>
+            <h2 className="mt-4 text-3xl font-light leading-tight sm:text-5xl">
+              Your event identity.
+              <span className="font-serif italic text-[#D4B66A]"> Their cover moment.</span>
+            </h2>
+            <p className="mt-5 text-sm leading-7 text-white/55 sm:text-base sm:leading-8">
+              Share your logo, approved brand assets, campaign artwork and
+              creative references with the team. The cover direction, design
+              details and production requirements can then be discussed as
+              part of your event proposal.
+            </p>
+            <ul className="mt-7 space-y-3">
+              {[
+                "Event theme and campaign-led artwork",
+                "Approved company logos and brand assets",
+                "Personalised magazine-style photo layouts",
+                "Digital and print options discussed in advance",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-white/65">
+                  <Check size={16} className="mt-0.5 shrink-0 text-[#D4B66A]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Media
+            src={EXPERIENCE_IMAGES.result}
+            alt="Personalised magazine cover design with event branding"
+            aspect="aspect-[4/5] sm:aspect-[5/4]"
+          />
+        </div>
+      </section>
+
+      {/* Delivery details */}
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-3 sm:gap-10">
+          <div className="flex items-start gap-4">
+            <Camera className="mt-1 shrink-0 text-[#D4B66A]" size={21} />
+            <div>
+              <h3 className="text-base font-medium">An editorial-style photo</h3>
+              <p className="mt-2 text-sm leading-6 text-white/45">
+                A personalised magazine-cover look for every guest.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <Download className="mt-1 shrink-0 text-[#D4B66A]" size={21} />
+            <div>
+              <h3 className="text-base font-medium">Digital access via QR</h3>
+              <p className="mt-2 text-sm leading-6 text-white/45">
+                Guests can scan to access and share their photo, subject to the
+                delivery setup agreed for the event.
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <Printer className="mt-1 shrink-0 text-[#D4B66A]" size={21} />
+            <div>
+              <h3 className="text-base font-medium">A print to take away</h3>
+              <p className="mt-2 text-sm leading-6 text-white/45">
+                Physical keepsakes can be included according to the confirmed
+                event package.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service area / trust */}
+      <section className="border-y border-white/[0.07] bg-[#10100E] px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="max-w-2xl">
+            <SectionEyebrow>Where we serve</SectionEyebrow>
+            <h2 className="mt-3 text-2xl font-light sm:text-4xl">
+              Delhi NCR. <span className="font-serif italic text-[#D4B66A]">Pan India.</span>
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-white/50">
+              Based in Delhi NCR, The Luxury Booths considers events across
+              India. Availability, travel, logistics and venue requirements
+              are reviewed for each enquiry.
+            </p>
+          </div>
+          <a
+            href={enquiryUrl("Hello The Luxury Booths, I would like to check availability for a corporate Magazine Photo Booth at my event.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#C8A85B]/50 px-6 py-3.5 text-sm text-[#E0C982] transition hover:bg-[#C8A85B]/10"
+          >
+            Check availability <ArrowUpRight size={15} />
+          </a>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="px-5 py-16 sm:px-8 sm:py-24">
         <div className="mx-auto max-w-4xl">
-          <p className="text-center text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">Frequently asked questions</p>
-          <h2 className="mt-5 text-center text-3xl font-light sm:text-5xl">Planning a corporate magazine booth?</h2>
-          <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
+          <div className="mb-8 text-center">
+            <SectionEyebrow>A few details</SectionEyebrow>
+            <h2 className="mt-3 text-3xl font-light sm:text-4xl">Good to know</h2>
+          </div>
+          <div className="divide-y divide-white/10 border-y border-white/10">
             {faqs.map((faq) => (
               <details key={faq.question} className="group py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-sm font-medium sm:text-base">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-left text-sm font-medium marker:hidden sm:text-base">
                   {faq.question}
-                  <span className="text-xl font-light text-[#D4AF37] transition group-open:rotate-45">+</span>
+                  <span className="shrink-0 text-xl font-light text-[#D4B66A] transition-transform group-open:rotate-45">
+                    +
+                  </span>
                 </summary>
-                <p className="max-w-3xl pt-4 text-sm leading-7 text-white/55">{faq.answer}</p>
+                <p className="max-w-3xl pt-3 text-sm leading-7 text-white/50">
+                  {faq.answer}
+                </p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative px-5 py-24 sm:px-8 lg:py-32">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#D4AF37]/[.07] to-transparent" />
-        <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-[10px] uppercase tracking-[.3em] text-[#D4AF37]">Corporate bookings · Delhi NCR · Pan India</p>
-          <h2 className="mt-5 text-4xl font-light leading-tight sm:text-6xl">Give your next event a cover moment.</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/55 sm:text-base">Tell us what you are planning. We will discuss the creative direction, event requirements and a suitable Magazine Photo Booth setup for your brief.</p>
-          <a href={enquiryUrl("Hello The Luxury Booths, I am planning a corporate event and would like to enquire about your Magazine Photo Booth.\n\nEvent date:\nCity / venue:\nEvent type:\nExpected attendees:\nOperating hours:\nBranding requirements:\n") } target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center justify-center gap-3 rounded-full bg-[#D4AF37] px-8 py-4 text-sm font-semibold text-black transition hover:bg-[#efd477]">
-            Discuss your event <ArrowRight size={16} />
+      {/* Final conversion section */}
+      <section className="relative overflow-hidden border-t border-white/[0.07] bg-[#11100D] px-5 py-20 text-center sm:px-8 sm:py-28">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C8A85B]/[0.07] blur-[120px]" />
+        <div className="relative mx-auto max-w-3xl">
+          <SectionEyebrow>Start planning your experience</SectionEyebrow>
+          <h2 className="mt-4 text-3xl font-light leading-tight sm:text-5xl">
+            Ready to put your guests
+            <span className="font-serif italic text-[#D4B66A]"> on the cover?</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/50 sm:text-base">
+            Share your event date, city and audience size. The team can help
+            shape the experience around your event brief.
+          </p>
+          <a
+            href={enquiryUrl(detailedMessage)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[#D4B66A] px-8 py-4 text-sm font-semibold text-black transition hover:bg-[#E7D19A]"
+          >
+            Enquire on WhatsApp <ArrowRight size={16} />
           </a>
-          <p className="mt-5 text-xs text-white/35">Call <a href="tel:+919266037002" className="text-white/60 hover:text-[#D4AF37]">+91 92660 37002</a> · <a href="mailto:enquiry@theluxurybooths.com" className="text-white/60 hover:text-[#D4AF37]">enquiry@theluxurybooths.com</a></p>
+          <div className="mt-7 flex flex-col items-center justify-center gap-3 text-xs text-white/40 sm:flex-row sm:gap-6">
+            <a href={`tel:${PHONE}`} className="transition hover:text-white">
+              {PHONE.replace("+91", "+91 ")}
+            </a>
+            <span className="hidden sm:inline">·</span>
+            <a href={`mailto:${EMAIL}`} className="transition hover:text-white">
+              {EMAIL}
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-                <footer
-                    id="contact-section"
-                    className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-900 border-t border-gray-800"
-                    role="contentinfo"
+      {/* Existing site footer */}
+      <footer
+        id="contact-section"
+        className="border-t border-white/8 bg-[#0B0B0A] px-4 py-10 sm:px-6 sm:py-12"
+        role="contentinfo"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="mb-4 text-xl font-semibold text-[#D4B66A] sm:text-2xl">
+                The Luxury Booths
+              </h3>
+              <p className="mb-5 text-sm leading-6 text-white/45">
+                The Luxury Booths is a luxury photo booth experience brand for
+                premium weddings, corporate events and VIP celebrations.
+              </p>
+              <div className="flex items-center gap-3">
+                {[
+                  {
+                    name: "Facebook",
+                    url: "https://www.facebook.com/profile.php?id=61570489859940",
+                    icon: Facebook,
+                  },
+                  {
+                    name: "Instagram",
+                    url: "https://www.instagram.com/theluxurybooths",
+                    icon: Instagram,
+                  },
+                  { name: "X", url: "https://twitter.com", icon: X },
+                  {
+                    name: "LinkedIn",
+                    url: "https://www.linkedin.com/in/theluxurybooths",
+                    icon: Linkedin,
+                  },
+                ].map(({ name, url, icon: Icon }) => (
+                  <a
+                    key={name}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit The Luxury Booths on ${name}`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/55 transition hover:border-[#C8A85B]/50 hover:text-[#D4B66A]"
+                  >
+                    <Icon size={17} />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Services</h4>
+              <ul className="space-y-2.5 text-sm text-white/45">
+                {[
+                  ["Magazine Photo Booth", "/magazine-photo-booth"],
+                  ["Mirror Selfie Booth", "/mirror-selfie-booth"],
+                  ["Vintage Photo Booth", "/vintage-photo-booth"],
+                  ["Mirror Photo Booth", "/mirror-photo-booth"],
+                  ["Strip Photo Booth", "/strip-photo-booth"],
+                  ["Butterfly Drone", "/butterfly-drone"],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href} className="transition hover:text-white">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Company</h4>
+              <ul className="space-y-2.5 text-sm text-white/45">
+                {[
+                  ["Home", "/#hero-section"],
+                  ["Products", "/products"],
+                  ["About Us", "/about"],
+                  ["Reviews", "/#testimonials-section"],
+                  ["Blog", "/blog"],
+                ].map(([label, href]) => (
+                  <li key={href}>
+                    <Link href={href} className="transition hover:text-white">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Contact</h4>
+              <div className="space-y-3 text-sm text-white/45">
+                <a href={`tel:${PHONE}`} className="flex items-start gap-2 transition hover:text-white">
+                  <Camera size={15} className="mt-0.5 shrink-0" />
+                  +91 92660 37002
+                </a>
+                <a href={`mailto:${EMAIL}`} className="flex items-start gap-2 transition hover:text-white">
+                  <Mail size={15} className="mt-0.5 shrink-0" />
+                  {EMAIL}
+                </a>
+                <a
+                  href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 transition hover:text-white"
                 >
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
-                            <div className="sm:col-span-2 lg:col-span-1">
-                                <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
-                                <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                                    The Luxury Booths is a luxury photo booth experience brand for premium weddings,
-                                    corporate events, and VIP celebrations.
-                                </p>
-                                <div className="flex space-x-4">
-                                    {[
-                                        { name: "facebook", url: "https://www.facebook.com/profile.php?id=61570489859940", icon: <Facebook className="w-5 h-5" />, color: "hover:text-blue-500" },
-                                        { name: "instagram", url: "https://www.instagram.com/theluxurybooths", icon: <Instagram className="w-5 h-5" />, color: "hover:text-pink-500" },
-                                        { name: "twitter", url: "https://twitter.com", icon: <X className="w-5 h-5" />, color: "hover:text-sky-400" },
-                                        { name: "linkedin", url: "https://www.linkedin.com/in/theluxurybooths", icon: <Linkedin className="w-5 h-5" />, color: "hover:text-blue-600" },
-                                    ].map((social) => (
-                                        <a
-                                            key={social.name}
-                                            href={social.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={`Visit our ${social.name} page`}
-                                            className={`w-10 h-10 glass rounded-full flex items-center justify-center cursor-pointer ${social.color}`}
-                                        >
-                                            {social.icon}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div>
-                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Services</h4>
-                                <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-                                    <li>
-                                        <Link href="/magazine-photo-booth" className="hover:text-white transition-colors">
-                                            Magazine Photo Booth
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/mirror-selfie-booth" className="hover:text-white transition-colors">
-                                            Mirror Selfie Booth
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/vintage-photo-booth" className="hover:text-white transition-colors">
-                                            Vintage Photo Booth
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/mirror-photo-booth" className="hover:text-white transition-colors">
-                                            Mirror Photo Booth
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/strip-photo-booth" className="hover:text-white transition-colors">
-                                            Strip Photo Booth
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/butterfly-drone" className="hover:text-white transition-colors">
-                                            Butterfly Drone
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/" className="hover:text-white transition-colors">
-                                            Polaroid Photo Booth (coming soon)
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Company</h4>
-                                <ul className="space-y-2 text-gray-400 text-sm sm:text-base">
-
-                                    <li>
-                                        <Link href="/#hero-section"
-                                            className="hover:text-white transition-colors"
-                                        >
-                                            Home
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/products"
-                                            className="hover:text-white transition-colors"
-                                        >
-                                            Product
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/about"
-                                            className="hover:text-white transition-colors"
-                                        >
-                                            About Us
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/#testimonials-section"
-                                            className="hover:text-white transition-colors"
-                                        >
-                                            Reviews
-                                        </Link>
-
-                                    </li>
-                                    <li>
-                                        <Link href={`/blog`} className="hover:text-white transition-colors">
-                                            Blog
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h4 className="font-semibold mb-4 text-sm sm:text-base">Contact</h4>
-                                <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                                    <p><a href="tel:+919266037002">📞 +91-9266037002</a></p>
-                                    <p className="flex flex-row"><a href="mailto:enquiry@theluxurybooths.com">✉️ enquiry@theluxurybooths.com</a></p>
-                                    <p><a href="https://maps.app.goo.gl/3XDsYrDYf6ModdjA8">📍 Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <FooterClientTwo />
-
-                    </div>
-                    <div className="py-9 sm:hidden"><span></span></div>
-                </footer>
+                  <MapPin size={15} className="mt-0.5 shrink-0" />
+                  Sector 73, Noida, Basi Bahuddin Nagar, Uttar Pradesh 201301
+                </a>
+              </div>
+            </div>
+          </div>
+          <FooterClientTwo />
+        </div>
+      </footer>
     </main>
   )
 }
