@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/magazine-photo-booth`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/magazine-photo-booth/images`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/magazine-photo-booth/for-sale`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/magazine-photo-booth/for-corporate-events`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/mirror-selfie-booth`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/vintage-photo-booth`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/mirror-photo-booth`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
