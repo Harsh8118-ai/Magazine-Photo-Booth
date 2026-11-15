@@ -8,7 +8,6 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   Camera,
-  Check,
   ChevronDown,
   Image as ImageIcon,
   Megaphone,
