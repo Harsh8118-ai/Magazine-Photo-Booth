@@ -163,20 +163,6 @@ function makeWhatsAppUrl(message: string) {
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 }
 
-function Breadcrumbs() {
-  return (
-    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-5 pt-28 sm:px-8">
-      <ol className="flex flex-wrap items-center gap-2 text-xs text-white/45">
-        <li><Link href="/" className="hover:text-[#D4AF37]">Home</Link></li>
-        <li aria-hidden="true">/</li>
-        <li><Link href="/products" className="hover:text-[#D4AF37]">Experiences</Link></li>
-        <li aria-hidden="true">/</li>
-        <li aria-current="page" className="text-white/80">Corporate Events</li>
-      </ol>
-    </nav>
-  )
-}
-
 function CorporateStructuredData() {
   const graph = {
     "@context": "https://schema.org",
@@ -281,34 +267,33 @@ export default function CorporatePhotoBoothPage() {
   return (
     <main className="overflow-hidden bg-black text-white">
       <CorporateStructuredData />
-      <Breadcrumbs />
 
       <div className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/40 backdrop-blur-xl">
-      
-                          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-      
-                              <Link
-                                  href="/"
-                                  className="flex items-center gap-2 text-white/70 transition hover:text-white"
-                              >
-      
-                                  <ArrowLeft size={18} />
-      
-                                  <span className="hidden sm:block text-sm">
-                                      Back
-                                  </span>
-      
-                              </Link>
-      
-                              <h1 className="text-xs sm:text-lg uppercase tracking-[0.3em] text-[#D4AF37]">
-                                  Photo Booth for Corporate Events
-                              </h1>
-      
-                              <div className="w-15" />
-      
-                          </div>
-      
-                      </div>
+
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-white/70 transition hover:text-white"
+          >
+
+            <ArrowLeft size={18} />
+
+            <span className="hidden sm:block text-sm">
+              Back
+            </span>
+
+          </Link>
+
+          <h1 className="text-xs sm:text-lg uppercase tracking-[0.3em] text-[#D4AF37]">
+            Photo Booth for Corporate Events
+          </h1>
+
+          <div className="w-15" />
+
+        </div>
+
+      </div>
 
       <section className="relative isolate px-5 pb-24 pt-12 sm:px-8 sm:pb-32 lg:pt-16">
         <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-[#D4AF37]/10 blur-[130px]" />

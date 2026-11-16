@@ -20,6 +20,7 @@ import {
   Building2,
   Facebook,
   X,
+  ArrowLeft,
 } from "lucide-react"
 import FooterClientTwo from "@/components/hero/footer.client-2"
 
@@ -357,50 +358,46 @@ export default function MagazineCorporateEvents() {
     <main className="overflow-hidden bg-[#090909] text-[#F5F1E8]">
       <StructuredData />
 
-      {/* Compact sticky navigation */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#090909]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
-          <Link
-            href="/magazine-photo-booth"
-            className="inline-flex items-center gap-2 text-xs text-white/65 transition hover:text-white"
-          >
-            <ArrowRight className="rotate-180" size={15} />
-            <span className="hidden sm:inline">Magazine Photo Booth</span>
-            <span className="sm:hidden">Back</span>
-          </Link>
+      <div className="fixed top-0 left-0 right-0 z-40 border-b border-white/5 bg-black/40 backdrop-blur-xl">
+
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
           <Link
             href="/"
-            aria-label="The Luxury Booths home"
-            className="text-[10px] font-medium uppercase tracking-[.25em] text-[#D4B66A] sm:text-xs"
+            className="flex items-center gap-2 text-white/70 transition hover:text-white"
           >
-            The Luxury Booths
+
+            <ArrowLeft size={18} />
+
+            <span className="hidden sm:block text-sm">
+              Back
+            </span>
+
           </Link>
 
-          <a
-            href={enquiryUrl(heroMessage)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#D4B66A] px-4 py-2.5 text-[11px] font-semibold text-black transition hover:bg-[#E7D19A] sm:px-5 sm:text-xs"
-          >
-            Enquire <ArrowUpRight size={14} />
-          </a>
+          <h1 className="text-xs sm:text-lg uppercase tracking-[0.3em] text-[#D4AF37] text-center">
+            Magazine Photo Booth for Corporate Events
+          </h1>
+
+          <div className="w-15" />
+
         </div>
-      </header>
+
+      </div>
 
       {/* Hero */}
       <section className="relative px-5 pb-16 pt-32 sm:px-8 sm:pb-24 sm:pt-40">
         <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-[#C8A85B]/8 blur-[120px]" />
         <div className="relative mx-auto max-w-6xl text-center">
           <SectionEyebrow>Corporate events · Brand experiences · Delhi NCR & India</SectionEyebrow>
-          <h1 className="mx-auto mt-6 max-w-5xl text-[2.65rem] font-light leading-[1.04] tracking-[-.045em] sm:text-6xl lg:text-[5.4rem]">
+          <h2 className="mx-auto mt-6 max-w-5xl text-[2.65rem] font-light leading-[1.04] tracking-[-.045em] sm:text-6xl lg:text-[5.4rem]">
             Your guests.
             <br className="sm:hidden" />{" "}
             <span className="font-serif italic text-[#D4B66A]">The cover stars.</span>
-          </h1>
+          </h2>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/60 sm:text-base sm:leading-8">
             A walk-in magazine photo booth that turns guests into the face of
-            their own cover — with a digital photo to share and an optional
+            their own cover - with a digital photo to share and an optional
             printed keepsake, based on your event package.
           </p>
           <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
@@ -437,7 +434,7 @@ export default function MagazineCorporateEvents() {
           />
           <div className="mt-3 flex items-center justify-between text-[9px] uppercase tracking-[.2em] text-white/35 sm:text-[10px]">
             <span>An experience they step into</span>
-            <span>01 — The magazine moment</span>
+            <span>01 - The magazine moment</span>
           </div>
         </div>
       </section>

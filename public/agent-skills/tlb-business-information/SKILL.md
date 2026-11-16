@@ -3,7 +3,7 @@ name: tlb-business-information
 description: Use when answering factual questions about The Luxury Booths (TLB), its photo booth experiences, event use cases, service areas, or how to prepare an enquiry. This is an information skill only; it does not check live availability, issue quotes, accept bookings, or process payments.
 ---
 
-# The Luxury Booths — Business Information Skill
+# The Luxury Booths - Business Information Skill
 
 ## Purpose
 

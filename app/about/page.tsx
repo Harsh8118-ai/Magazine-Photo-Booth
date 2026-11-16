@@ -263,10 +263,10 @@ export default function AboutPage() {
           </section>
 
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300 text-lg">
-            <p>• Vogue Magazine Photo Booth — Editorial covers with celebrity-style lighting</p>
-            <p>• Mirror Selfie Booth — Interactive mirror experience with instant prints</p>
-            <p>• Vintage Photo Booth — Timeless retro aesthetics with premium output</p>
-            <p>• Bespoke Luxury Installations — Custom-designed booths for elite events</p>
+            <p>• Vogue Magazine Photo Booth - Editorial covers with celebrity-style lighting</p>
+            <p>• Mirror Selfie Booth - Interactive mirror experience with instant prints</p>
+            <p>• Vintage Photo Booth - Timeless retro aesthetics with premium output</p>
+            <p>• Bespoke Luxury Installations - Custom-designed booths for elite events</p>
           </div> */}
         </div>
       </SectionWrapper>

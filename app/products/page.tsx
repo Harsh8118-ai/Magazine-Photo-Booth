@@ -820,7 +820,7 @@ export default function ProductsPage() {
                 </p>
 
                 <p className="mt-5 font-semibold">
-                  — Wedding Planner
+                  - Wedding Planner
                 </p>
               </div>
 
@@ -834,7 +834,7 @@ export default function ProductsPage() {
                 </p>
 
                 <p className="mt-5 font-semibold">
-                  — Brand Manager
+                  - Brand Manager
                 </p>
               </div>
 
@@ -848,7 +848,7 @@ export default function ProductsPage() {
                 </p>
 
                 <p className="mt-5 font-semibold">
-                  — Event Organizer
+                  - Event Organizer
                 </p>
               </div>
 
