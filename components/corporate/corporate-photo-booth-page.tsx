@@ -513,7 +513,6 @@ export default function CorporatePhotoBoothPage() {
               </div>
             ))}
           </div>
-          <p className="mt-5 text-center text-xs text-white/35">Answers reflect general service information. Confirm event-specific availability, inclusions and requirements with TLB.</p>
         </div>
       </section>
 
