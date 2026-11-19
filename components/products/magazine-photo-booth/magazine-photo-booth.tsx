@@ -321,7 +321,7 @@ export default function MagazinePhotoBooth() {
               <h3 className="font-display text-xl sm:text-2xl font-bold mb-4 text-gradient">The Luxury Booths</h3>
               <p className="text-gray-400 mb-4 text-sm sm:text-base">
                 The Luxury Booths is a luxury photo booth experience brand for premium weddings,
-                corporate events, and VIP celebrations.
+                corporate events, and VIP celebrations.  
               </p>
               <div className="flex space-x-4">
                 {[
