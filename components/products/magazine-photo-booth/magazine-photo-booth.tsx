@@ -306,7 +306,7 @@ export default function MagazinePhotoBooth() {
         </div>
       </section>
 
-      {/* <MiddleTwo /> */}         
+      {/* <MiddleTwo /> */}            
       <MiddleTwoSection />
 
       {/* Footer - Enhanced with legal links */}
